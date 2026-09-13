@@ -61,6 +61,7 @@
       }
     ],
     "rewrites": [
+      { "source": "/api/mcp", "destination": "/api/findatime?operation=mcp" },
       { "source": "/api/findatime/visit", "destination": "/api/findatime?operation=visit" },
       { "source": "/admin", "destination": "/blog-admin.html" },
       { "source": "/admin/dashboard", "destination": "/blog-dashboard.html" },

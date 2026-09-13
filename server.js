@@ -17,6 +17,7 @@ const PORT = process.env.PORT || 3000;
 app.get(['/findatime/admin', '/findatime/admin/'], (req, res) => (
   res.redirect(307, '/admin/dashboard?panel=findatime-panel')
 ));
+app.all('/api/mcp', require('./lib/findatimeMcpHttp'));
 app.use(bodyParser.json({ limit: '3mb' }));
 app.use(express.static('public'));
 
