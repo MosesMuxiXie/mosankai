@@ -26,6 +26,7 @@
       <div id="language-switcher-slot" class="language-switcher-slot"></div>
     </div>
     <div class="header-actions">
+      <button id="mcp-open" class="mcp-trigger" type="button" aria-controls="mcp-panel" aria-expanded="false" data-i18n="findatime.mcpOpen">MCP guide</button>
       <a class="home-link" href="/" data-i18n="findatime.backHome">Back to mosankai.com</a>
     </div>
   </header>
@@ -131,6 +132,34 @@
       </div>
     </section>
   </main>
+
+  <div id="mcp-scrim" class="mcp-scrim hidden" data-mcp-close></div>
+  <aside id="mcp-panel" class="mcp-panel" aria-labelledby="mcp-title" aria-hidden="true">
+    <div class="mcp-panel-header">
+      <div>
+        <p class="eyebrow" data-i18n="findatime.mcpEyebrow">MCP CONNECTION</p>
+        <h2 id="mcp-title" data-i18n="findatime.mcpTitle">Use findatime with an MCP client</h2>
+      </div>
+      <button class="mcp-close" type="button" data-mcp-close aria-label="Close MCP guide" data-i18n-aria-label="findatime.mcpClose">×</button>
+    </div>
+    <p class="mcp-intro" data-i18n="findatime.mcpIntro">Connect an MCP-compatible assistant to create meetings, check options, and submit availability.</p>
+    <div class="mcp-endpoint">
+      <span class="mcp-label" data-i18n="findatime.mcpEndpointLabel">Endpoint</span>
+      <code>https://mosankai.com/api/mcp</code>
+      <button id="mcp-copy" class="mcp-copy" type="button" data-i18n="findatime.mcpCopy">Copy address</button>
+      <span id="mcp-copy-status" class="mcp-copy-status" role="status" aria-live="polite"></span>
+    </div>
+    <div class="mcp-note"><span class="mcp-note-icon">✓</span><span data-i18n="findatime.mcpAuth">Authentication: none required.</span></div>
+    <div class="mcp-tools">
+      <p class="mcp-label" data-i18n="findatime.mcpToolsLabel">Available tools</p>
+      <ul>
+        <li><code>findatime_create_meeting</code><span data-i18n="findatime.mcpCreate">Create a meeting and get a share link.</span></li>
+        <li><code>findatime_get_meeting</code><span data-i18n="findatime.mcpGet">Read meeting options and responses.</span></li>
+        <li><code>findatime_submit_availability</code><span data-i18n="findatime.mcpSubmit">Submit or update your available times.</span></li>
+      </ul>
+    </div>
+    <p class="mcp-security" data-i18n="findatime.mcpSecurity">Keep creatorToken and participantToken private. Store them only in a trusted client.</p>
+  </aside>
 
   <div id="share-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="share-title">
     <div class="modal">

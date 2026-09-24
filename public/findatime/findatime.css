@@ -64,6 +64,73 @@ button { cursor: pointer; }
 .header-actions { display: flex; align-items: center; gap: 14px; }
 .home-link { color: var(--muted); text-decoration: none; font-size: .92rem; }
 .home-link:hover { color: var(--red); }
+.mcp-trigger {
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid rgba(34, 123, 114, .28);
+  border-radius: 999px;
+  color: var(--teal);
+  background: rgba(34, 123, 114, .08);
+  font-size: .76rem;
+  font-weight: 750;
+  transition: color 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+.mcp-trigger:hover { color: #fff; border-color: var(--teal); background: var(--teal); }
+.mcp-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: rgba(31, 29, 25, .35);
+  opacity: 1;
+  transition: opacity 180ms ease;
+}
+.mcp-panel {
+  position: fixed;
+  inset: 0 0 0 auto;
+  z-index: 21;
+  display: flex;
+  width: min(380px, 94vw);
+  padding: 28px 25px;
+  flex-direction: column;
+  gap: 18px;
+  overflow-y: auto;
+  border-left: 1px solid rgba(66, 56, 43, .14);
+  background: rgba(255, 253, 248, .98);
+  box-shadow: -18px 0 45px rgba(62, 50, 35, .16);
+  transform: translateX(100%);
+  transition: transform 220ms ease;
+}
+.mcp-panel.is-open { transform: translateX(0); }
+.mcp-scrim.hidden { display: block !important; opacity: 0; pointer-events: none; }
+.mcp-panel-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+.mcp-panel-header .eyebrow { margin: 2px 0 8px; font-size: .67rem; letter-spacing: .12em; }
+.mcp-panel h2 { margin: 0; font: 700 1.6rem/1.1 Georgia, "Noto Serif SC", serif; letter-spacing: -.02em; }
+.mcp-close {
+  width: 31px;
+  height: 31px;
+  flex: none;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--muted);
+  background: transparent;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.mcp-close:hover { color: var(--red); border-color: rgba(217, 79, 61, .35); }
+.mcp-intro, .mcp-security { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.6; }
+.mcp-label { display: block; margin: 0 0 8px; color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.mcp-endpoint { padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.mcp-endpoint code { display: block; overflow-wrap: anywhere; color: var(--teal); font: 600 .78rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; }
+.mcp-copy { margin-top: 11px; padding: 6px 10px; border: 1px solid rgba(34, 123, 114, .26); border-radius: 8px; color: var(--teal); background: var(--teal-soft); font-size: .75rem; font-weight: 750; }
+.mcp-copy:hover { color: #fff; background: var(--teal); }
+.mcp-copy-status { display: block; min-height: 17px; margin-top: 7px; color: var(--teal); font-size: .74rem; }
+.mcp-note { display: flex; gap: 9px; align-items: center; padding: 11px 13px; border-radius: 12px; color: #356e67; background: var(--teal-soft); font-size: .82rem; line-height: 1.45; }
+.mcp-note-icon { font-weight: 800; }
+.mcp-tools ul { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.mcp-tools li { display: grid; gap: 3px; padding-left: 13px; border-left: 2px solid var(--teal-soft); }
+.mcp-tools li code { color: var(--ink); font: 700 .76rem/1.35 ui-monospace, SFMono-Regular, Consolas, monospace; overflow-wrap: anywhere; }
+.mcp-tools li span { color: var(--muted); font-size: .84rem; line-height: 1.45; }
+.mcp-security { padding-top: 4px; border-top: 1px solid #eee8dd; font-size: .82rem; }
 .admin-link {
   display: inline-flex;
   align-items: center;
@@ -415,9 +482,11 @@ input:focus, select:focus, textarea:focus { border-color: var(--teal); box-shado
 
 @media (max-width: 560px) {
   .site-header { height: 66px; }
+  .header-actions { gap: 7px; }
+  .mcp-trigger { padding-inline: 9px; font-size: .7rem; }
+  .mcp-panel { width: 100%; padding: 24px 20px; }
   .brand-group { gap: 8px; }
   .language-switcher-slot .language-switcher button { padding-inline: .52rem; }
-  .header-actions { gap: 9px; }
   .home-link { font-size: .76rem; }
   .page-shell { width: min(94vw, 680px); }
   .card { padding: 25px 19px; border-radius: 22px; }

@@ -18,7 +18,54 @@ const state = {
 const byId = id => document.getElementById(id);
 const t = (key, parameters) => MosankaiI18n.t(`findatime.${key}`, parameters);
 const profileStorageKey = 'findatime-profile-v1';
+const MCP_ENDPOINT = 'https://mosankai.com/api/mcp';
 let creatorLayoutFrame = 0;
+let mcpCopyState = 'mcpCopy';
+
+function setupMcpPanel() {
+  const trigger = byId('mcp-open');
+  const panel = byId('mcp-panel');
+  const scrim = byId('mcp-scrim');
+  const closeButtons = document.querySelectorAll('[data-mcp-close]');
+  if (!trigger || !panel || !scrim) return;
+
+  const close = ({ restoreFocus = true } = {}) => {
+    panel.classList.remove('is-open');
+    panel.setAttribute('aria-hidden', 'true');
+    trigger.setAttribute('aria-expanded', 'false');
+    scrim.classList.add('hidden');
+    document.body.style.overflow = '';
+    if (restoreFocus) trigger.focus();
+  };
+  const open = () => {
+    panel.classList.add('is-open');
+    panel.setAttribute('aria-hidden', 'false');
+    trigger.setAttribute('aria-expanded', 'true');
+    scrim.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    panel.querySelector('.mcp-close')?.focus();
+  };
+
+  trigger.addEventListener('click', open);
+  closeButtons.forEach(button => button.addEventListener('click', close));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && panel.classList.contains('is-open')) close();
+  });
+  byId('mcp-copy')?.addEventListener('click', async () => {
+    const status = byId('mcp-copy-status');
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('clipboard-unavailable');
+      await navigator.clipboard.writeText(MCP_ENDPOINT);
+      mcpCopyState = 'mcpCopied';
+      status.dataset.findatimeKey = 'mcpCopied';
+    } catch {
+      mcpCopyState = 'mcpCopy';
+      status.dataset.findatimeKey = 'mcpCopyFailed';
+    }
+    status.textContent = t(status.dataset.findatimeKey);
+    byId('mcp-copy').textContent = t(mcpCopyState);
+  });
+}
 
 function syncCreatorLayout() {
   creatorLayoutFrame = 0;
@@ -812,6 +859,9 @@ window.addEventListener('mosankai:languagechange', () => {
   byId('create-meeting').textContent = t(state.creating ? 'creating' : 'createAndGetLink');
   byId('submit-vote').textContent = t(state.submitting ? 'submitting' : 'submitAvailability');
   byId('post-comment').textContent = t(state.commenting ? 'postingComment' : 'postComment');
+  byId('mcp-copy').textContent = t(mcpCopyState);
+  const mcpStatus = byId('mcp-copy-status');
+  if (mcpStatus?.dataset.findatimeKey) mcpStatus.textContent = t(mcpStatus.dataset.findatimeKey);
   if (!byId('meeting-loading').classList.contains('hidden')) {
     byId('meeting-loading').textContent = t(state.meetingMessageKey);
   }
@@ -829,6 +879,7 @@ window.addEventListener('mosankai:languagechange', () => {
 
 window.addEventListener('resize', queueCreatorLayoutSync);
 
+setupMcpPanel();
 trackVisit();
 if (match) setupMeeting(match[1]);
 else setupCreator();
