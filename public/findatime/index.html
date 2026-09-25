@@ -26,12 +26,13 @@
       <div id="language-switcher-slot" class="language-switcher-slot"></div>
     </div>
     <div class="header-actions">
-      <button id="mcp-open" class="mcp-trigger" type="button" aria-controls="mcp-panel" aria-expanded="false" data-i18n="findatime.mcpOpen">MCP guide</button>
+      <button id="mcp-open" class="mcp-trigger" type="button" data-mcp-open aria-controls="mcp-panel" aria-expanded="false" data-i18n="findatime.mcpOpen">MCP guide</button>
       <a class="home-link" href="/" data-i18n="findatime.backHome">Back to mosankai.com</a>
     </div>
   </header>
 
-  <main class="page-shell">
+  <main>
+    <div class="page-shell">
     <section id="creator-view" class="card">
       <div class="eyebrow">
         <span data-i18n="findatime.noLogin">No sign-in required ·</span>
@@ -131,6 +132,13 @@
         </section>
       </div>
     </section>
+    </div>
+    <section class="mcp-feature" aria-labelledby="mcp-feature-title">
+      <p class="mcp-feature__eyebrow" data-i18n="findatime.mcpFeatureEyebrow">AI ASSISTANT</p>
+      <h2 id="mcp-feature-title" data-i18n="findatime.mcpFeatureTitle">Schedule with your AI assistant</h2>
+      <p data-i18n="findatime.mcpFeatureDescription">Connect findatime to a remote MCP client to create meetings, check responses, and share your availability in a conversation.</p>
+      <button class="mcp-feature__link" type="button" data-mcp-open aria-controls="mcp-panel" aria-expanded="false"><span data-i18n="findatime.mcpFeatureLink">How to connect</span><span aria-hidden="true"> →</span></button>
+    </section>
   </main>
 
   <div id="mcp-scrim" class="mcp-scrim hidden" data-mcp-close></div>
@@ -142,23 +150,36 @@
       </div>
       <button class="mcp-close" type="button" data-mcp-close aria-label="Close MCP guide" data-i18n-aria-label="findatime.mcpClose">×</button>
     </div>
-    <p class="mcp-intro" data-i18n="findatime.mcpIntro">Connect an MCP-compatible assistant to create meetings, check options, and submit availability.</p>
+    <p class="mcp-intro" data-i18n="findatime.mcpIntro">Add findatime to an assistant that supports remote Streamable HTTP MCP. The assistant can then use the scheduling tools below.</p>
     <div class="mcp-endpoint">
-      <span class="mcp-label" data-i18n="findatime.mcpEndpointLabel">Endpoint</span>
+      <span class="mcp-label" data-i18n="findatime.mcpEndpointLabel">Remote MCP address · Streamable HTTP</span>
       <code>https://mosankai.com/api/mcp</code>
       <button id="mcp-copy" class="mcp-copy" type="button" data-i18n="findatime.mcpCopy">Copy address</button>
       <span id="mcp-copy-status" class="mcp-copy-status" role="status" aria-live="polite"></span>
     </div>
     <div class="mcp-note"><span class="mcp-note-icon">✓</span><span data-i18n="findatime.mcpAuth">Authentication: none required.</span></div>
+    <div class="mcp-steps">
+      <p class="mcp-label" data-i18n="findatime.mcpStepsLabel">How to connect</p>
+      <ol>
+        <li data-i18n="findatime.mcpStepOne">In your client's MCP settings, add a remote server using Streamable HTTP.</li>
+        <li data-i18n="findatime.mcpStepTwo">Paste the address above and choose no authentication.</li>
+        <li data-i18n="findatime.mcpStepThree">Once connected, ask your assistant to create or check a meeting. Include the date, time, and time zone.</li>
+      </ol>
+    </div>
+    <div class="mcp-examples">
+      <p class="mcp-label" data-i18n="findatime.mcpExamplesLabel">Try saying</p>
+      <p data-i18n="findatime.mcpExampleCreate">“Create a 60-minute project meeting in Asia/Shanghai next Saturday, with options at 14:00 and 16:00. Give me the share link.”</p>
+      <p data-i18n="findatime.mcpExampleSubmit">“Read this meeting link and its responses. I can attend the first option; submit my availability.”</p>
+    </div>
     <div class="mcp-tools">
       <p class="mcp-label" data-i18n="findatime.mcpToolsLabel">Available tools</p>
       <ul>
-        <li><code>findatime_create_meeting</code><span data-i18n="findatime.mcpCreate">Create a meeting and get a share link.</span></li>
-        <li><code>findatime_get_meeting</code><span data-i18n="findatime.mcpGet">Read meeting options and responses.</span></li>
-        <li><code>findatime_submit_availability</code><span data-i18n="findatime.mcpSubmit">Submit or update your available times.</span></li>
+        <li><code>findatime_create_meeting</code><span data-i18n="findatime.mcpCreate">Set a title, your name, a 30–480 minute duration in 30-minute steps, a time zone, and 1–10 candidate times. Get a share link and a private creator token.</span></li>
+        <li><code>findatime_get_meeting</code><span data-i18n="findatime.mcpGet">Use a known meeting ID to read candidate times, votes, and participants. This does not list every meeting.</span></li>
+        <li><code>findatime_submit_availability</code><span data-i18n="findatime.mcpSubmit">Read candidate time IDs, then submit your choices or mark yourself unavailable. No token is needed the first time; use your returned participantToken or creatorToken to update your response.</span></li>
       </ul>
     </div>
-    <p class="mcp-security" data-i18n="findatime.mcpSecurity">Keep creatorToken and participantToken private. Store them only in a trusted client.</p>
+    <p class="mcp-security" data-i18n="findatime.mcpSecurity">Share only the meeting link. creatorToken and participantToken can change your response: keep them in a trusted client. A name cannot recover a lost token.</p>
   </aside>
 
   <div id="share-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="share-title">

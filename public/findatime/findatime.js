@@ -23,30 +23,32 @@ let creatorLayoutFrame = 0;
 let mcpCopyState = 'mcpCopy';
 
 function setupMcpPanel() {
-  const trigger = byId('mcp-open');
+  const triggers = document.querySelectorAll('[data-mcp-open]');
   const panel = byId('mcp-panel');
   const scrim = byId('mcp-scrim');
   const closeButtons = document.querySelectorAll('[data-mcp-close]');
-  if (!trigger || !panel || !scrim) return;
+  if (!triggers.length || !panel || !scrim) return;
+  let lastTrigger = triggers[0];
 
   const close = ({ restoreFocus = true } = {}) => {
     panel.classList.remove('is-open');
     panel.setAttribute('aria-hidden', 'true');
-    trigger.setAttribute('aria-expanded', 'false');
+    triggers.forEach(trigger => trigger.setAttribute('aria-expanded', 'false'));
     scrim.classList.add('hidden');
     document.body.style.overflow = '';
-    if (restoreFocus) trigger.focus();
+    if (restoreFocus) lastTrigger.focus();
   };
-  const open = () => {
+  const open = event => {
+    lastTrigger = event.currentTarget;
     panel.classList.add('is-open');
     panel.setAttribute('aria-hidden', 'false');
-    trigger.setAttribute('aria-expanded', 'true');
+    triggers.forEach(trigger => trigger.setAttribute('aria-expanded', 'true'));
     scrim.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
     panel.querySelector('.mcp-close')?.focus();
   };
 
-  trigger.addEventListener('click', open);
+  triggers.forEach(trigger => trigger.addEventListener('click', open));
   closeButtons.forEach(button => button.addEventListener('click', close));
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && panel.classList.contains('is-open')) close();
@@ -78,7 +80,7 @@ function syncCreatorLayout() {
   // Measure the regular layout first, then use the wider two-column layout only
   // when the creation form would otherwise make the page scroll vertically.
   void byId('creator-view').offsetHeight;
-  const pageOverflows = document.documentElement.scrollHeight > window.innerHeight + 1;
+  const pageOverflows = byId('creator-view').getBoundingClientRect().bottom > window.innerHeight + 1;
   document.body.classList.toggle('creator-layout-wide', pageOverflows);
 }
 
