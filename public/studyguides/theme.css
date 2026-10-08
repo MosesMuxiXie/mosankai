@@ -1,0 +1,460 @@
+/* The study archive's paper, wood and dusk palette. Loaded after page styles. */
+:root[data-studyguide-page] {
+  color-scheme: light;
+  --study-background: #f2e8e2;
+  --study-paper: #fbf5f0;
+  --study-ink: #48362e;
+  --study-muted: #78645d;
+  --study-accent: #803e48;
+  --study-line: #d8c5bd;
+  --study-wash: #eadbd4;
+  --study-wood: #62463c;
+  --study-gold: #84572f;
+  --study-soft-ink: #6e5950;
+  --study-correct: #52654d;
+  --study-correct-wash: #e9eee2;
+  --study-error: #994c43;
+  --study-error-wash: #f6e5df;
+  --study-shadow: 0 6px 24px #62463c08;
+  --study-sans: "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+  --study-serif: Georgia, "Songti SC", "STSong", "SimSun", serif;
+  --paper: var(--study-background);
+  --white: var(--study-paper);
+  --ink: var(--study-ink);
+  --muted: var(--study-muted);
+  --line: var(--study-line);
+  --accent: var(--study-accent);
+  --green: var(--study-accent);
+  --lime: var(--study-wash);
+  --orange: var(--study-gold);
+  --gold: var(--study-gold);
+  --rose: var(--study-error);
+  --tint: var(--study-wash);
+  --wash: var(--study-wash);
+  --sans: var(--study-sans);
+  --serif: var(--study-serif);
+}
+
+html[data-studyguide-page] body {
+  background: var(--study-background);
+  color: var(--study-ink);
+  font-family: var(--study-sans);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+html[data-studyguide-page] :is(h1, h2, .brand, .root strong) {
+  font-family: var(--study-serif);
+  font-weight: 400;
+  letter-spacing: -.025em;
+}
+
+html[data-studyguide-page] :is(h1, h2, h3, h4) {
+  overflow-wrap: anywhere;
+}
+
+html[data-studyguide-page] :is(button, a, input, select, textarea, summary):focus-visible {
+  outline: 3px solid var(--study-accent);
+  outline-offset: 4px;
+}
+
+html[data-studyguide-page] ::selection {
+  color: var(--study-ink);
+  background: #ddbeb9;
+}
+
+html[data-studyguide-page] :is(button, a, input, select, textarea) {
+  -webkit-tap-highlight-color: transparent;
+  transition-duration: 150ms;
+}
+
+html[data-studyguide-page] :is(input[type="search"], textarea, select) {
+  color: var(--study-ink);
+  background: var(--study-paper);
+  border-color: var(--study-line);
+  border-radius: 8px;
+}
+
+html[data-studyguide-page] :is(.card, .panel, .question, .quizcard, .sample, .group, .coverage, .source-card) {
+  border-color: var(--study-line);
+  border-radius: 8px;
+  box-shadow: var(--study-shadow);
+}
+
+html[data-studyguide-page] :is(.card p, .card li, .question p, .answer, .answer p, .quick-grid p, .mistake p, .mcq-feedback, .options label, .options button, .leaves p, .leaves b, .chapter-review .answer, .sample p, td) {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+html[data-studyguide-page] :is(.callout, .formula, .readout, .answer, .note, .feedback, .method span) {
+  border-color: var(--study-accent);
+}
+
+html[data-studyguide-page] :is(.callout, .readout, .answer, .note, .feedback, .warn) {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+html[data-studyguide-page] :is(aside, .tag, .note, .callout, .warn, .feedback, th) {
+  --muted: var(--study-soft-ink);
+}
+
+html[data-studyguide-page] aside nav span {
+  color: var(--study-soft-ink);
+}
+
+html[data-studyguide-page] :is(th, .formula, .callout, .answer, .feedback, .tag, .page-link) {
+  background: var(--study-wash);
+}
+
+html[data-studyguide-page] th {
+  color: var(--study-ink);
+}
+
+html[data-studyguide-page] :is(.warn, .trap, .note) {
+  color: var(--study-gold);
+}
+
+html[data-studyguide-page] :is(.options button.correct, .mcq-feedback.correct) {
+  border-color: var(--study-correct);
+  background: var(--study-correct-wash);
+  color: var(--study-correct);
+}
+
+html[data-studyguide-page] :is(.options button.wrong, .mcq-feedback.incorrect) {
+  border-color: var(--study-error);
+  background: var(--study-error-wash);
+  color: var(--study-error);
+}
+
+html[data-studyguide-page] #studyguide-return {
+  position: fixed;
+  right: max(20px, env(safe-area-inset-right));
+  bottom: max(20px, env(safe-area-inset-bottom));
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  max-width: calc(100vw - 40px);
+  padding: 10px 16px;
+  border: 1px solid var(--study-line);
+  border-radius: 8px;
+  background: var(--study-paper);
+  color: var(--study-accent);
+  font: 600 13px/1.6 var(--study-sans);
+  text-decoration: none;
+  box-shadow: 0 4px 20px #48362e12;
+}
+
+html[data-studyguide-page] #studyguide-return:hover {
+  background: var(--study-wash);
+}
+
+html[data-studyguide-page]:not([data-studyguide-page="archive"]):not([data-embed="true"]) body {
+  padding-bottom: 80px;
+}
+
+html[data-studyguide-page="statistics"] header {
+  background: #fbf5f0f2;
+}
+
+html[data-studyguide-page="statistics"] :is(.hero-art, .wide-note) {
+  background: var(--study-wood);
+  border-radius: 8px;
+  transform: none;
+}
+
+html[data-studyguide-page="statistics"] .hero-art p {
+  color: #eadbd4;
+}
+
+html[data-studyguide-page="statistics"] .draw {
+  animation: none;
+  stroke-dashoffset: 0;
+}
+
+html[data-studyguide-page="statistics"] .reveal {
+  animation: none;
+}
+
+html[data-studyguide-page="statistics"] .readout {
+  background: var(--study-wash);
+}
+
+html[data-studyguide-page="neuroscience"] aside,
+html[data-studyguide-page="literature"] aside {
+  background: #eaded7;
+}
+
+html[data-studyguide-page="neuroscience"] :is(.hero-art, .readout),
+html[data-studyguide-page="literature"] #score {
+  background: var(--study-wood);
+  color: var(--study-paper);
+}
+
+html[data-studyguide-page="neuroscience"] .hero-art {
+  color: var(--study-wash);
+  border-radius: 8px;
+}
+
+html[data-studyguide-page="neuroscience"] .hero-art svg {
+  border-radius: 8px;
+}
+
+html[data-studyguide-page="literature"] .map-front {
+  background: var(--study-background);
+}
+
+html[data-studyguide-page="literature"] .table-wrap {
+  overflow-x: auto;
+}
+
+html[data-studyguide-page="neuron-map"] .top {
+  background: var(--study-wood);
+  color: var(--study-paper);
+}
+
+html[data-studyguide-page="neuron-map"] .top::after {
+  border-color: #987466;
+  box-shadow: 0 0 0 52px #735347, 0 0 0 53px #987466, 0 0 0 100px #6c4c42;
+  opacity: .4;
+}
+
+html[data-studyguide-page="neuron-map"] :is(.top p, .eyebrow, .meta, .root small) {
+  color: #eadbd4;
+}
+
+html[data-studyguide-page="neuron-map"] .root {
+  background: var(--study-accent);
+  border-radius: 8px;
+}
+
+html[data-studyguide-page="neuron-map"] .branch.selected {
+  background: color-mix(in srgb, var(--branch) 10%, var(--study-paper));
+}
+
+html[data-studyguide-page="neuron-map"] :is(.demo, .demo-state, .page-link) {
+  background: var(--study-wash);
+  border-color: var(--study-line);
+}
+
+html[data-studyguide-page="neuron-map"] :is(.demo svg text, .demo-state, .detail-head p, .leaves p, td) {
+  color: var(--study-muted);
+  fill: var(--study-muted);
+}
+
+html[data-studyguide-page="neuron-map"] dialog {
+  color: var(--study-ink);
+}
+
+html[data-studyguide-page="neuron-map"] dialog::backdrop {
+  background: #48362eaa;
+}
+
+html[data-studyguide-page="neuron-map"] dialog header {
+  background: var(--study-paper);
+}
+
+/* These also match the exporter's data-theme probes. Keep them at top level
+   so its SVG stylesheet collector includes the palette in exported files. */
+:root[data-studyguide-page="literature-map"],
+[data-studyguide-page="literature-map"][data-theme="light"] {
+  color-scheme: light;
+  --bg: #f2e8e2;
+  --grid: #e5d7ce;
+  --text: #48362e;
+  --text-muted: #78645d;
+  --text-dim: #78645d;
+  --text-faint: #78645d;
+  --panel: #fbf5f0;
+  --panel-border: #d8c5bd;
+  --lane-fill: #eadbd455;
+  --lane-stroke: #b7a197;
+  --arrow: #94756a;
+  --arrow-emphasis: #803e48;
+  --mask: #fbf5f0;
+  --frontend-fill: #803e4810;
+  --frontend-stroke: #803e48;
+  --backend-fill: #95633412;
+  --backend-stroke: #956334;
+  --database-fill: #77557212;
+  --database-stroke: #775572;
+  --cloud-fill: #8f655112;
+  --cloud-stroke: #8f6551;
+  --security-fill: #994c4312;
+  --security-stroke: #994c43;
+  --messagebus-fill: #89673c12;
+  --messagebus-stroke: #89673c;
+  --external-fill: #78645d10;
+  --external-stroke: #78645d;
+  --toolbar-bg: #fbf5f0f2;
+  --toolbar-border: #d8c5bd;
+  --toolbar-text: #48362e;
+  --toolbar-hover: #eadbd4;
+  --toolbar-menu-bg: #fbf5f0;
+}
+
+:root[data-studyguide-page="literature-map"][data-theme="dark"],
+[data-studyguide-page="literature-map"][data-theme="dark"] {
+  color-scheme: dark;
+  --study-background: #2b211e;
+  --study-paper: #362925;
+  --study-ink: #f2e8e2;
+  --study-muted: #c4aaa0;
+  --study-accent: #dfa5ab;
+  --study-line: #674e45;
+  --study-wash: #48362e;
+  --bg: #2b211e;
+  --grid: #44322c;
+  --text: #f2e8e2;
+  --text-muted: #c4aaa0;
+  --text-dim: #c4aaa0;
+  --text-faint: #c4aaa0;
+  --panel: #362925;
+  --panel-border: #674e45;
+  --lane-fill: #48362e66;
+  --lane-stroke: #94756a;
+  --arrow: #b79b8d;
+  --arrow-emphasis: #dfa5ab;
+  --mask: #362925;
+  --frontend-fill: #dfa5ab18;
+  --frontend-stroke: #dfa5ab;
+  --backend-fill: #d9b38418;
+  --backend-stroke: #d9b384;
+  --database-fill: #c4a6bf18;
+  --database-stroke: #c4a6bf;
+  --cloud-fill: #d7a68a18;
+  --cloud-stroke: #d7a68a;
+  --security-fill: #e0a19818;
+  --security-stroke: #e0a198;
+  --messagebus-fill: #ccb58c18;
+  --messagebus-stroke: #ccb58c;
+  --external-fill: #c4aaa018;
+  --external-stroke: #c4aaa0;
+  --toolbar-bg: #362925f2;
+  --toolbar-border: #674e45;
+  --toolbar-text: #f2e8e2;
+  --toolbar-hover: #48362e;
+  --toolbar-menu-bg: #362925;
+}
+
+html[data-studyguide-page="literature-map"][data-preset] body {
+  background: var(--bg);
+  background-image: none;
+  color: var(--text);
+  font-family: var(--study-sans);
+}
+
+html[data-studyguide-page="literature-map"][data-preset] :is(.diagram-container, .card) {
+  background: var(--panel);
+  border-color: var(--panel-border);
+  border-radius: 8px;
+  box-shadow: var(--study-shadow);
+}
+
+html[data-studyguide-page="literature-map"] .diagram-container {
+  background-image: radial-gradient(var(--grid) .6px, transparent .6px);
+  background-size: 24px 24px;
+}
+
+html[data-studyguide-page="literature-map"] .diagram-container::after {
+  display: none;
+}
+
+html[data-studyguide-page="literature-map"] :is(.subtitle, .card p) {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+@media (max-width: 720px) {
+  html[data-studyguide-page="literature-map"] .toolbar {
+    top: auto;
+    right: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  html[data-studyguide-page] body {
+    font-size: 15px;
+  }
+  html[data-studyguide-page] #studyguide-return {
+    right: max(12px, env(safe-area-inset-right));
+    bottom: max(12px, env(safe-area-inset-bottom));
+    max-width: calc(100vw - 24px);
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-studyguide-page] {
+    scroll-behavior: auto;
+  }
+  html[data-studyguide-page] *,
+  html[data-studyguide-page] *::before,
+  html[data-studyguide-page] *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  html[data-studyguide-page]:not([data-studyguide-page="archive"]):not([data-embed="true"]) body {
+    padding-bottom: 0;
+  }
+  :root[data-studyguide-page],
+  :root[data-studyguide-page="literature-map"][data-theme] {
+    color-scheme: light;
+    --study-background: #fff;
+    --study-paper: #fff;
+    --study-ink: #111;
+    --study-muted: #555;
+    --study-line: #ccc;
+    --study-accent: #48362e;
+    --study-wash: #f5f5f5;
+    --bg: #fff;
+    --text: #111;
+    --text-muted: #555;
+    --text-dim: #555;
+    --text-faint: #555;
+    --grid: #e5d7ce;
+    --panel: #fff;
+    --panel-border: #ccc;
+    --lane-fill: #eadbd455;
+    --lane-stroke: #b7a197;
+    --arrow: #78645d;
+    --arrow-emphasis: #803e48;
+    --mask: #fff;
+    --frontend-fill: #803e4810;
+    --frontend-stroke: #803e48;
+    --backend-fill: #95633412;
+    --backend-stroke: #956334;
+    --database-fill: #77557212;
+    --database-stroke: #775572;
+    --cloud-fill: #8f655112;
+    --cloud-stroke: #8f6551;
+    --security-fill: #994c4312;
+    --security-stroke: #994c43;
+    --messagebus-fill: #89673c12;
+    --messagebus-stroke: #89673c;
+    --external-fill: #78645d10;
+    --external-stroke: #78645d;
+  }
+  html[data-studyguide-page] :is(aside, .hero-art, .wide-note, .top, .root, .readout, .card, .panel, .sample) {
+    color: #111;
+    background: #fff;
+    box-shadow: none;
+  }
+  html[data-studyguide-page] #studyguide-return {
+    display: none;
+  }
+  html[data-studyguide-page] :is(p, li, td, .card p, .card li, .answer, .answer p, .quick-grid p, .options label, .leaves p, .chapter-review .answer) {
+    font-size: 10pt;
+  }
+  html[data-studyguide-page="neuron-map"] :is(.top p, .eyebrow, .meta, .root small, .meta strong) {
+    color: #555;
+  }
+}

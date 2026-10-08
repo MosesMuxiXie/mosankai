@@ -23,7 +23,8 @@
         pageTitle: 'Study Guides · Mosankai',
         description: 'Interactive reviews, knowledge maps, slides and reading materials organized by subject.',
         skip: 'Skip to the archive', home: 'Back home ↗',
-        heroLine1: 'A place for', heroLine2: 'what you learn.',
+        heroLine1: 'A little quiet,', heroLine2: 'a new understanding.',
+        quietPlace: 'Read slowly, as the light fades.',
         intro: 'Turn what you have learned into a starting point for the next insight. Interactive reviews, knowledge maps and source materials, together.',
         totals: 'Archive totals', subjects: 'Subjects', guides: 'Interactive reviews', sources: 'Source materials',
         catalog: 'Study materials', chooseSubject: 'Choose subject', all: 'All subjects',
@@ -35,7 +36,7 @@
         emptyTitle: 'No matching materials', emptyDescription: 'Try a different title or topic, or choose another subject.',
         missingSource: 'The mind map’s historical temporary PDF is unavailable. The current Chapter 2 classroom PDF is included above.',
         loadError: 'The archive could not be loaded. Please try again.', retry: 'Try again',
-        footer: 'Keep learning. Keep connecting.', top: 'Back to top ↑'
+        footer: 'Take your time. Let it make sense.', top: 'Back to top ↑'
       },
       blog: {
         title: 'Blog | Mosankai',
@@ -252,7 +253,8 @@
         pageTitle: '复习资料 · Mosankai',
         description: '按学科整理的交互复习手册、思维导图、课件与阅读资料。',
         skip: '跳到资料目录', home: '返回首页 ↗',
-        heroLine1: '知识，', heroLine2: '分门别类。',
+        heroLine1: '留一点安静，', heroLine2: '给新的理解。',
+        quietPlace: '在暮色里，慢慢读。',
         intro: '把学过的内容，变成下一次理解的起点。交互复习、知识地图和原始资料，都在这里。',
         totals: '资料总数', subjects: '学科分区', guides: '交互复习', sources: '原始资料',
         catalog: '复习资料目录', chooseSubject: '选择学科', all: '全部学科',
@@ -264,7 +266,7 @@
         emptyTitle: '没有找到匹配资料', emptyDescription: '试试其他标题、知识范围，或选择其他学科。',
         missingSource: '思维导图曾引用的临时 PDF 已缺失；现有的第 2 章课堂 PDF 已收录在上方。',
         loadError: '暂时无法加载资料目录，请重试。', retry: '重新加载',
-        footer: '持续学习，连接知识。', top: '返回顶部 ↑'
+        footer: '慢慢读，慢慢理解。', top: '返回顶部 ↑'
       },
       blog: {
         title: '博客 | Mosankai',

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark" data-preset="classic">
+<html lang="en" data-theme="light" data-studyguide-page="literature-map" data-preset="classic">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,21 +25,13 @@
           try { theme = localStorage.getItem('archify-theme'); } catch (_) {}
         }
         if (theme !== 'light' && theme !== 'dark') {
-          theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          theme = 'light';
         }
         document.documentElement.setAttribute('data-theme', theme);
       } catch (_) {}
     })();
   </script>
-  <!-- Async font load: a blackholed network must not block first paint.
-       The body font stack falls back to system monospace until it lands. -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  </noscript>
-  <style>
+<style>
     /* ==========================================================
        THEME VARIABLES — switch by toggling [data-theme] on <html>
        ========================================================== */
@@ -351,7 +343,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', 'Noto Sans Mono CJK SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', monospace;
+      font-family: 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif;
       background: var(--bg);
       min-height: 100vh;
       padding: 2rem;
@@ -4847,8 +4839,9 @@
       svg [data-node-id], svg [data-edge-from], svg [data-detail], svg [data-detail-anchor], svg [data-legend-hit], svg { transition: none !important; }
     }
   </style>
+  <link rel="stylesheet" href="/studyguides/theme.css">
 </head>
-<body><style>#studyguide-return{position:fixed!important;inset:auto 14px 14px auto!important;z-index:9999!important;display:inline-flex!important;align-items:center!important;gap:8px!important;max-width:calc(100vw - 28px)!important;padding:10px 16px!important;border:1px solid #606957!important;border-radius:99px!important;background:#0b0d0b!important;color:#f2f2ec!important;font:600 12px/1.4 system-ui,sans-serif!important;text-decoration:none!important;box-shadow:0 4px 20px #0003!important}#studyguide-return:focus-visible{outline:3px solid #c6ef46!important;outline-offset:3px!important}@media print{#studyguide-return{display:none!important}}</style><a id="studyguide-return" data-studyguide-return href="/studyguides/english" aria-label="返回学科目录 / Back to subject">← 英语文学 / English Literature</a>
+<body><a id="studyguide-return" data-studyguide-return href="/studyguides/english" aria-label="返回学科目录 / Back to subject">← 英语文学 / English Literature</a>
   <!-- Toolbar: theme, live visual style, trace motion, presentation stage, and export.
        Motion appears only for trace-enabled artifacts and has no shortcut;
        Keyboard: T toggles theme, S cycles style, F toggles the stage, E opens export. -->
@@ -5634,7 +5627,7 @@
     })();
 
     /* ============================================================
-       Theme toggle — persists to localStorage, respects system pref
+       Theme toggle — persists explicit preferences; defaults to dusk light
        ============================================================ */
 
     Archify.theme = (function () {
@@ -5665,7 +5658,7 @@
         if (fromUrl) return fromUrl;
         var saved = readStored();
         if (saved === 'light' || saved === 'dark') return saved;
-        return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        return 'light';
       }
 
       function apply(theme) {
@@ -5683,13 +5676,13 @@
       apply(resolveInitial());
       btn.addEventListener('click', toggle);
 
-      // Follow live OS theme changes while the user has no explicit preference.
+      // Keep dusk light when OS changes; explicit preferences still take priority.
       try {
         var media = window.matchMedia('(prefers-color-scheme: light)');
         var onChange = function (e) {
           var saved = readStored();
           if (urlOverride() || saved === 'light' || saved === 'dark') return;
-          apply(e.matches ? 'light' : 'dark');
+          apply('light');
         };
         if (media.addEventListener) media.addEventListener('change', onChange);
         else if (media.addListener) media.addListener(onChange);
@@ -6169,6 +6162,7 @@
         function resolveVars(themeAttr) {
           var probe = document.createElement('div');
           probe.setAttribute('data-theme', themeAttr);
+          probe.setAttribute('data-studyguide-page', 'literature-map');
           probe.setAttribute('data-preset', document.documentElement.getAttribute('data-preset') || 'classic');
           probe.style.cssText = 'position:absolute;width:0;height:0;visibility:hidden;';
           document.body.appendChild(probe);
@@ -6208,7 +6202,7 @@
 
           style.textContent =
             fontFallback + "\n" +
-            "svg { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', 'Noto Sans Mono CJK SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', monospace; }\n" +
+            "svg { font-family: 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif; }\n" +
             hostStyle + "\n" +
             ":root, svg { " + darkVars + " }\n" +
             "@media (prefers-color-scheme: light) { :root, svg { " + lightVars + " } }\n" +
@@ -6236,7 +6230,7 @@
           // Keep this order.
           style.textContent =
             fontFallback + "\n" +
-            "svg { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', 'Liberation Mono', 'Noto Sans Mono CJK SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', monospace; }\n" +
+            "svg { font-family: 'Segoe UI', 'Microsoft YaHei', system-ui, sans-serif; }\n" +
             hostStyle + "\n" +
             ":root, svg { " + vars + " }\n";
 
