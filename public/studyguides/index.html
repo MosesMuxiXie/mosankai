@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d0b">
+  <meta name="description" content="按学科整理的交互复习手册、思维导图、课件与阅读资料。" data-i18n-content="studyguides.description">
+  <title data-i18n="studyguides.pageTitle">Study Guides · Mosankai</title>
+  <link rel="icon" href="/favicon.png">
+  <link rel="stylesheet" href="/i18n.css">
+  <link rel="stylesheet" href="/studyguides/studyguides.css">
+  <script src="/i18n.js" defer></script>
+  <script src="/studyguides/studyguides.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#study-catalog" data-i18n="studyguides.skip">跳到资料目录</a>
+  <header class="site-header">
+    <a class="wordmark" href="/" aria-label="MOSANKAI home">MOSANKAI<span>/ STUDY GUIDES</span></a>
+    <div class="header-actions">
+      <a class="home-link" href="/" data-i18n="studyguides.home">返回首页 ↗</a>
+      <div id="language-switcher-slot" class="language-switcher-slot"></div>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="archive-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>THE STUDY ARCHIVE / 03</p>
+        <h1 id="archive-title"><span data-i18n="studyguides.heroLine1">知识，</span><br><span class="accent" data-i18n="studyguides.heroLine2">分门别类。</span></h1>
+        <p class="hero-description" data-i18n="studyguides.intro">把学过的内容，变成下一次理解的起点。交互复习、知识地图和原始资料，都在这里。</p>
+      </div>
+      <dl class="archive-stats" aria-label="Archive totals" data-i18n-aria-label="studyguides.totals">
+        <div><dt data-i18n="studyguides.subjects">学科分区</dt><dd id="subject-count">03</dd></div>
+        <div><dt data-i18n="studyguides.guides">交互复习</dt><dd id="guide-count">05</dd></div>
+        <div><dt data-i18n="studyguides.sources">原始资料</dt><dd id="source-count">25</dd></div>
+      </dl>
+    </section>
+    <section class="catalog" id="study-catalog" aria-label="Study materials" data-i18n-aria-label="studyguides.catalog">
+      <div class="catalog-toolbar">
+        <nav class="subject-filters" aria-label="Choose subject" data-i18n-aria-label="studyguides.chooseSubject">
+          <a href="/studyguides" data-subject="all" aria-current="page" data-i18n="studyguides.all">全部学科</a>
+          <a href="/studyguides/statistics" data-subject="statistics" data-i18n="studyguides.statistics">统计学</a>
+          <a href="/studyguides/neuroscience" data-subject="neuroscience" data-i18n="studyguides.neuroscience">神经科学</a>
+          <a href="/studyguides/english" data-subject="english" data-i18n="studyguides.english">英语文学</a>
+        </nav>
+        <div class="search-field">
+          <span aria-hidden="true">⌕</span>
+          <label class="sr-only" for="study-search" data-i18n="studyguides.searchLabel">搜索标题或知识范围</label>
+          <input id="study-search" type="search" placeholder="搜索标题或知识范围…" data-i18n-placeholder="studyguides.searchPlaceholder" autocomplete="off">
+        </div>
+      </div>
+      <div class="catalog-status"><span id="results-count" role="status" aria-live="polite"></span><span data-i18n="studyguides.publicAccess">公开阅读 · 无需登录</span></div>
+      <div id="catalog-results"><p class="state-message" role="status" data-i18n="studyguides.loading">正在整理资料…</p></div>
+      <noscript><p class="state-message">请启用 JavaScript 浏览资料目录。 / Enable JavaScript to browse the archive.</p></noscript>
+    </section>
+  </main>
+  <footer><a class="footer-brand" href="/">MOSANKAI</a><p data-i18n="studyguides.footer">Keep learning. Keep connecting.</p><a href="#archive-title" data-i18n="studyguides.top">返回顶部 ↑</a></footer>
+</body>
+</html>

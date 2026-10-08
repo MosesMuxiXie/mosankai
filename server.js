@@ -19,6 +19,12 @@ app.get(['/findatime/admin', '/findatime/admin/'], (req, res) => (
 ));
 app.all('/api/mcp', require('./lib/findatimeMcpHttp'));
 app.use(bodyParser.json({ limit: '3mb' }));
+app.get([
+  '/studyguides', '/studyguides/',
+  '/studyguides/statistics', '/studyguides/statistics/',
+  '/studyguides/neuroscience', '/studyguides/neuroscience/',
+  '/studyguides/english', '/studyguides/english/'
+], (req, res) => res.sendFile(path.join(__dirname, 'public', 'studyguides', 'index.html')));
 app.use(express.static('public'));
 
 function setAdminPageHeaders(res) {

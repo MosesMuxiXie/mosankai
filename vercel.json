@@ -61,6 +61,14 @@
       }
     ],
     "rewrites": [
+      { "source": "/studyguides", "destination": "/studyguides/index.html" },
+      { "source": "/studyguides/", "destination": "/studyguides/index.html" },
+      { "source": "/studyguides/statistics", "destination": "/studyguides/index.html" },
+      { "source": "/studyguides/statistics/", "destination": "/studyguides/index.html" },
+      { "source": "/studyguides/neuroscience", "destination": "/studyguides/index.html" },
+      { "source": "/studyguides/neuroscience/", "destination": "/studyguides/index.html" },
+      { "source": "/studyguides/english", "destination": "/studyguides/index.html" },
+      { "source": "/studyguides/english/", "destination": "/studyguides/index.html" },
       { "source": "/api/mcp", "destination": "/api/findatime?operation=mcp" },
       { "source": "/api/findatime/visit", "destination": "/api/findatime?operation=visit" },
       { "source": "/admin", "destination": "/blog-admin.html" },

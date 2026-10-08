@@ -2,21 +2,31 @@
 
 ## 中文
 
-Mosankai 是一个个人网站，包含以下两个主要部分：
+Mosankai 是一个个人网站，包含以下三个主要部分：
 
 - **Find a Time**：帮助多人分享空闲时间并找到合适的共同时间。
 - **博客**：用于发布和阅读文章、想法与近况。
+- **复习资料**：在 [Study Guides](https://mosankai.com/studyguides) 按统计学、神经科学和英语文学浏览交互复习页面、思维导图及原始课件、试卷与阅读文本。
 
 网站地址：[https://mosankai.com](https://mosankai.com)
 
 ## English
 
-Mosankai is a personal website with two main sections:
+Mosankai is a personal website with three main sections:
 
 - **Find a Time**: A tool that helps groups share their availability and find a suitable time for everyone.
 - **Blog**: A place to publish and read articles, ideas, and updates.
+- **Study Guides**: [A subject archive](https://mosankai.com/studyguides) of interactive reviews, knowledge maps, slides, exam papers and reading materials for statistics, neuroscience and English literature.
 
 Website: [https://mosankai.com](https://mosankai.com)
+
+## Study Guides
+
+资料目录由 `public/studyguides/catalog.json` 管理，当前收录 5 份交互成品与 25 份原始资料。学科地址为 `/studyguides/statistics`、`/studyguides/neuroscience`、`/studyguides/english`；目录支持中英文、标题与范围搜索，原页面保留原有语言和交互。PDF 支持阅读与下载，PPT/PPTX/DOCX 提供原文件下载。教材和小说原文件是全文，卡片单独注明复习所使用的章节范围。
+
+新增资料时，将文件放入对应学科的 `guides/` 或 `sources/` 目录，在清单中增加唯一 `id`、`subject`、`kind`、中英文 `title`/`scope`、`format`、原始 `filename`、URL 编码后的 `href` 和 `bytes`；原始资料还须记录 SHA-256 `sha256`。交互页面加上 `data-studyguide-return` 返回链接。运行 `node --test test/studyguides.test.js` 检查条目、文件、原始哈希、访问路由和下载，再运行 `npm test`。
+
+全部原始资料约 146 MiB，采用现有 Vercel Git 集成部署，不通过受源码上传体积限制的 Hobby CLI 上传流程；没有增加服务端函数。历史思维导图的一份临时来源 PDF 已缺失，目录如实注明，现有第 2 章课件仍可下载。
 
 ## Findatime MCP
 

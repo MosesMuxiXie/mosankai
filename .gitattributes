@@ -1,0 +1,2 @@
+# Preserve imported documents and HTML assets byte-for-byte on every platform.
+public/studyguides/** -text

@@ -1,0 +1,574 @@
+{
+  "subjects": [
+    {
+      "id": "statistics",
+      "title": {
+        "en": "Statistics",
+        "zh-CN": "统计学"
+      },
+      "description": {
+        "en": "Read the data. Understand the pattern.",
+        "zh-CN": "读懂数据，看见规律。"
+      }
+    },
+    {
+      "id": "neuroscience",
+      "title": {
+        "en": "Neuroscience",
+        "zh-CN": "神经科学"
+      },
+      "description": {
+        "en": "From neurons to the resting membrane.",
+        "zh-CN": "从神经元到静息膜电位。"
+      }
+    },
+    {
+      "id": "english",
+      "title": {
+        "en": "English Literature",
+        "zh-CN": "英语文学"
+      },
+      "description": {
+        "en": "Read closely. Build a defensible claim.",
+        "zh-CN": "细读文本，建立可论证的观点。"
+      }
+    }
+  ],
+  "materials": [
+    {
+      "id": "statistics-review",
+      "subject": "statistics",
+      "kind": "guide",
+      "title": {
+        "en": "Statistics Fieldnotes",
+        "zh-CN": "看见数据 · 统计复习手册"
+      },
+      "scope": {
+        "en": "Chapter 1–§2.2 · 4 interactive charts · 20 practice questions",
+        "zh-CN": "第 1 章至 §2.2 · 4 个交互图表 · 20 道练习"
+      },
+      "format": "HTML",
+      "filename": "statistics-review.html",
+      "href": "/studyguides/statistics/guides/statistics-review.html",
+      "bytes": 44415
+    },
+    {
+      "id": "neuroscience-review",
+      "subject": "neuroscience",
+      "kind": "guide",
+      "title": {
+        "en": "Neuro Notes · Exam Practice",
+        "zh-CN": "神经科学 · 考前复习指南"
+      },
+      "scope": {
+        "en": "Chapters 1–3 · 90 MCQs · 30 short responses · 3 mock exams",
+        "zh-CN": "第 1–3 章 · 90 道选择题 · 30 道简答题 · 3 套模拟卷"
+      },
+      "format": "HTML",
+      "filename": "neuroscience-study-guide.html",
+      "href": "/studyguides/neuroscience/guides/neuroscience-study-guide.html",
+      "bytes": 151173
+    },
+    {
+      "id": "neuron-glia-map",
+      "subject": "neuroscience",
+      "kind": "guide",
+      "title": {
+        "en": "Neurons & Glia · Mind Map",
+        "zh-CN": "神经元与胶质细胞 · 思维导图"
+      },
+      "scope": {
+        "en": "Chapter 2 · 8 branches · 95 entries · process animations",
+        "zh-CN": "第 2 章 · 8 个分支 · 95 个条目 · 过程动画"
+      },
+      "format": "HTML",
+      "filename": "neuron-glia-mindmap.html",
+      "href": "/studyguides/neuroscience/guides/neuron-glia-mindmap.html",
+      "bytes": 2212474
+    },
+    {
+      "id": "literature-review",
+      "subject": "english",
+      "kind": "guide",
+      "title": {
+        "en": "AP Literature · First Monthly Test",
+        "zh-CN": "AP 英语文学 · 首次月考复习档案"
+      },
+      "scope": {
+        "en": "Fiction concepts · Androids chapters 1–9 · claims · 23 self-test questions",
+        "zh-CN": "小说要素 ·《仿生人》前 9 章 · 论点写作 · 23 道自测题"
+      },
+      "format": "HTML",
+      "filename": "ap-literature-review.html",
+      "href": "/studyguides/english/guides/ap-literature-review.html",
+      "bytes": 1339192
+    },
+    {
+      "id": "literature-map",
+      "subject": "english",
+      "kind": "guide",
+      "title": {
+        "en": "AP Literature · Revision Map",
+        "zh-CN": "AP 英语文学 · 月考知识结构图"
+      },
+      "scope": {
+        "en": "Concept connections · texts · writing · interactive overview",
+        "zh-CN": "概念联系 · 阅读文本 · 写作 · 交互全览"
+      },
+      "format": "HTML",
+      "filename": "ap-literature-map.html",
+      "href": "/studyguides/english/guides/ap-literature-map.html",
+      "bytes": 717822
+    },
+    {
+      "id": "stats-ch-1_0",
+      "subject": "statistics",
+      "kind": "source",
+      "title": {
+        "en": "Statistics §1.0 · Introduction to Data",
+        "zh-CN": "统计学 §1.0 · 数据导论"
+      },
+      "scope": {
+        "en": "Classroom slides · Chapter 1.0",
+        "zh-CN": "课堂课件 · 第 1.0 节"
+      },
+      "format": "PPT",
+      "filename": "tps5e_Ch1_0.ppt",
+      "href": "/studyguides/statistics/sources/tps5e_Ch1_0.ppt",
+      "bytes": 4627968,
+      "sha256": "a0466336d63b4b5f52f16cacde5d2bbc7c66b1e7782b35f4e1ac04761c8ee9d1"
+    },
+    {
+      "id": "stats-ch-1_1",
+      "subject": "statistics",
+      "kind": "source",
+      "title": {
+        "en": "Statistics §1.1 · Analyzing Categorical Data",
+        "zh-CN": "统计学 §1.1 · 分析分类数据"
+      },
+      "scope": {
+        "en": "Classroom slides · Chapter 1.1",
+        "zh-CN": "课堂课件 · 第 1.1 节"
+      },
+      "format": "PPT",
+      "filename": "tps5e_Ch1_1.ppt",
+      "href": "/studyguides/statistics/sources/tps5e_Ch1_1.ppt",
+      "bytes": 6163968,
+      "sha256": "883054a41555bb68db2f3f3e80839b6cf8e7034d92b6e1757f883e8d83b3ccf4"
+    },
+    {
+      "id": "stats-ch-1_2",
+      "subject": "statistics",
+      "kind": "source",
+      "title": {
+        "en": "Statistics §1.2 · Displaying Quantitative Data",
+        "zh-CN": "统计学 §1.2 · 展示定量数据"
+      },
+      "scope": {
+        "en": "Classroom slides · Chapter 1.2",
+        "zh-CN": "课堂课件 · 第 1.2 节"
+      },
+      "format": "PPT",
+      "filename": "tps5e_Ch1_2.ppt",
+      "href": "/studyguides/statistics/sources/tps5e_Ch1_2.ppt",
+      "bytes": 6180864,
+      "sha256": "69099a78348cd0181ee97723bc82832c11c161050824eaa3656283a737761c8a"
+    },
+    {
+      "id": "stats-ch-1_3",
+      "subject": "statistics",
+      "kind": "source",
+      "title": {
+        "en": "Statistics §1.3 · Describing Quantitative Data",
+        "zh-CN": "统计学 §1.3 · 描述定量数据"
+      },
+      "scope": {
+        "en": "Classroom slides · Chapter 1.3",
+        "zh-CN": "课堂课件 · 第 1.3 节"
+      },
+      "format": "PPT",
+      "filename": "tps5e_Ch1_3.ppt",
+      "href": "/studyguides/statistics/sources/tps5e_Ch1_3.ppt",
+      "bytes": 6726656,
+      "sha256": "026b0d8b7ecc340cb5ff7c72e011c6cce04c962f218b955d5d251b24abb592d8"
+    },
+    {
+      "id": "stats-ch-2_1",
+      "subject": "statistics",
+      "kind": "source",
+      "title": {
+        "en": "Statistics §2.1 · Describing Location in a Distribution",
+        "zh-CN": "统计学 §2.1 · 分布中的位置"
+      },
+      "scope": {
+        "en": "Classroom slides · Chapter 2.1",
+        "zh-CN": "课堂课件 · 第 2.1 节"
+      },
+      "format": "PPT",
+      "filename": "tps5e_Ch2_1.ppt",
+      "href": "/studyguides/statistics/sources/tps5e_Ch2_1.ppt",
+      "bytes": 5945344,
+      "sha256": "08c94ad7417a74308c1e49b43038b3a270a39424dec2ec8c6c857c79e006dafb"
+    },
+    {
+      "id": "stats-ch-2_2",
+      "subject": "statistics",
+      "kind": "source",
+      "title": {
+        "en": "Statistics §2.2 · Normal Distributions",
+        "zh-CN": "统计学 §2.2 · 正态分布"
+      },
+      "scope": {
+        "en": "Classroom slides · Chapter 2.2",
+        "zh-CN": "课堂课件 · 第 2.2 节"
+      },
+      "format": "PPT",
+      "filename": "tps5e_Ch2_2.ppt",
+      "href": "/studyguides/statistics/sources/tps5e_Ch2_2.ppt",
+      "bytes": 7937024,
+      "sha256": "cf7f143623ad6e0fedb4cef96f4debd47ff46d56eae78af93d4199474735a6c7"
+    },
+    {
+      "id": "stats-textbook",
+      "subject": "statistics",
+      "kind": "source",
+      "title": {
+        "en": "The Practice of Statistics · 6th Edition",
+        "zh-CN": "The Practice of Statistics · 第 6 版教材"
+      },
+      "scope": {
+        "en": "Full source PDF · review uses Chapter 1–§2.2",
+        "zh-CN": "原始教材全文 · 复习使用第 1 章至 §2.2"
+      },
+      "format": "PDF",
+      "filename": "The_Practice_of_Statistics__6th_Edition_by_Starnes.c2.pdf",
+      "href": "/studyguides/statistics/sources/The_Practice_of_Statistics__6th_Edition_by_Starnes.c2.pdf",
+      "bytes": 25613998,
+      "sha256": "6bb448874e1a11cf8e3a30ddcb968a781360b8bed5de943827d9e1447801b457"
+    },
+    {
+      "id": "neuro-ch1",
+      "subject": "neuroscience",
+      "kind": "source",
+      "title": {
+        "en": "Chapter 1 · Past, Present & Future",
+        "zh-CN": "第 1 章 · 神经科学的过去、现在与未来"
+      },
+      "scope": {
+        "en": "Chapter 1 · classroom notes",
+        "zh-CN": "第 1 章 · 课堂资料"
+      },
+      "format": "PDF",
+      "filename": "Chapter1_ Neuroscience-Past, Present, Future.pdf",
+      "href": "/studyguides/neuroscience/sources/Chapter1_%20Neuroscience-Past%2C%20Present%2C%20Future.pdf",
+      "bytes": 8430615,
+      "sha256": "5563b0051ea818872ac6575efb832c2d1c706a926bbf0b67c7ce87ac4521ac31"
+    },
+    {
+      "id": "neuro-ch2",
+      "subject": "neuroscience",
+      "kind": "source",
+      "title": {
+        "en": "Chapter 2 · Neurons & Glia",
+        "zh-CN": "第 2 章 · 神经元与胶质细胞"
+      },
+      "scope": {
+        "en": "Chapter 2 · classroom notes",
+        "zh-CN": "第 2 章 · 课堂资料"
+      },
+      "format": "PDF",
+      "filename": "Chapter2 Neuron & Glia.pdf",
+      "href": "/studyguides/neuroscience/sources/Chapter2%20Neuron%20%26%20Glia.pdf",
+      "bytes": 6587518,
+      "sha256": "f811205c63db8a0a4827df31a5e112a7570d25a830478059bb2bf8751c30bf7c"
+    },
+    {
+      "id": "neuro-ch3",
+      "subject": "neuroscience",
+      "kind": "source",
+      "title": {
+        "en": "Chapter 3 · Resting Potential",
+        "zh-CN": "第 3 章 · 静息电位"
+      },
+      "scope": {
+        "en": "Chapter 3 · classroom notes",
+        "zh-CN": "第 3 章 · 课堂资料"
+      },
+      "format": "PDF",
+      "filename": "Chapter3 Resting Potential.pdf",
+      "href": "/studyguides/neuroscience/sources/Chapter3%20Resting%20Potential.pdf",
+      "bytes": 3776976,
+      "sha256": "6bbb1d032d428881994dc7fa85a89be7527f3b628b93056b72dff50eb3607f89"
+    },
+    {
+      "id": "neuro-paper-a",
+      "subject": "neuroscience",
+      "kind": "source",
+      "title": {
+        "en": "Monthly Exam · Paper A",
+        "zh-CN": "月考试卷 · A 卷"
+      },
+      "scope": {
+        "en": "Original exam · chapters 1–3",
+        "zh-CN": "原始试卷 · 第 1–3 章"
+      },
+      "format": "PDF",
+      "filename": "1st Monthly Exam 25-26 Va .pdf",
+      "href": "/studyguides/neuroscience/sources/1st%20Monthly%20Exam%2025-26%20Va%20.pdf",
+      "bytes": 269455,
+      "sha256": "6f36edd9d97dbf9ab7748aa462cfa793aeeb30875bf7f281b31efbac26753b10"
+    },
+    {
+      "id": "neuro-paper-b",
+      "subject": "neuroscience",
+      "kind": "source",
+      "title": {
+        "en": "Monthly Exam · Paper B",
+        "zh-CN": "月考试卷 · B 卷"
+      },
+      "scope": {
+        "en": "Original exam · chapters 1–3",
+        "zh-CN": "原始试卷 · 第 1–3 章"
+      },
+      "format": "PDF",
+      "filename": "neuroscience 1st Monthly Exam Va .pdf",
+      "href": "/studyguides/neuroscience/sources/neuroscience%201st%20Monthly%20Exam%20Va%20.pdf",
+      "bytes": 770748,
+      "sha256": "35771cd8f410af528db2b6a0e7e9154e3df2d7d8438d093e2b164c707d7cf0d7"
+    },
+    {
+      "id": "neuro-mark-a",
+      "subject": "neuroscience",
+      "kind": "source",
+      "title": {
+        "en": "Monthly Exam · Paper A Mark Scheme",
+        "zh-CN": "月考试卷 · A 卷评分参考"
+      },
+      "scope": {
+        "en": "Mark scheme · used for answer calibration",
+        "zh-CN": "评分参考 · 用于答案校准"
+      },
+      "format": "PDF",
+      "filename": "1st Monthly Exam 25-26 Va MS.pdf",
+      "href": "/studyguides/neuroscience/sources/1st%20Monthly%20Exam%2025-26%20Va%20MS.pdf",
+      "bytes": 1382561,
+      "sha256": "3a39b259978f31bf2d32e01fdfcc02c663107414c5ed95e6ecfd57bf5bd761e7"
+    },
+    {
+      "id": "neuro-mark-b",
+      "subject": "neuroscience",
+      "kind": "source",
+      "title": {
+        "en": "Monthly Exam · Paper B Follow-up",
+        "zh-CN": "月考试卷 · B 卷补充版本"
+      },
+      "scope": {
+        "en": "Follow-up source · used for answer calibration",
+        "zh-CN": "补充资料 · 用于答案校准"
+      },
+      "format": "PDF",
+      "filename": "neuroscience 1st Monthly Exam Va  (2).pdf",
+      "href": "/studyguides/neuroscience/sources/neuroscience%201st%20Monthly%20Exam%20Va%20%20(2).pdf",
+      "bytes": 1072303,
+      "sha256": "332664c8e480eb489810580e37f641de6c0f46ba6ba0ce0ea3b01ee7e6b125fc"
+    },
+    {
+      "id": "neuro-textbook",
+      "subject": "neuroscience",
+      "kind": "source",
+      "title": {
+        "en": "Neuroscience: Exploring the Brain",
+        "zh-CN": "Neuroscience: Exploring the Brain · 教材"
+      },
+      "scope": {
+        "en": "Full source PDF · review covers chapters 1–3",
+        "zh-CN": "原始教材全文 · 复习范围为第 1–3 章"
+      },
+      "format": "PDF",
+      "filename": "Neuroscience_ Exploring the Brain (2015).pdf",
+      "href": "/studyguides/neuroscience/sources/Neuroscience_%20Exploring%20the%20Brain%20(2015).pdf",
+      "bytes": 49666859,
+      "sha256": "2362a7b7774c8c01652af88f70fb6f244dc5e87ceea5fc835d6d15349375262c"
+    },
+    {
+      "id": "lit-intro",
+      "subject": "english",
+      "kind": "source",
+      "title": {
+        "en": "Elements of Fiction · Introduction",
+        "zh-CN": "小说要素 · 导论"
+      },
+      "scope": {
+        "en": "Classroom slides · fiction concepts",
+        "zh-CN": "课堂课件 · 小说基本概念"
+      },
+      "format": "PPTX",
+      "filename": "Elements_of_Fiction_Intro__1_.pptx",
+      "href": "/studyguides/english/sources/Elements_of_Fiction_Intro__1_.pptx",
+      "bytes": 6716905,
+      "sha256": "94f6a968f5ab430583bbcd59afe9b11fc9e485204bd0df7f5f237cec143d2ef3"
+    },
+    {
+      "id": "lit-plot",
+      "subject": "english",
+      "kind": "source",
+      "title": {
+        "en": "Elements of Fiction · Plot & POV",
+        "zh-CN": "小说要素 · 情节与叙述视角"
+      },
+      "scope": {
+        "en": "Classroom slides · plot and point of view",
+        "zh-CN": "课堂课件 · 情节与叙述视角"
+      },
+      "format": "PPTX",
+      "filename": "Elements__of_Fiction__Plot___POV__3_.pptx",
+      "href": "/studyguides/english/sources/Elements__of_Fiction__Plot___POV__3_.pptx",
+      "bytes": 1538265,
+      "sha256": "412ac076b2bb8afcf0f48d57220c2ed65ba7633de4bdbe95c04f4bb45e0c5426"
+    },
+    {
+      "id": "lit-setting",
+      "subject": "english",
+      "kind": "source",
+      "title": {
+        "en": "Elements of Fiction · Setting",
+        "zh-CN": "小说要素 · 背景"
+      },
+      "scope": {
+        "en": "Classroom slides · setting",
+        "zh-CN": "课堂课件 · 背景"
+      },
+      "format": "PPTX",
+      "filename": "Elements_of_Fiction__Setting__1_.pptx",
+      "href": "/studyguides/english/sources/Elements_of_Fiction__Setting__1_.pptx",
+      "bytes": 4781088,
+      "sha256": "987733664d6f374fb1417ab8c6ef0e474ab0c094d5a61e6ee9881c6427b29af2"
+    },
+    {
+      "id": "lit-setting-sheet",
+      "subject": "english",
+      "kind": "source",
+      "title": {
+        "en": "Setting · Study Sheet",
+        "zh-CN": "背景 · 学习单"
+      },
+      "scope": {
+        "en": "Classroom worksheet · setting",
+        "zh-CN": "课堂学习单 · 背景"
+      },
+      "format": "PDF",
+      "filename": "Setting_Study_Sheet.pdf",
+      "href": "/studyguides/english/sources/Setting_Study_Sheet.pdf",
+      "bytes": 3076,
+      "sha256": "80f32b975bab59f5756083cba7ff16bf319c644a6e3e9b8bab1accf224e07d60"
+    },
+    {
+      "id": "lit-claim",
+      "subject": "english",
+      "kind": "source",
+      "title": {
+        "en": "Developing a Defensible Claim",
+        "zh-CN": "建立可论证的论点"
+      },
+      "scope": {
+        "en": "Classroom slides · claims and writing rubric",
+        "zh-CN": "课堂课件 · 论点与写作量表"
+      },
+      "format": "PPTX",
+      "filename": "Developing_a_Defensible_Claim.pptx",
+      "href": "/studyguides/english/sources/Developing_a_Defensible_Claim.pptx",
+      "bytes": 2848896,
+      "sha256": "99dec484d929bf076f9cc0452d08d4789da6f67ade774bb3a0453bf7343d3a04"
+    },
+    {
+      "id": "lit-chopin",
+      "subject": "english",
+      "kind": "source",
+      "title": {
+        "en": "The Story of an Hour · Kate Chopin",
+        "zh-CN": "《一小时的故事》· 凯特·肖邦"
+      },
+      "scope": {
+        "en": "Short-story source text",
+        "zh-CN": "短篇阅读原文"
+      },
+      "format": "PDF",
+      "filename": "Story_of_an_Hour_-_Kate_Chopin.pdf",
+      "href": "/studyguides/english/sources/Story_of_an_Hour_-_Kate_Chopin.pdf",
+      "bytes": 65577,
+      "sha256": "9acf59e3fa236be254a3585252891f596565411ef0f7562d06194f9e5dede8ca"
+    },
+    {
+      "id": "lit-grimm",
+      "subject": "english",
+      "kind": "source",
+      "title": {
+        "en": "Snow White · Grimm",
+        "zh-CN": "《白雪公主》· 格林童话"
+      },
+      "scope": {
+        "en": "Short-story source text",
+        "zh-CN": "短篇阅读原文"
+      },
+      "format": "PDF",
+      "filename": "Snow_White_-_Grimm_s_Fairy_Tale.pdf",
+      "href": "/studyguides/english/sources/Snow_White_-_Grimm_s_Fairy_Tale.pdf",
+      "bytes": 21100,
+      "sha256": "1d5db44864a398c6a6c4b615b6c6b6ff458115606ae6806319f4f472a0c9787d"
+    },
+    {
+      "id": "lit-gaiman",
+      "subject": "english",
+      "kind": "source",
+      "title": {
+        "en": "Snow, Glass, Apples · School Edit",
+        "zh-CN": "《白雪、玻璃、苹果》· 课堂版本"
+      },
+      "scope": {
+        "en": "Classroom-edited source text",
+        "zh-CN": "课堂编辑版阅读文本"
+      },
+      "format": "DOCX",
+      "filename": "Snow_Glass_and_Apples_School_Edit.docx",
+      "href": "/studyguides/english/sources/Snow_Glass_and_Apples_School_Edit.docx",
+      "bytes": 30426,
+      "sha256": "201e019de21178a3c3bcf3d1513e33fdfc6b88ac2a3b93a67ac0ac1cf54d31cf"
+    },
+    {
+      "id": "lit-rebecca",
+      "subject": "english",
+      "kind": "source",
+      "title": {
+        "en": "Rebecca · Daphne du Maurier",
+        "zh-CN": "《蝴蝶梦》· 达芙妮·杜穆里埃"
+      },
+      "scope": {
+        "en": "Full source PDF · review uses the opening chapter",
+        "zh-CN": "原始文本全文 · 复习使用开篇章节"
+      },
+      "format": "PDF",
+      "filename": "Daphne__Du_Maurier_-_Rebecca__2010__-_libgen.li.pdf",
+      "href": "/studyguides/english/sources/Daphne__Du_Maurier_-_Rebecca__2010__-_libgen.li.pdf",
+      "bytes": 1625290,
+      "sha256": "d35258b84a4cf395e234d81695a2c48b2d973a8a778c69ad3822d7b042e522b1"
+    },
+    {
+      "id": "lit-androids",
+      "subject": "english",
+      "kind": "source",
+      "title": {
+        "en": "Do Androids Dream of Electric Sheep?",
+        "zh-CN": "《仿生人会梦见电子羊吗？》"
+      },
+      "scope": {
+        "en": "Full source PDF · review limited to chapters 1–9",
+        "zh-CN": "原始文本全文 · 复习限定前 9 章"
+      },
+      "format": "PDF",
+      "filename": "Do_Androids_Dream_of_Electric_Sheep_z_library_sk,_1lib_sk,.pdf",
+      "href": "/studyguides/english/sources/Do_Androids_Dream_of_Electric_Sheep_z_library_sk%2C_1lib_sk%2C.pdf",
+      "bytes": 528349,
+      "sha256": "156030d83cc528dcf1b98cc29967eaee06eff0126128f7e8bb86c4218f1181cf"
+    }
+  ]
+}
