@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f2e8e2">
+  <meta name="theme-color" content="#f6efe7">
   <meta name="description" content="按学科整理的交互复习手册、思维导图、课件与阅读资料。" data-i18n-content="studyguides.description">
   <title data-i18n="studyguides.pageTitle">Study Guides · Mosankai</title>
   <link rel="icon" href="/favicon.png">
@@ -14,6 +14,9 @@
   <script src="/studyguides/studyguides.js" defer></script>
 </head>
 <body>
+  <div class="archive-atmosphere" aria-hidden="true">
+    <img src="/studyguides/assets/dusk-reading-room.webp" width="1659" height="948" alt="" fetchpriority="high">
+  </div>
   <a class="skip-link" href="#study-catalog" data-i18n="studyguides.skip">跳到资料目录</a>
   <header class="site-header">
     <a class="wordmark" href="/" aria-label="MOSANKAI home">MOSANKAI<span>/ STUDY GUIDES</span></a>
@@ -29,15 +32,10 @@
         <h1 id="archive-title"><span data-i18n="studyguides.heroLine1">留一点安静，</span><br><span class="accent" data-i18n="studyguides.heroLine2">给新的理解。</span></h1>
         <p class="hero-description" data-i18n="studyguides.intro">把学过的内容，变成下一次理解的起点。交互复习、知识地图和原始资料，都在这里。</p>
       </div>
-      <div class="dusk-scene" aria-hidden="true">
-        <div class="dusk-window"><span class="dusk-sun"></span><span class="dusk-hill"></span></div>
-        <div class="dusk-books"><i></i><i></i><i></i></div>
-        <p data-i18n="studyguides.quietPlace">在暮色里，慢慢读。</p>
-      </div>
       <dl class="archive-stats" aria-label="Archive totals" data-i18n-aria-label="studyguides.totals">
-        <div><dt data-i18n="studyguides.subjects">学科分区</dt><dd id="subject-count">03</dd></div>
-        <div><dt data-i18n="studyguides.guides">交互复习</dt><dd id="guide-count">05</dd></div>
-        <div><dt data-i18n="studyguides.sources">原始资料</dt><dd id="source-count">25</dd></div>
+        <div><dt><span data-i18n="studyguides.subjects">学科分区</span><small data-i18n="studyguides.subjectsNote">按学科探索，系统整理</small></dt><dd id="subject-count">03</dd></div>
+        <div><dt><span data-i18n="studyguides.guides">交互复习</span><small data-i18n="studyguides.guidesNote">多种方式，加深理解</small></dt><dd id="guide-count">05</dd></div>
+        <div><dt><span data-i18n="studyguides.sources">原始资料</span><small data-i18n="studyguides.sourcesNote">经典资料，长期保存</small></dt><dd id="source-count">25</dd></div>
       </dl>
     </section>
     <section class="catalog" id="study-catalog" aria-label="Study materials" data-i18n-aria-label="studyguides.catalog">
@@ -49,9 +47,10 @@
           <a href="/studyguides/english" data-subject="english" data-i18n="studyguides.english">英语文学</a>
         </nav>
         <div class="search-field">
-          <span aria-hidden="true">⌕</span>
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
           <label class="sr-only" for="study-search" data-i18n="studyguides.searchLabel">搜索标题或知识范围</label>
           <input id="study-search" type="search" placeholder="搜索标题或知识范围…" data-i18n-placeholder="studyguides.searchPlaceholder" autocomplete="off">
+          <a class="search-jump" href="#catalog-results" aria-label="查看搜索结果" data-i18n-aria-label="studyguides.viewResults"><span aria-hidden="true">→</span></a>
         </div>
       </div>
       <div class="catalog-status"><span id="results-count" role="status" aria-live="polite"></span><span data-i18n="studyguides.publicAccess">公开阅读 · 无需登录</span></div>
