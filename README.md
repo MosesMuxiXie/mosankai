@@ -34,6 +34,8 @@ Website: [https://mosankai.com](https://mosankai.com)
 
 雨景与封面使用内置 imagegen 生成，无文字；WebP 图片位于 `public/gallery/assets/`。生成提示分别为冷灰蓝雨窗城市与少量暖光、普通冰与含水阶梯、方块地形及线框转换、无人物的雨城叙事场景。页面不包含情绪标语或设计说明。
 
+全部 9 个初始作品均有独立封面；补齐的 6 张分别呈现身份验证通道、附魔模板、传播网络、日程交集、计时器及个人网站工作台。生成方式与完整提示见 [封面素材记录](docs/gallery-cover-prompts.md)。
+
 运行 `node --test test/works.test.js test/gallery.test.js` 和 `npm test` 验证作品数据、并发版本保存、权限、来源校验、隐藏作品、资源路由与现有功能。沿用现有 Vercel Git 部署；函数配置包含初始作品清单。
 
 ## Study Guides

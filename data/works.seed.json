@@ -34,7 +34,7 @@
   },
   {
     "slug": "compat-login", "title": "Compat-Login", "category": "minecraft", "visible": true, "featured": false,
-    "tags": ["Minecraft", "Fabric", "Java"], "cover": "",
+    "tags": ["Minecraft", "Fabric", "Java"], "cover": "/gallery/assets/compat-login.webp",
     "summary": {"zh-CN": "让同一 Fabric 服务器验证不同可信身份源的玩家会话。", "en": "Verify players from multiple trusted identity providers on one Fabric server."},
     "details": {
       "problem": {"zh-CN": "同一服务器需要兼容正版与第三方 Yggdrasil 账号。", "en": "A server needs to accept official and third-party Yggdrasil accounts."},
@@ -45,7 +45,7 @@
   },
   {
     "slug": "arsa", "title": "Arsa", "category": "minecraft", "visible": true, "featured": false,
-    "tags": ["Minecraft", "Fabric", "Java"], "cover": "",
+    "tags": ["Minecraft", "Fabric", "Java"], "cover": "/gallery/assets/arsa.webp",
     "summary": {"zh-CN": "将附魔书制成可复制、一次性使用的附魔模板。", "en": "Turn enchanted books into copyable, single-use enchantment templates."},
     "details": {
       "problem": {"zh-CN": "为多个物品重复制作相同附魔需要重复操作。", "en": "Applying the same enchantments to multiple items takes repeated work."},
@@ -56,7 +56,7 @@
   },
   {
     "slug": "virusmodel", "title": "virusmodel", "category": "research", "visible": true, "featured": false,
-    "tags": ["SIR", "Modeling", "Research"], "cover": "",
+    "tags": ["SIR", "Modeling", "Research"], "cover": "/gallery/assets/virusmodel.webp",
     "summary": {"zh-CN": "基于 SIR 模型研究个人网络使用习惯与网络病毒传播。", "en": "Research on network usage habits and computer virus spread using an SIR model."},
     "details": {
       "problem": {"zh-CN": "研究个人计算机使用习惯与网络病毒感染风险之间的关系。", "en": "Investigate the relationship between computer usage habits and infection risk."},
@@ -67,7 +67,7 @@
   },
   {
     "slug": "findatime", "title": "FindaTime", "category": "tools", "visible": true, "featured": false,
-    "tags": ["WeChat", "JavaScript", "Mini Program"], "cover": "",
+    "tags": ["WeChat", "JavaScript", "Mini Program"], "cover": "/gallery/assets/findatime.webp",
     "summary": {"zh-CN": "用于寻找共同空闲时间的微信小程序。", "en": "A WeChat mini program for finding a time everyone can attend."},
     "details": {
       "problem": {"zh-CN": "多人活动需要协调每个人的空闲时间。", "en": "Group activities require coordinating everyone's availability."},
@@ -78,7 +78,7 @@
   },
   {
     "slug": "timer", "title": "timer", "category": "tools", "visible": true, "featured": false,
-    "tags": ["WeChat", "TypeScript", "Mini Program"], "cover": "",
+    "tags": ["WeChat", "TypeScript", "Mini Program"], "cover": "/gallery/assets/timer.webp",
     "summary": {"zh-CN": "一个使用 TypeScript 开发的微信计时器小程序。", "en": "A simple WeChat timer mini program written in TypeScript."},
     "details": {
       "problem": {"zh-CN": "在微信小程序中提供简单的计时功能。", "en": "Provide simple timing functionality in a WeChat mini program."},
@@ -89,7 +89,7 @@
   },
   {
     "slug": "mosankai", "title": "Mosankai", "category": "tools", "visible": true, "featured": false,
-    "tags": ["JavaScript", "Express", "MCP"], "cover": "",
+    "tags": ["JavaScript", "Express", "MCP"], "cover": "/gallery/assets/mosankai.webp",
     "summary": {"zh-CN": "个人网站，包含博客、约时间工具与交互复习资料。", "en": "A personal website with a blog, scheduling tool and interactive study guides."},
     "details": {
       "problem": {"zh-CN": "为个人内容、学习资料和实用工具提供统一入口。", "en": "Provide one place for personal writing, learning resources and useful tools."},
