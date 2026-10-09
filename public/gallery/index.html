@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10171d">
+  <meta name="description" content="Mos_X 的作品馆：Minecraft 模组、工具与网站、研究和叙事实验。">
+  <meta property="og:title" content="作品馆 · MOSANKAI">
+  <meta property="og:description" content="Minecraft 模组、工具与网站、研究和叙事实验。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://mosankai.com/gallery/assets/rain-window.webp">
+  <title>作品馆 · MOSANKAI</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/i18n.css">
+  <link rel="stylesheet" href="/gallery/gallery.css">
+  <script src="/i18n.js" defer></script>
+  <script src="/gallery/gallery.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#gallery-main" data-copy="skip">跳转到作品</a>
+  <header class="gallery-header">
+    <a class="wordmark" href="/" aria-label="MOSANKAI 首页">MOSANKAI</a>
+    <button class="mobile-menu" type="button" aria-controls="gallery-nav" aria-expanded="false" data-label="menu">☰</button>
+    <nav id="gallery-nav" aria-label="主导航">
+      <a href="/" data-copy="home">首页</a>
+      <a href="/gallery" aria-current="page" data-copy="gallery">作品馆</a>
+      <a href="/blog" data-copy="blog">博客</a>
+      <a href="/studyguides" data-copy="study">复习资料</a>
+      <a href="/findatime" data-copy="schedule">约时间</a>
+    </nav>
+    <div class="header-tools">
+      <div id="language-switcher-slot"></div>
+      <a class="github-link" href="https://github.com/MosesMuxiXie" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </div>
+  </header>
+  <main id="gallery-main" tabindex="-1">
+    <div id="gallery-list-view">
+      <section class="gallery-hero" aria-labelledby="gallery-title">
+        <div class="hero-inner">
+          <p class="eyebrow">WORKS / PERSONAL ARCHIVE</p>
+          <h1 id="gallery-title" data-copy="gallery">作品馆</h1>
+          <a class="browse-button" href="#all-works"><span data-copy="browse">浏览作品</span> <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+      <div class="gallery-content">
+        <section id="featured-section" class="featured-section" hidden>
+          <div class="section-heading"><h2 data-copy="featured">精选作品</h2><a href="#all-works"><span data-copy="all">全部作品</span> <span aria-hidden="true">↓</span></a></div>
+          <div id="featured-works" class="featured-grid"></div>
+        </section>
+        <section id="all-works" class="all-section" aria-labelledby="all-title">
+          <div class="archive-toolbar">
+            <h2 id="all-title" data-copy="all">全部作品</h2>
+            <div id="category-filters" class="category-filters" role="group" data-label="filter"></div>
+            <label class="search-field"><span class="sr-only" data-copy="search">搜索作品</span><span aria-hidden="true">⌕</span><input id="work-search" type="search" maxlength="200" placeholder="搜索作品" data-placeholder="search"></label>
+          </div>
+          <p id="results-count" class="results-count" aria-live="polite"></p>
+          <div id="works-status" class="works-status" role="status" aria-live="polite"></div>
+          <button id="gallery-retry" type="button" class="text-button" hidden data-copy="retry">重试</button>
+          <div id="all-works-grid" class="archive-grid"></div>
+        </section>
+      </div>
+    </div>
+    <section id="gallery-detail-view" class="gallery-detail" hidden></section>
+  </main>
+  <footer class="gallery-footer"><a class="wordmark" href="/">MOSANKAI</a><a href="https://github.com/MosesMuxiXie" target="_blank" rel="noopener noreferrer">GitHub ↗</a></footer>
+  <noscript><p class="noscript-note">请启用 JavaScript 浏览作品。 / Enable JavaScript to browse works. <a href="https://github.com/MosesMuxiXie">GitHub</a></p></noscript>
+</body>
+</html>

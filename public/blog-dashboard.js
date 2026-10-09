@@ -187,6 +187,7 @@ function showPanel(panelId) {
     'site-panel': ['网站封面', 'SITE APPEARANCE'],
     'creator-panel': ['主页创作者模式', 'HOMEPAGE CREATOR'],
     'findatime-panel': ['约时间管理', 'FIND A TIME'],
+    'works-panel': ['作品管理', 'GALLERY'],
     'account-panel': ['账号安全', 'ADMIN SECURITY']
   };
   if (!editorMode && !creatorMode) {
@@ -196,6 +197,7 @@ function showPanel(panelId) {
   }
   closeMenu();
   closeStudioPanels();
+  if (panelId === 'works-panel') window.MosankaiWorksAdmin?.load();
 
   if (creatorMode) {
     window.requestAnimationFrame(sendCreatorSettings);
@@ -1679,6 +1681,6 @@ api('/api/blogs/admin/auth')
     byId('dashboard-app').classList.remove('hidden');
     await Promise.all([loadPosts(), loadSiteSettings()]);
     const requestedPanel = new URLSearchParams(window.location.search).get('panel');
-    if (requestedPanel === 'findatime-panel') showPanel('findatime-panel');
+    if (['findatime-panel', 'works-panel'].includes(requestedPanel)) showPanel(requestedPanel);
   })
   .catch(() => window.location.replace('/admin'));

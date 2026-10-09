@@ -16,6 +16,7 @@
   <title>MOSANKAI 管理后台</title>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="stylesheet" href="/blog-admin.css">
+  <link rel="stylesheet" href="/gallery/admin.css">
 </head>
 <body class="dashboard-page">
   <div id="dashboard-loading" class="page-loading">
@@ -49,6 +50,8 @@
         <button class="side-nav-item" type="button" data-panel="account-panel">
           <span>⌁</span> 账号安全
         </button>
+        <button class="side-nav-item" type="button" data-panel="works-panel"><span>▦</span> 作品管理</button>
+        <a class="side-nav-item" href="/gallery" target="_blank" rel="noopener"><span>↗</span> 查看作品馆</a>
         <a class="side-nav-item" href="/blog" target="_blank" rel="noopener">
           <span>↗</span> 查看博客
         </a>
@@ -606,6 +609,39 @@
         </form>
       </section>
 
+      <section id="works-panel" class="dashboard-panel hidden">
+        <div class="library-header">
+          <div><span class="eyebrow ink">GALLERY</span><h2>作品管理</h2></div>
+          <div class="works-admin-actions"><a class="secondary-button" href="/gallery" target="_blank" rel="noopener">查看作品馆 ↗</a><button id="works-reload" class="secondary-button" type="button">重新读取</button><button id="work-new" class="primary-button" type="button" disabled>新增作品</button></div>
+        </div>
+        <p id="works-admin-message" class="form-message" role="status" aria-live="polite"></p>
+        <div class="works-admin-layout">
+          <div id="works-admin-list" class="works-admin-list" aria-label="作品列表"></div>
+          <form id="work-editor" class="work-editor" hidden>
+            <fieldset id="work-fields">
+              <legend id="work-editor-heading">编辑作品</legend>
+              <div class="work-field-pair">
+                <label>名称<input id="work-title" maxlength="120" required></label>
+                <label>作品地址<input id="work-slug" maxlength="80" pattern="[a-z0-9]+(-[a-z0-9]+)*" required placeholder="my-project"><small>/gallery/<span id="work-slug-label"></span></small></label>
+              </div>
+              <div class="work-field-pair">
+                <label>分类<select id="work-category"><option value="minecraft">Minecraft</option><option value="tools">工具与网站</option><option value="research">研究</option><option value="story">叙事实验</option></select></label>
+                <label>技术标签<input id="work-tags" maxlength="409" placeholder="Java, Fabric"><small>用英文逗号分隔，最多 10 项</small></label>
+              </div>
+              <div class="work-field-pair">
+                <label>中文简介<textarea id="work-summary-zh" maxlength="400" required rows="3"></textarea></label>
+                <label>English summary<textarea id="work-summary-en" maxlength="400" required rows="3" lang="en"></textarea></label>
+              </div>
+              <div id="work-detail-fields"></div>
+              <div class="work-cover-field"><img id="work-cover-preview" alt="作品封面预览" hidden><div><label>封面<input id="work-cover-file" type="file" accept="image/png,image/jpeg,image/webp"></label><small>JPG、PNG、WebP，原图最大 12 MB，自动压缩</small><button id="work-clear-cover" class="secondary-button small" type="button">移除封面</button></div></div>
+              <div id="work-link-fields" class="work-field-pair"></div>
+              <div class="work-flags"><label><input id="work-visible" type="checkbox">公开作品</label><label><input id="work-featured" type="checkbox">加入精选</label></div>
+              <div class="works-admin-actions"><button id="work-save" type="submit" class="primary-button">保存作品</button><button id="work-preview" type="button" class="secondary-button">预览</button><span id="work-dirty-state"></span></div>
+            </fieldset>
+          </form>
+        </div>
+        <section id="work-preview-area" hidden><div class="works-admin-actions"><h3>作品预览</h3><button id="work-close-preview" class="secondary-button" type="button">关闭预览</button></div><iframe id="work-preview-frame" title="作品详情预览"></iframe></section>
+      </section>
       <section id="account-panel" class="dashboard-panel hidden">
         <div class="account-layout">
           <article class="account-intro">
@@ -661,5 +697,6 @@
     <button id="sidebar-scrim" class="sidebar-scrim" type="button" aria-label="关闭菜单"></button>
   </div>
   <script src="/blog-dashboard.js" defer></script>
+  <script src="/gallery/admin.js" defer></script>
 </body>
 </html>

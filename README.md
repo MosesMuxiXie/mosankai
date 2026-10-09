@@ -2,23 +2,39 @@
 
 ## 中文
 
-Mosankai 是一个个人网站，包含以下三个主要部分：
+Mosankai 是一个个人网站，包含以下四个主要部分：
 
 - **Find a Time**：帮助多人分享空闲时间并找到合适的共同时间。
 - **博客**：用于发布和阅读文章、想法与近况。
+- **作品馆**：在 `/gallery` 浏览模组、工具与网站、研究及叙事实验。
 - **复习资料**：在 [Study Guides](https://mosankai.com/studyguides) 按统计学、神经科学和英语文学浏览交互复习页面、思维导图及原始课件、试卷与阅读文本。
 
 网站地址：[https://mosankai.com](https://mosankai.com)
 
 ## English
 
-Mosankai is a personal website with three main sections:
+Mosankai is a personal website with four main sections:
 
 - **Find a Time**: A tool that helps groups share their availability and find a suitable time for everyone.
 - **Blog**: A place to publish and read articles, ideas, and updates.
+- **Gallery**: Browse mods, tools, research and narrative experiments at `/gallery`.
 - **Study Guides**: [A subject archive](https://mosankai.com/studyguides) of interactive reviews, knowledge maps, slides, exam papers and reading materials for statistics, neuroscience and English literature.
 
 Website: [https://mosankai.com](https://mosankai.com)
+
+## Gallery
+
+作品馆位于 `/gallery`，详情页位于 `/gallery/{slug}`。首版清单 `data/works.seed.json` 收录九个公开 GitHub 项目；精选、分类搜索和详情支持中英文。项目文案依据公开仓库说明整理，封面为独立生成的概念插画，不是项目实际截图。
+
+在 `/admin/dashboard?panel=works-panel` 管理作品：新增、编辑、上传封面、预览、排序、精选、隐藏及重新公开。新作品默认隐藏，已有作品地址保持不变；作品不需要 GitHub 仓库。保存采用版本校验，发生冲突时保留表单，重新读取前先复制需要保留的修改。
+
+公开 `GET /api/works` 仅返回公开作品；管理员 `GET /api/works?admin=1` 返回完整清单及 `revision`；同源、已认证的 `PUT /api/works` 接收 `{ revision, works }`，过期版本返回 409。通过 `/api/site-settings?section=works` 分发，未增加 Vercel 函数。作品字段包含唯一 `slug`、`title`、`category`（minecraft/tools/research/story）、`visible`、`featured`、`tags`、双语 `summary` 与 `details`（problem/approach/outcome）、`cover`、可选资源 `links`（source/docs/demo/download/read）；数组顺序决定展示顺序。
+
+线上沿用现有 Redis，独立键为 `site:works:v1`；本地使用 `WORKS_DATA_FILE` 或 `works-data.json`。只有存储不存在时才读取初始清单；空清单也是有效保存，不会被种子覆盖。生产环境未配置 Redis 或存储损坏时明确报错，不退回易失存储。访客浏览不调用 GitHub API。
+
+雨景与封面使用内置 imagegen 生成，无文字；WebP 图片位于 `public/gallery/assets/`。生成提示分别为冷灰蓝雨窗城市与少量暖光、普通冰与含水阶梯、方块地形及线框转换、无人物的雨城叙事场景。页面不包含情绪标语或设计说明。
+
+运行 `node --test test/works.test.js test/gallery.test.js` 和 `npm test` 验证作品数据、并发版本保存、权限、来源校验、隐藏作品、资源路由与现有功能。沿用现有 Vercel Git 部署；函数配置包含初始作品清单。
 
 ## Study Guides
 

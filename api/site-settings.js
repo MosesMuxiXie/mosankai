@@ -10,6 +10,7 @@ const {
 } = require('../lib/siteSettings');
 
 module.exports = async function handler(req, res) {
+  if (req.query?.section === 'works') return require('../lib/worksApi')(req, res);
   res.setHeader('Cache-Control', 'no-store');
 
   try {

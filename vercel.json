@@ -1,5 +1,8 @@
 {
     "functions": {
+      "api/site-settings.js": {
+        "includeFiles": "data/works.seed.json"
+      },
       "api/blogs/index.js": {
         "includeFiles": "blogs.json"
       },
@@ -61,6 +64,10 @@
       }
     ],
     "rewrites": [
+      { "source": "/api/works", "destination": "/api/site-settings?section=works" },
+      { "source": "/gallery", "destination": "/gallery/index.html" },
+      { "source": "/gallery/", "destination": "/gallery/index.html" },
+      { "source": "/gallery/:slug([a-z0-9-]+)", "destination": "/gallery/index.html" },
       { "source": "/studyguides", "destination": "/studyguides/index.html" },
       { "source": "/studyguides/", "destination": "/studyguides/index.html" },
       { "source": "/studyguides/statistics", "destination": "/studyguides/index.html" },

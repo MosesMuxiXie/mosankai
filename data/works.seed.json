@@ -1,0 +1,101 @@
+[
+  {
+    "slug": "crystallization", "title": "Crystallization", "category": "minecraft", "visible": true, "featured": true,
+    "tags": ["Minecraft", "Fabric", "Java"], "cover": "/gallery/assets/crystallization.webp",
+    "summary": {"zh-CN": "使用普通冰，让干燥的可含水方块直接含水。", "en": "Use regular ice to waterlog dry, waterloggable blocks."},
+    "details": {
+      "problem": {"zh-CN": "大型建筑和生电工程需要大量重复的含水操作。", "en": "Large builds and technical Minecraft projects require repeated waterlogging."},
+      "approach": {"zh-CN": "启用功能后，手持普通冰右键点击可含水方块，消耗一个冰块完成操作。提供快捷键、配置界面和分版本构建。", "en": "When enabled, using regular ice on a waterloggable block consumes one ice block. Includes a toggle key, configuration and version-specific builds."},
+      "outcome": {"zh-CN": "公开 Fabric 模组源码和构建说明；多人游戏要求客户端与服务端均安装模组。", "en": "Public Fabric mod source and build instructions. Multiplayer requires installation on both client and server."}
+    },
+    "links": {"source": "https://github.com/MosesMuxiXie/Crystallization", "docs": "https://github.com/MosesMuxiXie/Crystallization#readme"}
+  },
+  {
+    "slug": "netease-world-converter", "title": "NeteaseWorldConverter", "category": "tools", "visible": true, "featured": true,
+    "tags": ["Rust", "Tauri", "Minecraft"], "cover": "/gallery/assets/world-converter.webp",
+    "summary": {"zh-CN": "在本机识别并转换网易 Minecraft 存档。", "en": "Identify and convert NetEase Minecraft worlds locally."},
+    "details": {
+      "problem": {"zh-CN": "不同版本与平台的 Minecraft 存档格式不一致。", "en": "Minecraft world formats differ between versions and platforms."},
+      "approach": {"zh-CN": "使用 Tauri 桌面界面，在本机完成安全解压、格式识别、存档转换、结构验证和打包输出。", "en": "A Tauri desktop interface handles local archive extraction, format detection, conversion, structural verification and export."},
+      "outcome": {"zh-CN": "仓库提供源码、使用说明和发布包入口；具体支持的存档格式以项目文档为准。", "en": "The repository provides source, documentation and a releases entry. Consult the documentation for supported world formats."}
+    },
+    "links": {"source": "https://github.com/MosesMuxiXie/NeteaseWorldConverter", "docs": "https://github.com/MosesMuxiXie/NeteaseWorldConverter#readme", "download": "https://github.com/MosesMuxiXie/NeteaseWorldConverter/releases"}
+  },
+  {
+    "slug": "operation-sigrdrifa", "title": "Operation Sigrdrifa", "category": "story", "visible": true, "featured": true,
+    "tags": ["Ren’Py", "Visual Novel", "AI"], "cover": "/gallery/assets/sigrdrifa.webp",
+    "summary": {"zh-CN": "中文现实主义视觉小说与 AI 交互实验。", "en": "A Chinese realist visual novel and AI interaction experiment."},
+    "details": {
+      "problem": {"zh-CN": "探索固定叙事与受控 AI 角色交互如何共存。", "en": "Explore how a fixed narrative can coexist with controlled AI character interactions."},
+      "approach": {"zh-CN": "以 Ren’Py 构建主线与章节选择，加入本地玩家账号、个人 API 设置、角色对话和剧情图片生成。", "en": "Built with Ren’Py, combining story chapters with local player accounts, personal API settings, character conversations and story image generation."},
+      "outcome": {"zh-CN": "仓库公开游戏代码、文档和构建目录；项目说明中提供 beta 发布包的启动流程。", "en": "The repository contains game code, documentation and builds, with instructions for launching the beta package."}
+    },
+    "links": {"source": "https://github.com/MosesMuxiXie/Operation-Sigrdrifa", "docs": "https://github.com/MosesMuxiXie/Operation-Sigrdrifa#readme"}
+  },
+  {
+    "slug": "compat-login", "title": "Compat-Login", "category": "minecraft", "visible": true, "featured": false,
+    "tags": ["Minecraft", "Fabric", "Java"], "cover": "",
+    "summary": {"zh-CN": "让同一 Fabric 服务器验证不同可信身份源的玩家会话。", "en": "Verify players from multiple trusted identity providers on one Fabric server."},
+    "details": {
+      "problem": {"zh-CN": "同一服务器需要兼容正版与第三方 Yggdrasil 账号。", "en": "A server needs to accept official and third-party Yggdrasil accounts."},
+      "approach": {"zh-CN": "服务端向配置的可信身份源验证会话，保留 online-mode 验证，不接收玩家密码。", "en": "The server verifies sessions with configured trusted providers, retains online-mode validation and does not accept player passwords."},
+      "outcome": {"zh-CN": "公开服务端模组源码、安装配置说明和版本发布入口。", "en": "Public server-side mod source, setup documentation and a releases entry."}
+    },
+    "links": {"source": "https://github.com/MosesMuxiXie/Compat-Login", "docs": "https://github.com/MosesMuxiXie/Compat-Login#readme", "download": "https://github.com/MosesMuxiXie/Compat-Login/releases"}
+  },
+  {
+    "slug": "arsa", "title": "Arsa", "category": "minecraft", "visible": true, "featured": false,
+    "tags": ["Minecraft", "Fabric", "Java"], "cover": "",
+    "summary": {"zh-CN": "将附魔书制成可复制、一次性使用的附魔模板。", "en": "Turn enchanted books into copyable, single-use enchantment templates."},
+    "details": {
+      "problem": {"zh-CN": "为多个物品重复制作相同附魔需要重复操作。", "en": "Applying the same enchantments to multiple items takes repeated work."},
+      "approach": {"zh-CN": "通过铁砧制作模板、工作台复制模板，再使用锻造台转移整组附魔。", "en": "Create templates at an anvil, copy them at a crafting table and transfer enchantments at a smithing table."},
+      "outcome": {"zh-CN": "公开 Fabric 模组源码、配方与版本要求。", "en": "Public Fabric mod source, recipes and version requirements."}
+    },
+    "links": {"source": "https://github.com/MosesMuxiXie/Arsa", "docs": "https://github.com/MosesMuxiXie/Arsa#readme"}
+  },
+  {
+    "slug": "virusmodel", "title": "virusmodel", "category": "research", "visible": true, "featured": false,
+    "tags": ["SIR", "Modeling", "Research"], "cover": "",
+    "summary": {"zh-CN": "基于 SIR 模型研究个人网络使用习惯与网络病毒传播。", "en": "Research on network usage habits and computer virus spread using an SIR model."},
+    "details": {
+      "problem": {"zh-CN": "研究个人计算机使用习惯与网络病毒感染风险之间的关系。", "en": "Investigate the relationship between computer usage habits and infection risk."},
+      "approach": {"zh-CN": "使用易感、感染、恢复三类群体构成的 SIR 模型开展研究。", "en": "Use an SIR model with susceptible, infected and recovered populations."},
+      "outcome": {"zh-CN": "仓库收录英文研究报告 PDF 与研究摘要。", "en": "The repository contains an English research paper PDF and a summary."}
+    },
+    "links": {"source": "https://github.com/MosesMuxiXie/virusmodel", "read": "https://github.com/MosesMuxiXie/virusmodel/blob/main/The%20Relationship%20Between%20Personal%20Network%20Usage%20Habits%20and%20the%20Spread%20of%20Network%20Viruses%20Based%20on%20the%20SIR%20Model.pdf"}
+  },
+  {
+    "slug": "findatime", "title": "FindaTime", "category": "tools", "visible": true, "featured": false,
+    "tags": ["WeChat", "JavaScript", "Mini Program"], "cover": "",
+    "summary": {"zh-CN": "用于寻找共同空闲时间的微信小程序。", "en": "A WeChat mini program for finding a time everyone can attend."},
+    "details": {
+      "problem": {"zh-CN": "多人活动需要协调每个人的空闲时间。", "en": "Group activities require coordinating everyone's availability."},
+      "approach": {"zh-CN": "使用微信小程序及云函数组织约时间功能。", "en": "Organize scheduling through a WeChat mini program and cloud functions."},
+      "outcome": {"zh-CN": "仓库公开小程序和云函数源码。这是微信小程序项目，区别于 Mosankai 网站的约时间页面。", "en": "Public mini program and cloud-function source. This is the WeChat project, separate from the scheduling page on Mosankai."}
+    },
+    "links": {"source": "https://github.com/MosesMuxiXie/FindaTime"}
+  },
+  {
+    "slug": "timer", "title": "timer", "category": "tools", "visible": true, "featured": false,
+    "tags": ["WeChat", "TypeScript", "Mini Program"], "cover": "",
+    "summary": {"zh-CN": "一个使用 TypeScript 开发的微信计时器小程序。", "en": "A simple WeChat timer mini program written in TypeScript."},
+    "details": {
+      "problem": {"zh-CN": "在微信小程序中提供简单的计时功能。", "en": "Provide simple timing functionality in a WeChat mini program."},
+      "approach": {"zh-CN": "使用 TypeScript 与微信小程序结构实现计时器。", "en": "Implement a timer using TypeScript and the WeChat mini program structure."},
+      "outcome": {"zh-CN": "公开小程序源码与项目配置。", "en": "Public mini program source and project configuration."}
+    },
+    "links": {"source": "https://github.com/MosesMuxiXie/timer"}
+  },
+  {
+    "slug": "mosankai", "title": "Mosankai", "category": "tools", "visible": true, "featured": false,
+    "tags": ["JavaScript", "Express", "MCP"], "cover": "",
+    "summary": {"zh-CN": "个人网站，包含博客、约时间工具与交互复习资料。", "en": "A personal website with a blog, scheduling tool and interactive study guides."},
+    "details": {
+      "problem": {"zh-CN": "为个人内容、学习资料和实用工具提供统一入口。", "en": "Provide one place for personal writing, learning resources and useful tools."},
+      "approach": {"zh-CN": "使用 HTML、CSS、JavaScript 与 Express，提供管理后台、多人约时间及 MCP 接口。", "en": "Use HTML, CSS, JavaScript and Express, with an admin dashboard, group scheduling and an MCP endpoint."},
+      "outcome": {"zh-CN": "已公开网站及源码，包含博客、约时间和按学科组织的交互复习资料。", "en": "Public website and source, including a blog, scheduling and subject-based interactive study resources."}
+    },
+    "links": {"source": "https://github.com/MosesMuxiXie/mosankai", "demo": "/", "docs": "https://github.com/MosesMuxiXie/mosankai#readme"}
+  }
+]

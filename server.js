@@ -19,6 +19,11 @@ app.get(['/findatime/admin', '/findatime/admin/'], (req, res) => (
 ));
 app.all('/api/mcp', require('./lib/findatimeMcpHttp'));
 app.use(bodyParser.json({ limit: '3mb' }));
+app.all('/api/works', (req, res) => {
+  req.query = { ...req.query, section: 'works' };
+  return require('./api/site-settings')(req, res);
+});
+app.get(['/gallery', '/gallery/', '/gallery/:slug([a-z0-9-]+)'], (req, res) => res.sendFile(path.join(__dirname, 'public/gallery/index.html')));
 app.get([
   '/studyguides', '/studyguides/',
   '/studyguides/statistics', '/studyguides/statistics/',
