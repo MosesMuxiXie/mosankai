@@ -120,3 +120,5 @@ Vercel 将 `/api/mcp` rewrite 到 `/api/findatime?operation=mcp`，复用现有�
 沿用 Vercel Git 部署；此阶段未新增服务端接口或函数。
 
 独立插画的生成方式、文件及提示词见 [素材记录](docs/study-center-artwork.md)。
+
+资料页也有直接“导出备份”按钮，可在存储受限时保存当前页面的内存记录，离开页面前请先导出。记录恢复完成前，原页面控件暂不可编辑，避免慢加载覆盖输入。独立审查回归检查为 node scripts/check-study-review.cjs，使用同一 Playwright 环境配置。

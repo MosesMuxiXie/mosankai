@@ -35,12 +35,19 @@
   }
   async function boot(win) {
     const doc=win.document,id=doc.documentElement.dataset.studyMaterial;if(!id)return;
-    const store=await win.MosankaiStudy.ready,desc=store.index[id],bank=desc?.questions||[];
     const en=doc.documentElement.lang==='en',text=(zh,english)=>en?english:zh;
+    // Native content is readable while loading, but editing starts after restoration.
+    const gates=[...doc.body.children].filter(n=>!['SCRIPT','STYLE','LINK'].includes(n.tagName)&&!n.hasAttribute('data-studyguide-return')).map(node=>({node,inert:node.inert}));
+    gates.forEach(({node})=>node.inert=true);
+    const loading=doc.createElement('p');loading.className='study-initializing';loading.setAttribute('role','status');loading.textContent=text('正在恢复学习记录…','Restoring learning records…');doc.body.append(loading);
+    let store;
+    try {store=await win.MosankaiStudy.ready;}
+    catch(error){gates.forEach(({node,inert})=>node.inert=inert);loading.remove();throw error;}
+    const desc=store.index[id],bank=desc?.questions||[];
     const $=selector=>doc.querySelector(selector),all=selector=>[...doc.querySelectorAll(selector)];
     const isReload=win.performance.getEntriesByType('navigation')[0]?.type==='reload';
     const params=new URLSearchParams(win.location.search),qid=!isReload&&bank.some(q=>q.id===params.get('studyQuestion'))?params.get('studyQuestion'):null;
-    let restoring=true, timer, busy=false;const record=store.read(id);let lastState=record.progress.state;
+    let restoring=true, timer, busy=false;const record=store.read(id);let lastState=record.progress.state,lastAssessment={answers:{},checked:[]};
     const value=(node)=>node?node.value:'';
     const strip=s=>String(s||'').slice(0,12000);
     let page;
@@ -80,7 +87,11 @@
         assess(event){const b=event.target.closest('#quizarea [data-choice]');if(b&&!isMock&&queue[pos]!==undefined)return[D.quiz[queue[pos]].id];if(event.target.closest('#submitQ')||(event.target.closest('#nextQ')&&submitted))return queue.map(n=>D.quiz[n].id);return[];}
       };
     } else if(id==='literature-androids-10-12') {
-      page={capture:()=>win.MosankaiPage.capture(),restore:(s,r,target)=>win.MosankaiPage.restore(s,r,target),assess(){return[];}};
+      page={capture:()=>win.MosankaiPage.capture(),restore:(s,r,target)=>win.MosankaiPage.restore(s,r,target),assess(event){
+        const snap=this.capture();if(event.target.closest('#check-answer'))return snap.resume.questionId?[snap.resume.questionId]:[];
+        if(event.target.closest('#submit-test')&&snap.selectedIds.every(qid=>snap.state.submitted.includes(qid)))return snap.selectedIds;
+        return[];
+      }};
     } else {
       page={capture:()=>({state:{},answers:{},checked:[],resume:/^#[\w-]{1,100}$/.test(win.location.hash)?{hash:win.location.hash}:null}),restore(s,r){if(r?.hash&&doc.getElementById(r.hash.slice(1)))doc.getElementById(r.hash.slice(1)).scrollIntoView();},assess:()=>[]};
     }
@@ -89,15 +100,32 @@
     const button=(label,handler)=>{const b=doc.createElement('button');b.type='button';b.textContent=label;b.addEventListener('click',handler);tools.append(b);return b;};
     const favorite=button('',()=>store.save(id,{favorite:!store.read(id).favorite}));
     const pending=button('',()=>store.save(id,{pending:{material:!store.read(id).pending.material}}));
+    const exportButton=button(text('导出备份','Export backup'),()=>{
+      clearTimeout(timer);persist();const url=win.URL.createObjectURL(new Blob([store.exportBackup()],{type:'application/json'})),a=doc.createElement('a');
+      a.href=url;a.download='mosankai-study-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>win.URL.revokeObjectURL(url),1000);
+    });exportButton.className='study-export';
     const status=doc.createElement('span');status.className='study-save-status';status.setAttribute('role','status');tools.append(status);doc.body.append(tools);
     function refreshTools(){const r=store.read(id);favorite.textContent=r.favorite?text('已收藏','Saved'):text('收藏','Save');favorite.setAttribute('aria-pressed',String(r.favorite));pending.textContent=r.pending.material?text('已加入待复习','In review list'):text('加入待复习','Add to review');pending.setAttribute('aria-pressed',String(r.pending.material));}
-    function persist(force=[]){if(restoring||busy)return;busy=true;try{const previous=store.read(id),snap=page.capture();const results=assessedResults(bank,snap.answers,snap.checked,previous.progress.results,Date.now(),force);
-        const rebased=rebaseState(lastState,snap.state,previous.progress.state);lastState=JSON.parse(JSON.stringify(snap.state));
-        const result=store.save(id,{resume:snap.resume,progress:{state:rebased,results}});status.textContent=result.persisted?text('已保存','Saved in this browser'):text('未保存 · 可导出本次记录','Not saved · export this session');
-      }catch(error){status.textContent=text('保存失败，请返回学习中心导出备份','Save failed; export a backup from the study center');console.error(error);}finally{busy=false;}}
+    function persist(force=[]){if(restoring||busy)return;busy=true;try{const previous=store.read(id),snap=page.capture();
+        // An unchanged stale answer is not a new local assessment.
+        const assessed=[...new Set([...force,...snap.checked.filter(qid=>!lastAssessment.checked.includes(qid)||lastAssessment.answers[qid]!==snap.answers[qid])])].filter(qid=>{
+          const q=bank.find(q=>q.id===qid),answer=snap.answers[qid];return q?.type==='mc'&&snap.checked.includes(qid)&&Number.isInteger(answer)&&answer>=0&&answer<q.options.length;
+        });
+        const results=assessedResults(bank,snap.answers,assessed,previous.progress.results,Date.now(),assessed);
+        const rebased=rebaseState(lastState,snap.state,previous.progress.state);
+        for(const qid of assessed){if(rebased.choices)rebased.choices[qid]=snap.answers[qid];else if(rebased.answers)rebased.answers[qid]=snap.answers[qid];}
+        if(id==='neuroscience-review'){
+          const mc=bank.filter(q=>q.type==='mc');rebased.wrong=mc.flatMap((q,i)=>results[q.id]?.status==='incorrect'?[i]:[]);
+          rebased.seen=[...new Set([...(rebased.seen||[]),...assessed.map(qid=>mc.findIndex(q=>q.id===qid)).filter(i=>i>=0)])];
+        }
+        lastState=JSON.parse(JSON.stringify(snap.state));lastAssessment=JSON.parse(JSON.stringify({answers:snap.answers,checked:snap.checked}));
+        const result=store.save(id,{resume:snap.resume,progress:{state:rebased,results}});status.textContent=result.persisted?text('已保存','Saved in this browser'):text('未保存 · 请在本页导出备份','Not saved · export before leaving this page');
+      }catch(error){status.textContent=text('保存失败，请在本页导出备份','Save failed; export before leaving this page');console.error(error);}finally{busy=false;}}
     win.MosankaiGuide={save:persist};
     const resume=params.get('studyResume')==='1'||isReload?record.resume:null;
-    page.restore(record.progress.state,resume,qid);restoring=false;store.save(id,{lastVisitedAt:Date.now()});refreshTools();
+    try {page.restore(record.progress.state,resume,qid);}
+    finally {gates.forEach(({node,inert})=>node.inert=inert);loading.remove();}
+    restoring=false;const initial=page.capture();lastAssessment=JSON.parse(JSON.stringify({answers:initial.answers,checked:initial.checked}));store.save(id,{lastVisitedAt:Date.now()});refreshTools();
     function addWrittenButtons(){all('textarea').forEach((t,i)=>{
       let q;
       if(id==='statistics-review')q=bank.find(q=>q.id==='STAT-'+String(Number(t.id.replace('note',''))+1).padStart(3,'0'));

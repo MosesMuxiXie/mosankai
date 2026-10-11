@@ -259,7 +259,7 @@ for(const id of ['filter-chapter','filter-category','filter-type'])$(id).addEven
 document.addEventListener('click',event=>{const b=event.target.closest('[data-question]');if(b){retryIds=null;for(const id of ['filter-chapter','filter-category','filter-type'])$(id).value='all';questionIndex=Review.questions.findIndex(q=>q.id===b.dataset.question);confirmSubmit=false;message('');showSection('quiz',true);renderQuestion(true);}});
 
 window.MosankaiPage={
- capture(){const list=filtered();return {state:JSON.parse(JSON.stringify(state)),answers:state.answers,checked:[...new Set([...state.checked,...state.submitted])],resume:{section,sceneIndex,branchIndex,flowView,mode,chapter:$('filter-chapter').value,category:$('filter-category').value,type:$('filter-type').value,...(list[questionIndex]?{questionId:list[questionIndex].id}:{})}};},
+ capture(){const list=filtered();return {selectedIds:list.map(q=>q.id),state:JSON.parse(JSON.stringify(state)),answers:state.answers,checked:[...new Set([...state.checked,...state.submitted])],resume:{section,sceneIndex,branchIndex,flowView,mode,chapter:$('filter-chapter').value,category:$('filter-category').value,type:$('filter-type').value,...(list[questionIndex]?{questionId:list[questionIndex].id}:{})}};},
  restore(saved,resume,target){state=Review.restoreState(JSON.stringify(saved));cancelPlayback();retryIds=null;confirmSubmit=false;
   if(resume){for(const [key,id] of [['chapter','filter-chapter'],['category','filter-category'],['type','filter-type']])if([...$(id).options].some(o=>o.value===resume[key]))$(id).value=resume[key];
    if(Number.isInteger(resume.sceneIndex)&&Review.scenes[resume.sceneIndex])sceneIndex=resume.sceneIndex;
