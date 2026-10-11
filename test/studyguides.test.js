@@ -10,13 +10,13 @@ const net = require('node:net');
 const root = path.resolve(__dirname, '..');
 const readCatalog = () => JSON.parse(fs.readFileSync(path.join(root, 'public/studyguides/catalog.json'), 'utf8'));
 
-test('study catalog contains all 30 materials with valid files and original hashes', () => {
+test('study catalog contains all 31 materials with valid files and original hashes', () => {
   const catalog = readCatalog();
   assert.deepEqual(catalog.subjects.map(subject => subject.id), ['statistics', 'neuroscience', 'english']);
-  assert.equal(catalog.materials.length, 30);
-  assert.equal(new Set(catalog.materials.map(item => item.id)).size, 30);
-  assert.equal(new Set(catalog.materials.map(item => item.href)).size, 30);
-  const totals = { statistics: [1, 7], neuroscience: [2, 8], english: [2, 10] };
+  assert.equal(catalog.materials.length, 31);
+  assert.equal(new Set(catalog.materials.map(item => item.id)).size, 31);
+  assert.equal(new Set(catalog.materials.map(item => item.href)).size, 31);
+  const totals = { statistics: [1, 7], neuroscience: [2, 8], english: [3, 10] };
   for (const [subject, [guides, sources]] of Object.entries(totals)) {
     assert.equal(catalog.materials.filter(item => item.subject === subject && item.kind === 'guide').length, guides);
     assert.equal(catalog.materials.filter(item => item.subject === subject && item.kind === 'source').length, sources);

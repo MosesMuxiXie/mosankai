@@ -1,0 +1,1994 @@
+{
+  "statistics-review": {
+    "cardIds": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "questions": [
+      {
+        "id": "STAT-001",
+        "type": "written",
+        "prompt": "哪些数字是真正的定量变量？ · 随机抽取 60 名学生，记录学号、年级、每天睡眠时长。个体是什么？哪些变量是分类变量，哪个是定量变量？"
+      },
+      {
+        "id": "STAT-002",
+        "type": "mc",
+        "prompt": "分母到底选哪个？ · A 班 50 人中 30 人参加社团，B 班 100 人中 40 人参加。已知某学生来自 A 班，他参加社团的比例为？",
+        "options": [
+          "20%",
+          "42.86%",
+          "60%",
+          "46.67%"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "STAT-003",
+        "type": "mc",
+        "prompt": "直方图与条形图 · 哪一项描述正确？",
+        "options": [
+          "直方图的横轴必须是类别",
+          "条形图与直方图完全相同",
+          "直方图通常可还原每个原始值",
+          "等宽直方图的柱高可以表示频数"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "STAT-004",
+        "type": "written",
+        "prompt": "手算一次样本标准差 · 样本数据为 2、4、4、6（分钟）。求均值、中位数、极差及样本标准差。"
+      },
+      {
+        "id": "STAT-005",
+        "type": "written",
+        "prompt": "百分位不是正确率 · 小林在 40 人中有 30 人的成绩严格低于他。按本课件约定，小林处于哪个百分位？这能否推出他答对了 75% 的题？"
+      },
+      {
+        "id": "STAT-006",
+        "type": "written",
+        "prompt": "解释负的 z 分数 · 某测验均值 70 分，标准差 8 分。小周得 58 分。求 z 并解释。"
+      },
+      {
+        "id": "STAT-007",
+        "type": "mc",
+        "prompt": "密度与概率 · 以下说法哪一个正确？",
+        "options": [
+          "密度曲线的高度不能大于 1",
+          "曲线下总面积为 1",
+          "所有对称分布都是正态分布",
+          "标准化会把任何分布变为正态"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "STAT-008",
+        "type": "written",
+        "prompt": "从双向表发现关联 · 沿用社团数据：A 班参加 30、不参加 20；B 班参加 40、不参加 60。求全体参加比例、两班各自参加比例，并判断是否有关联。"
+      },
+      {
+        "id": "STAT-009",
+        "type": "written",
+        "prompt": "五数概括与修正箱线图 · 数据为 2、3、4、5、6、7、8、9、10、20（分钟）。求五数概括、IQR、围栏，并说明箱线图的两端须与异常值。"
+      },
+      {
+        "id": "STAT-010",
+        "type": "written",
+        "prompt": "用 SOCS 比较两组 · 两组通学时长：A 组近似对称，五数概括 (10,15,20,25,30)；B 组右偏，五数概括 (8,12,18,30,70)。用形状、中心、离散程度和 1.5IQR 规则比较。"
+      },
+      {
+        "id": "STAT-011",
+        "type": "written",
+        "prompt": "画图之前确定区间 · 阅读时长 2、3、4、5、6、7、8、9、10、20。按 [0,5)、[5,10)、[10,15)、[15,20)、[20,25] 分组，列出频数并描述形状。"
+      },
+      {
+        "id": "STAT-012",
+        "type": "written",
+        "prompt": "读取累积相对频率图 · 某分组累积图依次经过 (0,0%)、(10,20%)、(20,60%)、(30,100%)。用直线插值估计第 50 百分位，以及小于 15 的比例。"
+      },
+      {
+        "id": "STAT-013",
+        "type": "written",
+        "prompt": "摄氏转华氏 · 气温均值为 10°C，标准差为 3°C，中位数为 9°C，IQR 为 4°C。用 F=32+1.8C 转为华氏后，这四个量分别是多少？"
+      },
+      {
+        "id": "STAT-014",
+        "type": "written",
+        "prompt": "68–95–99.7 快速估计 · 成绩近似服从 N(100,15)，第二参数为标准差。估计 85 到 115 分、低于 70 分、高于 145 分的比例。"
+      },
+      {
+        "id": "STAT-015",
+        "type": "written",
+        "prompt": "正态模型：区间与右尾 · 某产品质量 X ~ N(500,10)，单位克，第二参数为标准差。求 P(490 < X < 515) 和 P(X > 520)。给定 Φ(−1)=0.1587、Φ(1.5)=0.9332、Φ(2)=0.9772。"
+      },
+      {
+        "id": "STAT-016",
+        "type": "written",
+        "prompt": "反过来求门槛 · 某测试近似服从 N(70,8)。进入最高 10% 至少需要多少分？给定 Φ(1.2816)=0.90。若分数只取整数，用模型近似设定门槛。"
+      },
+      {
+        "id": "STAT-017",
+        "type": "written",
+        "prompt": "跨考试比较：分数越高就越好吗？ · 小陈两次考试：数学 86 分（组均值 74，标准差 8）；英语 90 分（组均值 82，标准差 10）。哪个相对表现更好？若改为比赛用时，较大的 z 是否仍更好？"
+      },
+      {
+        "id": "STAT-018",
+        "type": "written",
+        "prompt": "非正态密度也能计算 · X 在 [0,4] 上均匀分布。画出密度曲线并标注高度，求 P(1 < X < 2.5)、第 75 百分位、均值和中位数。"
+      },
+      {
+        "id": "STAT-019",
+        "type": "written",
+        "prompt": "平移、反射、标准化 · 样本 X 的均值为 12，标准差为 3，Q₁=10，Q₃=14，分布右偏。令 Y=100−2X。求 Y 的均值、标准差、IQR、Q₁、Q₃，并判断偏态方向。再将 Y 标准化，会成为正态吗？"
+      },
+      {
+        "id": "STAT-020",
+        "type": "written",
+        "prompt": "审查一个看似合理的结论 · 同学说：“这组数据直方图对称，所以一定正态；标准化以后，有 95% 的数据位于 −2 和 2 之间。”请指出两处逻辑问题，并说出应补充什么图形证据。"
+      }
+    ]
+  },
+  "neuroscience-review": {
+    "cardIds": [
+      "c1",
+      "c2",
+      "c3",
+      "c4",
+      "c5",
+      "c6",
+      "c7",
+      "c8",
+      "c9",
+      "c10",
+      "c11",
+      "c12",
+      "c13",
+      "c14",
+      "c15",
+      "c16",
+      "c17",
+      "c18",
+      "c19",
+      "c20",
+      "c21",
+      "c22",
+      "c23",
+      "c24",
+      "c25",
+      "c26"
+    ],
+    "questions": [
+      {
+        "id": "MCQ-001",
+        "type": "mc",
+        "prompt": "Which level of analysis investigates the types and functions of individual neurons?",
+        "options": [
+          "Molecular neuroscience",
+          "Cellular neuroscience",
+          "Systems neuroscience",
+          "Cognitive neuroscience"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-002",
+        "type": "mc",
+        "prompt": "Flourens repeated an ablation experiment in rabbits after studying pigeons. This is an example of",
+        "options": [
+          "observation.",
+          "interpretation.",
+          "replication.",
+          "verification."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-003",
+        "type": "mc",
+        "prompt": "During the Renaissance, which anatomist added detailed descriptions of brain structure?",
+        "options": [
+          "Vesalius",
+          "Broca",
+          "Gall",
+          "Cajal"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-004",
+        "type": "mc",
+        "prompt": "The bumps on the surface of the cerebrum are known as",
+        "options": [
+          "sulci.",
+          "ventricles.",
+          "gyri.",
+          "roots."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-005",
+        "type": "mc",
+        "prompt": "Which finding is associated with Fritsch and Hitzig?",
+        "options": [
+          "Skull shape predicts personality.",
+          "Electrical stimulation of dog cortex elicits discrete movements.",
+          "Nissl staining reveals nuclei.",
+          "Cutting dorsal roots abolishes movement."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-006",
+        "type": "mc",
+        "prompt": "Which statement correctly describes spinal nerve roots?",
+        "options": [
+          "Dorsal roots are motor; ventral roots are sensory.",
+          "Dorsal roots are sensory; ventral roots are motor.",
+          "Both roots contain only motor fibers.",
+          "Both roots contain only sensory fibers."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-007",
+        "type": "mc",
+        "prompt": "Which pairing best describes Broca's contribution?",
+        "options": [
+          "Cerebellum and sensation",
+          "Right parietal lobe and cooling blood",
+          "Left frontal lobe and speech production",
+          "Spinal cord and cognition"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-008",
+        "type": "mc",
+        "prompt": "What observation led Galen to assign different functions to the cerebrum and cerebellum?",
+        "options": [
+          "The cerebrum was soft and the cerebellum firm.",
+          "Gray matter was heavier than white matter.",
+          "Only a small proportion of neurons were stained.",
+          "Different regions had different electrical thresholds."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-009",
+        "type": "mc",
+        "prompt": "Which disorder is most closely associated with delusions and hallucinations?",
+        "options": [
+          "Autism",
+          "Schizophrenia",
+          "Spinal paralysis",
+          "Cerebral palsy"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-010",
+        "type": "mc",
+        "prompt": "Loss of sensation and movement following traumatic spinal cord damage is called",
+        "options": [
+          "stroke.",
+          "Parkinson's disease.",
+          "spinal paralysis.",
+          "epilepsy."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-011",
+        "type": "mc",
+        "prompt": "A researcher wishes to examine the full dendritic arbor of an individual neuron. Which method is most suitable?",
+        "options": [
+          "Nissl staining",
+          "Golgi staining",
+          "Nuclear staining alone",
+          "Measuring resting membrane potential"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-012",
+        "type": "mc",
+        "prompt": "Which statement concerning Nissl staining is correct?",
+        "options": [
+          "It labels only dendritic tips.",
+          "It stains every neuron completely.",
+          "It never stains glial nuclei.",
+          "It reveals nuclei and neuronal Nissl bodies."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "MCQ-013",
+        "type": "mc",
+        "prompt": "According to Golgi's reticular theory,",
+        "options": [
+          "neurons are independent functional units.",
+          "glia are a type of neuron.",
+          "neurites of different neurons fuse into a continuous network.",
+          "axons never branch."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-014",
+        "type": "mc",
+        "prompt": "Which CNS cells act as phagocytes and remove cellular debris?",
+        "options": [
+          "Astrocytes",
+          "Schwann cells",
+          "Oligodendrocytes",
+          "Microglia"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "MCQ-015",
+        "type": "mc",
+        "prompt": "Which type of cell forms myelin in the brain and spinal cord?",
+        "options": [
+          "Schwann cells",
+          "Oligodendrocytes",
+          "Microglia",
+          "Neuronal somata"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-016",
+        "type": "mc",
+        "prompt": "Identify the motor protein responsible for anterograde axonal transport.",
+        "options": [
+          "Dynein",
+          "Actin",
+          "Kinesin",
+          "Myelin"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-017",
+        "type": "mc",
+        "prompt": "At a typical chemical synapse, electrical information is converted into a chemical signal. What carries that chemical signal?",
+        "options": [
+          "A synaptic vesicle",
+          "A neurotransmitter",
+          "A microtubule",
+          "Myelin"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-018",
+        "type": "mc",
+        "prompt": "The presynaptic side of a typical chemical synapse is usually",
+        "options": [
+          "an axon terminal.",
+          "a dendritic spine.",
+          "a nucleus.",
+          "an astrocyte."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-019",
+        "type": "mc",
+        "prompt": "Which classification is based on the number of neurites extending from the soma?",
+        "options": [
+          "Spiny and aspinous",
+          "Sensory and motor",
+          "Unipolar, bipolar, and multipolar",
+          "Projection and local"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-020",
+        "type": "mc",
+        "prompt": "A single myelinating Schwann cell normally forms myelin around",
+        "options": [
+          "all axons in the CNS.",
+          "one segment of one axon.",
+          "all segments of several CNS axons.",
+          "a neuronal nucleus."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-021",
+        "type": "mc",
+        "prompt": "A resting membrane potential of −65 mV indicates that",
+        "options": [
+          "the inside is negative relative to the outside.",
+          "the inside is positive relative to the outside.",
+          "there is no potential difference.",
+          "the cytoplasm contains no cations."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-022",
+        "type": "mc",
+        "prompt": "Which set of concentrations agrees with the model used in this course?",
+        "options": [
+          "K: 5 mM inside and 100 mM outside",
+          "Na: 150 mM inside and 15 mM outside",
+          "K: 100 inside, 5 outside; Na: 15 inside, 150 outside (mM)",
+          "Equal internal and external concentrations of both ions"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-023",
+        "type": "mc",
+        "prompt": "For each ATP hydrolyzed, the sodium–potassium pump usually transports",
+        "options": [
+          "3 Na⁺ inward and 2 K⁺ outward.",
+          "2 Na⁺ outward and 3 K⁺ inward.",
+          "3 Na⁺ outward and 2 K⁺ inward.",
+          "1 Na⁺ outward and 1 K⁺ inward."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-024",
+        "type": "mc",
+        "prompt": "At 37°C, [K⁺]o = 5 mM and [K⁺]i = 100 mM. What is the approximate potassium equilibrium potential?",
+        "options": [
+          "+80 mV",
+          "−80 mV",
+          "−65 mV",
+          "0 mV"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-025",
+        "type": "mc",
+        "prompt": "Why is resting membrane potential usually more positive than E_K?",
+        "options": [
+          "Only K⁺ can cross the membrane.",
+          "A small permeability to Na⁺ permits inward Na⁺ leakage.",
+          "Internal and external K⁺ concentrations are equal.",
+          "The Nernst equation contains P_K."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-026",
+        "type": "mc",
+        "prompt": "An increase in extracellular K⁺ concentration, with other variables fixed, usually causes the membrane potential to become",
+        "options": [
+          "more negative.",
+          "more positive.",
+          "exactly zero in all cases.",
+          "unchanged."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-027",
+        "type": "mc",
+        "prompt": "At V_m = −65 mV and E_K = −80 mV, what is the net direction of K⁺ movement through open K⁺ channels?",
+        "options": [
+          "Inward",
+          "Outward",
+          "No net movement",
+          "Its direction cannot be determined."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-028",
+        "type": "mc",
+        "prompt": "If V_m equals E_Na while Na⁺ channels are open, the net sodium current is",
+        "options": [
+          "maximal and inward.",
+          "maximal and outward.",
+          "zero.",
+          "determined only by pump turnover."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-029",
+        "type": "mc",
+        "prompt": "Which cell type contributes to potassium spatial buffering in the brain?",
+        "options": [
+          "Schwann cells",
+          "Oligodendrocytes",
+          "Astrocytes",
+          "Red blood cells"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-030",
+        "type": "mc",
+        "prompt": "A change in membrane potential from −65 mV to −50 mV is called",
+        "options": [
+          "hyperpolarization.",
+          "depolarization.",
+          "no change in polarization.",
+          "ionic equilibrium."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-031",
+        "type": "mc",
+        "prompt": "A membrane starts at 0 mV and is permeable only to K⁺. With concentrations effectively constant, its voltage approaches",
+        "options": [
+          "E_Na, approximately +62 mV.",
+          "E_K, approximately −80 mV.",
+          "−65 mV in every case.",
+          "0 mV in every case."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-032",
+        "type": "mc",
+        "prompt": "Which statement correctly interprets the ratio 40:1 used in the course's Goldman model?",
+        "options": [
+          "It is the K⁺:Na⁺ concentration ratio.",
+          "It is the permeability ratio P_K:P_Na.",
+          "It is necessarily the ionic current ratio.",
+          "It is necessarily the conductance ratio g_K:g_Na."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-033",
+        "type": "mc",
+        "prompt": "Which view is most closely associated with Hippocrates?",
+        "options": [
+          "The brain is involved in sensation and intelligence.",
+          "The heart is the sole center of intelligence.",
+          "Skull bumps determine personality.",
+          "Neurites form a continuous reticulum."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-034",
+        "type": "mc",
+        "prompt": "According to Aristotle, the brain primarily functioned as",
+        "options": [
+          "a center for speech production.",
+          "a radiator for cooling blood.",
+          "a pump for cerebrospinal fluid.",
+          "the seat of intelligence."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-035",
+        "type": "mc",
+        "prompt": "The trepanation procedure probably served, in at least some historical interpretations, to",
+        "options": [
+          "replace blood lost from the brain.",
+          "measure membrane voltage.",
+          "provide an escape route for evil spirits.",
+          "stain cortical neurons."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-036",
+        "type": "mc",
+        "prompt": "Which explanation of muscle contraction prevailed during the Renaissance?",
+        "options": [
+          "ATP diffuses directly from cortex to muscle.",
+          "Voltage-gated channels open in the ventricles.",
+          "White matter contracts mechanically.",
+          "Fluid travels from ventricles through hollow nerves to muscles."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "MCQ-037",
+        "type": "mc",
+        "prompt": "A scientist removes a brain region and observes the resulting behavioral deficits. The method is called",
+        "options": [
+          "experimental ablation.",
+          "phrenology.",
+          "Nissl staining.",
+          "axoplasmic transport."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-038",
+        "type": "mc",
+        "prompt": "Which observation provides stronger evidence for cortical localization than skull-shape correlations?",
+        "options": [
+          "A large skull is assumed to indicate courage.",
+          "A focal left frontal lesion is associated with impaired speech production.",
+          "All brain regions are assumed to perform the same function.",
+          "Personality is inferred from a bump on the head."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-039",
+        "type": "mc",
+        "prompt": "Which conclusion should NOT be drawn from Flourens’s work?",
+        "options": [
+          "Ablation can reveal contributions to behavior.",
+          "The cerebellum contributes to movement coordination.",
+          "All mammalian cortical functions are conclusively shown to be unlocalized.",
+          "Interpretations can be limited by the species examined."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-040",
+        "type": "mc",
+        "prompt": "Galvani’s experiments on frog legs helped establish that",
+        "options": [
+          "nerves contain only cerebrospinal fluid.",
+          "the brain cools the blood.",
+          "the skull determines personality.",
+          "electrical stimulation of nerves can produce muscle contraction."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "MCQ-041",
+        "type": "mc",
+        "prompt": "A second laboratory precisely follows a published protocol and obtains the same result. In the textbook terminology, this is",
+        "options": [
+          "verification.",
+          "interpretation.",
+          "phrenology.",
+          "localization."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-042",
+        "type": "mc",
+        "prompt": "A researcher asks how the amino acid sequence of a channel determines ion selectivity. The primary level of analysis is",
+        "options": [
+          "behavioral.",
+          "molecular.",
+          "systems.",
+          "cognitive."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-043",
+        "type": "mc",
+        "prompt": "How interacting neural circuits process sensory inputs and organize movements is primarily a question in",
+        "options": [
+          "histology alone.",
+          "molecular neuroscience.",
+          "systems neuroscience.",
+          "phrenology."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-044",
+        "type": "mc",
+        "prompt": "Which question most directly concerns cognitive neuroscience?",
+        "options": [
+          "How many subunits form a channel?",
+          "Which motor protein carries a vesicle?",
+          "How is myelin synthesized?",
+          "How does the brain support language and self-awareness?"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "MCQ-045",
+        "type": "mc",
+        "prompt": "Which comparison best supports adaptation of cortical organization to environmental demands?",
+        "options": [
+          "Prominent visual processing in macaques and whisker representations in rodents",
+          "Equal cortical allocation to every sense in all species",
+          "A larger skull always indicating greater intelligence",
+          "Identical sensory behavior in all mammals"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-046",
+        "type": "mc",
+        "prompt": "Which pair belongs to the central nervous system?",
+        "options": [
+          "Cranial nerves and spinal nerves",
+          "Brain and spinal cord",
+          "Sensory receptors and muscles",
+          "Schwann cells and peripheral ganglia"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-047",
+        "type": "mc",
+        "prompt": "White matter appears pale mainly because it contains many",
+        "options": [
+          "neuronal nuclei.",
+          "ventricles.",
+          "myelinated axons.",
+          "dendritic spines."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-048",
+        "type": "mc",
+        "prompt": "A structure moves farther from the midline. Its new position is described as more",
+        "options": [
+          "medial.",
+          "ventral in every case.",
+          "anterior in every case.",
+          "lateral."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "MCQ-049",
+        "type": "mc",
+        "prompt": "Difficulty initiating voluntary movement is a characteristic feature of",
+        "options": [
+          "Parkinson’s disease.",
+          "spinal paralysis only.",
+          "autism.",
+          "stroke in every case."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-050",
+        "type": "mc",
+        "prompt": "Which disorder is associated with disruption of the blood supply to the brain?",
+        "options": [
+          "Cerebral palsy",
+          "Stroke",
+          "Schizophrenia",
+          "Autism"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-051",
+        "type": "mc",
+        "prompt": "A developmental history of social-communication difficulty and restricted, repetitive behavior most closely matches the course description of",
+        "options": [
+          "epilepsy.",
+          "Parkinson’s disease.",
+          "autism.",
+          "spinal paralysis."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-052",
+        "type": "mc",
+        "prompt": "Which pair is correctly matched?",
+        "options": [
+          "Alzheimer’s disease — traumatic spinal cord injury",
+          "Cerebral palsy — a theory of skull shape",
+          "Epilepsy — a staining method",
+          "Alzheimer’s disease — progressive cognitive decline and dementia"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "MCQ-053",
+        "type": "mc",
+        "prompt": "The major advantage of staining only a small fraction of neurons with the Golgi method is that",
+        "options": [
+          "the processes of an individual cell can be followed with less overlap.",
+          "all nuclei become invisible.",
+          "the membrane potential can be measured.",
+          "only dead neurons are detected."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-054",
+        "type": "mc",
+        "prompt": "Cytoarchitecture refers primarily to the",
+        "options": [
+          "direction of ionic current.",
+          "arrangement of cells in a tissue or brain region.",
+          "movement of vesicles along an axon.",
+          "charge of a potassium ion."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-055",
+        "type": "mc",
+        "prompt": "Which statement best represents Cajal’s neuron doctrine?",
+        "options": [
+          "All neurites are fused into one continuous cytoplasm.",
+          "Only glia are individual cells.",
+          "Neurons are discrete cells that communicate at contacts.",
+          "The nervous system is an exception to cell theory."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-056",
+        "type": "mc",
+        "prompt": "Which preparation step allows soft brain tissue to be cut into thin sections?",
+        "options": [
+          "Measuring sodium current",
+          "Increasing extracellular potassium",
+          "Removing all membranes",
+          "Fixing the tissue and using a microtome"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "MCQ-057",
+        "type": "mc",
+        "prompt": "Which neuronal structure is specialized primarily for receiving multiple synaptic inputs?",
+        "options": [
+          "Dendrites",
+          "Myelin alone",
+          "An axon terminal only",
+          "The nuclear envelope"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-058",
+        "type": "mc",
+        "prompt": "Which statement best describes a dendritic spine?",
+        "options": [
+          "It is a nucleus within a Schwann cell.",
+          "It is a small dendritic protrusion that often receives synaptic input.",
+          "It is a gap between myelin segments.",
+          "It is a bundle of peripheral axons."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-059",
+        "type": "mc",
+        "prompt": "Proteins destined for secretion or insertion into the membrane are commonly synthesized by ribosomes associated with",
+        "options": [
+          "myelin.",
+          "microfilaments.",
+          "rough endoplasmic reticulum.",
+          "the synaptic cleft."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-060",
+        "type": "mc",
+        "prompt": "Which organelle supplies much of the ATP required for neuronal transport and ion pumping?",
+        "options": [
+          "Nucleus",
+          "Golgi apparatus",
+          "Synaptic vesicle",
+          "Mitochondrion"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "MCQ-061",
+        "type": "mc",
+        "prompt": "Which is a defensible comparison between a proximal axon and an axon terminal?",
+        "options": [
+          "The terminal has abundant synaptic vesicles and specialized release machinery.",
+          "The proximal axon contains no mitochondria under any condition.",
+          "Only the terminal contains a neuronal nucleus.",
+          "Only the axon hillock contains abundant Nissl bodies."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-062",
+        "type": "mc",
+        "prompt": "Which structure forms the main track for long-distance axonal transport?",
+        "options": [
+          "Phospholipid tails",
+          "Microtubules",
+          "The synaptic cleft",
+          "Nissl bodies"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-063",
+        "type": "mc",
+        "prompt": "A labeled substance moves from an axon terminal toward the soma. Which motor protein is most closely associated with this movement?",
+        "options": [
+          "Kinesin",
+          "Tubulin",
+          "Dynein",
+          "Myelin protein"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-064",
+        "type": "mc",
+        "prompt": "Blocking fast anterograde transport would most directly impair",
+        "options": [
+          "electrical attraction between opposite charges.",
+          "the definition of equilibrium potential.",
+          "the direction called medial.",
+          "delivery of newly synthesized cargo from soma to terminal."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "MCQ-065",
+        "type": "mc",
+        "prompt": "Microfilaments are primarily composed of",
+        "options": [
+          "actin.",
+          "DNA.",
+          "myelin.",
+          "silver chromate."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-066",
+        "type": "mc",
+        "prompt": "Which pairing correctly matches an axon-length classification?",
+        "options": [
+          "Golgi type I — exclusively short local axons",
+          "Golgi type I — long projection axons",
+          "Golgi type II — only sensory dendrites",
+          "Golgi type II — no neurites"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-067",
+        "type": "mc",
+        "prompt": "A neuron with several processes emerging from the soma is classified as",
+        "options": [
+          "aspinous solely because of this feature.",
+          "bipolar.",
+          "multipolar.",
+          "a Schwann cell."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-068",
+        "type": "mc",
+        "prompt": "Which pair is correctly matched?",
+        "options": [
+          "Microglia — primary CNS myelin formation",
+          "Schwann cells — cortical language production",
+          "Oligodendrocytes — phagocytosis as their defining role",
+          "Astrocytes — regulation of extracellular K⁺ and transmitter levels"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "MCQ-069",
+        "type": "mc",
+        "prompt": "Which statement concerning a myelinating oligodendrocyte is correct?",
+        "options": [
+          "It may myelinate segments of more than one axon in the CNS.",
+          "It is restricted to peripheral nerves.",
+          "It forms the nucleus of a neuron.",
+          "It is the only cell able to synthesize ATP."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-070",
+        "type": "mc",
+        "prompt": "Which statement best identifies the direct structural basis of the blood–brain barrier?",
+        "options": [
+          "Fusion of all astrocytes into a single cell",
+          "Specialized brain capillary endothelium with tight junctions",
+          "The myelin sheath around each neuron",
+          "The nucleus of each microglial cell"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-071",
+        "type": "mc",
+        "prompt": "In a diagram of a peripheral myelinated axon, a nucleus within a myelin-forming cell belongs to",
+        "options": [
+          "the axon itself.",
+          "a dendritic spine.",
+          "a Schwann cell.",
+          "a node of Ranvier."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-072",
+        "type": "mc",
+        "prompt": "Cells lining the ventricular surface are called",
+        "options": [
+          "motor neurons.",
+          "Schwann cells.",
+          "pyramidal cells.",
+          "ependymal cells."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "MCQ-073",
+        "type": "mc",
+        "prompt": "Why do hydrated ions not freely cross the phospholipid bilayer?",
+        "options": [
+          "Its hydrophobic core presents an energetic barrier to charged particles.",
+          "All ions are too large to fit between neurons.",
+          "The membrane contains no proteins.",
+          "Ions have no kinetic energy."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-074",
+        "type": "mc",
+        "prompt": "Which statement distinguishes an ion channel from an ion pump?",
+        "options": [
+          "Both must hydrolyze ATP for each ion passing.",
+          "Channels permit passive ion flow; pumps can use energy to move ions against gradients.",
+          "Only channels are proteins.",
+          "Pumps cannot affect ionic concentrations."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-075",
+        "type": "mc",
+        "prompt": "A Na⁺/K⁺ pump cycle moves three sodium ions out and two potassium ions in. What is the net charge movement?",
+        "options": [
+          "One positive charge inward",
+          "No charge movement",
+          "One positive charge outward",
+          "Five positive charges outward"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-076",
+        "type": "mc",
+        "prompt": "At 37°C, [Na⁺]o/[Na⁺]i = 10. What is E_Na?",
+        "options": [
+          "−61.54 mV",
+          "−30.77 mV",
+          "0 mV",
+          "+61.54 mV"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "MCQ-077",
+        "type": "mc",
+        "prompt": "For a monovalent cation with equal internal and external concentrations, the Nernst equilibrium potential is",
+        "options": [
+          "0 mV.",
+          "−65 mV regardless of conditions.",
+          "+61.54 mV.",
+          "undefined because the channel is closed."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-078",
+        "type": "mc",
+        "prompt": "If external K⁺ doubles from 5 to 10 mM while internal K⁺ remains 100 mM at 37°C, E_K becomes approximately",
+        "options": [
+          "−98.6 mV.",
+          "−61.5 mV.",
+          "+61.5 mV.",
+          "0 mV."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-079",
+        "type": "mc",
+        "prompt": "Which factor does NOT appear in the Nernst equation for an individual ion?",
+        "options": [
+          "Temperature",
+          "Ionic charge",
+          "Membrane permeability",
+          "The external-to-internal concentration ratio"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-080",
+        "type": "mc",
+        "prompt": "For Cl⁻ at 37°C, which expression correctly gives its equilibrium potential?",
+        "options": [
+          "61.54 log10([Cl]o/[Cl]i) mV",
+          "30.77 log10([Cl]o/[Cl]i) mV",
+          "61.54 × ([Cl]o/[Cl]i) mV",
+          "−61.54 log10([Cl]o/[Cl]i) mV"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "MCQ-081",
+        "type": "mc",
+        "prompt": "With P_K = 40, P_Na = 1 and the course concentrations, which ratio occurs inside the Goldman logarithm?",
+        "options": [
+          "350/4015",
+          "4015/350",
+          "5/100 only",
+          "150/15 only"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-082",
+        "type": "mc",
+        "prompt": "If P_Na becomes zero but P_K remains positive, which statement is correct for the two-ion model?",
+        "options": [
+          "V_m must remain at −65 mV.",
+          "V_m approaches E_K.",
+          "P_K must also become zero because the resting ratio was 40:1.",
+          "V_m approaches E_Na."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-083",
+        "type": "mc",
+        "prompt": "For a cation, positive outward current is defined as positive. If V_m is less than E_ion and conductance is positive, the net ion flux is",
+        "options": [
+          "outward.",
+          "zero in all cases.",
+          "inward.",
+          "independent of V_m."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-084",
+        "type": "mc",
+        "prompt": "Given g_K = 2 nS, V_m = −65 mV and E_K = −80 mV, calculate I_K.",
+        "options": [
+          "−30 pA",
+          "+7.5 pA",
+          "0 pA",
+          "+30 pA"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "MCQ-085",
+        "type": "mc",
+        "prompt": "Given g_Na = 1 nS, V_m = −65 mV and E_Na = +62 mV, calculate I_Na.",
+        "options": [
+          "−127 pA",
+          "+127 pA",
+          "−3 pA",
+          "+62 pA"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-086",
+        "type": "mc",
+        "prompt": "Which condition is sufficient to make the net current through a particular ion channel population zero?",
+        "options": [
+          "A nonzero driving force alone",
+          "Zero conductance, even with a nonzero driving force",
+          "A concentration gradient alone",
+          "A negative membrane potential alone"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "MCQ-087",
+        "type": "mc",
+        "prompt": "Which statement about ionic equilibrium is correct?",
+        "options": [
+          "All ions stop moving microscopically.",
+          "Internal and external concentrations must be equal.",
+          "Opposing electrochemical influences balance so that net flux of that ion is zero.",
+          "All membrane channels must be closed."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "MCQ-088",
+        "type": "mc",
+        "prompt": "Which TWO mechanisms help stabilize extracellular K⁺ in the brain?",
+        "options": [
+          "Myelin synthesis and skull growth",
+          "Nissl staining and ablation",
+          "Phrenology and axonal transport",
+          "The blood–brain barrier and astrocytic spatial buffering"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "MCQ-089",
+        "type": "mc",
+        "prompt": "Which recording arrangement directly measures the transmembrane resting potential?",
+        "options": [
+          "An intracellular electrode with an extracellular reference",
+          "Two electrodes kept outside all cells, with no intracellular access",
+          "A photograph of Golgi-stained tissue",
+          "A measurement of skull diameter"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "MCQ-090",
+        "type": "mc",
+        "prompt": "Following a sudden loss of ATP production, which description best distinguishes an immediate effect from a longer-term consequence?",
+        "options": [
+          "All concentration gradients vanish instantly.",
+          "Pump activity is impaired; ionic gradients progressively deteriorate as leaks continue.",
+          "Nernst potentials instantly become independent of concentration.",
+          "The membrane is guaranteed to remain at −65 mV indefinitely."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "FRQ-001",
+        "type": "written",
+        "prompt": "Distinguish between the Nissl stain method and the Golgi stain method."
+      },
+      {
+        "id": "FRQ-002",
+        "type": "written",
+        "prompt": "Using THREE named examples of glial cells, state their specific functions."
+      },
+      {
+        "id": "FRQ-003",
+        "type": "written",
+        "prompt": "Compare and contrast oligodendrocytes and Schwann cells."
+      },
+      {
+        "id": "FRQ-004",
+        "type": "written",
+        "prompt": "Structural features reflect functional roles. State the roles of dendrites, the soma, dendritic spines and the axon in nerve signaling."
+      },
+      {
+        "id": "FRQ-005",
+        "type": "written",
+        "prompt": "Using THREE historical neuroscientists, state their names and major contributions to our understanding of the nervous system."
+      },
+      {
+        "id": "FRQ-006",
+        "type": "written",
+        "prompt": "Using macaques and rodents as examples, evaluate the statement: “Brain structure reflects adaptation to the environment.”"
+      },
+      {
+        "id": "FRQ-007",
+        "type": "written",
+        "prompt": "State THREE examples of nervous-system disorders and describe one major feature of each."
+      },
+      {
+        "id": "FRQ-008",
+        "type": "written",
+        "prompt": "State TWO different methods of classifying neurons and list the types recognized by each method."
+      },
+      {
+        "id": "FRQ-009",
+        "type": "written",
+        "prompt": "State the intracellular and extracellular concentrations of K⁺ and Na⁺ in the course model."
+      },
+      {
+        "id": "FRQ-010",
+        "type": "written",
+        "prompt": "State TWO mechanisms that regulate extracellular potassium concentration in the brain and explain their significance."
+      },
+      {
+        "id": "FRQ-011",
+        "type": "written",
+        "prompt": "State TWO differences between intracellular recording and extracellular recording."
+      },
+      {
+        "id": "FRQ-012",
+        "type": "written",
+        "prompt": "A neuron starts at V_m = 0 mV. Sodium permeability is set to zero while potassium permeability remains positive. Assuming no other permeant ions, explain the final membrane potential."
+      },
+      {
+        "id": "FRQ-013",
+        "type": "written",
+        "prompt": "State THREE structural specializations that distinguish an axon terminal from a proximal axon. Explain why “no mitochondria in the axon hillock” is an unsafe absolute claim."
+      },
+      {
+        "id": "FRQ-014",
+        "type": "written",
+        "prompt": "Distinguish between replication and verification, using a neuroscience experiment as an example."
+      },
+      {
+        "id": "FRQ-015",
+        "type": "written",
+        "prompt": "For EACH of molecular, cellular and systems neuroscience, state an appropriate research question."
+      },
+      {
+        "id": "FRQ-016",
+        "type": "written",
+        "prompt": "Explain how Broca’s observations supported localization of function. State ONE limitation of inferring function from a lesion."
+      },
+      {
+        "id": "FRQ-017",
+        "type": "written",
+        "prompt": "Distinguish Gall’s phrenology from experimental evidence for cortical localization."
+      },
+      {
+        "id": "FRQ-018",
+        "type": "written",
+        "prompt": "State the functions of the dorsal and ventral spinal roots. Predict the primary effect of cutting each root."
+      },
+      {
+        "id": "FRQ-019",
+        "type": "written",
+        "prompt": "Explain why the Golgi stain helped reveal neuronal morphology. How did Cajal’s conclusion differ from Golgi’s reticular theory?"
+      },
+      {
+        "id": "FRQ-020",
+        "type": "written",
+        "prompt": "Describe the sequence by which a membrane protein synthesized in the soma can reach an axon terminal."
+      },
+      {
+        "id": "FRQ-021",
+        "type": "written",
+        "prompt": "Compare microtubules, neurofilaments and microfilaments in terms of composition or structural role."
+      },
+      {
+        "id": "FRQ-022",
+        "type": "written",
+        "prompt": "At a typical chemical synapse, identify the presynaptic compartment, the chemical signal and the postsynaptic target."
+      },
+      {
+        "id": "FRQ-023",
+        "type": "written",
+        "prompt": "Explain how selective potassium permeability can generate a negative membrane potential while bulk ion concentrations remain nearly unchanged."
+      },
+      {
+        "id": "FRQ-024",
+        "type": "written",
+        "prompt": "At 37°C, calculate E_K when [K⁺]i = 100 mM and [K⁺]o increases from 5 to 10 mM. Show your working and state the direction of change."
+      },
+      {
+        "id": "FRQ-025",
+        "type": "written",
+        "prompt": "Using P_K:P_Na = 40:1, calculate resting membrane potential from [K]i=100, [K]o=5, [Na]i=15 and [Na]o=150 mM."
+      },
+      {
+        "id": "FRQ-026",
+        "type": "written",
+        "prompt": "For a K⁺ conductance of 2 nS, V_m = −65 mV and E_K = −80 mV, calculate the current and state its direction."
+      },
+      {
+        "id": "FRQ-027",
+        "type": "written",
+        "prompt": "Distinguish an ionic equilibrium potential from the resting membrane potential of a neuron."
+      },
+      {
+        "id": "FRQ-028",
+        "type": "written",
+        "prompt": "State TWO independent conditions that can make I_ion = g_ion(V_m − E_ion) equal to zero. Explain why they are not equivalent."
+      },
+      {
+        "id": "FRQ-029",
+        "type": "written",
+        "prompt": "Explain why the Na⁺/K⁺ pump is essential for long-term resting-potential maintenance but is not the sole immediate cause of the resting voltage."
+      },
+      {
+        "id": "FRQ-030",
+        "type": "written",
+        "prompt": "An astrocytic potassium-buffering mechanism becomes less effective. Predict the effect of a local rise in extracellular K⁺ and justify the prediction."
+      }
+    ]
+  },
+  "literature-review": {
+    "questions": [
+      {
+        "id": "LIT-001",
+        "type": "mc",
+        "prompt": "Jonah pushes the last biscuit toward a younger clerk and avoids drawing attention to the gesture. Which statement is best supported?",
+        "options": [
+          "The narrator directly calls Jonah generous.",
+          "His actions indirectly suggest consideration for another person.",
+          "He is necessarily an antagonist because his purpose is unstated.",
+          "The gesture proves that the narrator knows everyone’s thoughts."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "LIT-002",
+        "type": "mc",
+        "prompt": "A narrator calls a banquet a display of empty promises; smiling guests avoid one another’s eyes. Which account distinguishes tone from mood accurately?",
+        "options": [
+          "Tone means location and mood means time of day.",
+          "The tone is joyful because guests smile.",
+          "A skeptical tone contributes to an uneasy mood.",
+          "The tone and mood must always be identical."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "LIT-003",
+        "type": "mc",
+        "prompt": "Which explanation goes beyond listing events to analyze plot?",
+        "options": [
+          "The closure order forces a protest; the loss of a supporter makes success less certain.",
+          "The town has a ferry, an office, and a square.",
+          "Three characters enter a room in chapter order.",
+          "The writer uses verbs to describe actions."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "LIT-004",
+        "type": "mc",
+        "prompt": "A third-person passage reports Nora’s private uncertainty while giving only the visitor’s visible gestures. What description fits the information shown?",
+        "options": [
+          "First person, because a character has private thoughts.",
+          "Second person, because someone enters the scene.",
+          "Omniscient, because the visitor’s exact feelings are disclosed.",
+          "Third person with interior access centered on Nora."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "LIT-005",
+        "type": "mc",
+        "prompt": "What makes the doctors’ explanation at the end of The Story of an Hour a useful example of dramatic irony?",
+        "options": [
+          "A doctor intentionally jokes with Louise.",
+          "Readers know her private hopes for independence while the doctors give a public explanation through joy.",
+          "Every surprising ending is dramatic irony.",
+          "The statement confirms the exact emotional mechanism of her death."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "LIT-006",
+        "type": "mc",
+        "prompt": "What makes an interpretation of Louise’s open window defensible?",
+        "options": [
+          "The outside vitality is connected to her emerging recognition of an independent future.",
+          "Every window has the same symbolic meaning in every story.",
+          "A pleasant view proves the marriage was physically violent.",
+          "The weather makes all readers feel exactly the same emotion."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "LIT-007",
+        "type": "mc",
+        "prompt": "Which claim best answers a prompt about how Gaiman’s narrative perspective changes interpretation?",
+        "options": [
+          "Gaiman uses a narrator to tell a story.",
+          "The tale includes a queen and a child.",
+          "The Queen’s self-defense reframes familiar acts of persecution as claims of protection, unsettling inherited moral judgments.",
+          "The story is interesting because it has many events."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "LIT-008",
+        "type": "mc",
+        "prompt": "Which sequence describes the planning method in the new deck?",
+        "options": [
+          "Choose a broad conclusion first and search only for agreement.",
+          "Write a summary, list devices, and stop.",
+          "Present a claim, then quote without explanation.",
+          "Notice evidence, form smaller ideas, and synthesize an arguable claim."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "LIT-009",
+        "type": "mc",
+        "prompt": "Why does Iran deliberately schedule despair in chapter 1?",
+        "options": [
+          "She worries about noticing emptiness without an appropriate emotional response.",
+          "She wants to prove the mood organ cannot select emotions.",
+          "She has already emigrated and wants to return to Earth.",
+          "She intends to eliminate all emotion permanently."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "LIT-010",
+        "type": "mc",
+        "prompt": "Which account of Isidore’s social position is accurate by chapter 2?",
+        "options": [
+          "He is an android because he is called a special.",
+          "He is a human classified as a special and stigmatized, with restrictions including exclusion from emigration.",
+          "He owns the Rosen Association.",
+          "He is a senior bounty hunter replacing Holden."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "LIT-011",
+        "type": "mc",
+        "prompt": "Why is Dave Holden’s injury important to Rick’s situation?",
+        "options": [
+          "It proves there are no dangerous suspects left.",
+          "It causes Rick to abandon the police permanently.",
+          "It creates an opportunity to take over dangerous work while demonstrating the risks involved.",
+          "It shows that the novel’s main conflict has ended."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "LIT-012",
+        "type": "mc",
+        "prompt": "What is the main purpose of Bryant’s instruction that Rick visit the Rosen Association?",
+        "options": [
+          "To purchase the entire animal catalogue.",
+          "To arrest Isidore for refusing to emigrate.",
+          "To hear an opera before starting work.",
+          "To examine whether the detection procedure remains adequate for the newer Nexus-6 subjects."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "LIT-013",
+        "type": "mc",
+        "prompt": "Which conclusion follows from the later admissions in the chapter-5 Rosen encounter?",
+        "options": [
+          "Rachael is an android with programmed memories, and the owl is artificial.",
+          "Rachael is proved human, and the owl is proved alive.",
+          "The test has been shown unable to detect any android.",
+          "Rick kills Rachael as an illegally escaped fugitive during the visit."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "LIT-014",
+        "type": "mc",
+        "prompt": "Which detail complicates Isidore’s first encounter with the new neighbor?",
+        "options": [
+          "She immediately gives a complete, independently verified life history.",
+          "She first gives the name Rachael Rosen, then insists on Pris Stratton.",
+          "She identifies herself as Inspector Bryant.",
+          "She destroys Isidore’s empathy box in that scene."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "LIT-015",
+        "type": "mc",
+        "prompt": "What do the staff discover about Horace, the cat Isidore transports?",
+        "options": [
+          "The cat is an artificial animal that successfully repairs itself.",
+          "The cat never showed distress.",
+          "The cat was a living animal; Isidore’s mechanical explanation was mistaken.",
+          "The cat is the same artificial owl Rick saw in Seattle."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "LIT-016",
+        "type": "mc",
+        "prompt": "Who is the apparent Soviet police colleague in Rick’s chapter-8 confrontation?",
+        "options": [
+          "Wilbur Mercer, using the empathy box.",
+          "Dave Holden, already recovered.",
+          "Eldon Rosen, purchasing a horse.",
+          "Polokov, posing as Sandor Kadalyi."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "LIT-017",
+        "type": "mc",
+        "prompt": "Which statement accurately describes Rick’s position at the end of chapter 9?",
+        "options": [
+          "He has been taken into custody and faces uncertainty about the authority directing him to another police building.",
+          "He has fully resolved the nature of the other police institution.",
+          "He has completed every remaining retirement and gone home.",
+          "He has accepted Luba’s claim without any attempt to test or verify it."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "LIT-018",
+        "type": "mc",
+        "prompt": "Which claim best connects the first nine chapters’ treatment of Isidore to a larger idea supported by the text?",
+        "options": [
+          "The novel proves that every official assessment is always false.",
+          "The contrast between Isidore’s low social standing and his capacity for concern complicates the equation of institutional classification with moral worth.",
+          "Isidore drives a truck, so the theme is vehicles.",
+          "Because he makes one mistake, Isidore has no capacity for empathy."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "sa1",
+        "type": "written",
+        "prompt": "Explain how the Queen’s first-person account in the Gaiman school edit changes one moral judgment encouraged by Grimm’s tale. Use one precise event or voice detail from each version."
+      },
+      {
+        "id": "sa2",
+        "type": "written",
+        "prompt": "How do chapters 2 and 7 complicate the society’s dismissive classification of Isidore? Use one detail about his social position and one detail about his behavior or response."
+      },
+      {
+        "id": "sa3",
+        "type": "written",
+        "prompt": "Revise this statement into a defensible claim: “In chapter 9, Rick hears singing, and it is good.” Then identify two details you would use to support the revised claim."
+      },
+      {
+        "id": "sa4",
+        "type": "written",
+        "prompt": "Describe the main change in Rick’s position during chapter 9. Distinguish one event established in the chapter from one interpretation or fear Rick forms."
+      },
+      {
+        "id": "essay",
+        "type": "written",
+        "prompt": "Develop a defensible claim: setting and Iran’s dialogue."
+      }
+    ]
+  },
+  "literature-androids-10-12": {
+    "questions": [
+      {
+        "id": "m01",
+        "type": "mc",
+        "prompt": "Where does Crams take Deckard at the start of Chapter 10?",
+        "options": [
+          "The Mission Street Hall of Justice",
+          "The Rosen Association headquarters",
+          "Deckard’s usual Lombard Street office",
+          "The museum’s security office"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "m02",
+        "type": "mc",
+        "prompt": "What later accounts for the stranger answering Deckard’s call home?",
+        "options": [
+          "Iran has moved to Mars.",
+          "Deckard has forgotten his home number.",
+          "The station routes calls back inside its own building.",
+          "Resch answers while pretending to be Iran."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "m03",
+        "type": "mc",
+        "prompt": "What confirms Polokov’s android status during the station discussion?",
+        "options": [
+          "His failure on a museum art quiz",
+          "A bone-marrow laboratory analysis",
+          "A confession during Voigt-Kampff",
+          "His refusal to feed a squirrel"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "m04",
+        "type": "mc",
+        "prompt": "What does Resch’s Boneli Reflex-Arc Test measure?",
+        "options": [
+          "The subject’s ability to describe paintings",
+          "The accuracy of autobiographical memories",
+          "The subject’s willingness to own an animal",
+          "Reaction timing to a light or sound signal"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "m05",
+        "type": "mc",
+        "prompt": "What does Garland claim about Resch while Resch is absent?",
+        "options": [
+          "Resch is an android supplied with synthetic memories.",
+          "Resch is Deckard’s supervisor at Lombard Street.",
+          "Resch has already passed Deckard’s test that morning.",
+          "Resch owns only an electric squirrel."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "m06",
+        "type": "mc",
+        "prompt": "How do Deckard and Resch make their departure look routine?",
+        "options": [
+          "They announce that Garland is dead.",
+          "They replace every officer’s identification card.",
+          "Resch handcuffs Deckard to himself as an apparent prisoner.",
+          "Deckard gives a speech explaining the agency’s fraud."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "m07",
+        "type": "mc",
+        "prompt": "Which animal does Resch cite in arguing that he is human?",
+        "options": [
+          "A goat named Iran",
+          "A real squirrel named Buffy",
+          "An electric sheep named Garland",
+          "A cat named Munch"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "m08",
+        "type": "mc",
+        "prompt": "Which pairing correctly describes the museum encounter?",
+        "options": [
+          "Luba studies The Scream; Resch requests Puberty.",
+          "Deckard buys the original painting Puberty.",
+          "The exhibition displays Picasso rather than Munch.",
+          "Resch comments on The Scream; Luba requests a reproduction of Puberty."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "m09",
+        "type": "mc",
+        "prompt": "Which sequence accurately describes Luba’s death?",
+        "options": [
+          "Deckard wounds her; Resch fires the final shot.",
+          "Resch wounds her; Deckard then kills her.",
+          "Luba dies before either hunter fires.",
+          "Deckard spares her and Resch leaves the museum."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "m10",
+        "type": "mc",
+        "prompt": "Why does Deckard use Voigt-Kampff rather than Boneli to test Resch?",
+        "options": [
+          "Boneli can only be used inside a museum.",
+          "Resch has already destroyed both sets of equipment.",
+          "Deckard does not know how to score Boneli independently.",
+          "Voigt-Kampff measures musical ability more accurately."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "m11",
+        "type": "mc",
+        "prompt": "What is a literary foil?",
+        "options": [
+          "A contrast between characters that brings particular traits into focus",
+          "A narrator who deliberately lies about every event",
+          "A reference to another artwork",
+          "A reversal that resolves every conflict"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "m12",
+        "type": "mc",
+        "prompt": "What does third-person limited narration usually restrict?",
+        "options": [
+          "The use of dialogue",
+          "The number of chapters",
+          "The presence of external conflict",
+          "Access to knowledge and interior experience through a focal character"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "m13",
+        "type": "mc",
+        "prompt": "Which is an example of indirect characterization?",
+        "options": [
+          "A glossary defining empathy",
+          "An inference about a character drawn from actions or speech",
+          "A page listing chapter titles",
+          "A narrator simply stating a trait"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "m14",
+        "type": "mc",
+        "prompt": "What best defines situational irony?",
+        "options": [
+          "A comparison using like or as",
+          "An artwork mentioned by name",
+          "An outcome that conflicts with a meaningful expectation",
+          "Any statement spoken by an antagonist"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "m15",
+        "type": "mc",
+        "prompt": "Which statement describes setting as a literary element?",
+        "options": [
+          "Place, time, and social environment can help reveal character and shape meaning.",
+          "Setting consists only of a street address.",
+          "Setting is identical to the narrator’s pronouns.",
+          "Setting is relevant only when the weather changes."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "m16",
+        "type": "mc",
+        "prompt": "Which description best fits a defensible literary claim?",
+        "options": [
+          "A list of character names",
+          "An unsupported judgment that a character is good",
+          "An arguable interpretation that answers the prompt and can be supported with evidence",
+          "A summary that repeats the question in different words"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "m17",
+        "type": "mc",
+        "prompt": "What does Resch’s human test result most directly complicate?",
+        "options": [
+          "The assumption that Munch painted Puberty",
+          "The equation of human classification with humane treatment of androids",
+          "The fact that Luba is a singer",
+          "The location of the opera-house roof"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "m18",
+        "type": "mc",
+        "prompt": "How does narration centered on Deckard affect the station episode?",
+        "options": [
+          "Readers encounter uncertainty through his limited access to explanations.",
+          "Readers receive a verified account of every officer’s mind.",
+          "Readers are told from the start that Garland’s claim about Resch is true.",
+          "Readers hear only Resch’s first-person account."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "m19",
+        "type": "mc",
+        "prompt": "Why is Deckard’s purchase of the art book useful evidence for a character comparison?",
+        "options": [
+          "It proves Luba is biologically human.",
+          "It shows that Resch has paid for the book.",
+          "It establishes that all androids understand art identically.",
+          "It shows personal attention to Luba’s request amid an official pursuit."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "m20",
+        "type": "mc",
+        "prompt": "What is a defensible function of the allusion to The Scream during Luba’s shooting?",
+        "options": [
+          "It turns the scene into proof that paintings predict the future.",
+          "It establishes that Munch witnessed the shooting.",
+          "It connects artistic representation with the hunted figure’s suffering.",
+          "It means Puberty and The Scream are the same painting."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "m21",
+        "type": "mc",
+        "prompt": "How does the closed phone system contribute to the station’s power?",
+        "options": [
+          "It lets Deckard consult independent witnesses more quickly.",
+          "It controls verification while maintaining the appearance of normal procedure.",
+          "It removes the need for any officers in the building.",
+          "It confirms that every memory Deckard possesses is false."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "m22",
+        "type": "mc",
+        "prompt": "What is the strongest reason to treat Garland’s account of Resch cautiously?",
+        "options": [
+          "Garland has an interest in dividing the hunters, and the later test contradicts the allegation.",
+          "Garland’s job title makes everything he says false.",
+          "Deckard knows from the beginning that Resch has no memories.",
+          "Luba’s accusation supplies independent laboratory confirmation."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "m23",
+        "type": "mc",
+        "prompt": "Which description best captures Deckard’s emerging internal conflict?",
+        "options": [
+          "He must choose between two equally priced paintings.",
+          "He is certain that every android has exactly the same moral status.",
+          "He only disputes whether Resch may park on the roof.",
+          "His assigned duty conflicts with his response to certain androids as individuals."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "m24",
+        "type": "mc",
+        "prompt": "Which claim best accounts for the section’s reversals without overstating them?",
+        "options": [
+          "The test proves that cruelty is impossible in humans.",
+          "Dick uses conflicting accounts and a human test result to separate apparent identity from ethical judgment.",
+          "Dick proves that every official institution is an android conspiracy.",
+          "The museum resolves all uncertainty by replacing science with art."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "s01",
+        "type": "written",
+        "prompt": "Distinguish Voigt-Kampff from Boneli. Why does Deckard use the former on Resch?"
+      },
+      {
+        "id": "s02",
+        "type": "written",
+        "prompt": "Name two actions used to conceal Garland’s death and make the escape appear routine."
+      },
+      {
+        "id": "s03",
+        "type": "written",
+        "prompt": "Which artwork does Luba request, how does Deckard obtain it, and what happens to the purchase?"
+      },
+      {
+        "id": "s04",
+        "type": "written",
+        "prompt": "State who fires the initial shot at Luba and who kills her. What later result establishes Resch’s classification?"
+      },
+      {
+        "id": "s05",
+        "type": "written",
+        "prompt": "Define third-person limited narration and explain one effect it can create in the station episode."
+      },
+      {
+        "id": "s06",
+        "type": "written",
+        "prompt": "Define indirect characterization. Give one example from these chapters without merely naming a trait."
+      },
+      {
+        "id": "s07",
+        "type": "written",
+        "prompt": "Distinguish an artistic allusion from a thematic claim using the Munch exhibition."
+      },
+      {
+        "id": "s08",
+        "type": "written",
+        "prompt": "What makes a literary claim defensible? Write one claim about identity in Chapters 10–12."
+      },
+      {
+        "id": "s09",
+        "type": "written",
+        "prompt": "In 3–5 sentences, explain how the Mission Street setting shapes Deckard’s access to truth. Use a specific detail."
+      },
+      {
+        "id": "s10",
+        "type": "written",
+        "prompt": "In 3–5 sentences, analyze Deckard and Resch as foils. Include one qualification that prevents an oversimplified comparison."
+      },
+      {
+        "id": "s11",
+        "type": "written",
+        "prompt": "In 3–5 sentences, explain the significance of Resch testing as human. Avoid treating the result as an endorsement of his conduct."
+      },
+      {
+        "id": "s12",
+        "type": "written",
+        "prompt": "In 3–5 sentences, explain how the art-book episode complicates treating Luba as merely a target."
+      }
+    ]
+  }
+}

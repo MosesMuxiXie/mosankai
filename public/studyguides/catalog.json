@@ -50,7 +50,7 @@
       "format": "HTML",
       "filename": "statistics-review.html",
       "href": "/studyguides/statistics/guides/statistics-review.html",
-      "bytes": 43877
+      "bytes": 44136
     },
     {
       "id": "neuroscience-review",
@@ -67,7 +67,7 @@
       "format": "HTML",
       "filename": "neuroscience-study-guide.html",
       "href": "/studyguides/neuroscience/guides/neuroscience-study-guide.html",
-      "bytes": 150681
+      "bytes": 151066
     },
     {
       "id": "neuron-glia-map",
@@ -84,7 +84,7 @@
       "format": "HTML",
       "filename": "neuron-glia-mindmap.html",
       "href": "/studyguides/neuroscience/guides/neuron-glia-mindmap.html",
-      "bytes": 2211947
+      "bytes": 2212201
     },
     {
       "id": "literature-review",
@@ -101,7 +101,7 @@
       "format": "HTML",
       "filename": "ap-literature-review.html",
       "href": "/studyguides/english/guides/ap-literature-review.html",
-      "bytes": 1353024
+      "bytes": 1353293
     },
     {
       "id": "literature-map",
@@ -118,7 +118,24 @@
       "format": "HTML",
       "filename": "ap-literature-map.html",
       "href": "/studyguides/english/guides/ap-literature-map.html",
-      "bytes": 716220
+      "bytes": 716475
+    },
+    {
+      "id": "literature-androids-10-12",
+      "subject": "english",
+      "kind": "guide",
+      "title": {
+        "en": "Do Androids Dream of Electric Sheep? · Chapters 10–12",
+        "zh-CN": "《仿生人》· 第 10–12 章复习"
+      },
+      "scope": {
+        "en": "Chapters 10–12 · animated story flow · 24 MCQs · 12 short answers",
+        "zh-CN": "第 10–12 章 · 动态故事流程图 · 24 道选择题 · 12 道简答题"
+      },
+      "format": "HTML",
+      "filename": "androids-chapters-10-12.html",
+      "href": "/studyguides/english/guides/androids-chapters-10-12.html",
+      "bytes": 91899
     },
     {
       "id": "stats-ch-1_0",

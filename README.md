@@ -40,7 +40,7 @@ Website: [https://mosankai.com](https://mosankai.com)
 
 ## Study Guides
 
-资料目录由 `public/studyguides/catalog.json` 管理，当前收录 5 份交互成品与 25 份原始资料。学科地址为 `/studyguides/statistics`、`/studyguides/neuroscience`、`/studyguides/english`；目录支持中英文、标题与范围搜索，原页面保留原有语言和交互。PDF 支持阅读与下载，PPT/PPTX/DOCX 提供原文件下载。教材和小说原文件是全文，卡片单独注明复习所使用的章节范围。
+资料目录由 `public/studyguides/catalog.json` 管理，当前收录 6 份交互成品与 25 份原始资料。学科地址为 `/studyguides/statistics`、`/studyguides/neuroscience`、`/studyguides/english`；目录支持中英文、标题与范围搜索，原页面保留原有语言和交互。PDF 支持阅读与下载，PPT/PPTX/DOCX 提供原文件下载。教材和小说原文件是全文，卡片单独注明复习所使用的章节范围。
 
 新增资料时，将文件放入对应学科的 `guides/` 或 `sources/` 目录，在清单中增加唯一 `id`、`subject`、`kind`、中英文 `title`/`scope`、`format`、原始 `filename`、URL 编码后的 `href` 和 `bytes`；原始资料还须记录 SHA-256 `sha256`。交互页面加上 `data-studyguide-return` 返回链接。运行 `node --test test/studyguides.test.js` 检查条目、文件、原始哈希、访问路由和下载，再运行 `npm test`。
 
@@ -100,3 +100,23 @@ Vercel 将 `/api/mcp` rewrite 到 `/api/findatime?operation=mcp`，复用现有�
 ### 验证
 
 运行 `npm test`。MCP 集成测试使用官方客户端启动本地服务，数据写入临时文件，并禁用 `.env.local` 和真实 Redis 连接。覆盖创建、查询、参与及更新、无法参加、网页互通、输入错误、Origin/CORS、协议错误、私密令牌和存储失败。
+
+## Study Center · 学习中心
+
+第二阶段已将 /studyguides 升级为日漫风格学习中心：米白与靛蓝、黄昏三格分镜、少量网点和墨线。分镜及三张学科插画为独立 WebP；标题、按钮和列表使用真实网页元素。学科入口、目录搜索、中英文、原始阅读与下载保留。
+
+新增《仿生人》第 10–12 章资料：/studyguides/english/guides/androids-chapters-10-12.html，保留最新动态流程图、24 道选择题、12 道简答题与答案模板。旧英语资料仍标明前九章。网站副本的学习记录需要站内脚本，本地原始离线成品保持完整。
+
+- 继续学习列出最近五份资料。四份题库保存答案及位置；继续链接使用 studyResume=1，错题重练使用 studyQuestion=稳定题号。刷新保留当前学习位置，包括测试模式；两份思维导图保存页面或锚点，原始文件只记录打开入口。
+- 全部 31 个条目均可收藏；题库选择题在检查或提交后才记录结果。新的草稿不计成绩，上次错题保留至重练答对。书面题保持自评，可手动加入待复习。
+- 待复习合并自动错题和手动项目；完成只移出清单，不将错题判为答对。再次判错会重新加入。没有间隔复习算法或跨学科总分。
+- 记录仅保存在当前浏览器同源的 mosankai:study:v1:<materialId> 键，无账号或服务端同步。读取旧神经科学及新版英语的同源旧键，迁移后保留原键；file://、其他域名或其他浏览器的记录不能自动读取。
+- 导出包含学习状态的版本化 JSON；导入先预览新增、覆盖与跳过数量，点击恢复后按资料合并，较新优先、同时间保留本机。未知资料跳过，损坏文件不写入。存储受限时本次记录留在内存，可导出备份；清除浏览器数据会删除本机记录。
+
+新增或修改题库后运行 node scripts/build-study-index.js，从真实题库重建 learning-index.json（199 道题的身份与校验数据），同时重算目录文件大小。原始资料 SHA-256 保持独立校验。四份复习页面通过薄适配器接入，未改动原评分规则。
+
+验证：npm test、node test/androids-self-check.mjs。真实浏览器检查可运行 node scripts/check-study-browser.cjs，需将 MOSANKAI_PLAYWRIGHT 指向机器上已有的 Playwright 模块（本机可使用 Codex bundled runtime），并启动本地 3137 端口；STUDY_BASE_URL 可覆盖地址，STUDY_SCREENSHOT_DIR 可保存截图。此检查使用已安装的 Microsoft Edge，不新增项目依赖。
+
+沿用 Vercel Git 部署；此阶段未新增服务端接口或函数。
+
+独立插画的生成方式、文件及提示词见 [素材记录](docs/study-center-artwork.md)。
