@@ -122,3 +122,9 @@ Vercel 将 `/api/mcp` rewrite 到 `/api/findatime?operation=mcp`，复用现有�
 独立插画的生成方式、文件及提示词见 [素材记录](docs/study-center-artwork.md)。
 
 资料页也有直接“导出备份”按钮，可在存储受限时保存当前页面的内存记录，离开页面前请先导出。记录恢复完成前，原页面控件暂不可编辑，避免慢加载覆盖输入。独立审查回归检查为 node scripts/check-study-review.cjs，使用同一 Playwright 环境配置。
+
+### Androids 10–12 expanded review (2026-10-14)
+
+The existing English guide now begins with a Chapters 1–9 briefing, eight character entries, and eleven terms. All twelve story-flow events have expanded narrative explanations and earlier-chapter links. Seven named themes, four verified short original fragments with chapter/PDF locators, and a final synthesis support a first-time reader. The 24 multiple-choice and 12 short-answer identities, keys, and scoring are preserved, as are Study Center backup, resume, and assessed-result boundaries. No events after Chapter 12 are introduced.
+
+Run `node test/androids-self-check.mjs` (16 content/logic checks), the full `npm test`, and the real browser integration checks before deployment.

@@ -146,4 +146,30 @@ test('story flow connects all twelve events in order and preserves chapter views
     assert.ok(flow.nodes.every(s=>s.chapter===chapter));
   }
 });
+test('beginner context explains the earlier plot, people, and terms', () => {
+  assert.ok(Array.isArray(R.context) && R.context.length>=4,'A first-time reader needs an earlier-chapter briefing');
+  for(const block of R.context) assert.ok(block.title&&block.body&&block.connection&&block.chapters&&block.sources.length);
+  for(const name of ['Rick Deckard','Luba Luft','Phil Resch','Garland','John Isidore','Rachael Rosen']){
+    const c=R.characters.find(c=>c.name===name);assert.ok(c&&c.role&&c.goal&&c.significance,name);
+  }
+  assert.ok(R.glossary.length>=8);
+  for(const term of R.glossary) assert.ok(term.term&&term.definition&&term.application);
+});
+test('every storyline event supplies narrative details and explicit thematic connections', () => {
+  for(const scene of R.scenes){
+    assert.ok(scene.details?.length>=2,scene.id+' must explain the event beyond a caption');
+    assert.ok(scene.details.join(' ').split(/\s+/).length>=65,scene.id+' needs substantive explanation');
+    assert.ok(scene.connections?.length && scene.themes?.length,scene.id);
+    assert.ok(scene.themes.every(id=>R.themes.some(t=>t.id===id)),scene.id);
+  }
+});
+test('named themes and primary evidence support bounded interpretations', () => {
+  assert.ok(R.themes.length>=6);
+  for(const theme of R.themes){assert.ok(theme.title&&theme.claim&&theme.background&&theme.explanation&&theme.caution);assert.ok(theme.evidence.length>=2&&theme.evidence.every(id=>R.scenes.some(s=>s.id===id)));}
+  assert.equal(R.quotations.length,4);
+  assert.ok(R.quotations.reduce((n,q)=>n+q.text.split(/\s+/).length,0)<=25);
+  for(const q of R.quotations){assert.ok(q.speaker&&q.chapter>=10&&q.chapter<=12&&q.pdfPage&&q.context&&q.analysis&&q.limits&&q.scene);assert.ok(R.scenes.some(s=>s.id===q.scene));}
+  assert.ok(R.synthesis.length>=4);
+  assert.ok(html.includes('id="context"')&&html.includes('id="evidence"')&&html.includes('id="themes"'));
+});
 console.log(`\n${passed} checks passed. Content: 24 multiple-choice + 12 short-answer questions.`);
