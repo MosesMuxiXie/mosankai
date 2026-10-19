@@ -11,7 +11,7 @@ const paths={stats:'/studyguides/statistics/guides/statistics-review.html',neuro
  try{
   await go(paths.lit);assert.equal(await page.locator('.study-tools').count(),1,'older English CSP must allow same-origin learning integration');console.log('PASS older English guide loads learning controls');
   await go('/studyguides',false);await page.evaluate(()=>localStorage.clear());await go('/studyguides',false);
-  assert.equal(await page.locator('.guide-card').count(),6);assert.equal(await page.locator('.source-row').count(),25);assert.match(await page.locator('#recent-results').innerText(),/尚无学习记录/);
+  assert.equal(await page.locator('.guide-card').count(),7);assert.equal(await page.locator('.source-row').count(),25);assert.match(await page.locator('#recent-results').innerText(),/尚无学习记录/);
   await page.locator('.guide-card').first().locator('[data-favorite]').click();assert.equal((await read('statistics-review')).favorite,true);
   await page.locator('#tab-favorites').focus();await page.keyboard.press('ArrowRight');assert.equal(await page.locator('#tab-wrong').getAttribute('aria-selected'),'true');
   await page.locator('#study-search').fill('10–12');assert.equal(await page.locator('.guide-card').count(),1);await page.locator('#study-search').fill('');

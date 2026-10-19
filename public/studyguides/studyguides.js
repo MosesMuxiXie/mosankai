@@ -34,7 +34,7 @@ function size(bytes){const f=new Intl.NumberFormat(i18n().locale(),{maximumFract
 function date(time){return new Intl.DateTimeFormat(i18n().locale(),{month:'short',day:'numeric'}).format(new Date(time));}
 function renderRecent(){
  const records=store.all().filter(r=>r.lastVisitedAt).sort((a,b)=>b.lastVisitedAt-a.lastVisitedAt).slice(0,5),root=$('recent-results');root.replaceChildren();
- if(!records.length){const empty=el('div','empty-state');empty.append(el('div','',t('noRecent')));const newest=material('literature-androids-10-12');const a=link(newest,t('latest')+' · '+localized(newest.title));a.className='button';empty.append(a);root.append(empty);return;}
+ if(!records.length){const empty=el('div','empty-state');empty.append(el('div','',t('noRecent')));const newest=material('literature-kochai-phantom-pain');const a=link(newest,t('latest')+' · '+localized(newest.title));a.className='button';empty.append(a);root.append(empty);return;}
  const r=records[0],m=material(r.materialId),card=el('article','continue-card'),info=el('div');card.append(image(m.subject));info.append(el('h3','',localized(m.title)),el('p','',localized(m.scope)));
  let position=m.kind==='source'?t('opened'):t('savedAnswers');
  if(r.resume?.questionId)position=t('position')+' · '+r.resume.questionId;
@@ -61,7 +61,7 @@ function renderPersonal(){
  }
  root.append(list);
 }
-function guideCard(m){const card=el('article','guide-card');card.dataset.material=m.id;const a=link(m,'');a.append(image(m.subject),el('h3','',localized(m.title)),el('p','material-scope',localized(m.scope)));const meta=el('div','guide-metadata');meta.append(el('span','',m.format+' · '+size(m.bytes)),el('span','open-guide',t('open')));a.append(meta);card.append(a,bookmark(m));if(m.id==='literature-androids-10-12')card.append(el('span','new-tag',t('new')));return card;}
+function guideCard(m){const card=el('article','guide-card');card.dataset.material=m.id;const a=link(m,'');a.append(image(m.subject),el('h3','',localized(m.title)),el('p','material-scope',localized(m.scope)));const meta=el('div','guide-metadata');meta.append(el('span','',m.format+' · '+size(m.bytes)),el('span','open-guide',t('open')));a.append(meta);card.append(a,bookmark(m));if(m.id==='literature-kochai-phantom-pain')card.append(el('span','new-tag',t('new')));return card;}
 function sourceRow(m){const row=el('li','source-row'),info=el('div','source-info'),actions=el('div','source-actions');info.append(el('h4','',localized(m.title)),el('p','',localized(m.scope)));actions.append(el('span','file-size',size(m.bytes)));
  if(m.format==='PDF'){const a=link(m,t('read'));a.target='_blank';a.rel='noopener';a.setAttribute('aria-label',t('readMaterial').replace('{title}',localized(m.title)));actions.append(a);}
  const download=link(m,t('download'));download.download=m.filename;download.setAttribute('aria-label',t('downloadMaterial').replace('{title}',localized(m.title)));actions.append(download);

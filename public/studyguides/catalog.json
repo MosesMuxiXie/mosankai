@@ -87,6 +87,23 @@
       "bytes": 2212201
     },
     {
+      "id": "literature-kochai-phantom-pain",
+      "subject": "english",
+      "kind": "guide",
+      "title": {
+        "en": "Kochai · Essay Revision Toolkit",
+        "zh-CN": "Kochai · 文学作文复习工具箱"
+      },
+      "scope": {
+        "en": "Close reading · 26 evidence entries · 8 complete annotated essays · whole-story practice",
+        "zh-CN": "作品深读 · 26 条原文证据 · 8 篇完整精讲范文 · 全篇作文训练"
+      },
+      "format": "HTML",
+      "filename": "kochai-phantom-pain-essay-toolkit.html",
+      "href": "/studyguides/english/guides/kochai-phantom-pain-essay-toolkit.html",
+      "bytes": 158608
+    },
+    {
       "id": "literature-review",
       "subject": "english",
       "kind": "guide",

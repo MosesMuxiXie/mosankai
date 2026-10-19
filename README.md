@@ -40,7 +40,7 @@ Website: [https://mosankai.com](https://mosankai.com)
 
 ## Study Guides
 
-资料目录由 `public/studyguides/catalog.json` 管理，当前收录 6 份交互成品与 25 份原始资料。学科地址为 `/studyguides/statistics`、`/studyguides/neuroscience`、`/studyguides/english`；目录支持中英文、标题与范围搜索，原页面保留原有语言和交互。PDF 支持阅读与下载，PPT/PPTX/DOCX 提供原文件下载。教材和小说原文件是全文，卡片单独注明复习所使用的章节范围。
+资料目录由 `public/studyguides/catalog.json` 管理，当前收录 7 份交互成品与 25 份原始资料。学科地址为 `/studyguides/statistics`、`/studyguides/neuroscience`、`/studyguides/english`；目录支持中英文、标题与范围搜索，原页面保留原有语言和交互。PDF 支持阅读与下载，PPT/PPTX/DOCX 提供原文件下载。教材和小说原文件是全文，卡片单独注明复习所使用的章节范围。
 
 新增资料时，将文件放入对应学科的 `guides/` 或 `sources/` 目录，在清单中增加唯一 `id`、`subject`、`kind`、中英文 `title`/`scope`、`format`、原始 `filename`、URL 编码后的 `href` 和 `bytes`；原始资料还须记录 SHA-256 `sha256`。交互页面加上 `data-studyguide-return` 返回链接。运行 `node --test test/studyguides.test.js` 检查条目、文件、原始哈希、访问路由和下载，再运行 `npm test`。
 
@@ -108,7 +108,7 @@ Vercel 将 `/api/mcp` rewrite 到 `/api/findatime?operation=mcp`，复用现有�
 新增《仿生人》第 10–12 章资料：/studyguides/english/guides/androids-chapters-10-12.html，保留最新动态流程图、24 道选择题、12 道简答题与答案模板。旧英语资料仍标明前九章。网站副本的学习记录需要站内脚本，本地原始离线成品保持完整。
 
 - 继续学习列出最近五份资料。四份题库保存答案及位置；继续链接使用 studyResume=1，错题重练使用 studyQuestion=稳定题号。刷新保留当前学习位置，包括测试模式；两份思维导图保存页面或锚点，原始文件只记录打开入口。
-- 全部 31 个条目均可收藏；题库选择题在检查或提交后才记录结果。新的草稿不计成绩，上次错题保留至重练答对。书面题保持自评，可手动加入待复习。
+- 全部 32 个条目均可收藏；题库选择题在检查或提交后才记录结果。新的草稿不计成绩，上次错题保留至重练答对。书面题保持自评，可手动加入待复习。
 - 待复习合并自动错题和手动项目；完成只移出清单，不将错题判为答对。再次判错会重新加入。没有间隔复习算法或跨学科总分。
 - 记录仅保存在当前浏览器同源的 mosankai:study:v1:<materialId> 键，无账号或服务端同步。读取旧神经科学及新版英语的同源旧键，迁移后保留原键；file://、其他域名或其他浏览器的记录不能自动读取。
 - 导出包含学习状态的版本化 JSON；导入先预览新增、覆盖与跳过数量，点击恢复后按资料合并，较新优先、同时间保留本机。未知资料跳过，损坏文件不写入。存储受限时本次记录留在内存，可导出备份；清除浏览器数据会删除本机记录。
@@ -128,3 +128,11 @@ Vercel 将 `/api/mcp` rewrite 到 `/api/findatime?operation=mcp`，复用现有�
 The existing English guide now begins with a Chapters 1–9 briefing, eight character entries, and eleven terms. All twelve story-flow events have expanded narrative explanations and earlier-chapter links. Seven named themes, four verified short original fragments with chapter/PDF locators, and a final synthesis support a first-time reader. The 24 multiple-choice and 12 short-answer identities, keys, and scoring are preserved, as are Study Center backup, resume, and assessed-result boundaries. No events after Chapter 12 are introduced.
 
 Run `node test/androids-self-check.mjs` (16 content/logic checks), the full `npm test`, and the real browser integration checks before deployment.
+
+## Kochai Essay Revision Toolkit
+
+The English-only toolkit at `/studyguides/english/guides/kochai-phantom-pain-essay-toolkit.html` has two parts: close reading with the eight What I Notice categories and 26 PDF-verified evidence entries, followed by eight whole-story classroom prompts with complete annotated 744–760-word models. Each route includes thesis preparation, a line of reasoning, paragraph commentary, AP 1/4/1 rubric discussion, an alternative reading, and a summary-to-analysis revision. These are classroom models, not official AP questions or promised scores.
+
+Search and theme filters intersect; source links and paragraph links remain directly addressable. Highlights distinguish thesis, evidence, commentary and complexity. Printing expands all evidence, models and commentary, then restores the reading state. The generic Study Center adapter provides favorites, material review, backup and hash resume without adding assessment results or changing existing question banks. No source-file copies or server functions were added.
+
+Verify with `node --test`, `node scripts/check-kochai-browser.cjs` and the existing Study Center browser checks against a local server. The browser check uses the bundled Playwright runtime, reads `STUDY_BASE_URL` and `MOSANKAI_PLAYWRIGHT`, and optionally writes QA screenshots and a print PDF under `STUDY_SCREENSHOT_DIR`. Deployment follows the existing GitHub/Vercel integration.
