@@ -93,7 +93,16 @@
         return[];
       }};
     } else {
-      page={capture:()=>({state:{},answers:{},checked:[],resume:/^#[\w-]{1,100}$/.test(win.location.hash)?{hash:win.location.hash}:null}),restore(s,r){if(r?.hash&&doc.getElementById(r.hash.slice(1)))doc.getElementById(r.hash.slice(1)).scrollIntoView();},assess:()=>[]};
+      page={capture:()=>({state:{},answers:{},checked:[],resume:/^#[\w-]{1,100}$/.test(win.location.hash)?{hash:win.location.hash}:null}),restore(s,r){
+        const target=r?.hash&&doc.getElementById(r.hash.slice(1));
+        if(target){
+          // Continue URLs carry the saved position in the record, not in their URL.
+          // Retain it for the next capture and reveal native collapsed ancestors.
+          win.history.replaceState(win.history.state,'',r.hash);
+          for(let node=target.parentElement;node;node=node.parentElement)if(node.tagName==='DETAILS')node.open=true;
+          target.scrollIntoView();
+        }
+      },assess:()=>[]};
     }
     const tools=doc.createElement('div');tools.className='study-tools';
     const back=$('[data-studyguide-return]');if(back)tools.append(back);

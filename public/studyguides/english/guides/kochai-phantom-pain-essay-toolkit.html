@@ -139,7 +139,7 @@
 <article class="evidence-card" id="E19" data-topics="voice identity agency" aria-labelledby="E19-quote">
 <div class="evidence-meta">E19 · PDF page 6 · Tone / Voice</div>
 <blockquote id="E19-quote">“it is the voice of a faraway man imitating your voice”</blockquote><p><strong>Context.</strong> The son tells his brother he is sick through the locked door.</p>
-<details><summary>Explore the reading and essay connections</summary><p><strong>Notice and interpret.</strong> The simile-like formulation makes his own speech unfamiliar to him. Second-person narration already divides the person acting from the position that addresses him; the strange voice intensifies that distance. It supports a reading of estrangement but leaves its literal cause undecided.</p><p><strong>Wonder.</strong> How can a voice belong to a person and still seem to arrive from elsewhere?</p><p class="claim"><strong>Possible claim.</strong> The narration turns apparent self-command into uncertainty about possession of the self.</p><p class="evidence-links">Use with <a href="#essay-03">Essay 03</a> <a href="#essay-04">Essay 04</a> <a href="#essay-05">Essay 05</a></p></details></article>
+<details><summary>Explore the reading and essay connections</summary><p><strong>Notice and interpret.</strong> The metaphorical formulation makes his own speech unfamiliar to him. Second-person narration already divides the person acting from the position that addresses him; the strange voice intensifies that distance. It supports a reading of estrangement but leaves its literal cause undecided.</p><p><strong>Wonder.</strong> How can a voice belong to a person and still seem to arrive from elsewhere?</p><p class="claim"><strong>Possible claim.</strong> The narration turns apparent self-command into uncertainty about possession of the self.</p><p class="evidence-links">Use with <a href="#essay-03">Essay 03</a> <a href="#essay-04">Essay 04</a> <a href="#essay-05">Essay 05</a></p></details></article>
 <article class="evidence-card" id="E20" data-topics="family bodies trauma" aria-labelledby="E20-quote">
 <div class="evidence-meta">E20 · PDF page 7 · Character Insight</div>
 <blockquote id="E20-quote">“his body still strong and well, his heart unbroken”</blockquote><p><strong>Context.</strong> The son catches the younger father after tranquilizing him on the roof.</p>
@@ -277,6 +277,10 @@ var Toolkit = (function () {
     target.scrollIntoView({block:'start', behavior:'instant'});
   }
   window.addEventListener('hashchange', openHashTarget); openHashTarget();
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (link && link.getAttribute('href') === location.hash && !event.defaultPrevented && event.button === 0 && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) openHashTarget();
+  });
   let printState = null;
   function preparePrint() {
     if (printState) return;

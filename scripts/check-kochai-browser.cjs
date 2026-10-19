@@ -40,6 +40,9 @@ const material = 'literature-kochai-phantom-pain';
     await page.evaluate(() => {location.hash = 'E01';});
     await page.waitForFunction(() => !document.getElementById('E01').hidden);
     assert.equal(await page.locator('#theme-filter').inputValue(), 'all', 'Evidence deep links reveal filtered records');
+    await page.locator('#theme-filter').selectOption('ending');
+    await page.locator('.observation a[href="#E01"]').click();
+    assert.equal(await page.locator('#E01').isVisible(), true, 'Repeating the current anchor reveals a filtered target');
     console.log('PASS real evidence search, intersecting filters, empty/reset, filtered deep links');
 
     for (const role of ['thesis','evidence','commentary','complexity']) {
@@ -51,6 +54,10 @@ const material = 'literature-kochai-phantom-pain';
     await go('#essay-08-p4');
     assert.equal(await page.locator('#essay-08 .model').getAttribute('open'), '');
     assert.equal(await page.locator('#essay-08-p4').isVisible(), true);
+    await page.locator('#essay-08 .model > summary').click();
+    await page.locator('#essay-08 .notes > summary').click();
+    await page.locator('#essay-08 .paragraph-notes a[href="#essay-08-p4"]').click();
+    assert.equal(await page.locator('#essay-08-p4').isVisible(), true, 'Repeating a paragraph anchor reopens its model');
     console.log('PASS annotation controls and direct links into collapsed models');
 
     const favorite = page.getByRole('button', {name:'Save', exact:true});
@@ -68,6 +75,15 @@ const material = 'literature-kochai-phantom-pain';
     const backup = await page.evaluate(() => JSON.parse(window.MosankaiStudy.exportBackup()));
     assert.equal(backup.records.find(r => r.materialId === material).favorite, true);
     console.log('PASS favorites, review, paragraph resume, backup, and no invented assessment');
+
+    await page.goto(base+'/studyguides/english');
+    const resumeLink = page.locator(`#recent-results .continue-card a[href="${route}?studyResume=1"]`);
+    await resumeLink.click();
+    await page.waitForFunction(() => window.MosankaiGuide);
+    assert.equal(await page.evaluate(() => location.hash), '#essay-08-p4', 'Continue restores the saved hash before the next capture');
+    assert.equal(await page.locator('#essay-08-p4').isVisible(), true, 'Continue opens the containing model');
+    assert.equal(await page.evaluate(id => window.MosankaiStudy.read(id).resume.hash, material), '#essay-08-p4');
+    console.log('PASS real Study Center Continue restores a paragraph inside a collapsed model');
 
     await page.locator('#theme-filter').selectOption('ending');
     const priorCount = await visibleEvidence();
