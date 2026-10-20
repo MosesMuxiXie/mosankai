@@ -12,11 +12,14 @@ const mc = JSON.parse(lit.match(/const questions=([^\n]+);/)[1]);
 const shorts = JSON.parse(lit.match(/const shorts=([^\n]+);/)[1]);
 const latest = read('english/guides/androids-chapters-10-12.html');
 const ctx = vm.createContext({});vm.runInContext(latest.match(/<script id="review-core">([\s\S]*?)<\/script>/)[1],ctx);
+const nextReview = read('english/guides/androids-chapters-13-18.html');
+const nextContext = vm.createContext({});vm.runInContext(nextReview.match(/<script id="review-core">([\s\S]*?)<\/script>/)[1],nextContext);
 const index = {
   'statistics-review':{cardIds:['0','1','2','3','4','5'],questions:stats.map((q,i)=>({id:`STAT-${String(i+1).padStart(3,'0')}`,type:q[6]?'mc':'written',prompt:q[2]+' · '+q[3],...(q[6]?{options:q[6],answer:q[7]}:{})}))},
   'neuroscience-review':{cardIds:neuro.cards.map(c=>c.id),questions:[...neuro.quiz.map(q=>({id:q.id,type:'mc',prompt:q.prompt,options:q.options,answer:q.answer})),...neuro.frq.map((q,i)=>({id:`FRQ-${String(i+1).padStart(3,'0')}`,type:'written',prompt:q.title}))]},
   'literature-review':{questions:[...mc.map((q,i)=>({id:`LIT-${String(i+1).padStart(3,'0')}`,type:'mc',prompt:q.stem,options:q.options,answer:q.key})),...shorts.map(q=>({id:q.id,type:'written',prompt:q.prompt})),{id:'essay',type:'written',prompt:'Develop a defensible claim: setting and Iran’s dialogue.'}]},
-  'literature-androids-10-12':{questions:ctx.Review.questions.map(q=>({id:q.id,type:q.type==='mc'?'mc':'written',prompt:q.prompt,...(q.type==='mc'?{options:q.options,answer:q.answer}:{})}))}
+  'literature-androids-10-12':{questions:ctx.Review.questions.map(q=>({id:q.id,type:q.type==='mc'?'mc':'written',prompt:q.prompt,...(q.type==='mc'?{options:q.options,answer:q.answer}:{})}))},
+  'literature-androids-13-18':{questions:nextContext.Review.questions.map(q=>({id:q.id,type:q.type==='mc'?'mc':'written',prompt:q.prompt,...(q.type==='mc'?{options:q.options,answer:q.answer}:{})}))}
 };
 fs.writeFileSync(path.join(base,'learning-index.json'),JSON.stringify(index,null,2)+'\n');
 const catalog = JSON.parse(read('catalog.json'));

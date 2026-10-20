@@ -136,3 +136,11 @@ The English-only toolkit at `/studyguides/english/guides/kochai-phantom-pain-ess
 Search and theme filters intersect; source links and paragraph links remain directly addressable. Highlights distinguish thesis, evidence, commentary and complexity. Printing expands all evidence, models and commentary, then restores the reading state. The generic Study Center adapter provides favorites, material review, backup and hash resume without adding assessment results or changing existing question banks. No source-file copies or server functions were added.
 
 Verify with `node --test`, `node scripts/check-kochai-browser.cjs` and the existing Study Center browser checks against a local server. The browser check uses the bundled Playwright runtime, reads `STUDY_BASE_URL` and `MOSANKAI_PLAYWRIGHT`, and optionally writes QA screenshots and a print PDF under `STUDY_SCREENSHOT_DIR`. Deployment follows the existing GitHub/Vercel integration.
+
+### Androids Chapters 13–18 deep review
+
+The independent English guide at `/studyguides/english/guides/androids-chapters-13-18.html` contains 27 connected story nodes, 72 revealable detail cards, seven thematic arguments, a glossary, six verified short fragments and character close reading. Its 96-question bank has 60 MC and 36 written questions. Analytical written questions balance behavior, tone and thought (eight each), with twelve paraphrased-passage cues and twelve recall prompts. Every written answer includes a model, checklist, common error and acceptable alternative. The material stops at the Chapter 18 alarm.
+
+`literature-androids-13-18` uses the existing assessment adapter and `resume.topic` for the analysis-focus filter. Local drafts use `dadoes-ch13-18-review-v1`; migration and hosted records remain separate from Chapters 10–12. The offline copy is self-contained; only the hosted copy loads the Study Center scripts.
+
+Verify with `node test/androids-13-18-self-check.mjs`, `node --test` and `node scripts/check-androids-13-18-browser.cjs`. The browser check accepts `STUDY_BASE_URL`, `MOSANKAI_PLAYWRIGHT`, optional `STUDY_SCREENSHOT_DIR`, and `DADOES_OFFLINE` for an additional file-based no-network check. Rebuild question metadata after guide changes with `node scripts/build-study-index.js`. Publish through the existing Git/Vercel integration.

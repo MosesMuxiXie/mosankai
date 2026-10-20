@@ -1990,5 +1990,909 @@
         "prompt": "In 3–5 sentences, explain how the art-book episode complicates treating Luba as merely a target."
       }
     ]
+  },
+  "literature-androids-13-18": {
+    "questions": [
+      {
+        "id": "c13-m01",
+        "type": "mc",
+        "prompt": "Which foods does Isidore bring for dinner?",
+        "options": [
+          "Beef, rice and oranges.",
+          "Bread, apples and goat milk.",
+          "Bean curd, ripe peaches and cheese.",
+          "Fish, grapes and butter."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c13-m02",
+        "type": "mc",
+        "prompt": "How does Isidore finance the special groceries?",
+        "options": [
+          "A bounty collected from Bryant.",
+          "A loan from the Rosen Association.",
+          "Money paid by Pris for rent.",
+          "Two weeks’ wages borrowed in advance from Sloat."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c13-m03",
+        "type": "mc",
+        "prompt": "What wine has Isidore saved?",
+        "options": [
+          "Chablis.",
+          "Bourbon.",
+          "Champagne.",
+          "Sherry."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c13-m04",
+        "type": "mc",
+        "prompt": "Where has Isidore kept the wine?",
+        "options": [
+          "In the animal-repair workshop.",
+          "A safety deposit box at the Bank of America.",
+          "In Pris’s refrigerator.",
+          "In a police evidence locker."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c13-m05",
+        "type": "mc",
+        "prompt": "Who corrects Isidore’s attribution of the island saying?",
+        "options": [
+          "Roy corrects Donne to Shakespeare.",
+          "Isidore corrects Pris to Milton.",
+          "Pris corrects Shakespeare to John Donne.",
+          "Irmgard corrects Shakespeare to Yeats."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c13-m06",
+        "type": "mc",
+        "prompt": "Who introduces Pris to pre-colonial fiction?",
+        "options": [
+          "Roy Baty, the pharmacist.",
+          "Hannibal Sloat, the repair-shop owner.",
+          "Phil Resch, the bounty hunter.",
+          "Horst Hartman, a rare-stamp dealer."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c13-m07",
+        "type": "mc",
+        "prompt": "How does Pris instruct Isidore while visitors wait outside?",
+        "options": [
+          "She writes messages on scraps of paper.",
+          "She sends him a vidphone recording.",
+          "She shouts a password through the door.",
+          "She orders Roy to open the door."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c13-m08",
+        "type": "mc",
+        "prompt": "What does focalization explain in the door scene?",
+        "options": [
+          "The narrator directly knows every character’s private motive.",
+          "Events are filtered through a character’s access to knowledge and perception.",
+          "Every statement in dialogue is an objective fact.",
+          "The setting literally becomes a stage play."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c13-m09",
+        "type": "mc",
+        "prompt": "Why does the saved wine matter beyond its rarity?",
+        "options": [
+          "It proves Pris has agreed to protect him.",
+          "It confirms the visitors are trustworthy.",
+          "It embodies Isidore’s long-deferred hope of companionship.",
+          "It makes his economic sacrifice insignificant."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c13-m10",
+        "type": "mc",
+        "prompt": "What best explains the value of the old fiction to Pris?",
+        "options": [
+          "It offers a reliable scientific description of Mars.",
+          "It removes all awareness of her present danger.",
+          "It proves Mars has become a paradise.",
+          "It supplies imagined alternatives to disappointing colonial life."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c13-s01",
+        "type": "written",
+        "prompt": "Define focalization and explain its application in this chapter."
+      },
+      {
+        "id": "c13-s02",
+        "type": "written",
+        "prompt": "Identify the wine, its storage place and the source of the grocery money."
+      },
+      {
+        "id": "c13-s03",
+        "type": "written",
+        "prompt": "How do Isidore’s preparations characterize his investment in the relationship?"
+      },
+      {
+        "id": "c13-s04",
+        "type": "written",
+        "prompt": "Analyze Pris’s tonal change when Isidore suggests she has no friends."
+      },
+      {
+        "id": "c13-s05",
+        "type": "written",
+        "prompt": "Why does Isidore misunderstand what the old fiction offers Pris?"
+      },
+      {
+        "id": "c13-s06",
+        "type": "written",
+        "prompt": "What does the written door exchange reveal about the distribution of risk?"
+      },
+      {
+        "id": "c14-m01",
+        "type": "mc",
+        "prompt": "Which fugitives remain alive in the group’s account?",
+        "options": [
+          "Pris, Garland and Polokov.",
+          "Rachael, Luba and Roy.",
+          "Roy, Anders and Gitchel.",
+          "Pris, Roy Baty and Irmgard Baty."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c14-m02",
+        "type": "mc",
+        "prompt": "What do the fugitives know about the Mission Street outcome?",
+        "options": [
+          "Garland’s plan failed, but they do not know exactly how.",
+          "They watched Resch’s later empathy test.",
+          "They know Deckard has already abandoned his job.",
+          "They know Garland escaped with Luba."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c14-m03",
+        "type": "mc",
+        "prompt": "Who first proposes that Pris live with Isidore?",
+        "options": [
+          "Harry Bryant.",
+          "Roy Baty.",
+          "Phil Resch.",
+          "Hannibal Sloat."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c14-m04",
+        "type": "mc",
+        "prompt": "Who tells Pris to stop using the demeaning label for Isidore?",
+        "options": [
+          "Roy Baty.",
+          "Buster Friendly.",
+          "Irmgard Baty.",
+          "Dave Holden."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c14-m05",
+        "type": "mc",
+        "prompt": "What gives Roy’s alarm its panic-producing effect?",
+        "options": [
+          "A Voigt-Kampff scale.",
+          "A Boneli testing machine.",
+          "A fake laser tube.",
+          "A Penfield unit."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c14-m06",
+        "type": "mc",
+        "prompt": "Where are the alarm’s antenna wires laid?",
+        "options": [
+          "Under the carpet.",
+          "Inside the Chablis bottle.",
+          "Across the building’s roof pasture.",
+          "Through Deckard’s goat cage."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c14-m07",
+        "type": "mc",
+        "prompt": "Why does Isidore not trigger the alarm himself?",
+        "options": [
+          "He has passed Voigt-Kampff.",
+          "Roy compensates for Isidore’s cephalic emanations.",
+          "The device affects only androids.",
+          "He wears a police identification badge."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c14-m08",
+        "type": "mc",
+        "prompt": "Which situation exemplifies dramatic irony here?",
+        "options": [
+          "Every character knows the same complete account.",
+          "The alarm literally changes time.",
+          "Readers know more about Mission Street than the fugitives describing it.",
+          "A metaphor makes Roy a physical machine."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c14-m09",
+        "type": "mc",
+        "prompt": "What does Roy’s treatment of the alarm’s effect on Isidore reveal?",
+        "options": [
+          "Isidore is guaranteed physical safety.",
+          "Roy has abandoned every precaution.",
+          "The device proves all humans are unfeeling.",
+          "The defense treats a willing helper as a usable resource."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c14-m10",
+        "type": "mc",
+        "prompt": "Why is Pris’s rejection of Isidore’s social label significant?",
+        "options": [
+          "A hunted outsider reproduces another hierarchy of exclusion.",
+          "It establishes that Isidore is an escaped android.",
+          "It makes all excluded groups socially identical.",
+          "It proves Irmgard’s warmth is always fraudulent."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c14-s01",
+        "type": "written",
+        "prompt": "Define dramatic irony and explain its application in this chapter."
+      },
+      {
+        "id": "c14-s02",
+        "type": "written",
+        "prompt": "Explain the alarm’s trigger and why its treatment of Isidore requires two separate distinctions."
+      },
+      {
+        "id": "c14-s03",
+        "type": "written",
+        "prompt": "Analyze the irony in Pris’s presentation of Isidore as her caretaker."
+      },
+      {
+        "id": "c14-s04",
+        "type": "written",
+        "prompt": "How does Isidore’s imagined bounty hunter reveal his developing understanding?"
+      },
+      {
+        "id": "c14-s05",
+        "type": "written",
+        "prompt": "What is ethically significant, and limited, about Isidore’s acceptance after recognition?"
+      },
+      {
+        "id": "c14-s06",
+        "type": "written",
+        "prompt": "What does Roy’s matter-of-fact reaction to the alarm’s effect on Isidore reveal?"
+      },
+      {
+        "id": "c15-m01",
+        "type": "mc",
+        "prompt": "Who votes to kill Isidore and hide elsewhere?",
+        "options": [
+          "Roy Baty.",
+          "Pris Stratton.",
+          "Irmgard Baty.",
+          "John Isidore."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c15-m02",
+        "type": "mc",
+        "prompt": "What animal does Deckard purchase?",
+        "options": [
+          "A white male Nubian goat.",
+          "A large black female Nubian goat.",
+          "A black male sheep.",
+          "A pair of white rabbits."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c15-m03",
+        "type": "mc",
+        "prompt": "What does Deckard’s $3,000 payment represent?",
+        "options": [
+          "The full cash price with no debt.",
+          "The annual insurance premium.",
+          "A $3,000 down payment from his bounty earnings.",
+          "A deposit on a new electric sheep."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c15-m04",
+        "type": "mc",
+        "prompt": "What extension does Deckard propose for the goat contract?",
+        "options": [
+          "From 12 months to 24 months.",
+          "From 48 months to 60 months.",
+          "From 36 months to 6 months.",
+          "From 36 months to 48 months."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c15-m05",
+        "type": "mc",
+        "prompt": "What location does Bryant give Deckard?",
+        "options": [
+          "Conapt Building 3967-C.",
+          "The Mission Street Hall of Justice.",
+          "Conapt Building 3976-B.",
+          "The Rosen headquarters in Seattle."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c15-m06",
+        "type": "mc",
+        "prompt": "Where is Deckard physically injured during fusion?",
+        "options": [
+          "His wrist, bitten by the goat.",
+          "His ear, struck by a rock.",
+          "His leg, cut by Pris’s scissors.",
+          "His eye, injured in the hotel."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c15-m07",
+        "type": "mc",
+        "prompt": "Where do Deckard and Rachael arrange to meet?",
+        "options": [
+          "The War Memorial Opera House.",
+          "The Bank of America.",
+          "The St. Francis Hotel.",
+          "The Mission Street police station."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c15-m08",
+        "type": "mc",
+        "prompt": "What is ironic about the goat’s purchase?",
+        "options": [
+          "The goat is revealed to be electric in this chapter.",
+          "Iran never shows any pleasure in the goat.",
+          "The contract automatically cancels his assignment.",
+          "A purchase meant to restore Rick’s confidence increases pressure to continue troubling work."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c15-m09",
+        "type": "mc",
+        "prompt": "Which reading of Mercer’s advice is best supported?",
+        "options": [
+          "He offers solidarity while leaving Rick’s moral responsibility unresolved.",
+          "He certifies that retirement is always morally right.",
+          "He promises to perform the remaining jobs himself.",
+          "He guarantees physical safety that evening."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c15-m10",
+        "type": "mc",
+        "prompt": "Why is writing the address on the payment contract significant?",
+        "options": [
+          "It proves the animal seller works for the police.",
+          "It materially links his new debt to his next bounty assignment.",
+          "It means the goat has been repossessed.",
+          "It shows the address is imaginary."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c15-s01",
+        "type": "written",
+        "prompt": "Define situational irony and explain its application in this chapter."
+      },
+      {
+        "id": "c15-s02",
+        "type": "written",
+        "prompt": "State the goat’s breed, sex and color; explain what the $3,000 pays for."
+      },
+      {
+        "id": "c15-s03",
+        "type": "written",
+        "prompt": "Analyze Deckard’s competing reasons for buying the goat."
+      },
+      {
+        "id": "c15-s04",
+        "type": "written",
+        "prompt": "What does the vote’s formal procedure contribute to its ethical effect?"
+      },
+      {
+        "id": "c15-s05",
+        "type": "written",
+        "prompt": "Explain Iran’s shift from the roof celebration to discussion of the contract."
+      },
+      {
+        "id": "c15-s06",
+        "type": "written",
+        "prompt": "Why does Deckard find Mercer’s companionship insufficient?"
+      },
+      {
+        "id": "c16-m01",
+        "type": "mc",
+        "prompt": "What pictures accompany the Batys’ files?",
+        "options": [
+          "Clear wedding portraits.",
+          "Fuzzy telescopic 3-D color snapshots.",
+          "Hand-drawn pictures by Isidore.",
+          "Images from a Mercer video."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c16-m02",
+        "type": "mc",
+        "prompt": "How does the dossier frame Roy’s pharmacist occupation?",
+        "options": [
+          "As an independently certified human profession.",
+          "As a role at the San Francisco police laboratory.",
+          "As a cover identity.",
+          "As Rachael’s assignment at the hotel."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c16-m03",
+        "type": "mc",
+        "prompt": "What drink does Rachael bring to the hotel?",
+        "options": [
+          "Chablis from a bank deposit box.",
+          "Synthetic peach juice.",
+          "Coffee supplied by room service.",
+          "Bourbon made before the war."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c16-m04",
+        "type": "mc",
+        "prompt": "Why does the sheet describing Pris disturb Rachael?",
+        "options": [
+          "Pris is the same type and physically resembles her.",
+          "Pris is her biological daughter.",
+          "Pris has already killed Eldon Rosen.",
+          "Pris has replaced Iran in Deckard’s apartment."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c16-m05",
+        "type": "mc",
+        "prompt": "What is the small emergency device in Rachael’s purse?",
+        "options": [
+          "A syringe of silenizine.",
+          "A metallic sphere with a projecting button-stem.",
+          "A recording of Buster’s announcement.",
+          "A miniature goat-maintenance guide."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c16-m06",
+        "type": "mc",
+        "prompt": "What is said about the laser tube in Rachael’s purse?",
+        "options": [
+          "It is Holden’s confiscated weapon.",
+          "It has already been used to kill Roy.",
+          "It is fake.",
+          "It contains the alarm’s Penfield unit."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c16-m07",
+        "type": "mc",
+        "prompt": "What does Rachael promise concerning Pris?",
+        "options": [
+          "She promises to take Pris to Mars that night.",
+          "She says Pris has already died.",
+          "She promises to transfer the goat contract.",
+          "She offers to retire Pris herself."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c16-m08",
+        "type": "mc",
+        "prompt": "What does institutional framing mean in the dossier scene?",
+        "options": [
+          "A document’s evaluative language shapes how its subject is understood.",
+          "The document makes every inference certain.",
+          "The file is necessarily false in every detail.",
+          "Surveillance photographs reveal all private motives."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c16-m09",
+        "type": "mc",
+        "prompt": "What is the strongest qualification of Rick’s reading of Rachael’s kiss?",
+        "options": [
+          "He directly enters her mind.",
+          "He acknowledges that the response he senses may be wishful thinking.",
+          "Her appearance proves she cannot deceive.",
+          "The narrator confirms a complete absence of feeling."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c16-m10",
+        "type": "mc",
+        "prompt": "What does Rachael’s offer to kill Pris most directly complicate?",
+        "options": [
+          "The claim that she knows the hotel’s address.",
+          "The fact that Rick owns a goat.",
+          "Her earlier identification with the double who might replace her.",
+          "The stated number of originally escaped androids."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c16-s01",
+        "type": "written",
+        "prompt": "Define institutional framing and explain its application in this chapter."
+      },
+      {
+        "id": "c16-s02",
+        "type": "written",
+        "prompt": "Distinguish Rachael’s emergency device from her laser tube, including the device’s limitation."
+      },
+      {
+        "id": "c16-s03",
+        "type": "written",
+        "prompt": "Analyze Rachael’s offer to retire Pris in relation to her earlier response to the double."
+      },
+      {
+        "id": "c16-s04",
+        "type": "written",
+        "prompt": "How does Rachael’s tone change during her discussion of the Association’s work?"
+      },
+      {
+        "id": "c16-s05",
+        "type": "written",
+        "prompt": "How does the dossier both direct and complicate Rick’s view of Roy?"
+      },
+      {
+        "id": "c16-s06",
+        "type": "written",
+        "prompt": "Why does Rick’s relief at having only two targets left not solve the ethical problem?"
+      },
+      {
+        "id": "c17-m01",
+        "type": "mc",
+        "prompt": "What does Rick order from room service after the encounter?",
+        "options": [
+          "Chablis.",
+          "Silenizine.",
+          "Coffee.",
+          "Goat’s milk."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c17-m02",
+        "type": "mc",
+        "prompt": "How long does Rick estimate Rachael has left?",
+        "options": [
+          "About four more years after two years.",
+          "One more day because her brain expires.",
+          "An indefinite lifespan without aging.",
+          "About two more years, after two years of existence."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c17-m03",
+        "type": "mc",
+        "prompt": "What problem limits android lifespan?",
+        "options": [
+          "Cell replacement and metabolic renewal.",
+          "A fixed number of empathy-test questions.",
+          "The size of the laser battery.",
+          "The disappearance of the television signal."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c17-m04",
+        "type": "mc",
+        "prompt": "Whom does Rachael name as the exception among hunters she influenced?",
+        "options": [
+          "Dave Holden.",
+          "Phil Resch.",
+          "Harry Bryant.",
+          "Franklin Powers."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c17-m05",
+        "type": "mc",
+        "prompt": "What count does Rachael finally give for prior encounters?",
+        "options": [
+          "Three.",
+          "Seven.",
+          "Nine.",
+          "Twelve."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c17-m06",
+        "type": "mc",
+        "prompt": "What legal distinction does Rachael invoke when threatened?",
+        "options": [
+          "She is registered as a human police officer.",
+          "She has become Rick’s legally recognized spouse.",
+          "She has diplomatic immunity as a Mars governor.",
+          "She is Association property, not an escaped fugitive."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c17-m07",
+        "type": "mc",
+        "prompt": "What does Rachael do after Rick switches off the broadcast?",
+        "options": [
+          "She switches the radio back on and insists on listening.",
+          "She destroys the radio with a laser.",
+          "She asks Iran to change the channel.",
+          "She leaves the radio off and sleeps."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c17-m08",
+        "type": "mc",
+        "prompt": "Which distinction matters when Rachael predicts Rick’s future?",
+        "options": [
+          "Confidence makes future conduct already proven.",
+          "A speaker’s confident prediction is not yet an observed outcome.",
+          "A prediction must be false because it is dialogue.",
+          "All first-person claims are narrator-certified truths."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c17-m09",
+        "type": "mc",
+        "prompt": "What best explains Rick’s refusal to fire?",
+        "options": [
+          "It proves all future killings have already been prevented.",
+          "It shows he never drew a weapon.",
+          "It establishes a limit in this encounter while leaving his wider conflict unresolved.",
+          "It proves he was unaffected by the disclosure."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c17-m10",
+        "type": "mc",
+        "prompt": "Why is the radio exchange useful evidence of a power struggle?",
+        "options": [
+          "It proves that the signal is supernatural.",
+          "It establishes that Rick agrees with every claim.",
+          "It makes the broadcast irrelevant to the novel.",
+          "It makes contested control visible through repeated physical actions."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c17-s01",
+        "type": "written",
+        "prompt": "Define verbal claim versus demonstrated outcome and explain its application in this chapter."
+      },
+      {
+        "id": "c17-s02",
+        "type": "written",
+        "prompt": "Give Rachael’s stated age, estimated remaining lifespan and the reason for the limit."
+      },
+      {
+        "id": "c17-s03",
+        "type": "written",
+        "prompt": "Analyze the change in Rachael’s tone from the threat to its withdrawal."
+      },
+      {
+        "id": "c17-s04",
+        "type": "written",
+        "prompt": "Explain Rick’s simultaneous anger and continued attachment after Rachael’s disclosure."
+      },
+      {
+        "id": "c17-s05",
+        "type": "written",
+        "prompt": "How does the laser sequence distinguish intention, preparation and action?"
+      },
+      {
+        "id": "c17-s06",
+        "type": "written",
+        "prompt": "Analyze Rachael’s insistence on hearing Buster’s broadcast."
+      },
+      {
+        "id": "c18-m01",
+        "type": "mc",
+        "prompt": "Why is Pris’s television needed?",
+        "options": [
+          "Isidore owns no television at all.",
+          "Pris’s set contains the alarm sensor.",
+          "Buster’s show is available only on Mars.",
+          "Isidore’s own set receives the government channel."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c18-m02",
+        "type": "mc",
+        "prompt": "What does Isidore use to hold the spider?",
+        "options": [
+          "A plastic medicine bottle with a perforated cap.",
+          "A glass of bourbon.",
+          "A laser-tube case.",
+          "A sealed metal sphere."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c18-m03",
+        "type": "mc",
+        "prompt": "Who supplies the cuticle scissors?",
+        "options": [
+          "Roy Baty supplies them to Isidore.",
+          "Irmgard Baty supplies them to Pris.",
+          "Isidore gives them to Rachael.",
+          "Buster mails them to Pris."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c18-m04",
+        "type": "mc",
+        "prompt": "How many legs has Pris cut off before the final crisis?",
+        "options": [
+          "Two, leaving six.",
+          "Three, leaving five.",
+          "Four, leaving four remaining.",
+          "Eight, leaving none."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c18-m05",
+        "type": "mc",
+        "prompt": "What name does the broadcast give Mercer’s performer?",
+        "options": [
+          "Earl Parameter.",
+          "Wade Cortot.",
+          "Oscar Scruggs.",
+          "Al Jarry."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c18-m06",
+        "type": "mc",
+        "prompt": "Where do the investigators locate Al Jarry?",
+        "options": [
+          "East Harmony, Indiana, on Lark Avenue.",
+          "Seattle, Washington, at Rosen headquarters.",
+          "New New York on Mars.",
+          "Mission Street in San Francisco."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c18-m07",
+        "type": "mc",
+        "prompt": "How does Roy force the injured spider to move?",
+        "options": [
+          "He repairs its legs with wire.",
+          "He holds a lit match near it.",
+          "He uses a miniature empathy box.",
+          "He gives it silenizine."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c18-m08",
+        "type": "mc",
+        "prompt": "What is juxtaposed in the spider-and-broadcast sequence?",
+        "options": [
+          "Two unrelated accounts with no shared question.",
+          "Two recordings of the same event.",
+          "A public argument about empathy and an immediate instance of suffering.",
+          "A completed hunt and its legal trial."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c18-m09",
+        "type": "mc",
+        "prompt": "Why does Irmgard’s offer to pay fail to answer Isidore’s concern?",
+        "options": [
+          "It proves the spider is definitely the last of its kind.",
+          "It guarantees the spider has not suffered.",
+          "It shows Isidore was seeking a higher sale price.",
+          "It translates the loss of a particular life into catalogue replacement value."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c18-m10",
+        "type": "mc",
+        "prompt": "What does Mercer’s response to the exposé preserve?",
+        "options": [
+          "The possibility of meaningful shared experience despite acknowledged fabrication.",
+          "A denial that any production evidence exists.",
+          "Proof that the entire broadcast was a dream.",
+          "A complete objective account of every supernatural event."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c18-s01",
+        "type": "written",
+        "prompt": "Define juxtaposition and explain its application in this chapter."
+      },
+      {
+        "id": "c18-s02",
+        "type": "written",
+        "prompt": "Distinguish the roles of Irmgard, Pris, Roy and Isidore in the spider episode."
+      },
+      {
+        "id": "c18-s03",
+        "type": "written",
+        "prompt": "What do Isidore’s thoughts about exploitation reveal about his dependence?"
+      },
+      {
+        "id": "c18-s04",
+        "type": "written",
+        "prompt": "Why does the spider’s continued movement fail as an ethical defense of the experiment?"
+      },
+      {
+        "id": "c18-s05",
+        "type": "written",
+        "prompt": "Compare Buster’s presentation of evidence with his sweeping conclusion about Mercerism."
+      },
+      {
+        "id": "c18-s06",
+        "type": "written",
+        "prompt": "How does Isidore’s encounter with Mercer respond to, rather than simply disprove, the exposé?"
+      }
+    ]
   }
 }

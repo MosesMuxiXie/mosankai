@@ -37,7 +37,7 @@
     function empty(id) { return { version: 1, materialId: id, updatedAt: 0, favorite: false, pending: { material: false, questions: [] }, reviewed: {}, lastVisitedAt: 0, resume: null, progress: { state: {}, results: {} } }; }
     function validateState(id, state) {
       if (!plain(state)) fail(); safeJSON(state);
-      if (id === 'literature-androids-10-12' && state.version !== undefined && state.version !== 1) fail();
+      if (['literature-androids-10-12','literature-androids-13-18'].includes(id) && state.version !== undefined && state.version !== 1) fail();
       const desc = index[id] || {}, questions = desc.questions || [];
       const map = (name, check) => {
         if (state[name] === undefined) return;
@@ -146,7 +146,7 @@
       }};
     }
     function migrate() {
-      for (const [key,id] of [['neuro-guide-v1','neuroscience-review'],['dadoes-ch10-12-review-v1','literature-androids-10-12']]) {
+      for (const [key,id] of [['neuro-guide-v1','neuroscience-review'],['dadoes-ch10-12-review-v1','literature-androids-10-12'],['dadoes-ch13-18-review-v1','literature-androids-13-18']]) {
         if (!materials.has(id) || read(id).updatedAt) continue;
         try {
           const raw = storage?.getItem(key);if (!raw) continue;const old = JSON.parse(raw), results = {};

@@ -155,6 +155,23 @@
       "bytes": 142307
     },
     {
+      "id": "literature-androids-13-18",
+      "subject": "english",
+      "kind": "guide",
+      "title": {
+        "en": "Do Androids Dream of Electric Sheep? · Chapters 13–18",
+        "zh-CN": "《仿生人》· 第 13–18 章深度复习"
+      },
+      "scope": {
+        "en": "27 story nodes · 72 detail cards · character close reading · 7 themes · 96 questions",
+        "zh-CN": "27 个故事节点 · 72 张细节卡 · 行为、语气与心理分析 · 7 大主题 · 96 道题"
+      },
+      "format": "HTML",
+      "filename": "androids-chapters-13-18.html",
+      "href": "/studyguides/english/guides/androids-chapters-13-18.html",
+      "bytes": 260327
+    },
+    {
       "id": "stats-ch-1_0",
       "subject": "statistics",
       "kind": "source",
