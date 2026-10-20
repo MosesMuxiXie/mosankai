@@ -80,6 +80,16 @@ test('chapter boundaries and important distinctions stay explicit',()=>{
  assert.ok(R.details.some(d=>d.chapter===18&&d.answer.includes('Irmgard')&&d.prompt.includes('scissors')));
  assert.ok(R.scenes.at(-1).body.includes('alarm'));assert.ok(R.scenes.at(-1).body.includes('vision'));
 });
+test('ambiguous source counts are anchored to the stated stage',()=>{
+ const legs=R.questions.find(q=>q.id==='c18-m04');
+ assert.match(legs.prompt,/explicit count.*before Roy/i);
+ assert.match(legs.explanation,/another cut/i);
+ assert.ok(!R.scenes.find(s=>s.id==='18:cruelty').body.includes('four legs in total'));
+ const encounters=R.questions.find(q=>q.id==='c17-m05');assert.ok(!encounters.prompt.includes('prior encounters'));
+});
+test('concept models supply the definitions their prompts require',()=>{
+ for(const [id,term] of [['c14-s01','Dramatic irony'],['c15-s01','Situational irony'],['c18-s01','Juxtaposition']])assert.ok(R.questions.find(q=>q.id===id).model.startsWith(term),id);
+});
 test('document and UI stay English, self-contained and accessible',()=>{
  assert.match(html,/<html[^>]*lang="en"/);assert.ok(!/[\u4e00-\u9fff]/u.test(html));
  for(const s of ['context','story','details','characters','themes','evidence','map','types','quiz','templates','predictions'])assert.ok(html.includes('id="'+s+'"'),s);

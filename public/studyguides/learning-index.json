@@ -2644,7 +2644,7 @@
       {
         "id": "c17-m05",
         "type": "mc",
-        "prompt": "What count does Rachael finally give for prior encounters?",
+        "prompt": "What count does Rachael finally give for times she has used this strategy?",
         "options": [
           "Three.",
           "Seven.",
@@ -2782,11 +2782,11 @@
       {
         "id": "c18-m04",
         "type": "mc",
-        "prompt": "How many legs has Pris cut off before the final crisis?",
+        "prompt": "At Pris’s explicit count before Roy uses the match, how many legs have been removed?",
         "options": [
           "Two, leaving six.",
           "Three, leaving five.",
-          "Four, leaving four remaining.",
+          "Four, leaving four at that counted stage.",
           "Eight, leaving none."
         ],
         "answer": 2
