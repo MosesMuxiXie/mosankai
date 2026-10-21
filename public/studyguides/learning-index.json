@@ -2128,12 +2128,12 @@
       {
         "id": "c18-m12",
         "type": "mc",
-        "prompt": "What materials does the broadcast say produced the rocks and blood?",
+        "prompt": "How long is each Mercer video film described in the broadcast?",
         "options": [
-          "Real stones and human blood.",
-          "Painted wood and wine.",
-          "The rocks were rubber-like plastic, and the blood was catsup.",
-          "Metal weights and animal blood."
+          "Fifteen seconds.",
+          "One hour.",
+          "Fifteen minutes.",
+          "Twenty-four hours."
         ],
         "answer": 2
       },
