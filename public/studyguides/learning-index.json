@@ -1991,6 +1991,910 @@
       }
     ]
   },
+  "literature-androids-18-22": {
+    "questions": [
+      {
+        "id": "c18-m01",
+        "type": "mc",
+        "prompt": "Why is Pris’s television needed?",
+        "options": [
+          "Isidore owns no television at all.",
+          "Pris’s set contains the alarm sensor.",
+          "Buster’s show is available only on Mars.",
+          "Isidore’s own set receives the government channel."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c18-m02",
+        "type": "mc",
+        "prompt": "What does Isidore use to hold the spider?",
+        "options": [
+          "A plastic medicine bottle with a perforated cap.",
+          "A glass of bourbon.",
+          "A laser-tube case.",
+          "A sealed metal sphere."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c18-m03",
+        "type": "mc",
+        "prompt": "Who supplies the cuticle scissors?",
+        "options": [
+          "Roy Baty supplies them to Isidore.",
+          "Irmgard Baty supplies them to Pris.",
+          "Isidore gives them to Rachael.",
+          "Buster mails them to Pris."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c18-m04",
+        "type": "mc",
+        "prompt": "At Pris’s explicit count before Roy uses the match, how many legs have been removed?",
+        "options": [
+          "Two, leaving six.",
+          "Three, leaving five.",
+          "Four, leaving four at that counted stage.",
+          "Eight, leaving none."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c18-m05",
+        "type": "mc",
+        "prompt": "What name does the broadcast give Mercer’s performer?",
+        "options": [
+          "Earl Parameter.",
+          "Wade Cortot.",
+          "Oscar Scruggs.",
+          "Al Jarry."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c18-m06",
+        "type": "mc",
+        "prompt": "Where do the investigators locate Al Jarry?",
+        "options": [
+          "East Harmony, Indiana, on Lark Avenue.",
+          "Seattle, Washington, at Rosen headquarters.",
+          "New New York on Mars.",
+          "Mission Street in San Francisco."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c18-m07",
+        "type": "mc",
+        "prompt": "How does Roy force the injured spider to move?",
+        "options": [
+          "He repairs its legs with wire.",
+          "He holds a lit match near it.",
+          "He uses a miniature empathy box.",
+          "He gives it silenizine."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c18-m08",
+        "type": "mc",
+        "prompt": "What is juxtaposed in the spider-and-broadcast sequence?",
+        "options": [
+          "Two unrelated accounts with no shared question.",
+          "Two recordings of the same event.",
+          "A public argument about empathy and an immediate instance of suffering.",
+          "A completed hunt and its legal trial."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c18-m09",
+        "type": "mc",
+        "prompt": "Why does Irmgard’s offer to pay fail to answer Isidore’s concern?",
+        "options": [
+          "It proves the spider is definitely the last of its kind.",
+          "It guarantees the spider has not suffered.",
+          "It shows Isidore was seeking a higher sale price.",
+          "It translates the loss of a particular life into catalogue replacement value."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c18-m10",
+        "type": "mc",
+        "prompt": "What does Mercer’s response to the exposé preserve?",
+        "options": [
+          "The possibility of meaningful shared experience despite acknowledged fabrication.",
+          "A denial that any production evidence exists.",
+          "Proof that the entire broadcast was a dream.",
+          "A complete objective account of every supernatural event."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c18-m11",
+        "type": "mc",
+        "prompt": "Which item does Isidore move first, and how many trips are needed?",
+        "options": [
+          "He takes the suitcases first; one trip suffices.",
+          "He takes the television first; transferring Pris’s property requires two trips.",
+          "He carries his own television upstairs in three trips.",
+          "Roy moves the set while Isidore waits downstairs."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c18-m12",
+        "type": "mc",
+        "prompt": "What materials does the broadcast say produced the rocks and blood?",
+        "options": [
+          "Real stones and human blood.",
+          "Painted wood and wine.",
+          "The rocks were rubber-like plastic, and the blood was catsup.",
+          "Metal weights and animal blood."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c18-s01",
+        "type": "written",
+        "prompt": "Identify the three androids’ separate roles in harming the spider."
+      },
+      {
+        "id": "c18-s02",
+        "type": "written",
+        "prompt": "What two production details support Buster’s claim of fabrication, and what broader claim should be distinguished from them?"
+      },
+      {
+        "id": "c18-s03",
+        "type": "written",
+        "prompt": "Define focalization and explain why it matters for Isidore’s perceived collapse of the apartment."
+      },
+      {
+        "id": "c18-s04",
+        "type": "written",
+        "prompt": "How does moving the television reveal both Isidore’s generosity and his vulnerability?"
+      },
+      {
+        "id": "c18-s05",
+        "type": "written",
+        "prompt": "Why does Isidore drown the spider, and how should an answer acknowledge the difficulty of that action?"
+      },
+      {
+        "id": "c18-s06",
+        "type": "written",
+        "prompt": "Analyze Irmgard’s tone when she offers to pay for the spider and presses Isidore to answer."
+      },
+      {
+        "id": "c18-s07",
+        "type": "written",
+        "prompt": "How does Isidore’s recognition that the androids exploit him complicate his decision to remain close to them?"
+      },
+      {
+        "id": "c19-m01",
+        "type": "mc",
+        "prompt": "Where does Isidore put the spider?",
+        "options": [
+          "On a yard-square patch of dusty, drooping weeds outside the building.",
+          "Inside Pris’s medicine bottle in the kitchen.",
+          "In Deckard’s car, as payment for protection.",
+          "On the empathy box beside the television."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c19-m02",
+        "type": "mc",
+        "prompt": "What rise in spider prices does Deckard cite?",
+        "options": [
+          "A fifty-percent drop in the December catalogue.",
+          "Ten percent in the January Sidney’s.",
+          "A ten-percent rise in Roy’s bounty.",
+          "A hundred-percent rise in January."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c19-m03",
+        "type": "mc",
+        "prompt": "What employer does Isidore name to Deckard?",
+        "options": [
+          "A real-animal clinic owned by Harry Bryant.",
+          "The Rosen Association, owned by Eldon Rosen.",
+          "The Van Ness Pet Hospital, owned by Hannibal Sloat.",
+          "Mount Zion Hospital, run by Dr. Costa."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c19-m04",
+        "type": "mc",
+        "prompt": "What equipment does Rick use to find the occupied floor?",
+        "options": [
+          "An empathy box measuring moral guilt.",
+          "A Voigt-Kampff interview of every resident.",
+          "Pris’s television antenna as a tracking beacon.",
+          "Listening/detection gear: a revolving detek-snout with a blip screen."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c19-m05",
+        "type": "mc",
+        "prompt": "What first tells Rick that the approaching woman is not Rachael?",
+        "options": [
+          "Her clothes are wrong, despite her matching eyes and appearance.",
+          "Her voice uses Iran’s name.",
+          "She carries a United Nations badge.",
+          "Mercer introduces her as Irmgard."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c19-m06",
+        "type": "mc",
+        "prompt": "What falls down the stairs after Pris is shot?",
+        "options": [
+          "The scissors used on the spider.",
+          "Her laser tube.",
+          "Rick’s police identification.",
+          "A miniature empathy box."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c19-m07",
+        "type": "mc",
+        "prompt": "Whose stammer does Rick deliberately imitate?",
+        "options": [
+          "Roy Baty’s voice as a television host.",
+          "Iran’s voice through a hidden radio.",
+          "John Isidore’s.",
+          "Dave Holden’s hospital operator."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c19-m08",
+        "type": "mc",
+        "prompt": "In what order does Rick kill the final three androids?",
+        "options": [
+          "Roy, Pris, Irmgard.",
+          "Pris, Roy, Irmgard.",
+          "Irmgard, Pris, Roy.",
+          "Pris, then Irmgard, then Roy."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c19-m09",
+        "type": "mc",
+        "prompt": "How many androids has Rick retired by the end of the confrontation that day?",
+        "options": [
+          "Six.",
+          "Three for the whole day.",
+          "Eight for the whole day.",
+          "One, because only Roy is counted."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c19-m10",
+        "type": "mc",
+        "prompt": "Which description defines dramatic irony and applies it accurately here?",
+        "options": [
+          "A repeated animal image develops across several chapters.",
+          "Readers know Rick is impersonating Isidore while the Batys initially hear a trusted voice.",
+          "The empty hallway creates a bleak atmosphere.",
+          "Rick’s laser makes the scene scientifically realistic."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c19-m11",
+        "type": "mc",
+        "prompt": "Which reading best explains Isidore’s refusal to guide Deckard?",
+        "options": [
+          "He has never realized that the group are androids.",
+          "He has stopped wanting any human company.",
+          "He can recognize the group’s cruelty while still resisting its killing.",
+          "Mercer gives a public legal order forbidding the search."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c19-m12",
+        "type": "mc",
+        "prompt": "What does Roy’s cry after Irmgard’s death most strongly complicate?",
+        "options": [
+          "The fact that Pris and Rachael share an appearance.",
+          "The fact that Roy earlier used a match near the spider.",
+          "The claim that Rick has completed his assignment.",
+          "An absolute claim that androids cannot form any emotional attachment."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c19-s01",
+        "type": "written",
+        "prompt": "Give the killing order of the last three androids and explain when Roy’s cry occurs."
+      },
+      {
+        "id": "c19-s02",
+        "type": "written",
+        "prompt": "Define dramatic irony and apply it to Rick’s impersonation at the door."
+      },
+      {
+        "id": "c19-s03",
+        "type": "written",
+        "prompt": "What does Isidore’s refusal to guide Rick reveal after the spider episode?"
+      },
+      {
+        "id": "c19-s04",
+        "type": "written",
+        "prompt": "How does Rick’s performed voice at the Batys’ door change the significance of Isidore’s familiar language?"
+      },
+      {
+        "id": "c19-s05",
+        "type": "written",
+        "prompt": "Analyze the effect of Rick’s acknowledgment of Roy’s love immediately before he kills him."
+      },
+      {
+        "id": "c19-s06",
+        "type": "written",
+        "prompt": "How do Rick’s changing thoughts during Pris’s approach reveal the power and limit of resemblance?"
+      },
+      {
+        "id": "c19-s07",
+        "type": "written",
+        "prompt": "How does Rick use Mercer’s warning to understand his ability to continue the hunt?"
+      },
+      {
+        "id": "c20-m01",
+        "type": "mc",
+        "prompt": "What does Bryant arrange after Rick’s report?",
+        "options": [
+          "A medal ceremony that same night.",
+          "A patrol car to collect the three bodies, while Rick gets rest.",
+          "A medical team to revive the three androids.",
+          "A Voigt-Kampff test for Iran."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c20-m02",
+        "type": "mc",
+        "prompt": "Where does Isidore plan to live?",
+        "options": [
+          "Into Rick’s apartment, accepting his invitation.",
+          "To Seattle to join the Rosens.",
+          "Deeper in town, where there are more people.",
+          "To an off-world colony immediately."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c20-m03",
+        "type": "mc",
+        "prompt": "What contractual period does Rick initially remember?",
+        "options": [
+          "A lifetime guarantee against deliberate killing.",
+          "A thirty-day promise of increased market value.",
+          "A ten-percent insurance payout from Sidney’s.",
+          "A ninety-day guarantee if the goat becomes sick."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c20-m04",
+        "type": "mc",
+        "prompt": "How does Iran say the woman killed the goat?",
+        "options": [
+          "She dragged it from its cage to the roof edge and pushed it off.",
+          "It dies of radioactive disease in its cage.",
+          "It falls while Rick flies away with it.",
+          "It is shot during the apartment confrontation."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c20-m05",
+        "type": "mc",
+        "prompt": "Who came to fetch Iran during the incident?",
+        "options": [
+          "Roy Baty.",
+          "Barbour.",
+          "Ann Marsten.",
+          "Dave Holden."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c20-m06",
+        "type": "mc",
+        "prompt": "Which coat and bag identify the woman in Iran’s description?",
+        "options": [
+          "A police uniform and a hospital case.",
+          "A red cape and a basket of food.",
+          "A long fish-scale coat and a mail-pouch purse.",
+          "A white lab coat and a fuel-pump box."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c20-m07",
+        "type": "mc",
+        "prompt": "How long before Rick’s arrival did the killing occur?",
+        "options": [
+          "Ninety days earlier.",
+          "Two days before the hunt.",
+          "At nine-thirty the next morning.",
+          "About half an hour."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c20-m08",
+        "type": "mc",
+        "prompt": "In which direction does Rick fly away?",
+        "options": [
+          "North, away from San Francisco toward uninhabited desolation.",
+          "South toward San Francisco.",
+          "East toward Al Jarry’s house.",
+          "Directly to Seattle and the Rosen factory."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c20-m09",
+        "type": "mc",
+        "prompt": "Which definition of situational irony best fits Rick’s homecoming?",
+        "options": [
+          "Any sad event is irony, regardless of expectation.",
+          "An outcome reverses an established expectation: the goat he expects as comfort has been killed.",
+          "A character secretly hears every other character’s thoughts.",
+          "A name appears more than once."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c20-m10",
+        "type": "mc",
+        "prompt": "Which statement best respects the evidence about Rachael’s motive?",
+        "options": [
+          "Rachael explains to Iran that Rosen ordered the killing.",
+          "The narrator confirms that jealousy is her only possible feeling.",
+          "Retaliation against what Rick values is supported by context, but her motive is not directly narrated here.",
+          "Nothing connects the death to the earlier relationship."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c20-m11",
+        "type": "mc",
+        "prompt": "How should Rick’s harsh insult about android intelligence be read?",
+        "options": [
+          "As an objective scientific finding that settles all android thought.",
+          "As praise that Isidore warmly accepts.",
+          "As proof Rick no longer remembers the hunt.",
+          "As a strained character judgment after a successful deception, qualified by his ensuing self-condemnation."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c20-m12",
+        "type": "mc",
+        "prompt": "What is the effect of placing Rick’s private thought beside his reassurance to Iran?",
+        "options": [
+          "Readers see distress that his spoken reassurance does not disclose to her.",
+          "It proves Iran has heard his inner words.",
+          "It removes all uncertainty about his future.",
+          "It shows that Rachael is driving the car."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c20-s01",
+        "type": "written",
+        "prompt": "How is the goat’s killer identified, and whose interpretation supplies a motive?"
+      },
+      {
+        "id": "c20-s02",
+        "type": "written",
+        "prompt": "Define situational irony and explain its role in Rick’s homecoming."
+      },
+      {
+        "id": "c20-s03",
+        "type": "written",
+        "prompt": "How does Rick’s housing offer expose the difference between practical help and a repaired relationship?"
+      },
+      {
+        "id": "c20-s04",
+        "type": "written",
+        "prompt": "Develop a supported interpretation of the goat’s killing while respecting the limits of the scene’s evidence."
+      },
+      {
+        "id": "c20-s05",
+        "type": "written",
+        "prompt": "What does Rick’s savage dismissal of android intelligence reveal in the immediate aftermath?"
+      },
+      {
+        "id": "c20-s06",
+        "type": "written",
+        "prompt": "Compare Iran’s manner of reporting the goat’s death with Rick’s initial response."
+      },
+      {
+        "id": "c20-s07",
+        "type": "written",
+        "prompt": "How does the gap between Rick’s reassurance and his private thought characterize his departure from Iran?"
+      },
+      {
+        "id": "c21-m01",
+        "type": "mc",
+        "prompt": "Which hospital does Rick call?",
+        "options": [
+          "The Van Ness Pet Hospital.",
+          "Chief Cutter’s private clinic.",
+          "Mount Zion Hospital.",
+          "A Rosen-owned colony infirmary."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c21-m02",
+        "type": "mc",
+        "prompt": "Which doctor bars calls to Dave Holden?",
+        "options": [
+          "Dr. Johnson.",
+          "Hannibal Sloat.",
+          "Harry Bryant.",
+          "Dr. Costa."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c21-m03",
+        "type": "mc",
+        "prompt": "What brand of snuff does Rick take?",
+        "options": [
+          "Dr. Johnson Snuff.",
+          "Sidney’s Special Blend.",
+          "Costa Menthol.",
+          "Rosen’s Lunar Powder."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c21-m04",
+        "type": "mc",
+        "prompt": "What does Rick first mistake for Mercer on the hill?",
+        "options": [
+          "Pris approaching in new clothes.",
+          "His own shadow.",
+          "Dave arriving with a patrol car.",
+          "Buster’s cameraman recording a film."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c21-m05",
+        "type": "mc",
+        "prompt": "What distinguishes the climb from ordinary empathy-box fusion for Rick?",
+        "options": [
+          "He does it with every user connected to his box.",
+          "He watches only a replay of the television exposé.",
+          "He experiences it alone, without holding the box’s handles.",
+          "He refuses to climb or leave the car."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c21-m06",
+        "type": "mc",
+        "prompt": "At what time does Rick check his watch before the police call?",
+        "options": [
+          "Half past midnight.",
+          "Three in the afternoon.",
+          "Six, matching the retirement tally.",
+          "Nine-thirty."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c21-m07",
+        "type": "mc",
+        "prompt": "What is Rick’s secretary’s name?",
+        "options": [
+          "Ann Marsten.",
+          "Irmgard Baty.",
+          "Miss Wild.",
+          "Amanda Werner."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c21-m08",
+        "type": "mc",
+        "prompt": "Who may receive Rick’s name for a citation?",
+        "options": [
+          "A final medal presented by Mercer.",
+          "Chief Cutter, through Bryant’s recommendation.",
+          "An immediate promotion to replace Bryant.",
+          "An award already signed by the United Nations."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c21-m09",
+        "type": "mc",
+        "prompt": "Which statement correctly defines setting and analyzes its function here?",
+        "options": [
+          "Setting means only a date; the stones cannot affect meaning.",
+          "Setting is a speaker’s attitude; Ann’s concern is the landscape.",
+          "Setting includes physical and social surroundings; the barren hill makes Rick’s isolation bodily and immediate.",
+          "Setting is always a direct prophecy of the ending."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c21-m10",
+        "type": "mc",
+        "prompt": "What does Ann’s shift from citation news to urging rest reveal?",
+        "options": [
+          "She has discovered that the six retirements never happened.",
+          "She becomes indifferent to Iran’s concern.",
+          "She certifies Rick’s permanent supernatural transformation.",
+          "Public achievement does not adequately describe the distressed person she sees."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c21-m11",
+        "type": "mc",
+        "prompt": "How should Rick’s claim that only the goat troubled him be handled?",
+        "options": [
+          "Compare it with earlier self-reproach and hesitation as a changing self-explanation.",
+          "Use it to erase every earlier expression of moral strain.",
+          "Reject it because characters’ thoughts can never be evidence.",
+          "Treat it as Ann’s scientific diagnosis."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c21-m12",
+        "type": "mc",
+        "prompt": "Which comparison with the broadcast is best supported?",
+        "options": [
+          "The rock proves Buster’s production research was never conducted.",
+          "The painful rock strike recalls supposedly fake film stones without settling the encounter’s entire cause.",
+          "The hill is explicitly confirmed as a Hollywood stage.",
+          "Because the stones were fake on TV, Rick cannot be hurt."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c21-s01",
+        "type": "written",
+        "prompt": "Distinguish Miss Wild, Ann Marsten, Bryant and Chief Cutter in the police call."
+      },
+      {
+        "id": "c21-s02",
+        "type": "written",
+        "prompt": "Define setting and explain how two details make the hill more than background scenery."
+      },
+      {
+        "id": "c21-s03",
+        "type": "written",
+        "prompt": "What do Rick’s continued climb and eventual retreat reveal about his loss of mastery?"
+      },
+      {
+        "id": "c21-s04",
+        "type": "written",
+        "prompt": "How does Ann’s tone change during the call, and what does the change prioritize?"
+      },
+      {
+        "id": "c21-s05",
+        "type": "written",
+        "prompt": "Why does Rick imagine Dave Holden as the person who could understand him?"
+      },
+      {
+        "id": "c21-s06",
+        "type": "written",
+        "prompt": "How should Rick’s claim of permanent fusion be read alongside his description of an illusion?"
+      },
+      {
+        "id": "c21-s07",
+        "type": "written",
+        "prompt": "What does Rick’s fear that there may be no more androids to retire reveal about his relationship to work?"
+      },
+      {
+        "id": "c22-m01",
+        "type": "mc",
+        "prompt": "Where did Rick learn to recognize a toad?",
+        "options": [
+          "A childhood pet that his family kept.",
+          "A conversation with Roy on the stairs.",
+          "Iran’s newly purchased field guide.",
+          "Old nature films on Government TV."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c22-m02",
+        "type": "mc",
+        "prompt": "What letter follows the toad entry in Sidney’s?",
+        "options": [
+          "E, indicating extinction for all varieties.",
+          "R, meaning routinely available.",
+          "P, meaning prototype.",
+          "A, certifying this animal’s authenticity."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c22-m03",
+        "type": "mc",
+        "prompt": "What had been inside the cardboard container Rick uses?",
+        "options": [
+          "A live turtle.",
+          "A spare fuel pump for his car.",
+          "One pound of artificial flies.",
+          "A Voigt-Kampff testing device."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c22-m04",
+        "type": "mc",
+        "prompt": "What does Rick do to secure the box?",
+        "options": [
+          "He leaves the lid open throughout the flight.",
+          "He gives the animal to a hospital operator.",
+          "He ties it repeatedly with hemp-like twine.",
+          "He uses the spider’s cuticle scissors to close it."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c22-m05",
+        "type": "mc",
+        "prompt": "What return distance and flight time does Rick imagine?",
+        "options": [
+          "Seventy miles north, taking three hours.",
+          "Seven hundred miles east, taking ninety days.",
+          "Thirty miles south, taking seven hours.",
+          "San Francisco is seven hundred miles south; he expects about thirty minutes."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c22-m06",
+        "type": "mc",
+        "prompt": "How does Iran discover the toad’s construction?",
+        "options": [
+          "She opens a tiny control panel on its underside with her nail.",
+          "She measures a delayed eye response.",
+          "It announces that it works for Rosen.",
+          "Rick sees it plugged into the mood organ."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c22-m07",
+        "type": "mc",
+        "prompt": "What quantity does Iran order first?",
+        "options": [
+          "Three pounds of real mosquitoes.",
+          "One pound of artificial flies that fly and buzz.",
+          "One electric turtle.",
+          "A new organic toad from Sidney’s."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c22-m08",
+        "type": "mc",
+        "prompt": "What is Iran’s final action in the novel?",
+        "options": [
+          "She dials setting 670 and wakes Rick.",
+          "She throws the toad off the roof.",
+          "She makes herself a cup of black, hot coffee, feeling better.",
+          "She files Rick’s citation at the police office."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c22-m09",
+        "type": "mc",
+        "prompt": "Which distinction correctly explains ambiguity at the ending?",
+        "options": [
+          "Ambiguity means no factual statement can be supported.",
+          "Ambiguity proves that the toad must be organic.",
+          "Ambiguity requires a secret explanation from a sequel.",
+          "The panel settles that the toad is electrical, while its placement and Mercer’s role remain uncertain."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "c22-m10",
+        "type": "mc",
+        "prompt": "Which statement correctly identifies a motif and its development?",
+        "options": [
+          "Artificial animals recur, but the movement from shame about the sheep to care for the toad changes their significance.",
+          "Any single object is a motif even if it never recurs.",
+          "A motif is only a speaker’s sarcastic delivery.",
+          "All repeated animals must have exactly the same meaning."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "c22-m11",
+        "type": "mc",
+        "prompt": "What does Rick’s revision from being glad to preferring to know suggest?",
+        "options": [
+          "He has proved the toad is organic after all.",
+          "He values the truth without pretending that learning it makes him happy.",
+          "He no longer understands what Iran found.",
+          "He becomes entirely free of disappointment."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "c22-m12",
+        "type": "mc",
+        "prompt": "Which reading best accounts for Iran’s final supplies call?",
+        "options": [
+          "She believes the animal is organic because Rick hid the panel.",
+          "She abandons Rick to pursue the United Nations reward.",
+          "She turns concern into continuing care, while the commercial setting keeps that care ordinary and materially dependent.",
+          "Her purchase proves every problem in the novel is solved."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "c22-s01",
+        "type": "written",
+        "prompt": "What does Iran order, and why does she request delivery?"
+      },
+      {
+        "id": "c22-s02",
+        "type": "written",
+        "prompt": "Define ambiguity and distinguish one settled fact from one unresolved question about the toad."
+      },
+      {
+        "id": "c22-s03",
+        "type": "written",
+        "prompt": "Define motif and explain how artificial animals develop across the novel."
+      },
+      {
+        "id": "c22-s04",
+        "type": "written",
+        "prompt": "How do Iran’s final actions make care concrete after the toad is exposed as electrical?"
+      },
+      {
+        "id": "c22-s05",
+        "type": "written",
+        "prompt": "How does Rick’s handling of the toad complicate a reading based only on financial greed?"
+      },
+      {
+        "id": "c22-s06",
+        "type": "written",
+        "prompt": "Analyze Rick’s self-correction after Iran reveals the control panel."
+      },
+      {
+        "id": "c22-s07",
+        "type": "written",
+        "prompt": "What does Rick’s manner of asking Iran whether it is over reveal about their relation at the end?"
+      },
+      {
+        "id": "c22-s08",
+        "type": "written",
+        "prompt": "How do Iran’s thoughts at the mood organ and her response to the knock develop the opening chapter’s concerns?"
+      }
+    ]
+  },
   "literature-androids-13-18": {
     "questions": [
       {

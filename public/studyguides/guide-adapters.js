@@ -86,7 +86,7 @@
         },
         assess(event){const b=event.target.closest('#quizarea [data-choice]');if(b&&!isMock&&queue[pos]!==undefined)return[D.quiz[queue[pos]].id];if(event.target.closest('#submitQ')||(event.target.closest('#nextQ')&&submitted))return queue.map(n=>D.quiz[n].id);return[];}
       };
-    } else if(['literature-androids-10-12','literature-androids-13-18'].includes(id)) {
+    } else if(['literature-androids-10-12','literature-androids-13-18','literature-androids-18-22'].includes(id)) {
       page={capture:()=>win.MosankaiPage.capture(),restore:(s,r,target)=>win.MosankaiPage.restore(s,r,target),assess(event){
         const snap=this.capture();if(event.target.closest('#check-answer'))return snap.resume.questionId?[snap.resume.questionId]:[];
         if(event.target.closest('#submit-test')&&snap.selectedIds.every(qid=>snap.state.submitted.includes(qid)))return snap.selectedIds;
@@ -140,7 +140,7 @@
       if(id==='statistics-review')q=bank.find(q=>q.id==='STAT-'+String(Number(t.id.replace('note',''))+1).padStart(3,'0'));
       else if(id==='neuroscience-review')q=bank.find(q=>q.id==='FRQ-'+String(i+1).padStart(3,'0'));
       else if(id==='literature-review')q=bank.find(q=>q.id===t.id);
-      else if(['literature-androids-10-12','literature-androids-13-18'].includes(id)){const snap=page.capture();q=bank.find(q=>q.id===snap.resume.questionId&&q.type==='written');}
+      else if(['literature-androids-10-12','literature-androids-13-18','literature-androids-18-22'].includes(id)){const snap=page.capture();q=bank.find(q=>q.id===snap.resume.questionId&&q.type==='written');}
       if(!q||q.type==='mc'||t.parentElement.querySelector('[data-study-written]'))return;
       const b=doc.createElement('button');b.type='button';b.className='study-written';b.dataset.studyWritten=q.id;
       const update=()=>{const active=store.read(id).pending.questions.includes(q.id);b.textContent=active?text('从待复习移出','Remove from review'):text('加入待复习','Add to review');b.setAttribute('aria-pressed',String(active));};
