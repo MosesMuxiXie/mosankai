@@ -460,7 +460,11 @@ F(6,10,10,'A drug abolishes the response to presynaptic stimulation. Design a by
  '在对照与药物条件下记录同一突触后细胞反应。','比较前突触刺激与局部直接施加正常递质。','若直接给药仍有效，支持受体／下游可用及上游激发或释放障碍。','若直接给药也失效，需考虑受体／下游、剂量和活性等，不能草率唯一定位。','加前突触 AP／Ca²⁺或释放量测量进一步定位，并陈述推断边界。'
 ],'Record the postsynaptic cell under matched control and drug conditions, comparing presynaptic stimulation with direct local application of the normal transmitter. If stimulation fails but direct application still works, the receptor pathway remains responsive and an upstream excitation or release defect is supported. This does not uniquely identify a particular calcium channel or SNARE. If both responses fail, postsynaptic effects, application conditions and cell viability must be examined. Recording presynaptic spikes, calcium entry or transmitter release can further separate upstream steps. The bypass test localizes a range of mechanisms rather than proving one molecular target.','rescue 说明被绕过步骤范围，不等于锁定唯一分子；保留匹配对照。',[['N6','p.2–3'],['EX','FRQ 2、7'],['B','PDF p.192–197']]);
 const mocks=[];
-for(let i=0;i<3;i++){const mc=mcq.filter(q=>Number(q.id.slice(-2))>i*10&&Number(q.id.slice(-2))<=(i+1)*10).map(q=>q.id);const ranges=[[[0,4],[0,3],[0,3]],[[4,7],[3,7],[3,6]],[[7,10],[7,10],[6,10]]][i];const fq=[4,5,6].flatMap((ch,j)=>frq.filter(q=>q.chapter===ch).slice(...ranges[j]).map(q=>q.id));mocks.push({id:`mock${i+1}`,title:`模拟卷 ${'ABC'[i]}`,mcq:mc,frq:fq,minutes:90});}
+for(let i=0;i<3;i++){
+ const mc=mcq.filter(q=>(Number(q.id.slice(-2))-1)%3===i).map(q=>q.id);
+ const fq=[4,5,6].flatMap((ch,j)=>frq.filter(q=>q.chapter===ch&&(Number(q.id.slice(-2))-1)%3===(i-j+3)%3).map(q=>q.id));
+ mocks.push({id:`mock${i+1}`,title:`模拟卷 ${'ABC'[i]}`,mcq:mc,frq:fq,minutes:90});
+}
 const priorities=[
  {topic:'c5-t4',title:'Ca²⁺、active zone 与 SNARE',mcq:'常用 NOT 题或 v/t SNARE 位置互换；记住预先备好囊泡与局部微域。',frq:'按前突触 AP→Ca²⁺→传感器→融合→受体写，并解释快速的空间基础。',evidence:[['EX','MCQ 15、18；FRQ 7'],['K5B','Q3'],['N5','p.3、6']]},
  {topic:'c5-t9',title:'λ、被动衰减与分流抑制',mcq:'重点辨认 R 与 g 的反向关系、37% 和更大 λ 的意义。',frq:'E_Cl 接近静息时仍可抑制；必须写出电导、电阻、电压响应与传播的链。',evidence:[['EX','MCQ 5；FRQ 5'],['K5A','Q11'],['K5B','Q13–14、18'],['N5','p.10–12']]},

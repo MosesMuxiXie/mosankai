@@ -99,3 +99,32 @@ test('a question deep link overrides stale chapter, priority, topic and wrong-on
  assert.equal(next.questionId,'C6-M16');assert.equal(next.chapter,'6');assert.equal(next.topic,'c6-t6');assert.equal(next.priority,'all');assert.equal(next.type,'mc');assert.equal(next.wrongOnly,false);
  const linked=c.resolveTarget(d,s,{topicId:'c4-t1',section:'practice'});assert.equal(linked.priority,'all');assert.equal(linked.type,'mc');assert.equal(linked.topic,'c4-t1');
 });
+
+test('submitted blank FRQs can be explicitly assessed as zero without awarding blank responses points',()=>{
+ const d=content(),c=core(),paper=d.mocks[0],a=c.freshAttempt();a.submitted=true;a.selected=paper.frq.slice(0,8);
+ assert.equal(c.scoreMock(d,paper,a).total,null);
+ for(const id of a.selected)a.self[id]=[false,false,false,false,false];
+ assert.equal(c.scoreMock(d,paper,a).frq,0);assert.equal(c.scoreMock(d,paper,a).total,0);
+ a.self[a.selected[0]][0]=true;assert.equal(c.scoreMock(d,paper,a).total,null);
+});
+
+test('reload restores a newer guide position instead of replaying its original topic entry',()=>{
+ const d=content(),c=core(),s={...c.freshState(),chapter:'6',topic:'all',learnChapter:6,questionId:'C6-M01',section:'practice'};
+ const restored=c.resolveTarget(d,s,{topicId:'c4-t1',section:'practice',resume:true});
+ assert.equal(restored.chapter,'6');assert.equal(restored.questionId,'C6-M01');assert.equal(restored.learnChapter,6);
+});
+
+test('map selection resolves current node hashes and restored positions before stale entry queries',()=>{
+ const d=content(),c=core();assert.equal(typeof c.mapTarget,'function');
+ assert.equal(c.mapTarget(d,'c6-t6','c4-t1','#node-c6-t6',true),'c6-t6');
+ assert.equal(c.mapTarget(d,'c6-t6','c4-t1','',true),'c6-t6');
+ assert.equal(c.mapTarget(d,'c6-t6','c4-t1','',false),'c4-t1');
+ assert.equal(c.mapTarget(d,'c6-t6','invalid','#node-invalid',false),'c6-t6');
+});
+
+test('each mock samples all ten concept areas in every chapter instead of exhausting consecutive topics',()=>{
+ const d=content();for(const paper of d.mocks)for(const ch of [4,5,6]){
+   const topics=paper.mcq.map(id=>d.mcq.find(q=>q.id===id)).filter(q=>q.chapter===ch).map(q=>q.topic);
+   assert.equal(new Set(topics).size,10);
+ }
+});

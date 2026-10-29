@@ -33,6 +33,21 @@ Two new static study pages, 90 MCQs and 30 FRQs (30/10 per chapter), three disjo
 
 ## User-facing behavior
 
-The guide and map are registered separately as neuroscience-ch4-6-review and neuroscience-ch4-6-map. Both use the existing study center return/favorite/review/export tools. Written work is self-assessed; only explicit checks or exam submission update MCQ results. Mock answers are locked after submission until the user starts a new round. Exam time is a 90-minute reference, not an automatic submission deadline. A no-point written response can be recorded by checking and then unchecking a rubric item. Existing chapter 1–3 records are not migrated into this guide.
+The guide and map are registered separately as neuroscience-ch4-6-review and neuroscience-ch4-6-map. Both use the existing study center return/favorite/review/export tools. Written work is self-assessed; only explicit checks or exam submission update MCQ results. Mock answers are locked after submission until the user starts a new round. Exam time is a 90-minute reference, not an automatic submission deadline. A zero-mark or blank written response has an explicit “record 0” button; blank responses cannot earn checked points. Existing chapter 1–3 records are not migrated into this guide.
 
 The content is static HTML/CSS/JS; no backend, new dependencies, source-file uploads or accounts. The bundled Geist Latin variable font is licensed under the included OFL, with system fallback for Chinese and scientific glyphs. A primary electrophysiology paper is linked for the neonicotinoid correction.
+
+## Final review and repair
+
+An independent read-only reviewer ran the 69-test suite and identified two P2 issues. Both received failing regression tests before fixes:
+
+- Blank selected FRQs could be locked without a way to complete grading. Explicit zero assessment now works after submission, zero-point arrays are distinguished from missing self-assessment, and a blank response with positive checks cannot yield a total. Browser verified 0/100 survives reload and blank points cannot be awarded.
+- Entry topic queries could override newer saved positions. Guide reload now preserves the saved chapter/question; map selection resolves current node hashes and synchronizes its query. Browser verified C4 entry → C6 question → reload retains C6, and C4 map entry → c6-t6 → reload retains c6-t6.
+
+Ruling: mock questions are interleaved across concept areas rather than consecutive blocks. Every paper still has ten MCQs per chapter, but now each chapter's ten topics are represented once in every paper. FRQs remain disjoint with the specified 4/3/3 rotation. This improves representativeness without changing bank size or scoring; the regression test covers coverage and partitioning.
+
+Reviewer limits resolved: the author read all 24 classroom scans and checked specific disputed textbook passages; this is educational source calibration, not independent verification of every textbook page. The accessible outline provides the complete keyboard path even if rebuilding the graphical view resets SVG focus; browser verified Tab from a selected outline node reaches its correct guide link and Enter opens that topic. Interface preference validation remains bounded by safe JSON and validated answer/exam identities; malformed scoring state is rejected.
+
+Additional browser checks: real JSON download contains both new material records and exam/written drafts; the learning-center import preview recognized both records without replacing newer data. Native SVG dragging changed the pan transform; 375px and 1440px layouts fit their viewport.
+
+Final verification after the review fixes: npm test, 73 passed / 0 failed. Content and scoring regression tests include comprehensive per-paper topic coverage. New public text assets retain LF bytes as required by this repository's public-tree attributes. Existing sources and their hashes remain unchanged.
