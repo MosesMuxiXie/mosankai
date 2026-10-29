@@ -16,7 +16,10 @@ const nextReview = read('english/guides/androids-chapters-13-18.html');
 const nextContext = vm.createContext({});vm.runInContext(nextReview.match(/<script id="review-core">([\s\S]*?)<\/script>/)[1],nextContext);
 const finalReview = read('english/guides/androids-chapters-18-22.html');
 const finalContext = vm.createContext({});vm.runInContext(finalReview.match(/<script id="review-core">([\s\S]*?)<\/script>/)[1],finalContext);
+const neuro46 = require('../public/studyguides/neuroscience/guides/neuro46-data');
 const index = {
+  'neuroscience-ch4-6-review':{cardIds:neuro46.topics.map(t=>t.id),mocks:neuro46.mocks.map(p=>({id:p.id,mcq:p.mcq,frq:p.frq})),questions:[...neuro46.mcq.map(q=>({id:q.id,type:'mc',prompt:q.prompt,options:q.options,answer:q.answer})),...neuro46.frq.map(q=>({id:q.id,type:'written',prompt:q.prompt,rubricCount:q.points.length}))]},
+  'neuroscience-ch4-6-map':{cardIds:neuro46.topics.map(t=>t.id),questions:[]},
   'statistics-review':{cardIds:['0','1','2','3','4','5'],questions:stats.map((q,i)=>({id:`STAT-${String(i+1).padStart(3,'0')}`,type:q[6]?'mc':'written',prompt:q[2]+' · '+q[3],...(q[6]?{options:q[6],answer:q[7]}:{})}))},
   'neuroscience-review':{cardIds:neuro.cards.map(c=>c.id),questions:[...neuro.quiz.map(q=>({id:q.id,type:'mc',prompt:q.prompt,options:q.options,answer:q.answer})),...neuro.frq.map((q,i)=>({id:`FRQ-${String(i+1).padStart(3,'0')}`,type:'written',prompt:q.title}))]},
   'literature-review':{questions:[...mc.map((q,i)=>({id:`LIT-${String(i+1).padStart(3,'0')}`,type:'mc',prompt:q.stem,options:q.options,answer:q.key})),...shorts.map(q=>({id:q.id,type:'written',prompt:q.prompt})),{id:'essay',type:'written',prompt:'Develop a defensible claim: setting and Iran’s dialogue.'}]},

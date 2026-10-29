@@ -39,6 +39,30 @@
       if (!plain(state)) fail(); safeJSON(state);
       if (['literature-androids-10-12','literature-androids-13-18','literature-androids-18-22'].includes(id) && state.version !== undefined && state.version !== 1) fail();
       const desc = index[id] || {}, questions = desc.questions || [];
+      if(id==='neuroscience-ch4-6-review'&&Object.keys(state).length){
+        if(state.version!==1)fail();
+        const validAnswers=(answers,allowed)=>{
+          if(!plain(answers))fail();
+          for(const [qid,value] of Object.entries(answers)){
+            const q=question(id,qid);if(!q||(allowed&&!allowed.includes(qid)))fail();
+            if(q.type==='mc'){if(!Number.isInteger(value)||value<0||value>=q.options.length)fail();}
+            else if(typeof value!=='string')fail();
+          }
+        };
+        const validSelf=(self,allowed)=>{
+          if(!plain(self))fail();
+          for(const [qid,value] of Object.entries(self)){
+            const q=question(id,qid);if(!q||q.type!=='written'||allowed&&!allowed.includes(qid)||!Array.isArray(value)||value.length!==q.rubricCount||value.some(v=>typeof v!=='boolean'))fail();
+          }
+        };
+        if(!plain(state.exams))fail();
+        validAnswers(state.answers);validSelf(state.assessed);
+        for(const [key,a] of Object.entries(state.exams)){
+          const paper=desc.mocks?.find(p=>p.id===key);
+          if(!paper||!plain(a)||typeof a.submitted!=='boolean'||!time(a.startedAt)||!time(a.elapsed)||!Array.isArray(a.selected)||a.selected.length>8||new Set(a.selected).size!==a.selected.length||a.selected.some(qid=>!paper.frq.includes(qid)))fail();
+          validAnswers(a.answers,[...paper.mcq,...paper.frq]);validSelf(a.self,paper.frq);
+        }
+      }
       const map = (name, check) => {
         if (state[name] === undefined) return;
         if (!plain(state[name])) fail();

@@ -18,8 +18,8 @@
         "zh-CN": "神经科学"
       },
       "description": {
-        "en": "From neurons to the resting membrane.",
-        "zh-CN": "从神经元到静息膜电位。"
+        "en": "From neurons to spikes, synapses and transmitter systems.",
+        "zh-CN": "从神经元到放电、突触与递质系统。"
       }
     },
     {
@@ -51,6 +51,40 @@
       "filename": "statistics-review.html",
       "href": "/studyguides/statistics/guides/statistics-review.html",
       "bytes": 44136
+    },
+    {
+      "id": "neuroscience-ch4-6-review",
+      "subject": "neuroscience",
+      "kind": "guide",
+      "title": {
+        "en": "Neuro Notes · From spike to synapse",
+        "zh-CN": "神经科学 · 第 4–6 章完整复习"
+      },
+      "scope": {
+        "en": "Chapters 4–6 · 90 MCQs · 30 FRQs · 3 mock exams · calibrated sources",
+        "zh-CN": "第 4–6 章 · 90 道 MCQ · 30 道 FRQ · 3 套模拟卷 · 来源纠错"
+      },
+      "format": "HTML",
+      "filename": "neuroscience-chapters-4-6.html",
+      "href": "/studyguides/neuroscience/guides/neuroscience-chapters-4-6.html",
+      "bytes": 9627
+    },
+    {
+      "id": "neuroscience-ch4-6-map",
+      "subject": "neuroscience",
+      "kind": "guide",
+      "title": {
+        "en": "From spike to synapse · Knowledge map",
+        "zh-CN": "从放电到突触 · 第 4–6 章思维导图"
+      },
+      "scope": {
+        "en": "Chapters 4–6 · 30 linked concepts · interactive and accessible outline",
+        "zh-CN": "第 4–6 章 · 30 个关联知识点 · 图谱与层级阅读"
+      },
+      "format": "HTML",
+      "filename": "neuroscience-chapters-4-6-mindmap.html",
+      "href": "/studyguides/neuroscience/guides/neuroscience-chapters-4-6-mindmap.html",
+      "bytes": 3312
     },
     {
       "id": "neuroscience-review",
@@ -449,8 +483,8 @@
         "zh-CN": "Neuroscience: Exploring the Brain · 教材"
       },
       "scope": {
-        "en": "Full source PDF · review covers chapters 1–3",
-        "zh-CN": "原始教材全文 · 复习范围为第 1–3 章"
+        "en": "Full source PDF · reviews cover chapters 1–6",
+        "zh-CN": "原始教材全文 · 复习使用第 1–6 章"
       },
       "format": "PDF",
       "filename": "Neuroscience_ Exploring the Brain (2015).pdf",

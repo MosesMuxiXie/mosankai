@@ -1,4 +1,1478 @@
 {
+  "neuroscience-ch4-6-review": {
+    "cardIds": [
+      "c4-t1",
+      "c4-t2",
+      "c4-t3",
+      "c4-t4",
+      "c4-t5",
+      "c4-t6",
+      "c4-t7",
+      "c4-t8",
+      "c4-t9",
+      "c4-t10",
+      "c5-t1",
+      "c5-t2",
+      "c5-t3",
+      "c5-t4",
+      "c5-t5",
+      "c5-t6",
+      "c5-t7",
+      "c5-t8",
+      "c5-t9",
+      "c5-t10",
+      "c6-t1",
+      "c6-t2",
+      "c6-t3",
+      "c6-t4",
+      "c6-t5",
+      "c6-t6",
+      "c6-t7",
+      "c6-t8",
+      "c6-t9",
+      "c6-t10"
+    ],
+    "mocks": [
+      {
+        "id": "mock1",
+        "mcq": [
+          "C4-M01",
+          "C4-M02",
+          "C4-M03",
+          "C4-M04",
+          "C4-M05",
+          "C4-M06",
+          "C4-M07",
+          "C4-M08",
+          "C4-M09",
+          "C4-M10",
+          "C5-M01",
+          "C5-M02",
+          "C5-M03",
+          "C5-M04",
+          "C5-M05",
+          "C5-M06",
+          "C5-M07",
+          "C5-M08",
+          "C5-M09",
+          "C5-M10",
+          "C6-M01",
+          "C6-M02",
+          "C6-M03",
+          "C6-M04",
+          "C6-M05",
+          "C6-M06",
+          "C6-M07",
+          "C6-M08",
+          "C6-M09",
+          "C6-M10"
+        ],
+        "frq": [
+          "C4-F01",
+          "C4-F02",
+          "C4-F03",
+          "C4-F04",
+          "C5-F01",
+          "C5-F02",
+          "C5-F03",
+          "C6-F01",
+          "C6-F02",
+          "C6-F03"
+        ]
+      },
+      {
+        "id": "mock2",
+        "mcq": [
+          "C4-M11",
+          "C4-M12",
+          "C4-M13",
+          "C4-M14",
+          "C4-M15",
+          "C4-M16",
+          "C4-M17",
+          "C4-M18",
+          "C4-M19",
+          "C4-M20",
+          "C5-M11",
+          "C5-M12",
+          "C5-M13",
+          "C5-M14",
+          "C5-M15",
+          "C5-M16",
+          "C5-M17",
+          "C5-M18",
+          "C5-M19",
+          "C5-M20",
+          "C6-M11",
+          "C6-M12",
+          "C6-M13",
+          "C6-M14",
+          "C6-M15",
+          "C6-M16",
+          "C6-M17",
+          "C6-M18",
+          "C6-M19",
+          "C6-M20"
+        ],
+        "frq": [
+          "C4-F05",
+          "C4-F06",
+          "C4-F07",
+          "C5-F04",
+          "C5-F05",
+          "C5-F06",
+          "C5-F07",
+          "C6-F04",
+          "C6-F05",
+          "C6-F06"
+        ]
+      },
+      {
+        "id": "mock3",
+        "mcq": [
+          "C4-M21",
+          "C4-M22",
+          "C4-M23",
+          "C4-M24",
+          "C4-M25",
+          "C4-M26",
+          "C4-M27",
+          "C4-M28",
+          "C4-M29",
+          "C4-M30",
+          "C5-M21",
+          "C5-M22",
+          "C5-M23",
+          "C5-M24",
+          "C5-M25",
+          "C5-M26",
+          "C5-M27",
+          "C5-M28",
+          "C5-M29",
+          "C5-M30",
+          "C6-M21",
+          "C6-M22",
+          "C6-M23",
+          "C6-M24",
+          "C6-M25",
+          "C6-M26",
+          "C6-M27",
+          "C6-M28",
+          "C6-M29",
+          "C6-M30"
+        ],
+        "frq": [
+          "C4-F08",
+          "C4-F09",
+          "C4-F10",
+          "C5-F08",
+          "C5-F09",
+          "C5-F10",
+          "C6-F07",
+          "C6-F08",
+          "C6-F09",
+          "C6-F10"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "C4-M01",
+        "type": "mc",
+        "prompt": "At point B on the action-potential trace (the rising phase), which change directly drives the rapid increase in Vm?",
+        "options": [
+          "Removal of every intracellular anion",
+          "An increase in Na⁺ conductance with net Na⁺ influx",
+          "Increased K⁺ efflux through delayed rectifier channels",
+          "A sudden reversal of the Na⁺/K⁺ pump"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C4-M02",
+        "type": "mc",
+        "prompt": "What does the term overshoot specifically describe?",
+        "options": [
+          "The entire falling phase",
+          "The interval below the resting potential",
+          "The portion of an action potential above 0 mV",
+          "Every depolarization below threshold"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C4-M03",
+        "type": "mc",
+        "prompt": "Why can Vm briefly become more negative than its resting value after a spike?",
+        "options": [
+          "All K⁺ channels have already closed",
+          "The pump instantaneously removes all Na⁺ that entered",
+          "Na⁺ channels remain maximally open",
+          "K⁺ conductance remains elevated while Na⁺ conductance is low"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C4-M04",
+        "type": "mc",
+        "prompt": "A depolarized membrane cannot immediately reopen many Na⁺ channels. They are best described as:",
+        "options": [
+          "Inactivated",
+          "Closed and fully available at rest",
+          "Constitutively open leak channels",
+          "Permanently destroyed"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C4-M05",
+        "type": "mc",
+        "prompt": "Which event allows voltage-gated Na⁺ channels to recover from inactivation?",
+        "options": [
+          "Hydrolysis of ACh in the synaptic cleft",
+          "Repolarization toward a negative membrane potential",
+          "Maintaining the membrane at a strongly positive voltage",
+          "Increasing stimulus amplitude without repolarization"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C4-M06",
+        "type": "mc",
+        "prompt": "Which structural description is appropriate for a typical voltage-gated Na⁺ pore-forming α subunit?",
+        "options": [
+          "Two connexons containing six connexins each",
+          "A vesicle containing four SNARE proteins",
+          "One polypeptide chain containing four homologous domains",
+          "Four independent α chains, each identical to the entire Na⁺ channel"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C4-M07",
+        "type": "mc",
+        "prompt": "The absolute refractory period is primarily caused by:",
+        "options": [
+          "Complete depletion of all extracellular Na⁺",
+          "Inactivation of every K⁺ channel",
+          "Absence of neurotransmitter receptors",
+          "Inactivation of voltage-gated Na⁺ channels"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C4-M08",
+        "type": "mc",
+        "prompt": "If an absolute refractory period is 2 ms, what is the ideal upper bound set by this period alone?",
+        "options": [
+          "500 spikes per second",
+          "2 spikes per second",
+          "2000 spikes per second",
+          "An unlimited firing rate"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C4-M09",
+        "type": "mc",
+        "prompt": "A second spike requires a larger stimulus during the relative refractory period mainly because:",
+        "options": [
+          "The synaptic cleft has become wider",
+          "Some Na⁺ channels are recovering and K⁺ conductance is still elevated",
+          "All Na⁺ channels must remain irreversibly blocked",
+          "The second action potential must have twice the amplitude"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C4-M10",
+        "type": "mc",
+        "prompt": "In one neuron under otherwise comparable conditions, a stronger sustained suprathreshold input usually increases:",
+        "options": [
+          "The number of Na⁺ ions in a single action potential without any limit",
+          "Axon length during the recording",
+          "Firing frequency rather than individual spike amplitude",
+          "Each spike’s amplitude in direct proportion to stimulus strength"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C4-M11",
+        "type": "mc",
+        "prompt": "Which statement correctly limits the all-or-none principle?",
+        "options": [
+          "All neurons in all species have identical spike duration",
+          "Any depolarization, however small, produces a spike",
+          "A graded EPSP cannot vary in amplitude",
+          "It describes spike initiation in a given neuron; different neuron types may have different waveforms"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C4-M12",
+        "type": "mc",
+        "prompt": "Which signal can normally undergo graded spatial summation before a postsynaptic spike is initiated?",
+        "options": [
+          "Excitatory postsynaptic potentials",
+          "The amplitudes of two propagated axonal spikes",
+          "The equilibrium potentials of all ions as separate spikes",
+          "The molecular mass of sodium channels"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C4-M13",
+        "type": "mc",
+        "prompt": "Using outward-positive current, gNa = 2 nS, Vm = −65 mV and ENa = +55 mV give:",
+        "options": [
+          "INa = 0 because Vm is negative",
+          "INa = −240 pA, an inward current",
+          "INa = +240 pA, an outward current",
+          "INa = −20 pA"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C4-M14",
+        "type": "mc",
+        "prompt": "A Na⁺ channel is open but Vm equals ENa. What is the net Na⁺ current through it?",
+        "options": [
+          "Maximal outward current because Vm is positive",
+          "Impossible to determine even with I = g(Vm − ENa)",
+          "Zero, because the electrochemical driving force is zero",
+          "Maximal inward current because the channel is open"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C4-M15",
+        "type": "mc",
+        "prompt": "Resistors R1 = 0.001 Ω, R2 = 1 Ω and R3 = 10 Ω are compared. Which has the lowest conductance?",
+        "options": [
+          "R1",
+          "R2",
+          "All three have the same conductance",
+          "R3"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C4-M16",
+        "type": "mc",
+        "prompt": "Lowering extracellular K⁺, with other conditions fixed, makes EK more negative. What is the expected first-order effect near rest?",
+        "options": [
+          "The resting membrane potential becomes more negative",
+          "The AP peak must become more positive",
+          "The K⁺ gradient disappears immediately",
+          "Na⁺ channels become ligand-gated"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C4-M17",
+        "type": "mc",
+        "prompt": "In the usual simplified AP model, increasing intracellular K⁺ primarily changes EK. The AP peak is expected to:",
+        "options": [
+          "Disappear because no ion gradient can remain",
+          "Remain approximately unchanged if ENa and Na⁺ conductance are otherwise unchanged",
+          "Become much more negative in direct proportion to EK",
+          "Become exactly equal to EK"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C4-M18",
+        "type": "mc",
+        "prompt": "An impermeant Na⁺ gradient remains unchanged while anion channels are inserted into a cell with [A⁻]out > [A⁻]in. Initially A⁻ enters. What happens to the inside?",
+        "options": [
+          "Na⁺ must enter through the new anion channels",
+          "A⁻ must move outward down its stated concentration gradient",
+          "It becomes more negative relative to the outside",
+          "It becomes more positive because all inward flow is depolarizing"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C4-M19",
+        "type": "mc",
+        "prompt": "Which pair of changes generally increases axonal conduction velocity?",
+        "options": [
+          "Longer total axon length and a smaller diameter",
+          "Loss of myelin and increased current leakage",
+          "A larger synaptic cleft and fewer nodes",
+          "Larger diameter and myelination"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C4-M20",
+        "type": "mc",
+        "prompt": "An axon doubles in length while its conduction velocity stays constant. The end-to-end conduction time:",
+        "options": [
+          "Doubles",
+          "Halves",
+          "Remains unchanged",
+          "Becomes zero because spikes are regenerated"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C4-M21",
+        "type": "mc",
+        "prompt": "In saltatory conduction, action potentials are regenerated mainly at:",
+        "options": [
+          "Mitochondria inside the axon",
+          "Nodes of Ranvier with a high density of voltage-gated channels",
+          "Every point under the thickest myelin sheath",
+          "The synaptic cleft"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C4-M22",
+        "type": "mc",
+        "prompt": "Saxitoxin prevents normal AP conduction primarily by:",
+        "options": [
+          "Keeping every K⁺ channel permanently open as its primary target",
+          "Making the entire axon longer",
+          "Blocking sensitive voltage-gated Na⁺ channels",
+          "Blocking ACh hydrolysis"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C4-M23",
+        "type": "mc",
+        "prompt": "Which comparison between TTX and batrachotoxin is most accurate?",
+        "options": [
+          "Both primarily hydrolyze acetylcholine",
+          "Both must physically destroy skeletal muscle cells to stop signaling",
+          "Batrachotoxin works by closing every gap junction",
+          "TTX blocks Na⁺ conduction; batrachotoxin disrupts normal gating and can cause persistent depolarization"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C4-M24",
+        "type": "mc",
+        "prompt": "A local anesthetic inhibits voltage-gated Na⁺ channels in an axon. Which event is most directly reduced?",
+        "options": [
+          "Regenerative Na⁺ influx during spike propagation",
+          "The affinity of all postsynaptic GABA receptors",
+          "Synthesis of every peptide in the soma",
+          "The number of connexins in a gap junction"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C4-M25",
+        "type": "mc",
+        "prompt": "To compare the time courses of Na⁺ and K⁺ currents at a specified Vm, which approach is most suitable?",
+        "options": [
+          "Apply ACh and assume all current is Na⁺ current",
+          "Voltage clamp combined with appropriate ion/channel isolation",
+          "Measure only the final muscle contraction",
+          "Count Nissl bodies without electrical recording"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C4-M26",
+        "type": "mc",
+        "prompt": "Which method can resolve the opening and closing current of a single ion channel in a small membrane patch?",
+        "options": [
+          "An ordinary photograph of the whole brain",
+          "A behavioral questionnaire",
+          "Patch-clamp recording",
+          "Immunohistochemistry alone"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C4-M27",
+        "type": "mc",
+        "prompt": "In a voltage-clamp experiment, which variable is controlled and which is recorded?",
+        "options": [
+          "Current is fixed; only cell color is recorded",
+          "Axon length is controlled; neurotransmitter mass is recorded",
+          "Both Vm and current must remain zero",
+          "Membrane voltage is controlled; compensating membrane current is recorded"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C4-M28",
+        "type": "mc",
+        "prompt": "Blue light activates classic ChR2 expressed in a neuron near rest. What is the usual immediate effect?",
+        "options": [
+          "A net inward cation current and depolarization",
+          "ATP-driven export of all intracellular Na⁺",
+          "A selective block of all voltage-gated Na⁺ channels",
+          "ACh hydrolysis in the cleft"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C4-M29",
+        "type": "mc",
+        "prompt": "Classic halorhodopsin is best described as:",
+        "options": [
+          "A vesicular transporter for dopamine",
+          "A light-driven inward Cl⁻ pump that usually inhibits firing",
+          "A blue-light-gated Na⁺-only channel",
+          "A Na⁺/K⁺ ATPase stimulated by nicotine"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C4-M30",
+        "type": "mc",
+        "prompt": "Which control most directly tests whether a light-evoked response depends on the introduced opsin?",
+        "options": [
+          "Compare only two different colors in different species",
+          "Assume every neuron responds identically to light",
+          "Give the same light to otherwise matched cells lacking that opsin",
+          "Change both opsin expression and every recording condition"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C5-M01",
+        "type": "mc",
+        "prompt": "A typical complete gap-junction channel between two cells contains:",
+        "options": [
+          "Two synaptic clefts and no membrane protein",
+          "Six SNAREs acting as neurotransmitter receptors",
+          "Two connexons, each assembled from six connexins",
+          "One connexin shared by six vesicles"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C5-M02",
+        "type": "mc",
+        "prompt": "Which feature most directly explains the very small delay of an electrical synapse?",
+        "options": [
+          "Peptides are synthesized unusually fast",
+          "AChE removes all electrical resistance",
+          "The postsynaptic cell has no membrane",
+          "Current passes directly through gap-junction channels"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C5-M03",
+        "type": "mc",
+        "prompt": "Which experimental observation most specifically indicates synchronization by electrical coupling?",
+        "options": [
+          "Neighboring coupled cells show correlated subthreshold fluctuations and near-simultaneous spikes",
+          "Every presynaptic spike has twice its previous amplitude",
+          "A single cell produces an mRNA signal",
+          "All receptors are degraded but peptide synthesis rises"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C5-M04",
+        "type": "mc",
+        "prompt": "After stimulating the vagus nerve of heart 1, Loewi transfers its bath fluid to heart 2, which also slows. What is supported?",
+        "options": [
+          "Heart 2 received the same electrode stimulation",
+          "A transferable chemical mediator contributes to slowing",
+          "A direct gap junction must connect the two hearts",
+          "All neuronal synapses are exclusively chemical"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C5-M05",
+        "type": "mc",
+        "prompt": "Which bath-transfer control best addresses whether stimulation is necessary for the transferred effect?",
+        "options": [
+          "Use a different species, temperature and solution simultaneously",
+          "Measure only the mass of the second heart",
+          "Transfer comparable bath fluid collected before vagal stimulation",
+          "Remove every measurement electrode from both hearts"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C5-M06",
+        "type": "mc",
+        "prompt": "The classic vagal mediator later identified from this line of work was:",
+        "options": [
+          "GABA",
+          "Sodium itself as a neurotransmitter",
+          "Tyrosine hydroxylase",
+          "Acetylcholine"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C5-M07",
+        "type": "mc",
+        "prompt": "A synapse with an asymmetric prominent postsynaptic density and round vesicles is classically associated with:",
+        "options": [
+          "Gray type I, usually excitatory",
+          "Gray type II, always a gap junction",
+          "A synapse lacking any postsynaptic membrane",
+          "A vesicle-free electrical synapse solely because it is asymmetric"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C5-M08",
+        "type": "mc",
+        "prompt": "The presynaptic membrane region specialized for vesicle docking and release is the:",
+        "options": [
+          "Nissl body",
+          "Active zone",
+          "Postsynaptic density",
+          "Node of Ranvier"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C5-M09",
+        "type": "mc",
+        "prompt": "An axon terminal contacts another neuron’s soma. This connection is:",
+        "options": [
+          "Dendrodendritic",
+          "Axoaxonic",
+          "Axosomatic",
+          "Axodendritic"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C5-M10",
+        "type": "mc",
+        "prompt": "Which feature does NOT explain rapid transmitter release at an active zone?",
+        "options": [
+          "Vesicles are already docked and primed",
+          "Ca²⁺ channels lie close to release-ready vesicles",
+          "A local Ca²⁺ microdomain triggers nearby fusion machinery",
+          "Ca²⁺ must first build up uniformly throughout the entire axon"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C5-M11",
+        "type": "mc",
+        "prompt": "Which placement of SNAREs is appropriate for classical presynaptic exocytosis?",
+        "options": [
+          "v SNARE on the vesicle; t SNARE on the presynaptic target membrane",
+          "v SNARE on the postsynaptic receptor and t SNARE in the nucleus",
+          "Both SNARE classes only in the synaptic cleft as soluble transmitters",
+          "v SNARE on myelin; t SNARE on a connexin"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C5-M12",
+        "type": "mc",
+        "prompt": "Extracellular Ca²⁺ is removed while the presynaptic action potential still arrives. Which process is most directly impaired?",
+        "options": [
+          "Passive diffusion of an already applied transmitter across solution",
+          "Ca²⁺-triggered evoked vesicle fusion",
+          "The existence of every postsynaptic receptor",
+          "mRNA complementarity in a FISH probe"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C5-M13",
+        "type": "mc",
+        "prompt": "A response requires repeated sustained presynaptic activity rather than isolated spikes. Which transmitter arrangement is most compatible?",
+        "options": [
+          "More active zones alone, with no change in release requirements",
+          "No intracellular transport from the soma",
+          "Peptides in dense-core granules requiring broader Ca²⁺ accumulation",
+          "A guarantee that every single vesicle always triggers a postsynaptic AP"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C5-M14",
+        "type": "mc",
+        "prompt": "Which sequence best describes a typical peptide transmitter before release?",
+        "options": [
+          "Choline uptake → ChAT → direct diffusion through myelin",
+          "Synthesis only inside the synaptic cleft",
+          "Insertion of naked mRNA into connexons",
+          "rER synthesis → Golgi processing → dense-core granules → axonal transport"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C5-M15",
+        "type": "mc",
+        "prompt": "High-frequency stimulation releases peptide from a terminal that also contains small clear vesicles. Which conclusion is justified?",
+        "options": [
+          "Peptide release can accompany small-molecule release",
+          "Small-molecule release must completely stop",
+          "Peptides must have been newly synthesized in the cleft",
+          "Ca²⁺ is no longer involved in any release"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C5-M16",
+        "type": "mc",
+        "prompt": "Following exocytosis, endocytosis primarily recycles:",
+        "options": [
+          "The electric charge of Ca²⁺ ions into ATP",
+          "Vesicle membrane for reuse",
+          "All free transmitter molecules directly from the cleft",
+          "The axon’s entire cytoplasm"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C5-M17",
+        "type": "mc",
+        "prompt": "At the NMJ, acetylcholinesterase normally:",
+        "options": [
+          "Acts as the postsynaptic ACh receptor",
+          "Moves intact ACh back across the neuronal membrane as its main action",
+          "Hydrolyzes ACh, helping terminate the signal",
+          "Synthesizes ACh from choline and acetyl CoA"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C5-M18",
+        "type": "mc",
+        "prompt": "Which released transmitter component is classically taken back up to support resynthesis in a cholinergic terminal?",
+        "options": [
+          "Intact ACh through the dopamine transporter",
+          "Acetylcholinesterase through every nAChR",
+          "Connexin after extracellular proteolysis",
+          "Choline after ACh hydrolysis"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C5-M19",
+        "type": "mc",
+        "prompt": "ACh excites skeletal muscle but can slow the heart primarily because:",
+        "options": [
+          "Different receptor subtypes couple to different effectors",
+          "ACh changes its chemical identity in every organ",
+          "The heart has no ion channels",
+          "Every agonist always produces an EPSP"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C5-M20",
+        "type": "mc",
+        "prompt": "Compared with a typical ionotropic receptor response, a GPCR response often:",
+        "options": [
+          "Requires no ligand binding",
+          "Uses an intermediate G protein/effector and can last longer",
+          "Must always be an inward Na⁺ current through the receptor itself",
+          "Never influences ion channels"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C5-M21",
+        "type": "mc",
+        "prompt": "Opening a Cl⁻ channel when ECl is close to the resting potential can:",
+        "options": [
+          "Never affect excitability unless a large hyperpolarization appears",
+          "Convert all Cl⁻ into Na⁺",
+          "Reduce excitatory voltage responses with little change in resting Vm",
+          "Only excite, because channel opening always depolarizes"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C5-M22",
+        "type": "mc",
+        "prompt": "Two different synapses generate overlapping EPSPs at nearly the same time. This is:",
+        "options": [
+          "Temporal summation at one synapse only",
+          "An increase in the amplitude of the presynaptic AP",
+          "Na⁺ channel inactivation",
+          "Spatial summation"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C5-M23",
+        "type": "mc",
+        "prompt": "A single CNS presynaptic spike produces a small EPSP that does not trigger a postsynaptic spike. What follows?",
+        "options": [
+          "An EPSP occurred; it was insufficient by itself to reach spike threshold",
+          "No synaptic transmission occurred",
+          "An EPSP is impossible unless an AP appears postsynaptically",
+          "The all-or-none principle has been violated"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C5-M24",
+        "type": "mc",
+        "prompt": "Whether a postsynaptic neuron fires normally depends most broadly on:",
+        "options": [
+          "The color of the recording electrode",
+          "The integrated pattern of excitatory and inhibitory synaptic potentials at its initiation region",
+          "Only the amplitude of its presynaptic partner’s AP",
+          "Only whether exactly one receptor was activated"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C5-M25",
+        "type": "mc",
+        "prompt": "At a distance of one length constant from a passive voltage input, about what fraction remains?",
+        "options": [
+          "0.500",
+          "0.000",
+          "0.368",
+          "1.000"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C5-M26",
+        "type": "mc",
+        "prompt": "With a consistent cable model, which change increases the length constant?",
+        "options": [
+          "Increasing leak conductance with everything else fixed",
+          "Increasing axial resistance while membrane resistance is fixed",
+          "Opening many shunting Cl⁻ channels",
+          "Increasing membrane resistance while axial resistance is fixed"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C5-M27",
+        "type": "mc",
+        "prompt": "Why does a larger λ often allow a distant EPSP to influence spike initiation more strongly?",
+        "options": [
+          "The depolarization decays less before reaching the initiation region",
+          "All inhibitory inputs are selectively erased",
+          "AP amplitude grows exponentially with distance",
+          "The neuron must have fewer synapses"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C5-M28",
+        "type": "mc",
+        "prompt": "Which combination contributes to the normal NMJ safety factor?",
+        "options": [
+          "An AP amplitude that increases each time it crosses the cleft",
+          "Many release sites, substantial ACh release and dense postsynaptic receptors/folds",
+          "A tiny EPP far below threshold in every stimulus",
+          "Elimination of all AChE to guarantee indefinite excitation"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C5-M29",
+        "type": "mc",
+        "prompt": "A miniature endplate potential at rest is commonly associated with:",
+        "options": [
+          "A complete propagated AP with arbitrarily small amplitude",
+          "A permanent gap junction connecting motor axon and muscle",
+          "Spontaneous release of transmitter from one vesicle",
+          "Mandatory simultaneous release of every vesicle in the terminal"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C5-M30",
+        "type": "mc",
+        "prompt": "The phrase fail-safe NMJ is best interpreted as:",
+        "options": [
+          "An absolute guarantee despite receptor loss, toxins or any pathology",
+          "Proof that every CNS synapse behaves identically to an NMJ",
+          "Evidence that muscle APs have no threshold",
+          "A high probability of successful transmission under normal physiological conditions"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C6-M01",
+        "type": "mc",
+        "prompt": "Which set best represents the classical evidence for a candidate vesicular neurotransmitter?",
+        "options": [
+          "Three positive antibody stains without any release measurement",
+          "Presence in blood, high molecular mass and a blue color",
+          "Only that a drug can bind to it",
+          "Presynaptic synthesis/storage, stimulation-dependent release and mimicry of the postsynaptic response"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C6-M02",
+        "type": "mc",
+        "prompt": "A neuron contains an enzyme that synthesizes substance X. Which conclusion is premature?",
+        "options": [
+          "X has been fully established as the neurotransmitter at this synapse",
+          "The cell may have the capacity to synthesize X",
+          "The enzyme can serve as a candidate phenotypic marker if specificity is validated",
+          "Release experiments would add information"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C6-M03",
+        "type": "mc",
+        "prompt": "Both endogenous stimulation and locally applied X produce the same response, blocked by the same antagonist. This most strongly supports:",
+        "options": [
+          "That the antagonist must itself be an excitatory transmitter",
+          "A shared receptor-mediated action of X and the endogenous signal",
+          "Proof that X is stored in every neuron in the brain",
+          "Proof that no electrical synapse exists anywhere"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C6-M04",
+        "type": "mc",
+        "prompt": "Immunohistochemistry primarily relies on:",
+        "options": [
+          "Conversion of current directly into fluorescent mRNA",
+          "Random diffusion without any binding specificity",
+          "Specific binding of antibodies to antigens",
+          "Complementary base pairing between every neurotransmitter and DNA"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C6-M05",
+        "type": "mc",
+        "prompt": "To localize mRNA encoding ChAT in tissue, the most directly appropriate method is:",
+        "options": [
+          "Recording an action potential without any molecular probe",
+          "Applying an antibody to acetylcholine and calling it FISH",
+          "Measuring only heart rate",
+          "In situ hybridization with a complementary labeled nucleic-acid probe"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C6-M06",
+        "type": "mc",
+        "prompt": "What does a fluorescent in situ hybridization signal for GAD mRNA show most directly?",
+        "options": [
+          "The location of a transcript associated with GABA synthesis",
+          "The exact number of GABA vesicles released during the last spike",
+          "That the cell contains no other transmitter",
+          "A direct measurement of postsynaptic chloride current"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C6-M07",
+        "type": "mc",
+        "prompt": "Why can an increase in extracellular K⁺ help depolarize cells in a release assay?",
+        "options": [
+          "It converts K⁺ into acetylcholine",
+          "It makes EK less negative and shifts K⁺-dominated Vm toward less negative values",
+          "It makes EK more negative by definition",
+          "It directly activates only one genetically specified neuron regardless of preparation"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C6-M08",
+        "type": "mc",
+        "prompt": "Which manipulation most directly tests the Ca²⁺ dependence of evoked transmitter release?",
+        "options": [
+          "Measure mRNA once in fixed tissue",
+          "Remove glucose and assume any loss of release proves Ca²⁺ dependence",
+          "Compare stimulated release with and without extracellular Ca²⁺ while controlling tissue viability",
+          "Change the antibody fluorophore but never stimulate"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C6-M09",
+        "type": "mc",
+        "prompt": "Microiontophoresis and pressure ejection both allow local application, but:",
+        "options": [
+          "Both necessarily inject antibodies into the bloodstream",
+          "Neither can be combined with a postsynaptic recording",
+          "Pressure ejection specifically measures membrane conductance without electrodes",
+          "The former uses electrical force on charged solutes; the latter uses pressure"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C6-M10",
+        "type": "mc",
+        "prompt": "A molecule binds a transmitter receptor and activates its normal signaling pathway. It is a receptor:",
+        "options": [
+          "Agonist",
+          "Antagonist merely because its action lasts a long time",
+          "Degradation enzyme",
+          "Vesicular transporter"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C6-M11",
+        "type": "mc",
+        "prompt": "Which receptor–agonist–antagonist combination is classically matched?",
+        "options": [
+          "GABA_A receptor — tyrosine — ChAT",
+          "Nicotinic ACh receptor — nicotine — curare",
+          "Muscarinic ACh receptor — nicotine — GAD",
+          "AMPA receptor — ACh — acetylcholinesterase"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C6-M12",
+        "type": "mc",
+        "prompt": "AMPA, NMDA and kainate receptors are ionotropic receptor subtypes for:",
+        "options": [
+          "GABA",
+          "Norepinephrine",
+          "Glutamate",
+          "Acetylcholine"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C6-M13",
+        "type": "mc",
+        "prompt": "The classroom-emphasized rate-limiting factor for ACh synthesis is:",
+        "options": [
+          "Acetylcholinesterase activity as the synthetic enzyme",
+          "The amount of ACh as its own required precursor",
+          "Tyrosine hydroxylase acting on choline",
+          "High-affinity choline uptake into the terminal"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C6-M14",
+        "type": "mc",
+        "prompt": "Selective loss of ChAT activity most directly reduces:",
+        "options": [
+          "Synthesis of ACh from choline and acetyl CoA",
+          "Hydrolysis of ACh by AChE",
+          "Conversion of L DOPA to dopamine",
+          "Opening of gap-junction channels"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C6-M15",
+        "type": "mc",
+        "prompt": "Which statement corrects the handwritten neonicotinoid note?",
+        "options": [
+          "They are classic muscarinic antagonists identical to atropine",
+          "Neonicotinoids primarily act at nicotinic ACh receptors rather than being defined as AChE inhibitors",
+          "They are simply another name for acetylcholinesterase",
+          "They are the enzyme that makes choline"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C6-M16",
+        "type": "mc",
+        "prompt": "Which is the immediate precursor of dopamine in the classical synthesis pathway?",
+        "options": [
+          "Tryptophan",
+          "Choline",
+          "L DOPA",
+          "Tyrosine"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C6-M17",
+        "type": "mc",
+        "prompt": "Tyrosine hydroxylase catalyzes which step?",
+        "options": [
+          "L DOPA → dopamine",
+          "Dopamine → norepinephrine",
+          "Norepinephrine → epinephrine",
+          "Tyrosine → L DOPA"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C6-M18",
+        "type": "mc",
+        "prompt": "In a simplified catecholamine pathway, selective inhibition of DBH is expected to:",
+        "options": [
+          "Reduce norepinephrine synthesis downstream of dopamine",
+          "Directly block choline uptake",
+          "Convert all serotonin into epinephrine",
+          "Increase NE synthesis by accelerating the blocked step"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C6-M19",
+        "type": "mc",
+        "prompt": "Which order correctly describes serotonin synthesis?",
+        "options": [
+          "Glutamate → glycine → serotonin",
+          "Tryptophan → 5 HTP → 5 HT",
+          "Tyrosine → L DOPA → 5 HT",
+          "Choline → GABA → 5 HT"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C6-M20",
+        "type": "mc",
+        "prompt": "Blocking serotonin reuptake, with release otherwise maintained, usually:",
+        "options": [
+          "Immediately removes all serotonin from the cleft",
+          "Has the same molecular target as blocking ChAT",
+          "Prolongs serotonin availability outside the presynaptic cell",
+          "Directly blocks every serotonin-synthesis enzyme"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C6-M21",
+        "type": "mc",
+        "prompt": "Which statement about the first serotonin synthesis step is accurate?",
+        "options": [
+          "TH and TPH are interchangeable names for the same catecholamine enzyme",
+          "AChE converts tryptophan into 5 HTP",
+          "The step occurs only after serotonin binds its receptor",
+          "TPH catalyzes the step, and tryptophan availability can influence synthesis"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C6-M22",
+        "type": "mc",
+        "prompt": "Loss of GABAergic neurons in a mature circuit would generally tend to:",
+        "options": [
+          "Reduce inhibition and increase circuit excitability",
+          "Increase inhibition because GABA is always excitatory",
+          "Directly increase the number of GAD-expressing cells",
+          "Make all synapses electrical"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C6-M23",
+        "type": "mc",
+        "prompt": "Which intervention most directly decreases GABA synthesis?",
+        "options": [
+          "Activation of choline acetyltransferase",
+          "Inhibition of glutamic acid decarboxylase",
+          "Inhibition of GABA transaminase",
+          "Inhibition of tyrosine hydroxylase"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C6-M24",
+        "type": "mc",
+        "prompt": "In a mature cell with Vm above ECl, opening a glycine-gated Cl⁻ channel generally causes:",
+        "options": [
+          "A Vm shift away from ECl regardless of driving force",
+          "Degradation of glycine by ChAT",
+          "Net Cl⁻ influx and a shift of Vm toward ECl",
+          "Guaranteed Na⁺ efflux through the same Cl⁻-selective channel"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C6-M25",
+        "type": "mc",
+        "prompt": "Which comparison between transporters is correct?",
+        "options": [
+          "Every vesicular transporter uses extracellular Na⁺ directly in exactly the same way as SERT",
+          "AChE is the vesicular ACh transporter",
+          "Transport and degradation are the same chemical reaction",
+          "Plasma-membrane reuptake and vesicular filling move transmitter across different membranes"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C6-M26",
+        "type": "mc",
+        "prompt": "A drug increases extracellular transmitter lifetime without binding its receptor. Which mechanism could explain it?",
+        "options": [
+          "Inhibition of a transmitter reuptake transporter",
+          "It must be a direct receptor agonist",
+          "It must synthesize more receptor mRNA instantly",
+          "It must increase axon diameter"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C6-M27",
+        "type": "mc",
+        "prompt": "Blocking a vesicular transmitter transporter while leaving synthesis intact most directly causes:",
+        "options": [
+          "An obligatory increase in quantal transmitter content",
+          "Reduced transmitter loading into release-ready vesicles",
+          "Complete inhibition of all postsynaptic receptors",
+          "Conversion of a chemical synapse into a gap junction"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C6-M28",
+        "type": "mc",
+        "prompt": "Presynaptic stimulation no longer evokes a response, but local application of the normal transmitter still does. The result is most consistent with:",
+        "options": [
+          "Proof that the transmitter is not involved",
+          "A uniquely identified defect in only one named SNARE",
+          "An upstream failure of excitation/release with a responsive postsynaptic receptor pathway",
+          "Proof that all postsynaptic receptors have been eliminated"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C6-M29",
+        "type": "mc",
+        "prompt": "Which order best links the three chapters during classical chemical transmission?",
+        "options": [
+          "Postsynaptic AP → presynaptic receptor destruction → peptide translation in the cleft",
+          "AChE synthesis → gap-junction closure → Ca²⁺ creation from Na⁺",
+          "FISH staining → irreversible transmitter binding → no clearance",
+          "Presynaptic AP → Ca²⁺ influx → vesicle fusion → receptor response → postsynaptic integration"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C6-M30",
+        "type": "mc",
+        "prompt": "Which intervention-and-rescue pair best separates a presynaptic release defect from loss of postsynaptic responsiveness?",
+        "options": [
+          "Block evoked release, then apply transmitter directly while recording the postsynaptic cell",
+          "Count two unrelated enzymes in different species",
+          "Change receptor, transmitter and extracellular ions together",
+          "Record only one unstimulated action-potential trace"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C4-F01",
+        "type": "written",
+        "prompt": "Describe Na⁺/K⁺ flux, relative conductance and Vm during rest, the rising phase and repolarization.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C4-F02",
+        "type": "written",
+        "prompt": "Explain the state cycle of a voltage-gated Na⁺ channel and distinguish inactivation from ordinary closure.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C4-F03",
+        "type": "written",
+        "prompt": "Compare absolute and relative refractory periods. Calculate the ideal firing limit if the absolute period is 1 ms.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C4-F04",
+        "type": "written",
+        "prompt": "Explain all-or-none firing and intensity coding. State two mechanisms that stabilize extracellular K⁺ in the CNS.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C4-F05",
+        "type": "written",
+        "prompt": "Use Iion = gion(Vm − Eion) to explain why maximal Na⁺ conductance need not coincide with maximal inward Na⁺ current.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C4-F06",
+        "type": "written",
+        "prompt": "Using the Nernst equation, predict how lower extracellular K⁺ and lower extracellular Na⁺ affect the AP waveform when considered separately.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C4-F07",
+        "type": "written",
+        "prompt": "Explain why larger diameter and myelination increase conduction velocity, and distinguish velocity from end-to-end travel time.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C4-F08",
+        "type": "written",
+        "prompt": "Compare how TTX and batrachotoxin disrupt signaling despite acting differently on Na⁺ channels.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C4-F09",
+        "type": "written",
+        "prompt": "Design an electrophysiological comparison of Na⁺ and K⁺ channel kinetics, and identify a method for resolving single-channel events.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C4-F10",
+        "type": "written",
+        "prompt": "Compare classic ChR2 and halorhodopsin and describe a control for opsin-dependent optical stimulation.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C5-F01",
+        "type": "written",
+        "prompt": "Compare chemical and electrical synapses using structure, transmitted signal, delay and directionality.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C5-F02",
+        "type": "written",
+        "prompt": "Explain Loewi’s bath-transfer experiment, one suitable control and the limits of its conclusion.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C5-F03",
+        "type": "written",
+        "prompt": "Distinguish Gray type I and type II synapses and explain why morphology alone is not a complete functional test.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C5-F04",
+        "type": "written",
+        "prompt": "Outline classical chemical transmission and explain the structural basis for rapid release.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C5-F05",
+        "type": "written",
+        "prompt": "Compare synthesis, packaging, transport and release requirements of typical small-molecule and peptide transmitters.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C5-F06",
+        "type": "written",
+        "prompt": "Describe three mechanisms of transmitter clearance and distinguish them from vesicle membrane recycling.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C5-F07",
+        "type": "written",
+        "prompt": "Explain how ACh can excite skeletal muscle and inhibit cardiac activity, comparing receptor mechanisms.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C5-F08",
+        "type": "written",
+        "prompt": "Compare spatial and temporal summation and explain the importance of the spike-initiation region.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C5-F09",
+        "type": "written",
+        "prompt": "Explain shunting inhibition with ECl near rest. State three other physical influences on the length constant.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C5-F10",
+        "type": "written",
+        "prompt": "State three adaptations that make a normal NMJ reliable and explain how they produce a safety factor.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C6-F01",
+        "type": "written",
+        "prompt": "State three classical criteria for identifying a neurotransmitter and connect each to an appropriate type of evidence.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C6-F02",
+        "type": "written",
+        "prompt": "Compare IHC and FISH for identifying a transmitter phenotype, including target, recognition mechanism, readout and limits.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C6-F03",
+        "type": "written",
+        "prompt": "Design a test of stimulation-dependent release and postsynaptic mimicry for candidate X in a brain-slice preparation.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C6-F04",
+        "type": "written",
+        "prompt": "Define agonist and antagonist, give matched ACh-receptor examples, and explain why an agonist need not excite a cell.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C6-F05",
+        "type": "written",
+        "prompt": "Outline the cholinergic cycle: limiting supply, synthesis, packaging, degradation and recovery.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C6-F06",
+        "type": "written",
+        "prompt": "State the catecholamine synthesis sequence with enzymes, identify its rate-limiting step and predict a DBH block.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C6-F07",
+        "type": "written",
+        "prompt": "Compare serotonin and dopamine with respect to precursor pathway, limiting factors and termination.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C6-F08",
+        "type": "written",
+        "prompt": "Explain how inhibiting GAD differs from inhibiting GABA transaminase, and predict the usual circuit effect of losing GABAergic neurons.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C6-F09",
+        "type": "written",
+        "prompt": "Compare inhibiting synthesis, vesicular loading, reuptake and receptor binding in one transmitter pathway.",
+        "rubricCount": 5
+      },
+      {
+        "id": "C6-F10",
+        "type": "written",
+        "prompt": "A drug abolishes the response to presynaptic stimulation. Design a bypass test and explain what it can and cannot locate.",
+        "rubricCount": 5
+      }
+    ]
+  },
+  "neuroscience-ch4-6-map": {
+    "cardIds": [
+      "c4-t1",
+      "c4-t2",
+      "c4-t3",
+      "c4-t4",
+      "c4-t5",
+      "c4-t6",
+      "c4-t7",
+      "c4-t8",
+      "c4-t9",
+      "c4-t10",
+      "c5-t1",
+      "c5-t2",
+      "c5-t3",
+      "c5-t4",
+      "c5-t5",
+      "c5-t6",
+      "c5-t7",
+      "c5-t8",
+      "c5-t9",
+      "c5-t10",
+      "c6-t1",
+      "c6-t2",
+      "c6-t3",
+      "c6-t4",
+      "c6-t5",
+      "c6-t6",
+      "c6-t7",
+      "c6-t8",
+      "c6-t9",
+      "c6-t10"
+    ],
+    "questions": []
+  },
   "statistics-review": {
     "cardIds": [
       "0",

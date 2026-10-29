@@ -15,6 +15,10 @@
     }
     return results;
   }
+  function assessmentIds(id,snap,last,force){
+    const changed=id==='neuroscience-ch4-6-review'?[]:snap.checked.filter(qid=>!last.checked.includes(qid)||last.answers[qid]!==snap.answers[qid]);
+    return [...new Set([...force,...changed])];
+  }
   // Rebase only locally edited fields onto the freshest record from another tab.
   function rebaseState(before, current, latest, key = '') {
     if (JSON.stringify(before) === JSON.stringify(current)) return latest;
@@ -86,6 +90,8 @@
         },
         assess(event){const b=event.target.closest('#quizarea [data-choice]');if(b&&!isMock&&queue[pos]!==undefined)return[D.quiz[queue[pos]].id];if(event.target.closest('#submitQ')||(event.target.closest('#nextQ')&&submitted))return queue.map(n=>D.quiz[n].id);return[];}
       };
+    } else if(['neuroscience-ch4-6-review','neuroscience-ch4-6-map'].includes(id)) {
+      page={capture:()=>win.MosankaiPage.capture(),restore:(s,r,target)=>win.MosankaiPage.restore(s,r,target),assess:event=>win.MosankaiPage.assess(event)};
     } else if(['literature-androids-10-12','literature-androids-13-18','literature-androids-18-22'].includes(id)) {
       page={capture:()=>win.MosankaiPage.capture(),restore:(s,r,target)=>win.MosankaiPage.restore(s,r,target),assess(event){
         const snap=this.capture();if(event.target.closest('#check-answer'))return snap.resume.questionId?[snap.resume.questionId]:[];
@@ -117,12 +123,12 @@
     function refreshTools(){const r=store.read(id);favorite.textContent=r.favorite?text('已收藏','Saved'):text('收藏','Save');favorite.setAttribute('aria-pressed',String(r.favorite));pending.textContent=r.pending.material?text('已加入待复习','In review list'):text('加入待复习','Add to review');pending.setAttribute('aria-pressed',String(r.pending.material));}
     function persist(force=[]){if(restoring||busy)return;busy=true;try{const previous=store.read(id),snap=page.capture();
         // An unchanged stale answer is not a new local assessment.
-        const assessed=[...new Set([...force,...snap.checked.filter(qid=>!lastAssessment.checked.includes(qid)||lastAssessment.answers[qid]!==snap.answers[qid])])].filter(qid=>{
+        const assessed=assessmentIds(id,snap,lastAssessment,force).filter(qid=>{
           const q=bank.find(q=>q.id===qid),answer=snap.answers[qid];return q?.type==='mc'&&snap.checked.includes(qid)&&Number.isInteger(answer)&&answer>=0&&answer<q.options.length;
         });
         const results=assessedResults(bank,snap.answers,assessed,previous.progress.results,Date.now(),assessed);
         const rebased=rebaseState(lastState,snap.state,previous.progress.state);
-        for(const qid of assessed){if(rebased.choices)rebased.choices[qid]=snap.answers[qid];else if(rebased.answers)rebased.answers[qid]=snap.answers[qid];}
+        if(id!=='neuroscience-ch4-6-review')for(const qid of assessed){if(rebased.choices)rebased.choices[qid]=snap.answers[qid];else if(rebased.answers)rebased.answers[qid]=snap.answers[qid];}
         if(id==='neuroscience-review'){
           const mc=bank.filter(q=>q.type==='mc');rebased.wrong=mc.flatMap((q,i)=>results[q.id]?.status==='incorrect'?[i]:[]);
           rebased.seen=[...new Set([...(rebased.seen||[]),...assessed.map(qid=>mc.findIndex(q=>q.id===qid)).filter(i=>i>=0)])];
@@ -139,6 +145,7 @@
       let q;
       if(id==='statistics-review')q=bank.find(q=>q.id==='STAT-'+String(Number(t.id.replace('note',''))+1).padStart(3,'0'));
       else if(id==='neuroscience-review')q=bank.find(q=>q.id==='FRQ-'+String(i+1).padStart(3,'0'));
+      else if(id==='neuroscience-ch4-6-review')q=bank.find(q=>q.id===t.dataset.questionId);
       else if(id==='literature-review')q=bank.find(q=>q.id===t.id);
       else if(['literature-androids-10-12','literature-androids-13-18','literature-androids-18-22'].includes(id)){const snap=page.capture();q=bank.find(q=>q.id===snap.resume.questionId&&q.type==='written');}
       if(!q||q.type==='mc'||t.parentElement.querySelector('[data-study-written]'))return;
@@ -150,5 +157,5 @@
     doc.addEventListener('click',process);doc.addEventListener('change',process);doc.addEventListener('input',process);win.addEventListener('hashchange',()=>persist());win.addEventListener('pagehide',()=>{clearTimeout(timer);persist();});
     store.subscribe(refreshTools);addWrittenButtons();persist();
   }
-  return {assessedResults,rebaseState,boot};
+  return {assessedResults,assessmentIds,rebaseState,boot};
 });

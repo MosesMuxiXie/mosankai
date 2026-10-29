@@ -46,6 +46,14 @@ Website: [https://mosankai.com](https://mosankai.com)
 
 全部原始资料约 146 MiB，采用现有 Vercel Git 集成部署，不通过受源码上传体积限制的 Hobby CLI 上传流程；没有增加服务端函数。历史思维导图的一份临时来源 PDF 已缺失，目录如实注明，现有第 2 章课件仍可下载。
 
+## Neuroscience chapters 4–6
+
+The new light study guide at `/studyguides/neuroscience/guides/neuroscience-chapters-4-6.html` contains 30 sourced concept notes, 90 MCQs, 30 five-point FRQs, three disjoint mock papers, evidence-based MCQ/FRQ study priorities and a source/answer audit. Its companion `neuroscience-chapters-4-6-mindmap.html` links the same 30 topics through an SVG network and an accessible mobile outline.
+
+Practice and mock drafts are independent. Only explicit checks/submissions affect MCQ results. FRQs are self-assessed; a mock shows a total only after eight selected written responses have self-assessment records. New material IDs keep all earlier neuroscience records separate. Quizlet links are retained but their card text was inaccessible and is marked unverified. Newly supplied classroom files and the answer photograph are not published.
+
+Run `node scripts/build-study-index.js` after content changes, then `node --test test/neuro46.test.js` and `npm test`. Shared progress validation and adapters cover the new identities. Source calibration, browser checks and limitations are recorded in `docs/neuroscience-ch4-6-review.md`. Deployment uses the existing Vercel Git integration.
+
 ## Findatime MCP
 
 Findatime 提供公开的 **Streamable HTTP** MCP 接口。部署本版本后，在支持远程 MCP 的客户端中添加地址 `https://mosankai.com/api/mcp`，认证选择“无”。本地运行 `npm ci`、`npm start` 后可连接 `http://localhost:3000/api/mcp`。直接在浏览器中打开该地址会返回 405，这是正常行为；接口通过 POST 接收 MCP 请求，不提供旧版 SSE GET 入口。
