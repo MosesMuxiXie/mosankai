@@ -41,3 +41,13 @@ test('new records survive backups independently and reject invalid rubric checkl
  const bad=structuredClone(s);bad.assessed[q.id]=[true];assert.throws(()=>store.save('statistics-ch1-4-review',{progress:{state:bad}}));
  bad.assessed[q.id]=q.rubric.map(()=>true);bad.answers[q.id]='';assert.throws(()=>store.save('statistics-ch1-4-review',{progress:{state:bad}}));
 });
+test('concurrent drafts invalidate review markers bound to a different answer',()=>{
+ const d=load(),c=core(),api=require('../public/studyguides/guide-adapters'),before=c.freshState(),mc=d.questions.find(q=>q.type==='mc'),frq=d.questions.find(q=>q.type==='written');
+ assert.equal(typeof api.rebaseStatsState,'function');
+ const reviewed=structuredClone(before),draft=structuredClone(before);reviewed.answers[mc.id]=1;reviewed.checked=[mc.id];draft.answers[mc.id]=0;
+ let merged=api.rebaseStatsState(before,draft,reviewed);assert.equal(merged.answers[mc.id],0);assert.deepEqual(merged.checked,[]);
+ reviewed.answers[frq.id]='Reviewed text';reviewed.assessed[frq.id]=frq.rubric.map(()=>true);draft.answers[frq.id]='Different, unreviewed text';
+ merged=api.rebaseStatsState(before,draft,reviewed);assert.equal(merged.answers[frq.id],'Different, unreviewed text');assert.equal(merged.assessed[frq.id],undefined);
+ const old=structuredClone(before);old.answers[mc.id]=1;const local=structuredClone(old);local.checked=[mc.id];const latest=structuredClone(old);latest.answers[mc.id]=0;
+ merged=api.rebaseStatsState(old,local,latest,[mc.id]);assert.equal(merged.answers[mc.id],1);assert.deepEqual(merged.checked,[mc.id]);
+});

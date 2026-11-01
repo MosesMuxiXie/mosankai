@@ -66,7 +66,7 @@
       {
         "id": "ST14-C1-M04",
         "type": "mc",
-        "prompt": "人数与比例 / Counts versus rates · 沿用上一题，两班骑车情况应怎样比较？ / Using the previous data, how should cycling be compared?",
+        "prompt": "人数与比例 / Counts versus rates · A 班 60 人中 24 人骑车；B 班 100 人中 30 人骑车。两班骑车情况应怎样比较？ / In A, 24 of 60 students cycle; in B, 30 of 100 cycle. How should cycling be compared?",
         "options": [
           "B 更多人，所以 B 比例较高 / B has more cyclists, so its rate is higher",
           "A 为 40%，B 为 30%，相差 10 个百分点 / A has 40%, B has 30%: a 10-percentage-point gap",

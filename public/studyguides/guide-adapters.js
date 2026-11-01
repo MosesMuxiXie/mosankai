@@ -37,6 +37,18 @@
     }
     return merged;
   }
+  // A review marker describes a particular answer, not merely a question ID.
+  // Merging an answer from another tab must not attach an older marker to it.
+  function rebaseStatsState(before,current,latest,force=[]) {
+    const merged=rebaseState(before,current,latest),sources=[current,latest];
+    merged.answers=merged.answers||{};merged.checked=merged.checked||[];
+    for(const id of force)if(current.checked?.includes(id)&&Number.isInteger(current.answers?.[id])){
+      merged.answers[id]=current.answers[id];merged.checked=[...new Set([...merged.checked,id])];
+    }
+    merged.checked=merged.checked.filter(id=>sources.some(s=>s.checked?.includes(id)&&s.answers?.[id]===merged.answers[id]));
+    for(const id of Object.keys(merged.assessed||{}))if(!sources.some(s=>Array.isArray(s.assessed?.[id])&&s.answers?.[id]===merged.answers[id]&&JSON.stringify(s.assessed[id])===JSON.stringify(merged.assessed[id])))delete merged.assessed[id];
+    return merged;
+  }
   async function boot(win) {
     const doc=win.document,id=doc.documentElement.dataset.studyMaterial;if(!id)return;
     const en=doc.documentElement.lang==='en',text=(zh,english)=>en?english:zh;
@@ -127,7 +139,7 @@
           const q=bank.find(q=>q.id===qid),answer=snap.answers[qid];return q?.type==='mc'&&snap.checked.includes(qid)&&Number.isInteger(answer)&&answer>=0&&answer<q.options.length;
         });
         const results=assessedResults(bank,snap.answers,assessed,previous.progress.results,Date.now(),assessed);
-        const rebased=rebaseState(lastState,snap.state,previous.progress.state);
+        const rebased=id==='statistics-ch1-4-review'?rebaseStatsState(lastState,snap.state,previous.progress.state,assessed):rebaseState(lastState,snap.state,previous.progress.state);
         if(id!=='neuroscience-ch4-6-review')for(const qid of assessed){if(rebased.choices)rebased.choices[qid]=snap.answers[qid];else if(rebased.answers)rebased.answers[qid]=snap.answers[qid];}
         if(id==='neuroscience-review'){
           const mc=bank.filter(q=>q.type==='mc');rebased.wrong=mc.flatMap((q,i)=>results[q.id]?.status==='incorrect'?[i]:[]);
@@ -158,5 +170,5 @@
     doc.addEventListener('click',process);doc.addEventListener('change',process);doc.addEventListener('input',process);win.addEventListener('hashchange',()=>persist());win.addEventListener('pagehide',()=>{clearTimeout(timer);persist();});
     store.subscribe(refreshTools);addWrittenButtons();persist();
   }
-  return {assessedResults,assessmentIds,rebaseState,boot};
+  return {assessedResults,assessmentIds,rebaseState,rebaseStatsState,boot};
 });

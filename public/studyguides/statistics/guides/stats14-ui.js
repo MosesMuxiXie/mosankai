@@ -51,7 +51,7 @@
  function drawDesign(){const sample=$('#random-sample').checked,assign=$('#random-assign').checked;$('#design-result').innerHTML=pair({zh:`${sample?'随机抽样：支持推广到目标总体。':'无随机抽样：广泛推广需谨慎。'} ${assign?'随机分配：支持研究条件下的因果处理比较。':'无随机分配：关联可能受混杂影响。'}`,en:`${sample?'Random sampling supports generalization to the target population.':'Without random sampling, broad generalization needs caution.'} ${assign?'Random assignment supports a causal treatment comparison under the study conditions.':'Without random assignment, association may be confounded.'}`});}
  function printQuestion(q){
   const options=q.type==='mc'?q.options.map((o,i)=>`<b>${'ABCD'[i]}</b>${pair(o)}`).join(''):'<p>________________________________________________________________</p><p>________________________________________________________________</p>';
-  const solution=q.type==='mc'?`<b>答案 / Answer: ${'ABCD'[q.answer]}</b>`+q.rationale.map((r,i)=>`<b>${'ABCD'[i]}</b>${pair(r)}`).join(''):pair(q.model)+q.rubric.map((r,i)=>`<div>${i+1}. ${pair(r)}</div>`).join('')+pair(q.trap);
+  const solution=q.type==='mc'?`<h4>答案 / Answer: ${'ABCD'[q.answer]}</h4>`+q.rationale.map((r,i)=>`<div class="print-rationale"><b>${'ABCD'[i]}</b>${pair(r)}</div>`).join(''):pair(q.model)+q.rubric.map((r,i)=>`<div>${i+1}. ${pair(r)}</div>`).join('')+pair(q.trap);
   return `<article class="print-question"><h3>${q.id} · ${title(q.title)}</h3>${pair(q.prompt)}${options}<div class="print-solution">${solution}</div>${source(q)}</article>`;
  }
  function printContent(){
@@ -73,7 +73,7 @@
   const params=new URLSearchParams(location.search),reload=performance.getEntriesByType('navigation')[0]?.type==='reload';
   if(isMap){if(saved?.version===1)mapState={...mapState,...saved};const hash=location.hash.startsWith('#node-')?location.hash.slice(6):null,selected=topic(hash)?hash:topic(mapState.mapTopic)?mapState.mapTopic:d.topics[0].id;selectMap(selected,false);return;}
   if(saved?.version===1){try{state={...c.freshState(),...c.validateState(d,saved)};}catch(_){message('草稿格式无效，可导出备份检查。 / Invalid draft format; export a backup to inspect.');}}
-  const entry=!resume&&!reload,topicId=params.get('topic'),example=d.examples.find(e=>e.id===params.get('example'));
+  const entry=!resume&&!reload,topicId=params.get('topic'),example=d.examples.find(e=>e.id===(params.get('example')||(location.hash.startsWith('#example-')?location.hash.slice(9):null)));
   state=c.resolveTarget(d,state,{topicId,questionId:targetId,practice:params.get('practice')==='1',resume:!entry});
   if(resume?.section)state.section=resume.section;if(targetId)state.section='practice';if(entry&&example){state.learnChapter=String(example.chapter);state.section='examples';}
   renderLearning();renderPractice();
