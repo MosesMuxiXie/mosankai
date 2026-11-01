@@ -39,6 +39,16 @@
       if (!plain(state)) fail(); safeJSON(state);
       if (['literature-androids-10-12','literature-androids-13-18','literature-androids-18-22'].includes(id) && state.version !== undefined && state.version !== 1) fail();
       const desc = index[id] || {}, questions = desc.questions || [];
+      if(id==='statistics-ch1-4-review'&&Object.keys(state).length){
+        if(state.version!==1||!plain(state.answers)||!plain(state.assessed)||!Array.isArray(state.checked)||state.checked.some(qid=>question(id,qid)?.type!=='mc'||!Number.isInteger(state.answers[qid])))fail();
+        for(const [qid,value]of Object.entries(state.assessed)){
+          const q=question(id,qid);
+          if(q?.type!=='written'||!Array.isArray(value)||value.length!==q.rubricCount||value.some(v=>typeof v!=='boolean')||(!String(state.answers[qid]||'').trim()&&value.some(Boolean)))fail();
+        }
+      }
+      if(id==='statistics-ch1-4-map'&&Object.keys(state).length){
+        if(state.version!==1||!desc.cardIds?.includes(state.mapTopic)||!['all','1','2','3','4'].includes(state.mapChapter))fail();
+      }
       if(id==='neuroscience-ch4-6-review'&&Object.keys(state).length){
         if(state.version!==1)fail();
         const validAnswers=(answers,allowed)=>{

@@ -40,6 +40,14 @@ Website: [https://mosankai.com](https://mosankai.com)
 
 ## Study Guides
 
+### Statistics chapters 1–4 · 完整双语复习
+
+新增手册 `/studyguides/statistics/guides/statistics-chapters-1-4.html` 与配套 `statistics-chapters-1-4-mindmap.html`：24 个知识点、16 道步骤例题、32 道选择题、16 道书面题及答题句式，全部中英对应。四个图示连接异常值、正态面积、回归残差与研究结论边界。手册可分别打印全部知识与例题、无答案练习、含答案练习。
+
+两页共用 `stats14-data.js`，使用独立资料 / 题目身份，原第 1–2 章页面与记录保留。选择答案只保存草稿，显式检查才记录结果；书面题以原创清单自评，可加入待复习。数据来源为十份 TPS5e 课件与 TPS6e 第 1–4 章核对，未上传新增原课件。
+
+内容变更后运行 `node scripts/build-study-index.js`、`node --test test/stats14.test.js`、`npm test`。浏览器检查 `node scripts/check-stats14-browser.cjs` 支持既有 `STUDY_BASE_URL`、`MOSANKAI_PLAYWRIGHT`、`STUDY_SCREENSHOT_DIR`；默认本地端口 3138。沿用 Git/Vercel 部署。
+
 资料目录由 `public/studyguides/catalog.json` 管理，当前收录 7 份交互成品与 25 份原始资料。学科地址为 `/studyguides/statistics`、`/studyguides/neuroscience`、`/studyguides/english`；目录支持中英文、标题与范围搜索，原页面保留原有语言和交互。PDF 支持阅读与下载，PPT/PPTX/DOCX 提供原文件下载。教材和小说原文件是全文，卡片单独注明复习所使用的章节范围。
 
 新增资料时，将文件放入对应学科的 `guides/` 或 `sources/` 目录，在清单中增加唯一 `id`、`subject`、`kind`、中英文 `title`/`scope`、`format`、原始 `filename`、URL 编码后的 `href` 和 `bytes`；原始资料还须记录 SHA-256 `sha256`。交互页面加上 `data-studyguide-return` 返回链接。运行 `node --test test/studyguides.test.js` 检查条目、文件、原始哈希、访问路由和下载，再运行 `npm test`。

@@ -36,6 +36,40 @@
   ],
   "materials": [
     {
+      "id": "statistics-ch1-4-review",
+      "subject": "statistics",
+      "kind": "guide",
+      "title": {
+        "en": "Statistics · Chapters 1–4 Bilingual Handbook",
+        "zh-CN": "统计学 · 第 1–4 章双语复习手册"
+      },
+      "scope": {
+        "en": "24 bilingual concepts · 16 worked examples · 32 MCQs + 16 written tasks · answer conventions",
+        "zh-CN": "24 个双语知识点 · 16 道例题 · 32 道选择题＋16 道书面题 · 答题规范"
+      },
+      "format": "HTML",
+      "filename": "statistics-chapters-1-4.html",
+      "href": "/studyguides/statistics/guides/statistics-chapters-1-4.html",
+      "bytes": 10185
+    },
+    {
+      "id": "statistics-ch1-4-map",
+      "subject": "statistics",
+      "kind": "guide",
+      "title": {
+        "en": "Statistics · Chapters 1–4 Knowledge Map",
+        "zh-CN": "统计学 · 第 1–4 章双语思维导图"
+      },
+      "scope": {
+        "en": "4 connected branches · 24 concepts · linked notes, examples and practice · accessible outline",
+        "zh-CN": "4 个关联分支 · 24 个知识点 · 直达讲解、例题与练习 · 层级阅读"
+      },
+      "format": "HTML",
+      "filename": "statistics-chapters-1-4-mindmap.html",
+      "href": "/studyguides/statistics/guides/statistics-chapters-1-4-mindmap.html",
+      "bytes": 2971
+    },
+    {
       "id": "statistics-review",
       "subject": "statistics",
       "kind": "guide",

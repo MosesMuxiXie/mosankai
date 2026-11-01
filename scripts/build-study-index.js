@@ -17,7 +17,10 @@ const nextContext = vm.createContext({});vm.runInContext(nextReview.match(/<scri
 const finalReview = read('english/guides/androids-chapters-18-22.html');
 const finalContext = vm.createContext({});vm.runInContext(finalReview.match(/<script id="review-core">([\s\S]*?)<\/script>/)[1],finalContext);
 const neuro46 = require('../public/studyguides/neuroscience/guides/neuro46-data');
+const stats14 = require('../public/studyguides/statistics/guides/stats14-data');
 const index = {
+  'statistics-ch1-4-review':{cardIds:stats14.topics.map(t=>t.id),questions:stats14.questions.map(q=>({id:q.id,type:q.type,prompt:q.title.zh+' / '+q.title.en+' · '+q.prompt.zh+' / '+q.prompt.en,...(q.type==='mc'?{options:q.options.map(o=>o.zh+' / '+o.en),answer:q.answer}:{rubricCount:q.rubric.length})}))},
+  'statistics-ch1-4-map':{cardIds:stats14.topics.map(t=>t.id),questions:[]},
   'neuroscience-ch4-6-review':{cardIds:neuro46.topics.map(t=>t.id),mocks:neuro46.mocks.map(p=>({id:p.id,mcq:p.mcq,frq:p.frq})),questions:[...neuro46.mcq.map(q=>({id:q.id,type:'mc',prompt:q.prompt,options:q.options,answer:q.answer})),...neuro46.frq.map(q=>({id:q.id,type:'written',prompt:q.prompt,rubricCount:q.points.length}))]},
   'neuroscience-ch4-6-map':{cardIds:neuro46.topics.map(t=>t.id),questions:[]},
   'statistics-review':{cardIds:['0','1','2','3','4','5'],questions:stats.map((q,i)=>({id:`STAT-${String(i+1).padStart(3,'0')}`,type:q[6]?'mc':'written',prompt:q[2]+' · '+q[3],...(q[6]?{options:q[6],answer:q[7]}:{})}))},

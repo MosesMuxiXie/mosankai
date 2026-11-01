@@ -16,7 +16,7 @@
     return results;
   }
   function assessmentIds(id,snap,last,force){
-    const changed=id==='neuroscience-ch4-6-review'?[]:snap.checked.filter(qid=>!last.checked.includes(qid)||last.answers[qid]!==snap.answers[qid]);
+    const changed=['neuroscience-ch4-6-review','statistics-ch1-4-review'].includes(id)?[]:snap.checked.filter(qid=>!last.checked.includes(qid)||last.answers[qid]!==snap.answers[qid]);
     return [...new Set([...force,...changed])];
   }
   // Rebase only locally edited fields onto the freshest record from another tab.
@@ -90,7 +90,7 @@
         },
         assess(event){const b=event.target.closest('#quizarea [data-choice]');if(b&&!isMock&&queue[pos]!==undefined)return[D.quiz[queue[pos]].id];if(event.target.closest('#submitQ')||(event.target.closest('#nextQ')&&submitted))return queue.map(n=>D.quiz[n].id);return[];}
       };
-    } else if(['neuroscience-ch4-6-review','neuroscience-ch4-6-map'].includes(id)) {
+    } else if(['neuroscience-ch4-6-review','neuroscience-ch4-6-map','statistics-ch1-4-review','statistics-ch1-4-map'].includes(id)) {
       page={capture:()=>win.MosankaiPage.capture(),restore:(s,r,target)=>win.MosankaiPage.restore(s,r,target),assess:event=>win.MosankaiPage.assess(event)};
     } else if(['literature-androids-10-12','literature-androids-13-18','literature-androids-18-22'].includes(id)) {
       page={capture:()=>win.MosankaiPage.capture(),restore:(s,r,target)=>win.MosankaiPage.restore(s,r,target),assess(event){
@@ -146,6 +146,7 @@
       if(id==='statistics-review')q=bank.find(q=>q.id==='STAT-'+String(Number(t.id.replace('note',''))+1).padStart(3,'0'));
       else if(id==='neuroscience-review')q=bank.find(q=>q.id==='FRQ-'+String(i+1).padStart(3,'0'));
       else if(id==='neuroscience-ch4-6-review')q=bank.find(q=>q.id===t.dataset.questionId);
+      else if(id==='statistics-ch1-4-review')q=bank.find(q=>q.id===t.dataset.questionId);
       else if(id==='literature-review')q=bank.find(q=>q.id===t.id);
       else if(['literature-androids-10-12','literature-androids-13-18','literature-androids-18-22'].includes(id)){const snap=page.capture();q=bank.find(q=>q.id===snap.resume.questionId&&q.type==='written');}
       if(!q||q.type==='mc'||t.parentElement.querySelector('[data-study-written]'))return;

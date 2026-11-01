@@ -1,4 +1,543 @@
 {
+  "statistics-ch1-4-review": {
+    "cardIds": [
+      "st14-c1-data",
+      "st14-c1-categorical",
+      "st14-c1-graphs",
+      "st14-c1-socs",
+      "st14-c1-center-spread",
+      "st14-c1-boxplot",
+      "st14-c2-percentile",
+      "st14-c2-z",
+      "st14-c2-transform",
+      "st14-c2-density",
+      "st14-c2-normal",
+      "st14-c2-quantiles",
+      "st14-c3-scatter",
+      "st14-c3-correlation",
+      "st14-c3-line",
+      "st14-c3-residual",
+      "st14-c3-fit",
+      "st14-c3-influence",
+      "st14-c4-sampling",
+      "st14-c4-methods",
+      "st14-c4-bias",
+      "st14-c4-experiment",
+      "st14-c4-design",
+      "st14-c4-inference"
+    ],
+    "questions": [
+      {
+        "id": "ST14-C1-M01",
+        "type": "mc",
+        "prompt": "数字一定是数量吗？ / Is every number quantitative? · 哪个变量是分类变量？ / Which variable is categorical?",
+        "options": [
+          "公交线路编号 / Bus route number",
+          "车程分钟数 / Travel time in minutes",
+          "乘客体重 / Passenger mass",
+          "今日载客人数 / Passengers carried today"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "ST14-C1-M02",
+        "type": "mc",
+        "prompt": "谁是个体？ / Identify the individuals · 表中每行记录一所学校的名称、人数和类型，个体是什么？ / Each row lists a school’s name, enrollment and type. What are the individuals?",
+        "options": [
+          "学校类型 / School types",
+          "每所学校 / The schools",
+          "人数 / Enrollments",
+          "全部学生 / All students"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ST14-C1-M03",
+        "type": "mc",
+        "prompt": "圈出条件组 / Find the condition group · A 班 60 人中 24 人骑车，B 班 100 人中 30 人骑车。A 班骑车比例是多少？ / In A, 24 of 60 students cycle; in B, 30 of 100 cycle. What proportion in A cycles?",
+        "options": [
+          "24/54 / 24/54",
+          "24/160 / 24/160",
+          "24/60 / 24/60",
+          "54/160 / 54/160"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "ST14-C1-M04",
+        "type": "mc",
+        "prompt": "人数与比例 / Counts versus rates · 沿用上一题，两班骑车情况应怎样比较？ / Using the previous data, how should cycling be compared?",
+        "options": [
+          "B 更多人，所以 B 比例较高 / B has more cyclists, so its rate is higher",
+          "A 为 40%，B 为 30%，相差 10 个百分点 / A has 40%, B has 30%: a 10-percentage-point gap",
+          "A 比 B 高 10%（相对增加） / A is 10% higher in relative terms",
+          "班级导致骑车比例变化 / Class membership causes different cycling rates"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ST14-C1-M05",
+        "type": "mc",
+        "prompt": "哪种图保留原值？ / Which graph retains exact values? · 要展示 18 个整数测量值并保留每个值，哪种图最合适？ / To display 18 integer measurements while retaining each exact value, which is most suitable?",
+        "options": [
+          "带键的茎叶图 / A stemplot with a key",
+          "饼图 / A pie chart",
+          "只给五数概括的箱线图 / A boxplot showing only five-number information",
+          "按宽区间分组的直方图 / A histogram with wide bins"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "ST14-C1-M06",
+        "type": "mc",
+        "prompt": "箱线图能告诉你什么？ / What can a boxplot tell you? · 仅凭一个箱线图，通常不能可靠判断什么？ / What usually cannot be reliably determined from a boxplot alone?",
+        "options": [
+          "中位数位置 / Median location",
+          "IQR / IQR",
+          "分布有几个峰 / Number of modes",
+          "修正箱线图标出的潜在异常点 / Potential outliers marked by a modified boxplot"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "ST14-C1-M07",
+        "type": "mc",
+        "prompt": "样本标准差 / Sample standard deviation · 样本 2、4、6 的样本标准差是多少？ / What is the sample SD of 2, 4 and 6?",
+        "options": [
+          "√(8/3) / √(8/3)",
+          "2 / 2",
+          "4 / 4",
+          "8 / 8"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ST14-C1-M08",
+        "type": "mc",
+        "prompt": "恰好位于围栏上 / Exactly on a fence · Q₁=10，Q₃=18；观测为 30。按 1.5IQR 规则，它是异常值吗？ / Q₁=10 and Q₃=18; an observation is 30. Is it an outlier by the 1.5IQR rule?",
+        "options": [
+          "是，因为 30≥30 / Yes, because 30≥30",
+          "不是，因为上围栏是 30，需严格超过 / No; the upper fence is 30 and must be exceeded",
+          "是，因为 30 大于 Q₃ / Yes, because 30 exceeds Q₃",
+          "无法计算 IQR / IQR cannot be calculated"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ST14-C1-F01",
+        "type": "written",
+        "prompt": "双向表解释 / Interpret a two-way table · A 年级 50 人，20 人参加乐团；B 年级 100 人，30 人参加。求各年级参加率和总体参加率，并解释是否有关联。 / Grade A has 50 students, 20 in orchestra; grade B has 100, 30 in orchestra. Find both conditional rates and the overall rate; describe association.",
+        "rubricCount": 4
+      },
+      {
+        "id": "ST14-C1-F02",
+        "type": "written",
+        "prompt": "选择指标并比较 / Choose summaries and compare · 跑步用时 A 近似对称，中位数 12 分钟、IQR 2；B 右偏，中位数 15、IQR 5，并有一个 30 分钟的异常点。比较两组，并说明为何优先用中位数和 IQR。 / Running times: A is roughly symmetric, median 12 minutes, IQR 2. B is right-skewed, median 15, IQR 5, with a 30-minute outlier. Compare and justify median/IQR.",
+        "rubricCount": 4
+      },
+      {
+        "id": "ST14-C1-F03",
+        "type": "written",
+        "prompt": "平方离差与单位 / Squared deviations and units · 样本为 1、3、5、7 小时。求均值、样本方差与样本标准差；若所有值加 2 小时，均值和标准差如何变？ / A sample is 1,3,5,7 hours. Find its mean, sample variance and sample SD. What happens to mean and SD if 2 hours are added to every value?",
+        "rubricCount": 4
+      },
+      {
+        "id": "ST14-C1-F04",
+        "type": "written",
+        "prompt": "九个值的箱线图 / A nine-value boxplot · 数据为 1、2、3、4、5、6、7、8、30。按本手册分半法求五数概括、围栏和修正箱线图须端。 / Data are 1,2,3,4,5,6,7,8,30. Using the median-of-halves rule, find the five-number summary, fences and modified-boxplot whiskers.",
+        "rubricCount": 4
+      },
+      {
+        "id": "ST14-C2-M01",
+        "type": "mc",
+        "prompt": "百分位不是正确率 / Percentile is not percent correct · 某值的百分位秩为 80，最准确的解释是？ / A value has percentile rank 80. Which is the best interpretation?",
+        "options": [
+          "答对 80% 试题 / 80% of items were answered correctly",
+          "约 80% 观测严格低于它 / About 80% of observations are strictly below it",
+          "其数值等于最高值的 80% / It equals 80% of the maximum",
+          "比均值高 80 个标准差 / It is 80 SDs above the mean"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ST14-C2-M02",
+        "type": "mc",
+        "prompt": "负标准分 / A negative z score · x=42，均值 50、标准差 4；z 为多少？ / x=42, mean 50, SD 4. What is z?",
+        "options": [
+          "−2 / −2",
+          "2 / 2",
+          "−8 / −8",
+          "10.5 / 10.5"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "ST14-C2-M03",
+        "type": "mc",
+        "prompt": "标准化会改变形状吗？ / Does standardizing change shape? · 右偏数据减去均值再除以正标准差后，会怎样？ / Right-skewed data are centered and divided by positive SD. What happens?",
+        "options": [
+          "一定正态 / They become normal",
+          "变成左偏 / They become left-skewed",
+          "仍右偏，均值为 0、标准差为 1 / They remain right-skewed, with mean 0 and SD 1",
+          "所有观测都变为 0 / Every observation becomes zero"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "ST14-C2-M04",
+        "type": "mc",
+        "prompt": "平移与缩放 / Shift and scale · X 的均值 5、标准差 2。Y=10−3X 的均值与标准差是？ / X has mean 5 and SD 2. For Y=10−3X, what are mean and SD?",
+        "options": [
+          "−5，−6 / −5, −6",
+          "−5，6 / −5, 6",
+          "−5，4 / −5, 4",
+          "25，6 / 25, 6"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ST14-C2-M05",
+        "type": "mc",
+        "prompt": "面积与高度 / Area and height · X 在 [0,0.5] 均匀分布，密度高度应为多少？ / X is uniform on [0,.5]. What is the density height?",
+        "options": [
+          "0.5 / 0.5",
+          "1 / 1",
+          "2 / 2",
+          "密度不能大于 1，所以不存在 / Impossible because density cannot exceed 1"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "ST14-C2-M06",
+        "type": "mc",
+        "prompt": "经验规则的尾部 / An empirical-rule tail · X 近似正态。按 68–95–99.7 规则，X>μ+2σ 的比例约为多少？ / X is approximately normal. By the 68–95–99.7 rule, about what fraction exceeds μ+2σ?",
+        "options": [
+          "95% / 95%",
+          "5% / 5%",
+          "2.5% / 2.5%",
+          "0.15% / 0.15%"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "ST14-C2-M07",
+        "type": "mc",
+        "prompt": "右尾要补集 / Use a complement for a right tail · Z~N(0,1)，Φ(1.2)=0.8849。P(Z>1.2) 为多少？ / Z~N(0,1) and Φ(1.2)=.8849. Find P(Z>1.2).",
+        "options": [
+          "0.8849 / 0.8849",
+          "0.1151 / 0.1151",
+          "0.7698 / 0.7698",
+          "1.2 / 1.2"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ST14-C2-M08",
+        "type": "mc",
+        "prompt": "最高四分之一 / The upper quarter · X~N(100,12)，第二参数为标准差，Φ(0.67449)=0.75。最高 25% 的连续门槛约为？ / X~N(100,12), with SD second; Φ(.67449)=.75. Approximately what is the cutoff for the top 25%?",
+        "options": [
+          "91.91 / 91.91",
+          "100 / 100",
+          "108.09 / 108.09",
+          "125 / 125"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "ST14-C2-F01",
+        "type": "written",
+        "prompt": "从原始值数百分位 / Count a percentile rank · 分数为 50、55、60、65、70、75、80、85、90、95。按严格低于约定，80 的百分位秩是多少？按这组数据计算，80 的样本标准分约为 0.50。百分位秩与标准分分别表达什么？ / Scores are 50,55,60,65,70,75,80,85,90,95. Under the strictly-below rule, find the percentile rank of 80. Its sample z score is about .50. What do the two position measures mean?",
+        "rubricCount": 3
+      },
+      {
+        "id": "ST14-C2-F02",
+        "type": "written",
+        "prompt": "负倍数与四分位数 / Negative scaling and quartiles · X 的均值 12、标准差 3、Q₁=10、Q₃=14，分布右偏。Y=100−2X，求均值、标准差、IQR、Q₁、Q₃ 与偏态。 / X has mean 12, SD 3, Q₁=10, Q₃=14 and right skew. For Y=100−2X, find mean, SD, IQR, quartiles and skew.",
+        "rubricCount": 4
+      },
+      {
+        "id": "ST14-C2-F03",
+        "type": "written",
+        "prompt": "交付时间的正态概率 / A normal delivery-time probability · 交付时间 X~N(30,4) 分钟，第二参数为标准差。求 P(26<X<38)，给定 Φ(−1)=0.1587、Φ(2)=0.9772。需写出阴影区间、标准化与情境结论。 / Delivery time X~N(30,4) minutes, with SD second. Find P(26<X<38), given Φ(−1)=.1587 and Φ(2)=.9772. State the shaded interval, standardization and contextual conclusion.",
+        "rubricCount": 4
+      },
+      {
+        "id": "ST14-C2-F04",
+        "type": "written",
+        "prompt": "候诊时间门槛 / A waiting-time cutoff · 候诊时间近似 N(40,6) 分钟，第二参数为标准差。最短 5% 的界线是多少？给定 Φ(−1.64485)=.05。另求 [0,10] 上均匀模型中前 20% 的界线。 / Waits are approximately N(40,6) minutes, with SD second. Find the cutoff for the shortest 5%, given Φ(−1.64485)=.05. Also find the bottom-20% cutoff for a uniform model on [0,10].",
+        "rubricCount": 4
+      },
+      {
+        "id": "ST14-C3-M01",
+        "type": "mc",
+        "prompt": "关系的四个方面 / Four features of association · 描述散点图时，最完整的组合是什么？ / Which is the most complete set of features for a scatterplot description?",
+        "options": [
+          "方向、形式、强度、异常点 / Direction, form, strength, unusual points",
+          "只有均值和中位数 / Only mean and median",
+          "只有样本量 / Only sample size",
+          "只有因果结论 / Only a causal conclusion"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "ST14-C3-M02",
+        "type": "mc",
+        "prompt": "r=0 是否没有关系？ / Does r=0 mean no relationship? · 点精确落在 U 形曲线上，r 接近 0。哪项正确？ / Points lie exactly on a U-shaped curve, but r is near zero. Which is correct?",
+        "options": [
+          "变量互不相关且没有任何关系 / There is no relationship of any kind",
+          "r 可能遗漏强非线性关系 / r can miss a strong nonlinear relationship",
+          "数据一定有录入错误 / The data must contain entry errors",
+          "r 必须大于 1 / r must exceed 1"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ST14-C3-M03",
+        "type": "mc",
+        "prompt": "换单位后的相关 / Correlation after changing units · 身高厘米与质量千克的 r=.65；身高改为米，质量改为克，r 如何变？ / Height in cm and mass in kg have r=.65. Convert height to m and mass to g. What happens to r?",
+        "options": [
+          "变为 .00065 / It becomes .00065",
+          "变为 650 / It becomes 650",
+          "仍为 .65 / It remains .65",
+          "变为 −.65 / It becomes −.65"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "ST14-C3-M04",
+        "type": "mc",
+        "prompt": "从摘要求斜率 / Find slope from summaries · r=.6，sₓ=4 小时，sᵧ=10 分。y 对 x 的回归斜率为？ / r=.6, sₓ=4 hours and sᵧ=10 points. What is the slope for regressing y on x?",
+        "options": [
+          ".24 小时/分 / .24 hours/point",
+          "1.5 分/小时 / 1.5 points/hour",
+          "6 分/小时 / 6 points/hour",
+          "24 分/小时 / 24 points/hour"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ST14-C3-M05",
+        "type": "mc",
+        "prompt": "正残差 / A positive residual · 模型预测 72 分，实际 78 分。残差及解释是？ / A model predicts 72 points; the observed score is 78. What is the residual and interpretation?",
+        "options": [
+          "−6，模型低估 / −6, underprediction",
+          "6，模型高估 / 6, overprediction",
+          "6，模型低估 / 6, underprediction",
+          "150，模型准确 / 150, accurate prediction"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "ST14-C3-M06",
+        "type": "mc",
+        "prompt": "r² 的解释 / Interpret r² · 阅读小时与词汇量回归的 r=−.8（假设数据确实如此）。r² 的含义是？ / For vocabulary regressed on reading hours, r=−.8 (assume these data). What does r² mean?",
+        "options": [
+          "64% 的词汇量变异由与阅读小时的线性关系解释 / 64% of vocabulary variation is explained by its linear relationship with reading hours",
+          "−64% 的变异被解释 / −64% of variation is explained",
+          "80% 的个体预测完全正确 / 80% of individual predictions are exact",
+          "阅读导致 64% 的词汇量 / Reading causes 64% of vocabulary"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "ST14-C3-M07",
+        "type": "mc",
+        "prompt": "小残差也能有影响 / Small residual, possible influence · 一个点的 x 远离其他点，但它贴近当前回归线。哪项最合理？ / A point has x far from the others but lies close to the fitted line. Which is most defensible?",
+        "options": [
+          "它绝不可能有影响 / It cannot be influential",
+          "它必然是大残差异常点 / It must have a large residual",
+          "它有高杠杆；需比较删点前后拟合 / It has high leverage; compare fits with and without it",
+          "应该自动删除 / It should automatically be deleted"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "ST14-C3-M08",
+        "type": "mc",
+        "prompt": "残差图里的曲线 / A curve in residuals · 残差随 x 呈明显 U 形，最主要的提示是什么？ / Residuals display a clear U shape against x. What does this chiefly suggest?",
+        "options": [
+          "直线遗漏了非线性结构 / The line has missed nonlinear structure",
+          "回归线肯定完美 / The line is necessarily perfect",
+          "所有残差应改为正 / All residuals should be made positive",
+          "样本均值必须为零 / The sample mean must be zero"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "ST14-C3-F01",
+        "type": "written",
+        "prompt": "从摘要到情境解释 / From summaries to interpretation · 学习小时 x 与得分 y：x̄=4、ȳ=25、sₓ=2、sᵧ=5、r=.8。求 y 对 x 的回归线；预测 x=5，若实际 29，求残差并解释。 / Study hours x and score y have x̄=4, ȳ=25, sₓ=2, sᵧ=5, r=.8. Find the y-on-x regression, predict at x=5, and interpret the residual if observed y=29.",
+        "rubricCount": 4
+      },
+      {
+        "id": "ST14-C3-F02",
+        "type": "written",
+        "prompt": "解释误差尺度 / Interpret error scale · 对 n=12 个实验单位，带截距一元回归的 SSE=90、SST=250。求 r² 和残差标准差，响应是产量（克）。可由这些数判断相关方向吗？ / For n=12 units, simple regression with an intercept has SSE=90 and SST=250. Find r² and residual SD when response is yield in grams. Can these summaries determine the correlation sign?",
+        "rubricCount": 4
+      },
+      {
+        "id": "ST14-C3-F03",
+        "type": "written",
+        "prompt": "审查残差结构 / Audit residual structure · 五个按 x 递增排列的残差为 2、−1、−2、−1、2 克。画出其大致模式并评价直线模型；即使 r² 很高，结论会改变吗？ / Five residuals in increasing x order are 2,−1,−2,−1,2 grams. Sketch their pattern and assess a straight-line model. Would a high r² remove the concern?",
+        "rubricCount": 4
+      },
+      {
+        "id": "ST14-C3-F04",
+        "type": "written",
+        "prompt": "审查一个预测报告 / Audit a prediction report · 数据中的年龄为 12–18 岁，模型 ŷ=30+2x 预测阅读速度。报告用它预测 70 岁者，并因某点删后 r² 上升而删除该点。评价两项操作及因果结论。 / A reading-speed model ŷ=30+2x is fitted to ages 12–18. A report predicts for age 70 and deletes a point because r² rises without it. Evaluate both choices and a claim that age causes speed changes.",
+        "rubricCount": 4
+      },
+      {
+        "id": "ST14-C4-M01",
+        "type": "mc",
+        "prompt": "等机会不一定是 SRS / Equal chances need not mean SRS · 100 人分为两个固定的 50 人组，抛硬币选择其中整组。每人被选概率均为 1/2；这是否是 50 人的 SRS？ / 100 people are split into two fixed groups of 50; a coin selects one whole group. Each person has inclusion probability 1/2. Is this an SRS of 50?",
+        "options": [
+          "是，只要每人机会相同 / Yes, equal individual chances suffice",
+          "不是，因为大多数 50 人组合不可能被选到 / No, most possible groups of 50 cannot be selected",
+          "是，因为用了硬币 / Yes, because a coin was used",
+          "不是，因为样本过大 / No, because the sample is too large"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ST14-C4-M02",
+        "type": "mc",
+        "prompt": "从每层抽取 / Sample every stratum · 各年级内分别随机抽 10 人再合并，是什么抽样？ / Select 10 students randomly within each grade and combine them. What design is this?",
+        "options": [
+          "整群 / Cluster",
+          "分层 / Stratified",
+          "便利 / Convenience",
+          "自愿回应 / Voluntary response"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ST14-C4-M03",
+        "type": "mc",
+        "prompt": "整群的识别 / Identify cluster sampling · 随机选 4 个教室，调查这 4 个教室中的每名学生，是哪种方法？ / Randomly select four classrooms and survey every student in those rooms. Which method is this?",
+        "options": [
+          "分层抽样 / Stratified sampling",
+          "简单随机抽学生 / An SRS of students",
+          "整群抽样 / Cluster sampling",
+          "只要教室大小不同就不是随机抽样 / Not random if room sizes differ"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "ST14-C4-M04",
+        "type": "mc",
+        "prompt": "抽中了却不回答 / Selected but no response · 随机抽中的 200 人中有 70 人拒绝作答，这主要属于什么问题？ / Of 200 randomly selected people, 70 refuse to respond. What is the main issue?",
+        "options": [
+          "无回应 / Nonresponse",
+          "覆盖不足 / Undercoverage",
+          "自愿回应抽样 / Voluntary-response sampling",
+          "一定没有偏差，因为最初随机 / No bias is possible because selection was random"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "ST14-C4-M05",
+        "type": "mc",
+        "prompt": "是否施加处理？ / Were treatments imposed? · 研究者记录学生自己选择的饮食与成绩，属于？ / Researchers record students’ self-chosen diets and scores. This is a/an…",
+        "options": [
+          "随机实验 / Randomized experiment",
+          "观察研究 / Observational study",
+          "配对实验 / Matched-pairs experiment",
+          "因果证明 / Proof of causation"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ST14-C4-M06",
+        "type": "mc",
+        "prompt": "为何区组？ / Why block? · 训练实验按原有技能水平区组的主要目的是什么？ / Why block a training experiment by initial skill?",
+        "options": [
+          "保证每个人反应完全一致 / Guarantee identical responses",
+          "消除所有随机误差 / Eliminate all chance variation",
+          "减少由原有技能差异造成的响应变异 / Reduce response variation due to initial skill differences",
+          "替代区组内随机分配 / Replace random assignment within blocks"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "ST14-C4-M07",
+        "type": "mc",
+        "prompt": "配对实验的顺序 / Order in a matched-pairs experiment · 同一人分别测试 A、B 两副耳机，最合理的顺序安排是？ / Each person tests headphones A and B. What is the most defensible order design?",
+        "options": [
+          "所有人先 A 后 B / Everyone tests A then B",
+          "每人随机决定 AB 或 BA，并控制测试条件 / Randomize AB or BA for each person and control testing conditions",
+          "让 A 的测试总在安静房间、B 总在吵闹房间 / Always test A in quiet and B in noise",
+          "把两次测量当作两个独立受试者 / Treat the two measurements as independent subjects"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ST14-C4-M08",
+        "type": "mc",
+        "prompt": "志愿者的随机实验 / A randomized volunteer experiment · 志愿者被随机分配到两种教学法。设计最直接支持哪项？ / Volunteers are randomly assigned to two teaching methods. What does the design most directly support?",
+        "options": [
+          "自动推广至全国所有学生 / Automatic generalization to all national students",
+          "在研究条件下进行因果处理比较 / A causal treatment comparison under the study conditions",
+          "保证每次差异都有统计显著性 / Guaranteed statistical significance of every difference",
+          "保证两组所有特点完全相同 / Guaranteed identical characteristics in both groups"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "ST14-C4-F01",
+        "type": "written",
+        "prompt": "写一份 SRS 操作规程 / Specify an SRS procedure · 图书馆有完整的 240 本书名单，要无放回随机抽 12 本检查破损。写别人能照做的步骤，并指出总体与样本。 / A library has a complete list of 240 books and wants an SRS of 12 without replacement to inspect damage. Give reproducible steps and identify population and sample.",
+        "rubricCount": 4
+      },
+      {
+        "id": "ST14-C4-F02",
+        "type": "written",
+        "prompt": "把偏差机制说清楚 / Explain the bias mechanism · 城市用工作日上午商场门口的便利样本估计所有居民的平均工作时长。指出谁可能被遗漏、合理的偏差方向与一种改进。 / A city estimates mean working hours of all residents using a convenience sample outside a mall on a weekday morning. Identify a likely missing group, a plausible direction and an improvement.",
+        "rubricCount": 4
+      },
+      {
+        "id": "ST14-C4-F03",
+        "type": "written",
+        "prompt": "设计一个配对实验 / Design a paired experiment · 24 人比较两款键盘 A、B 的打字速度，每人都用两款。设计实验，说明随机化、控制、响应和配对分析单位。 / Twenty-four people compare typing speed on keyboards A and B, each trying both. Specify randomization, control, response and the paired analysis unit.",
+        "rubricCount": 4
+      },
+      {
+        "id": "ST14-C4-F04",
+        "type": "written",
+        "prompt": "两种随机化分别解决什么？ / What does each randomization address? · 研究者从全校完整名单随机抽 80 人，随机将 40 人分 A 课程、其余分 B，并统一测验。说明可支持的结论，以及为何仍不能只看均值差就宣布 A 更好。 / Researchers randomly sample 80 students from a complete school roster, randomly assign 40 to course A and the rest to B, and use a common test. What conclusions can the design support, and why is a mean difference alone insufficient?",
+        "rubricCount": 4
+      }
+    ]
+  },
+  "statistics-ch1-4-map": {
+    "cardIds": [
+      "st14-c1-data",
+      "st14-c1-categorical",
+      "st14-c1-graphs",
+      "st14-c1-socs",
+      "st14-c1-center-spread",
+      "st14-c1-boxplot",
+      "st14-c2-percentile",
+      "st14-c2-z",
+      "st14-c2-transform",
+      "st14-c2-density",
+      "st14-c2-normal",
+      "st14-c2-quantiles",
+      "st14-c3-scatter",
+      "st14-c3-correlation",
+      "st14-c3-line",
+      "st14-c3-residual",
+      "st14-c3-fit",
+      "st14-c3-influence",
+      "st14-c4-sampling",
+      "st14-c4-methods",
+      "st14-c4-bias",
+      "st14-c4-experiment",
+      "st14-c4-design",
+      "st14-c4-inference"
+    ],
+    "questions": []
+  },
   "neuroscience-ch4-6-review": {
     "cardIds": [
       "c4-t1",
