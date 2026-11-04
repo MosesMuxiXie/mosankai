@@ -1,6 +1,7 @@
 (function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.Neuro46Data=factory();})(typeof window==='object'?window:globalThis,function(){
 'use strict';
 const sources={
+ RC:{title:'Classroom correction · NT reuptake',note:'用户补充的课堂修正图：endocytosis 改为 specific transporter protein；原图仅内部核对'},
  N4:{title:'Chapter 4_ Action Potential .pdf',note:'6 页课堂手写笔记，已逐页核读'},
  N5:{title:'Chapter 5 Synaptic Transmission  .pdf',note:'12 页课堂手写笔记，已逐页核读'},
  N6:{title:'Chapter 6_ Neurotransmitter System.pdf',note:'6 页课堂手写笔记，已逐页核读'},
@@ -101,7 +102,7 @@ T(5,6,'清除递质与回收膜','Termination and recycling','清除化学信号
  '突触递质通过扩散、神经元／胶质细胞转运体摄取、特异酶降解等途径清除。清除有助终止受体激活和提高时间分辨率。',
  'AChE 将 ACh 水解为 acetate 与 choline；再摄取的主要是 choline，而不是把 intact ACh 作为经典回收底物。ChAT 则催化 ACh 合成，两者功能相反。',
  '胞吐后 endocytosis 回收囊泡膜，随后重新装填递质；它不等于用胞吞把所有游离小分子递质直接捞回。肽递质的补给与清除也不能简单照搬小分子。'
-],'AChE≠ChAT；endocytosis 的对象是 membrane，不是所有递质。','每一步写明 substrate、location 和 process，再解释终止信号如何防止持续去极化。',[['N5','p.7'],['N6','p.4'],['K5B','Q4、10'],['EX','MCQ 8；FRQ 1'],['B','PDF p.170–174、198–200']]);
+],'AChE≠ChAT；endocytosis 的对象是 membrane，不是所有递质。','每一步写明 substrate、location 和 process，再解释终止信号如何防止持续去极化。',[['N5','p.7'],['RC','用户提供修正图'],['N6','p.4'],['K5B','Q4、10'],['EX','MCQ 8；FRQ 1'],['B','PDF p.170–174、198–200']]);
 T(5,7,'受体决定响应','Ionotropic and metabotropic responses','同一个递质可以通过不同受体产生相反的效应。',[
  '离子型受体本身就是递质门控通道，通常响应快。代谢型受体通过 G 蛋白和效应器调节通道或酶，通常较慢且持续较久，可放大信号。',
  '骨骼肌 nAChR 是阳离子通道，常见静息条件下净内向电流产生 EPP；心脏 M2 型 muscarinic 受体可通过 G 蛋白提高 K⁺通透性，减慢心率。',
@@ -486,7 +487,7 @@ const corrections=[
  {title:'Na⁺通道：四结构域不是四独立链',before:'N4 p.3 写 4 subunit／polypeptide chain。',after:'典型成孔 α 亚基为一条多肽上的四重复结构域；与 K⁺通道四亚基区分。',sources:[['N4','p.3'],['B','PDF p.136–137']]},
  {title:'光遗传：pump 与 channel',before:'Halorhodopsin 的开关图易被理解为被动通道。',after:'经典 halorhodopsin 是黄光驱动 Cl⁻内向泵；ChR2 是蓝光门控阳离子通道。未核验奖项标注不进入复习证据。',sources:[['N4','p.2'],['B','PDF p.130–132']]},
  {title:'Ca²⁺先被传感器检测',before:'N5 p.6 简写 Ca binds on SNAREs。',after:'synaptotagmin 等检测 Ca²⁺并触发 SNARE 机器融合；保持课堂主链但补清分工。',sources:[['N5','p.6'],['B','PDF p.168–170']]},
- {title:'胞吞回收膜，不是统一的递质回收',before:'N5 p.7 的 reuptake by endocytosis 易混对象。',after:'将囊泡膜 endocytosis 与小分子 transporter uptake、扩散、降解分开。AChE 的产物为 acetate＋choline。',sources:[['N5','p.7'],['K5B','Q4、10'],['B','PDF p.170–174、198–200']]},
+ {title:'胞吞回收膜，不是统一的递质回收',before:'N5 p.7 原写 reuptake by endocytosis；用户补充修正图将其改为 specific transporter protein。',after:'将囊泡膜 endocytosis 与小分子 transporter uptake、扩散、降解分开。AChE 的产物为 acetate＋choline。',sources:[['N5','p.7'],['RC','用户提供修正图'],['K5B','Q4、10'],['B','PDF p.170–174、198–200']]},
  {title:'CNS 可有单输入 EPSP',before:'K5B Q12 写 CNS EPSP could not be evoked by single AP。',after:'单个前突触 AP 可以产生小 EPSP，但常不足以触发突触后 AP。',sources:[['K5B','Q12'],['N5','p.9–10'],['B','PDF p.176–179']]},
  {title:'AMPA／NMDA／kainate 属于 glutamate',before:'N6 p.3 的 GABA 标题覆盖了这些亚型。',after:'Glu 离子型亚型与 GABA_A／GABA_B 分开。',sources:[['N6','p.3'],['B','PDF p.194–197、208–213']]},
  {title:'FISH 与放射性 ISH 不混名',before:'笔记将 fluorescent／radioactive 标签并列。',after:'FISH 指荧光原位杂交；放射性探针可用于另一种 ISH 检测。mRNA 常指小分子合成酶的转录本。',sources:[['N6','p.1'],['MS','FRQ 2'],['B','PDF p.189–192']]},
