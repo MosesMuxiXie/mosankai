@@ -35,3 +35,12 @@ test('reload retains a newer practice position instead of replaying an older ori
  assert.equal(e.restoreHash('#original-frq-4',{section:'sources',hash:'#original-frq-5'}),'#original-frq-5');
  assert.equal(e.restoreHash('#original-frq-4',null),'#original-frq-4');
 });
+test('printing opens all original disclosures during capture and restores reading state afterward',()=>{
+ const e=exam(),details=[{open:false},{open:true},{open:false}];
+ let during;
+ e.withOpenDisclosures(details,()=>{during=details.map(d=>d.open);});
+ assert.deepEqual(during,[true,true,true]);
+ assert.deepEqual(details.map(d=>d.open),[false,true,false]);
+ assert.throws(()=>e.withOpenDisclosures(details,()=>{throw Error('Print unavailable');}),/Print unavailable/);
+ assert.deepEqual(details.map(d=>d.open),[false,true,false]);
+});

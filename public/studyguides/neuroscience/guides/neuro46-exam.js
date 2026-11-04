@@ -598,5 +598,6 @@ function renderFRQ(number){
 function target(hash){if(hash==='#original-exam')return'original-exam';const match=/^#original-(mcq|frq)-(\d+)$/.exec(hash);if(!match)return null;return (match[1]==='mcq'?mcq:frq).some(q=>q.number===Number(match[2]))?'original-'+match[1]+'-'+Number(match[2]):null;}
 function resumeTarget(hash,resume){return resume?resume.section==='sources'?target(resume.hash||hash):null:target(hash);}
 function restoreHash(hash,resume){if(!resume||!target(hash))return hash;if(resume.section==='sources')return target(resume.hash)?resume.hash:hash;return ['home','priorities','learn','practice','mocks','connections'].includes(resume.section)?'#'+resume.section:'#sources';}
-return {mcq,frq,renderMCQ,renderFRQ,target,resumeTarget,restoreHash};
+function withOpenDisclosures(disclosures,print){const items=Array.from(disclosures),before=items.map(item=>item.open);try{items.forEach(item=>{item.open=true;});return print();}finally{items.forEach((item,i)=>{item.open=before[i];});}}
+return {mcq,frq,renderMCQ,renderFRQ,target,resumeTarget,restoreHash,withOpenDisclosures};
 });
