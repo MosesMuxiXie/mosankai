@@ -51,3 +51,11 @@ Reviewer limits resolved: the author read all 24 classroom scans and checked spe
 Additional browser checks: real JSON download contains both new material records and exam/written drafts; the learning-center import preview recognized both records without replacing newer data. Native SVG dragging changed the pan transform; 375px and 1440px layouts fit their viewport.
 
 Final verification after the review fixes: npm test, 73 passed / 0 failed. Content and scoring regression tests include comprehensive per-paper topic coverage. New public text assets retain LF bytes as required by this repository's public-tree attributes. Existing sources and their hashes remain unchanged.
+
+## Chinese–English comparison update · 2026-11-04
+
+Added adjacent English counterparts to all 30 concept introductions/body paragraphs and MCQ/FRQ strategies, all 360 option rationales, all 150 FRQ rubric points and 30 common-mistake notes. Priority cards, source notes, the 35-item exam audit, 12 corrections, mechanism demonstrations, instructions and map summaries/outline are also bilingual. Existing English stems, options and model answers remain the originals. The translations preserve the original qualifications and source calibration; no new recurrence claims or Quizlet verification are implied.
+
+English content is a shared static module keyed by existing topic/question identities. Rendering escapes both languages and marks English passages with lang="en". Print notes use the same paragraph pairs. On phones, the topic badge sits above the title so both languages retain readable width. No answer, rubric order, paper allocation, scoring rule, record identity or state schema changed.
+
+Verification: npm test passed all 80 tests, including escaped bilingual output and the existing scoring/state/backup regressions. A separate alignment check covered every translated paragraph, four rationales per MCQ and five points per FRQ. Browser checks confirmed C6-M16 option explanations, C6-F06 rubric/self-score and draft restoration, all 30 translated map-outline nodes and bilingual c5-t9 map details. Both 375px and 1440px layouts fit their viewports; no browser console errors were reported.

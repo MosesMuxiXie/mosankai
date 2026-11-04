@@ -95,13 +95,13 @@
         "zh-CN": "神经科学 · 第 4–6 章完整复习"
       },
       "scope": {
-        "en": "Chapters 4–6 · 90 MCQs · 30 FRQs · 3 mock exams · calibrated sources",
-        "zh-CN": "第 4–6 章 · 90 道 MCQ · 30 道 FRQ · 3 套模拟卷 · 来源纠错"
+        "en": "Chapters 4–6 · Chinese–English explanations · 90 MCQs · 30 FRQs · 3 mock exams",
+        "zh-CN": "第 4–6 章 · 中英对照讲解 · 90 道 MCQ · 30 道 FRQ · 3 套模拟卷"
       },
       "format": "HTML",
       "filename": "neuroscience-chapters-4-6.html",
       "href": "/studyguides/neuroscience/guides/neuroscience-chapters-4-6.html",
-      "bytes": 9627
+      "bytes": 14704
     },
     {
       "id": "neuroscience-ch4-6-map",
@@ -112,13 +112,13 @@
         "zh-CN": "从放电到突触 · 第 4–6 章思维导图"
       },
       "scope": {
-        "en": "Chapters 4–6 · 30 linked concepts · interactive and accessible outline",
-        "zh-CN": "第 4–6 章 · 30 个关联知识点 · 图谱与层级阅读"
+        "en": "Chapters 4–6 · 30 linked concepts · bilingual summaries · interactive outline",
+        "zh-CN": "第 4–6 章 · 30 个关联知识点 · 中英对照概要 · 图谱与层级阅读"
       },
       "format": "HTML",
       "filename": "neuroscience-chapters-4-6-mindmap.html",
       "href": "/studyguides/neuroscience/guides/neuroscience-chapters-4-6-mindmap.html",
-      "bytes": 3312
+      "bytes": 4335
     },
     {
       "id": "neuroscience-review",
