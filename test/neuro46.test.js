@@ -10,9 +10,9 @@ function core() { assert.ok(fs.existsSync(corePath), 'real grading/state core mu
 
 test('each chapter has a complete, source-traceable bank and five-point FRQs', () => {
   const d = content();
-  assert.equal(d.mcq.length, 90); assert.equal(d.frq.length, 30);
-  assert.equal(new Set([...d.mcq,...d.frq].map(q=>q.id)).size,120);
-  for (const chapter of [4,5,6]) { assert.equal(d.mcq.filter(q=>q.chapter===chapter).length,30); assert.equal(d.frq.filter(q=>q.chapter===chapter).length,10); }
+  assert.equal(d.mcq.length, 105); assert.equal(d.frq.length, 30);
+  assert.equal(new Set([...d.mcq,...d.frq].map(q=>q.id)).size,135);
+  for (const chapter of [4,5,6]) { assert.equal(d.mcq.filter(q=>q.chapter===chapter).length,chapter===6?45:30); assert.equal(d.frq.filter(q=>q.chapter===chapter).length,10); }
   for(const q of [...d.mcq,...d.frq]) {
     assert.ok(d.topics.some(t=>t.id===q.topic)); assert.ok(q.sources.length);
     for(const ref of q.sources) assert.ok(d.sources[ref[0]] && ref[1], q.id+' needs an actual source locator');
@@ -23,7 +23,7 @@ test('each chapter has a complete, source-traceable bank and five-point FRQs', (
 
 test('three mock papers partition the bank and expose no duplicate questions',()=>{
  const d=content(), seen=[];
- for(const [i,paper] of d.mocks.entries()) {
+ for(const [i,paper] of d.mocks.filter(p=>!p.format).entries()) {
    assert.equal(paper.mcq.length,30); assert.equal(paper.frq.length,10);
    for(const ch of [4,5,6]) assert.equal(paper.mcq.filter(id=>d.mcq.find(q=>q.id===id)?.chapter===ch).length,10);
    assert.deepEqual([4,5,6].map(ch=>paper.frq.filter(id=>d.frq.find(q=>q.id===id)?.chapter===ch).length),[[4,3,3],[3,4,3],[3,3,4]][i]);
@@ -63,7 +63,7 @@ test('new study materials restore and export independent practice/exam drafts wi
  const d=content(),c=core(),{createStore}=require('../public/studyguides/study-progress');
  const catalog=require('../public/studyguides/catalog.json'),index=require('../public/studyguides/learning-index.json');
  const id='neuroscience-ch4-6-review';assert.ok(catalog.materials.some(m=>m.id===id),'new guide must be discoverable');
- assert.equal(index[id].questions.length,120);
+ assert.equal(index[id].questions.length,135+d.figures.length+d.terms.length);
  const make=()=>{const map=new Map();return createStore({storage:{getItem:k=>map.get(k)||null,setItem:(k,v)=>map.set(k,v),removeItem:k=>map.delete(k)},catalog,index,now:()=>2000});};
  const store=make(),s=c.freshState();s.answers['C4-F01']='My written draft';s.exams.mock1=c.freshAttempt();s.exams.mock1.answers['C4-M01']=2;
  store.save(id,{progress:{state:s}});store.save('neuroscience-review',{progress:{state:{frq:{'FRQ-001':'Earlier material'}}}});
@@ -123,7 +123,7 @@ test('map selection resolves current node hashes and restored positions before s
 });
 
 test('each mock samples all ten concept areas in every chapter instead of exhausting consecutive topics',()=>{
- const d=content();for(const paper of d.mocks)for(const ch of [4,5,6]){
+ const d=content();for(const paper of d.mocks.filter(p=>!p.format))for(const ch of [4,5,6]){
    const topics=paper.mcq.map(id=>d.mcq.find(q=>q.id===id)).filter(q=>q.chapter===ch).map(q=>q.topic);
    assert.equal(new Set(topics).size,10);
  }

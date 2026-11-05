@@ -712,6 +712,198 @@
           "C6-F07",
           "C6-F10"
         ]
+      },
+      {
+        "id": "midterm2026-a",
+        "mcq": [
+          "C4-M01",
+          "C4-M04",
+          "C4-M07",
+          "C4-M10",
+          "C4-M13",
+          "C4-M16",
+          "C5-M01",
+          "C5-M04",
+          "C5-M07",
+          "C5-M10",
+          "C5-M13",
+          "C5-M16",
+          "C5-M19",
+          "C5-M22",
+          "C5-M25",
+          "C6-M01",
+          "C6-M04",
+          "C6-M07",
+          "C6-M10",
+          "C6-M13",
+          "C6-M16",
+          "C6-M19",
+          "C6-M22",
+          "C6-M25",
+          "C6-M28",
+          "C6-M31",
+          "C6-M34",
+          "C6-M37",
+          "C6-M40",
+          "C6-M43"
+        ],
+        "frq": [
+          "C4-F01",
+          "C5-F04",
+          "C5-F08",
+          "C6-F01",
+          "C6-F05",
+          "C6-F06"
+        ],
+        "format": "midterm2026",
+        "figures": [
+          "G-current-clamp",
+          "G-connexin",
+          "G-transmitter-classes",
+          "G-ionotropic",
+          "G-spike-train",
+          "G-coupling",
+          "G-voltage-clamp",
+          "G-connexon",
+          "G-catechol",
+          "G-gpcr"
+        ],
+        "terms": [
+          "D-ap",
+          "D-synapse",
+          "D-gpcr",
+          "D-ihc",
+          "D-fish"
+        ],
+        "requiredFrq": 6
+      },
+      {
+        "id": "midterm2026-b",
+        "mcq": [
+          "C4-M14",
+          "C4-M17",
+          "C4-M20",
+          "C4-M23",
+          "C4-M26",
+          "C4-M29",
+          "C5-M02",
+          "C5-M05",
+          "C5-M08",
+          "C5-M11",
+          "C5-M14",
+          "C5-M17",
+          "C5-M20",
+          "C5-M23",
+          "C5-M29",
+          "C6-M02",
+          "C6-M05",
+          "C6-M08",
+          "C6-M11",
+          "C6-M14",
+          "C6-M17",
+          "C6-M20",
+          "C6-M23",
+          "C6-M26",
+          "C6-M29",
+          "C6-M32",
+          "C6-M35",
+          "C6-M38",
+          "C6-M41",
+          "C6-M44"
+        ],
+        "frq": [
+          "C4-F03",
+          "C5-F06",
+          "C5-F09",
+          "C6-F02",
+          "C6-F07",
+          "C6-F08"
+        ],
+        "format": "midterm2026",
+        "figures": [
+          "G-patch-clamp",
+          "G-gap-junction",
+          "G-ach-cycle",
+          "G-camp",
+          "G-chr2",
+          "G-epsp",
+          "G-loewi",
+          "G-dendrodendritic",
+          "G-acetylcholine",
+          "G-agonist"
+        ],
+        "terms": [
+          "D-threshold",
+          "D-contact",
+          "D-iontophoresis",
+          "D-agonist",
+          "D-antagonist"
+        ],
+        "requiredFrq": 6
+      },
+      {
+        "id": "midterm2026-c",
+        "mcq": [
+          "C4-M03",
+          "C4-M06",
+          "C4-M09",
+          "C4-M21",
+          "C4-M24",
+          "C4-M30",
+          "C5-M03",
+          "C5-M06",
+          "C5-M09",
+          "C5-M12",
+          "C5-M15",
+          "C5-M18",
+          "C5-M21",
+          "C5-M27",
+          "C5-M30",
+          "C6-M03",
+          "C6-M06",
+          "C6-M09",
+          "C6-M12",
+          "C6-M15",
+          "C6-M18",
+          "C6-M21",
+          "C6-M24",
+          "C6-M27",
+          "C6-M30",
+          "C6-M33",
+          "C6-M36",
+          "C6-M39",
+          "C6-M42",
+          "C6-M45"
+        ],
+        "frq": [
+          "C4-F07",
+          "C5-F01",
+          "C5-F07",
+          "C6-F03",
+          "C6-F04",
+          "C6-F09"
+        ],
+        "format": "midterm2026",
+        "figures": [
+          "G-gene-expression",
+          "G-axospinous",
+          "G-chat",
+          "G-antagonist",
+          "G-sodium-channel",
+          "G-spatial-sum",
+          "G-fish",
+          "G-axodendritic",
+          "G-ache",
+          "G-ionotropic"
+        ],
+        "terms": [
+          "D-refractory",
+          "D-vesicle",
+          "D-precursor",
+          "D-chat",
+          "D-ache"
+        ],
+        "requiredFrq": 6
       }
     ],
     "questions": [
@@ -1796,6 +1988,186 @@
         "answer": 0
       },
       {
+        "id": "C6-M31",
+        "type": "mc",
+        "prompt": "A fluorescent complementary probe labels ChAT mRNA in a neuron. What does this observation establish most directly?",
+        "options": [
+          "ChAT transcripts are present in that neuron.",
+          "ACh was released during the last action potential.",
+          "The postsynaptic receptor is nicotinic.",
+          "The probe directly bound free acetylcholine."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C6-M32",
+        "type": "mc",
+        "prompt": "Two tissue sections are labeled with fluorescent reagents. Which feature distinguishes IHC from FISH?",
+        "options": [
+          "Only FISH can produce a fluorescent signal.",
+          "IHC uses antibody–antigen recognition; FISH uses complementary nucleic-acid hybridization.",
+          "IHC measures release directly; FISH measures receptor activation directly.",
+          "Both methods must recognize the neurotransmitter molecule itself."
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C6-M33",
+        "type": "mc",
+        "prompt": "Which description correctly identifies microiontophoresis in a candidate-transmitter mimicry test?",
+        "options": [
+          "A pressure pulse alone ejects solution; this defines iontophoresis.",
+          "A fluorescent antibody identifies a protein in fixed tissue.",
+          "An electric current drives charged candidate molecules from a micropipette near the target cell.",
+          "A voltage clamp holds every neuron in a brain slice at the same voltage."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C6-M34",
+        "type": "mc",
+        "prompt": "Candidate X is synthesized and stored in a neuron and is released during stimulation. Which additional result addresses the remaining classical transmitter criterion?",
+        "options": [
+          "X has a short English name.",
+          "X can be stained after fixation.",
+          "X is absent from all glia.",
+          "Applying X to the target cell mimics the response produced by normal transmission."
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C6-M35",
+        "type": "mc",
+        "prompt": "An agonist activates a receptor that increases K⁺ conductance and lowers firing in the target cell. Which conclusion is correct?",
+        "options": [
+          "It is still an agonist because it activates the receptor.",
+          "It must be an antagonist because firing decreases.",
+          "All agonists directly open Na⁺ channels.",
+          "A decrease in firing proves that the ligand cannot be a neurotransmitter."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C6-M36",
+        "type": "mc",
+        "prompt": "During sustained cholinergic activity, inhibiting high-affinity choline uptake most directly limits which supply step?",
+        "options": [
+          "ACh binding to muscle nicotinic receptors",
+          "Delivery of choline into the presynaptic cytoplasm for ACh synthesis",
+          "Hydrolysis of ACh in the synaptic cleft",
+          "Translation of ACh from mRNA"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C6-M37",
+        "type": "mc",
+        "prompt": "Which pair correctly links ACh termination with recovery of a useful precursor?",
+        "options": [
+          "AChE converts ACh to dopamine; dopamine is taken up.",
+          "Intact ACh is routinely retrieved by vesicle membrane endocytosis.",
+          "AChE hydrolyzes ACh to acetate and choline; choline is taken up by a specific transporter.",
+          "ChAT hydrolyzes ACh to serotonin and acetate."
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C6-M38",
+        "type": "mc",
+        "prompt": "A drug blocks VAChT while leaving the plasma-membrane choline transporter intact. What is the most direct affected process?",
+        "options": [
+          "Cleavage of extracellular ACh by AChE",
+          "Choline entry from outside the cell",
+          "Recognition of ACh by a postsynaptic GPCR",
+          "Loading ACh from the cytoplasm into synaptic vesicles"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C6-M39",
+        "type": "mc",
+        "prompt": "Which sequence correctly identifies dopamine’s immediate precursor and the enzyme for that step?",
+        "options": [
+          "L-DOPA → dopamine, catalyzed by aromatic amino acid decarboxylase",
+          "Tyrosine → dopamine, catalyzed directly by tyrosine hydroxylase",
+          "Tryptophan → dopamine, catalyzed by tryptophan hydroxylase",
+          "Norepinephrine → dopamine, catalyzed by PNMT"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C6-M40",
+        "type": "mc",
+        "prompt": "Which enzyme acts on tryptophan to form 5-hydroxytryptophan in serotonin synthesis?",
+        "options": [
+          "Tyrosine hydroxylase (TH)",
+          "Tryptophan hydroxylase (TPH)",
+          "Acetylcholinesterase (AChE)",
+          "Glutamic acid decarboxylase (GAD)"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C6-M41",
+        "type": "mc",
+        "prompt": "A pathway is shown as tryptophan → 5-HTP → 5-HT. Which label names the final product rather than either precursor?",
+        "options": [
+          "Phenylalanine",
+          "5-Hydroxytryptophan",
+          "Serotonin (5-hydroxytryptamine)",
+          "Tyrosine"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "C6-M42",
+        "type": "mc",
+        "prompt": "A molecule loses its α-carboxyl group during a GAD-catalyzed reaction and becomes GABA. What was the substrate?",
+        "options": [
+          "Glycine",
+          "Choline",
+          "Serotonin",
+          "Glutamate"
+        ],
+        "answer": 3
+      },
+      {
+        "id": "C6-M43",
+        "type": "mc",
+        "prompt": "External candidate transmitter still produces a normal postsynaptic response after a drug blocks the response to presynaptic stimulation. What is the safest inference?",
+        "options": [
+          "At least part of the postsynaptic response machinery remains functional; an upstream step may be affected.",
+          "The drug must inhibit exactly one named synthetic enzyme.",
+          "All presynaptic functions are proven normal.",
+          "The postsynaptic receptor must be completely blocked."
+        ],
+        "answer": 0
+      },
+      {
+        "id": "C6-M44",
+        "type": "mc",
+        "prompt": "Which group consists of ionotropic glutamate receptor families?",
+        "options": [
+          "Nicotinic, muscarinic and adrenergic",
+          "AMPA, NMDA and kainate",
+          "GABA-A, GABA-B and glycine",
+          "ChAT, AChE and tyrosine hydroxylase"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "C6-M45",
+        "type": "mc",
+        "prompt": "IHC detects a synthetic enzyme and FISH detects its mRNA in the same neuron. Which statement avoids overinterpreting these findings?",
+        "options": [
+          "The two signals prove every receptor on the neuron has the same function.",
+          "The signals by themselves establish Ca²⁺-dependent release.",
+          "They support a transmitter phenotype, but release and postsynaptic mimicry still need functional tests.",
+          "The mRNA signal is direct imaging of free neurotransmitter molecules."
+        ],
+        "answer": 2
+      },
+      {
         "id": "C4-F01",
         "type": "written",
         "prompt": "Describe Na⁺/K⁺ flux, relative conductance and Vm during rest, the rising phase and repolarization.",
@@ -1974,6 +2346,1109 @@
         "type": "written",
         "prompt": "A drug abolishes the response to presynaptic stimulation. Design a bypass test and explain what it can and cannot locate.",
         "rubricCount": 5
+      },
+      {
+        "id": "G-spike-train",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the entire sequence of repeated spikes marked A.",
+        "term": "spike train",
+        "accepted": [
+          "spike train"
+        ]
+      },
+      {
+        "id": "G-action-potential",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the whole transient voltage event marked A.",
+        "term": "action potential",
+        "accepted": [
+          "action potential",
+          "AP"
+        ]
+      },
+      {
+        "id": "G-current-clamp",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the experimental method using the two electrodes marked A.",
+        "term": "current clamp",
+        "accepted": [
+          "current clamp"
+        ]
+      },
+      {
+        "id": "G-chr2",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the light-responsive membrane protein marked A.",
+        "term": "channelrhodopsin-2",
+        "accepted": [
+          "channelrhodopsin-2",
+          "ChR2"
+        ]
+      },
+      {
+        "id": "G-halorhodopsin",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the light-responsive membrane protein marked A.",
+        "term": "halorhodopsin",
+        "accepted": [
+          "halorhodopsin",
+          "NpHR"
+        ]
+      },
+      {
+        "id": "G-voltage-clamp",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the feedback-controlled recording method marked A.",
+        "term": "voltage clamp",
+        "accepted": [
+          "voltage clamp"
+        ]
+      },
+      {
+        "id": "G-sodium-channel",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the channel type illustrated by the states or current marked A.",
+        "term": "voltage-gated sodium channel",
+        "accepted": [
+          "voltage-gated sodium channel",
+          "voltage-gated Na+ channel"
+        ]
+      },
+      {
+        "id": "G-potassium-channel",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the channel type illustrated by the states or current marked A.",
+        "term": "delayed rectifier potassium channel",
+        "accepted": [
+          "delayed rectifier potassium channel"
+        ]
+      },
+      {
+        "id": "G-absolute-refractory",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the highlighted recovery interval marked A.",
+        "term": "absolute refractory period",
+        "accepted": [
+          "absolute refractory period",
+          "ARP"
+        ]
+      },
+      {
+        "id": "G-relative-refractory",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the highlighted recovery interval marked A.",
+        "term": "relative refractory period",
+        "accepted": [
+          "relative refractory period",
+          "RRP"
+        ]
+      },
+      {
+        "id": "G-continuous",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the propagation process along the whole axon marked A.",
+        "term": "continuous conduction",
+        "accepted": [
+          "continuous conduction"
+        ]
+      },
+      {
+        "id": "G-saltatory",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the propagation process along the whole axon marked A.",
+        "term": "saltatory conduction",
+        "accepted": [
+          "saltatory conduction"
+        ]
+      },
+      {
+        "id": "G-node",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the exposed gap between the insulating segments marked A.",
+        "term": "node of Ranvier",
+        "accepted": [
+          "node of Ranvier"
+        ]
+      },
+      {
+        "id": "G-ais",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the highlighted spike-initiation region marked A.",
+        "term": "axon initial segment",
+        "accepted": [
+          "axon initial segment",
+          "AIS"
+        ]
+      },
+      {
+        "id": "G-sensory-initiation",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the highlighted spike-initiation region marked A.",
+        "term": "sensory initiation site",
+        "accepted": [
+          "sensory initiation site"
+        ]
+      },
+      {
+        "id": "G-patch-clamp",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the electrode-seal recording technique marked A.",
+        "term": "patch clamp",
+        "accepted": [
+          "patch clamp"
+        ]
+      },
+      {
+        "id": "G-connexin",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the single colored protein subunit marked A.",
+        "term": "connexin",
+        "accepted": [
+          "connexin"
+        ]
+      },
+      {
+        "id": "G-connexon",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the single six-subunit hemichannel marked A.",
+        "term": "connexon",
+        "accepted": [
+          "connexon"
+        ]
+      },
+      {
+        "id": "G-gap-junction",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the complete paired intercellular connection marked A.",
+        "term": "gap junction",
+        "accepted": [
+          "gap junction"
+        ]
+      },
+      {
+        "id": "G-coupling",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the connection mechanism explaining the paired-cell recordings marked A.",
+        "term": "electrical coupling",
+        "accepted": [
+          "electrical coupling"
+        ]
+      },
+      {
+        "id": "G-psp",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the graded receiving-cell voltage response marked A.",
+        "term": "postsynaptic potential",
+        "accepted": [
+          "postsynaptic potential",
+          "PSP"
+        ]
+      },
+      {
+        "id": "G-dendrodendritic",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the contact type, naming both connected cellular compartments marked A.",
+        "term": "dendrodendritic synapse",
+        "accepted": [
+          "dendrodendritic synapse"
+        ]
+      },
+      {
+        "id": "G-axospinous",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the contact type, naming both connected cellular compartments marked A.",
+        "term": "axospinous synapse",
+        "accepted": [
+          "axospinous synapse"
+        ]
+      },
+      {
+        "id": "G-axodendritic",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the contact type, naming both connected cellular compartments marked A.",
+        "term": "axodendritic synapse",
+        "accepted": [
+          "axodendritic synapse"
+        ]
+      },
+      {
+        "id": "G-axosomatic",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the contact type, naming both connected cellular compartments marked A.",
+        "term": "axosomatic synapse",
+        "accepted": [
+          "axosomatic synapse"
+        ]
+      },
+      {
+        "id": "G-axoaxonic",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the contact type, naming both connected cellular compartments marked A.",
+        "term": "axoaxonic synapse",
+        "accepted": [
+          "axoaxonic synapse"
+        ]
+      },
+      {
+        "id": "G-active-zone",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the specific structure at the arrow endpoint marked A.",
+        "term": "active zone",
+        "accepted": [
+          "active zone"
+        ]
+      },
+      {
+        "id": "G-psd",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the specific structure at the arrow endpoint marked A.",
+        "term": "postsynaptic density",
+        "accepted": [
+          "postsynaptic density"
+        ]
+      },
+      {
+        "id": "G-vesicle",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the specific structure at the arrow endpoint marked A.",
+        "term": "synaptic vesicle",
+        "accepted": [
+          "synaptic vesicle"
+        ]
+      },
+      {
+        "id": "G-dense-core",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the specific structure at the arrow endpoint marked A.",
+        "term": "dense-core vesicle",
+        "accepted": [
+          "dense-core vesicle"
+        ]
+      },
+      {
+        "id": "G-mitochondrion",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the specific structure at the arrow endpoint marked A.",
+        "term": "mitochondrion",
+        "accepted": [
+          "mitochondrion"
+        ]
+      },
+      {
+        "id": "G-contact-forms",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the shared anatomical feature represented by all three profiles marked A.",
+        "term": "synaptic contact area",
+        "accepted": [
+          "synaptic contact area"
+        ]
+      },
+      {
+        "id": "G-gray-I",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the morphological synapse type marked A.",
+        "term": "Gray type I synapse",
+        "accepted": [
+          "Gray type I synapse",
+          "Gray I"
+        ]
+      },
+      {
+        "id": "G-gray-II",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the morphological synapse type marked A.",
+        "term": "Gray type II synapse",
+        "accepted": [
+          "Gray type II synapse",
+          "Gray II"
+        ]
+      },
+      {
+        "id": "G-nmj",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the whole specialized nerve-to-muscle connection marked A.",
+        "term": "neuromuscular junction",
+        "accepted": [
+          "neuromuscular junction",
+          "NMJ"
+        ]
+      },
+      {
+        "id": "G-transmitter-classes",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the classification of transmitters represented by the three panels marked A.",
+        "term": "neurotransmitter classes",
+        "accepted": [
+          "neurotransmitter classes"
+        ]
+      },
+      {
+        "id": "G-peptide-transport",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the whole transmitter production and delivery route marked A.",
+        "term": "peptide synthesis and transport",
+        "accepted": [
+          "peptide synthesis and transport"
+        ]
+      },
+      {
+        "id": "G-local-synthesis",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the whole transmitter production and delivery route marked A.",
+        "term": "small-molecule transmitter synthesis",
+        "accepted": [
+          "small-molecule transmitter synthesis"
+        ]
+      },
+      {
+        "id": "G-fusion",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the calcium-triggered release mechanism marked A.",
+        "term": "calcium-triggered vesicle fusion",
+        "accepted": [
+          "calcium-triggered vesicle fusion"
+        ]
+      },
+      {
+        "id": "G-clearance",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the set of mechanisms removing free transmitter marked A.",
+        "term": "transmitter clearance",
+        "accepted": [
+          "transmitter clearance"
+        ]
+      },
+      {
+        "id": "G-recycling",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the membrane retrieval process marked A.",
+        "term": "synaptic vesicle recycling",
+        "accepted": [
+          "synaptic vesicle recycling"
+        ]
+      },
+      {
+        "id": "G-loewi",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the two-heart bath-transfer experiment marked A.",
+        "term": "Loewi experiment",
+        "accepted": [
+          "Loewi experiment"
+        ]
+      },
+      {
+        "id": "G-ionotropic",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the receptor class marked A.",
+        "term": "ionotropic receptor",
+        "accepted": [
+          "ionotropic receptor"
+        ]
+      },
+      {
+        "id": "G-gpcr",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the receptor class marked A.",
+        "term": "G protein-coupled receptor",
+        "accepted": [
+          "G protein-coupled receptor",
+          "GPCR"
+        ]
+      },
+      {
+        "id": "G-epsp",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the graded receiving-cell voltage response marked A.",
+        "term": "excitatory postsynaptic potential",
+        "accepted": [
+          "excitatory postsynaptic potential",
+          "EPSP"
+        ]
+      },
+      {
+        "id": "G-ipsp",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the graded receiving-cell voltage response marked A.",
+        "term": "inhibitory postsynaptic potential",
+        "accepted": [
+          "inhibitory postsynaptic potential",
+          "IPSP"
+        ]
+      },
+      {
+        "id": "G-spatial-sum",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the input-integration process marked A.",
+        "term": "spatial summation",
+        "accepted": [
+          "spatial summation"
+        ]
+      },
+      {
+        "id": "G-temporal-sum",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the input-integration process marked A.",
+        "term": "temporal summation",
+        "accepted": [
+          "temporal summation"
+        ]
+      },
+      {
+        "id": "G-quantal",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the vesicular release principle producing the amplitude steps marked A.",
+        "term": "quantal release",
+        "accepted": [
+          "quantal release"
+        ]
+      },
+      {
+        "id": "G-miniature",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the spontaneous single small voltage event marked A.",
+        "term": "miniature postsynaptic potential",
+        "accepted": [
+          "miniature postsynaptic potential",
+          "mPSP"
+        ]
+      },
+      {
+        "id": "G-lambda",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the distance marked below the decay plot marked A.",
+        "term": "length constant",
+        "accepted": [
+          "length constant",
+          "lambda",
+          "λ"
+        ]
+      },
+      {
+        "id": "G-shunt",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the mechanism reducing the second excitatory voltage response marked A.",
+        "term": "shunting inhibition",
+        "accepted": [
+          "shunting inhibition"
+        ]
+      },
+      {
+        "id": "G-camp",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the entire second-messenger signaling pathway marked A.",
+        "term": "cAMP signaling cascade",
+        "accepted": [
+          "cAMP signaling cascade"
+        ]
+      },
+      {
+        "id": "G-gene-expression",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the entire DNA-to-protein process marked A.",
+        "term": "gene expression",
+        "accepted": [
+          "gene expression"
+        ]
+      },
+      {
+        "id": "G-fish",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the probe-based tissue-localization method marked A.",
+        "term": "fluorescence in situ hybridization",
+        "accepted": [
+          "fluorescence in situ hybridization",
+          "FISH"
+        ]
+      },
+      {
+        "id": "G-ihc",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the antibody-based tissue-localization method marked A.",
+        "term": "immunohistochemistry",
+        "accepted": [
+          "immunohistochemistry",
+          "IHC"
+        ]
+      },
+      {
+        "id": "G-high-k",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the slice-stimulation and release-assay method marked A.",
+        "term": "high-potassium evoked release",
+        "accepted": [
+          "high-potassium evoked release"
+        ]
+      },
+      {
+        "id": "G-iontophoresis",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the current-driven local drug-application method marked A.",
+        "term": "microiontophoresis",
+        "accepted": [
+          "microiontophoresis"
+        ]
+      },
+      {
+        "id": "G-agonist",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the pharmacological role of the bound drug marked A.",
+        "term": "agonist",
+        "accepted": [
+          "agonist"
+        ]
+      },
+      {
+        "id": "G-antagonist",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the pharmacological role of the bound drug marked A.",
+        "term": "antagonist",
+        "accepted": [
+          "antagonist"
+        ]
+      },
+      {
+        "id": "G-radioligand",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the labeled-ligand receptor assay marked A.",
+        "term": "radioligand binding",
+        "accepted": [
+          "radioligand binding"
+        ]
+      },
+      {
+        "id": "G-catechol",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the complete molecule drawn, rather than only its chemical family marked A.",
+        "term": "catechol",
+        "accepted": [
+          "catechol"
+        ]
+      },
+      {
+        "id": "G-ach-cycle",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the complete synthesis-and-clearance cycle marked A.",
+        "term": "acetylcholine cycle",
+        "accepted": [
+          "acetylcholine cycle"
+        ]
+      },
+      {
+        "id": "G-acetylcholine",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the complete molecule drawn, rather than only its chemical family marked A.",
+        "term": "acetylcholine",
+        "accepted": [
+          "acetylcholine",
+          "ACh"
+        ]
+      },
+      {
+        "id": "G-chat",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the enzyme catalyzing the top synthesis reaction marked A.",
+        "term": "choline acetyltransferase",
+        "accepted": [
+          "choline acetyltransferase",
+          "ChAT"
+        ]
+      },
+      {
+        "id": "G-ache",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the enzyme catalyzing the bottom hydrolysis reaction marked A.",
+        "term": "acetylcholinesterase",
+        "accepted": [
+          "acetylcholinesterase",
+          "AChE"
+        ]
+      },
+      {
+        "id": "G-phenylalanine",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the complete molecule drawn, rather than only its chemical family marked A.",
+        "term": "phenylalanine",
+        "accepted": [
+          "phenylalanine"
+        ]
+      },
+      {
+        "id": "G-tyrosine",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the complete molecule drawn, rather than only its chemical family marked A.",
+        "term": "tyrosine",
+        "accepted": [
+          "tyrosine"
+        ]
+      },
+      {
+        "id": "G-ldopa",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the complete molecule drawn, rather than only its chemical family marked A.",
+        "term": "L-DOPA",
+        "accepted": [
+          "L-DOPA"
+        ]
+      },
+      {
+        "id": "G-dopamine",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the complete molecule drawn, rather than only its chemical family marked A.",
+        "term": "dopamine",
+        "accepted": [
+          "dopamine"
+        ]
+      },
+      {
+        "id": "G-norepinephrine",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the complete molecule drawn, rather than only its chemical family marked A.",
+        "term": "norepinephrine",
+        "accepted": [
+          "norepinephrine",
+          "noradrenaline"
+        ]
+      },
+      {
+        "id": "G-epinephrine",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the complete molecule drawn, rather than only its chemical family marked A.",
+        "term": "epinephrine",
+        "accepted": [
+          "epinephrine",
+          "adrenaline"
+        ]
+      },
+      {
+        "id": "G-tryptophan",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the complete molecule drawn, rather than only its chemical family marked A.",
+        "term": "tryptophan",
+        "accepted": [
+          "tryptophan"
+        ]
+      },
+      {
+        "id": "G-5htp",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the complete molecule drawn, rather than only its chemical family marked A.",
+        "term": "5-hydroxytryptophan",
+        "accepted": [
+          "5-hydroxytryptophan"
+        ]
+      },
+      {
+        "id": "G-serotonin",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the complete molecule drawn, rather than only its chemical family marked A.",
+        "term": "serotonin",
+        "accepted": [
+          "serotonin",
+          "5-HT",
+          "5-hydroxytryptamine"
+        ]
+      },
+      {
+        "id": "G-glutamate",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the complete molecule drawn, rather than only its chemical family marked A.",
+        "term": "glutamate",
+        "accepted": [
+          "glutamate"
+        ]
+      },
+      {
+        "id": "G-glycine",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the complete molecule drawn, rather than only its chemical family marked A.",
+        "term": "glycine",
+        "accepted": [
+          "glycine"
+        ]
+      },
+      {
+        "id": "G-gaba",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the complete molecule drawn, rather than only its chemical family marked A.",
+        "term": "GABA",
+        "accepted": [
+          "GABA"
+        ]
+      },
+      {
+        "id": "G-catecholamine-path",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the entire biosynthetic pathway, rather than one substrate or enzyme marked A.",
+        "term": "catecholamine synthesis",
+        "accepted": [
+          "catecholamine synthesis"
+        ]
+      },
+      {
+        "id": "G-gad",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the enzyme represented by the question mark above the reaction arrow marked A.",
+        "term": "glutamate decarboxylase",
+        "accepted": [
+          "glutamate decarboxylase",
+          "GAD"
+        ]
+      },
+      {
+        "id": "G-serotonin-path",
+        "type": "written",
+        "subtype": "spelling",
+        "prompt": "Write the full English term or accepted abbreviation for the entire biosynthetic pathway, rather than one substrate or enzyme marked A.",
+        "term": "serotonin synthesis",
+        "accepted": [
+          "serotonin synthesis"
+        ]
+      },
+      {
+        "id": "D-ap",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "action potential",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-threshold",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "threshold",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-refractory",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "refractory period",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-saltatory",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "saltatory conduction",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-voltage-clamp",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "voltage clamp",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-patch-clamp",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "patch clamp",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-inactivation",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "sodium-channel inactivation",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-frequency-coding",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "frequency coding",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-node",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "node of Ranvier",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-synapse",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "synapse",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-contact",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "synaptic contact",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-vesicle",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "synaptic vesicle",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-release",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "transmitter release",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-spatial",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "spatial summation",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-temporal",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "temporal summation",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-shunt",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "shunting inhibition",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-length",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "length constant",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-gap",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "gap junction",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-quantal",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "quantal release",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-active-zone",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "active zone",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-clearance",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "transmitter clearance",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-gpcr",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "G protein-coupled receptor",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-ihc",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "immunohistochemistry",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-fish",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "fluorescence in situ hybridization",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-iontophoresis",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "microiontophoresis",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-agonist",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "agonist",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-antagonist",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "antagonist",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-precursor",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "precursor",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-chat",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "choline acetyltransferase",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-ache",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "acetylcholinesterase",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-ionotropic",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "ionotropic receptor",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-radioligand",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "radioligand binding",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-th",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "tyrosine hydroxylase",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-tph",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "tryptophan hydroxylase",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-gad",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "glutamate decarboxylase",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-monoamine",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "monoamine",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-catecholamine",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "catecholamine",
+        "rubricCount": 2
+      },
+      {
+        "id": "D-choline-uptake",
+        "type": "written",
+        "subtype": "definition",
+        "prompt": "high-affinity choline uptake",
+        "rubricCount": 2
       }
     ]
   },

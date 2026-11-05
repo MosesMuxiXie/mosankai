@@ -1,4 +1,4 @@
-(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.Neuro46Data=factory();})(typeof window==='object'?window:globalThis,function(){
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('./neuro46-midterm-data'),require('./neuro46-atlas'));else root.Neuro46Data=factory(root.Neuro46MidtermData,root.Neuro46Atlas);})(typeof window==='object'?window:globalThis,function(midterm,atlas){
 'use strict';
 const sources={
  RC:{title:'Classroom correction · NT reuptake',note:'用户补充的课堂修正图：endocytosis 改为 specific transporter protein；原图仅内部核对'},
@@ -499,5 +499,6 @@ const quizlet=[
  {chapter:5,title:'Chapter 5 · Synaptic transmission',href:'https://quizlet.com/cn/957814490/chapter-5-synaptic-transmission-flash-cards/?i=281hhv&x=1jqt'},
  {chapter:6,title:'Chapter 6 · Neurotransmitter systems brief',href:'https://quizlet.com/hk/1228722837/chapter-6-neurotransmitter-systems-brief-flash-cards/?i=281hhv&x=1jqt'}
 ];
-return {version:1,sources,topics,mcq,frq,mocks,priorities,examAudit,corrections,quizlet};
+const allMCQ=[...mcq,...midterm.extraMCQ],figures=atlas.figures,terms=atlas.terms;
+return {version:1,sources,topics,mcq:allMCQ,frq,figures,terms,blueprint:midterm.blueprint,mocks:[...mocks,...midterm.makeMocks({mcq:allMCQ,frq,figures,terms})],priorities,examAudit,corrections,quizlet};
 });
