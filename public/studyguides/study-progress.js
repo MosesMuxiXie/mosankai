@@ -50,27 +50,40 @@
         if(state.version!==1||!desc.cardIds?.includes(state.mapTopic)||!['all','1','2','3','4'].includes(state.mapChapter))fail();
       }
       if(id==='neuroscience-ch4-6-review'&&Object.keys(state).length){
-        if(state.version!==1)fail();
+        if(state.version!==1||!plain(state.exams)||!Array.isArray(state.checked)||state.checked.some(qid=>question(id,qid)?.type!=='mc')||!Array.isArray(state.learned)||state.learned.some(qid=>!desc.cardIds?.includes(qid)))fail();
+        const own=(obj,key)=>Object.prototype.hasOwnProperty.call(obj,key);
         const validAnswers=(answers,allowed)=>{
           if(!plain(answers))fail();
-          for(const [qid,value] of Object.entries(answers)){
+          for(const [qid,value]of Object.entries(answers)){
             const q=question(id,qid);if(!q||(allowed&&!allowed.includes(qid)))fail();
             if(q.type==='mc'){if(!Number.isInteger(value)||value<0||value>=q.options.length)fail();}
             else if(typeof value!=='string')fail();
           }
         };
-        const validSelf=(self,allowed)=>{
-          if(!plain(self))fail();
-          for(const [qid,value] of Object.entries(self)){
-            const q=question(id,qid);if(!q||q.type!=='written'||allowed&&!allowed.includes(qid)||!Array.isArray(value)||value.length!==q.rubricCount||value.some(v=>typeof v!=='boolean'))fail();
+        const validBindings=(bindings,allowed)=>{if(bindings===undefined)return;if(!plain(bindings))fail();for(const [qid,value]of Object.entries(bindings))if(!allowed.includes(qid)||typeof value!=='string')fail();};
+        const cleanSelf=(self,answers,bindings,allowed,legacy)=>{
+          if(!plain(self))fail();validBindings(bindings,allowed);const clean={},bound={};
+          for(const [qid,value]of Object.entries(self)){
+            const q=question(id,qid);if(!q||q.type!=='written'||q.subtype==='spelling'||!allowed.includes(qid)||!Array.isArray(value)||value.length!==q.rubricCount||value.some(v=>typeof v!=='boolean'))fail();
+            const answer=answers[qid]===undefined?'':answers[qid];
+            if(bindings&&own(bindings,qid)&&bindings[qid]!==answer)continue;
+            if(!answer.trim()&&value.some(Boolean))fail();
+            if(!own(bindings||{},qid)&&(!legacy||q.subtype==='definition'))continue;clean[qid]=[...value];bound[qid]=answer;
           }
+          return {self:clean,bindings:bound};
         };
-        if(!plain(state.exams))fail();
-        validAnswers(state.answers);validSelf(state.assessed);
-        for(const [key,a] of Object.entries(state.exams)){
+        // Stale answer bindings are recoverable; malformed identities are not.
+        state=clone(state);validAnswers(state.answers);
+        const frqIds=questions.filter(q=>q.type==='written'&&!q.subtype).map(q=>q.id),spellingIds=questions.filter(q=>q.subtype==='spelling').map(q=>q.id),termIds=questions.filter(q=>q.subtype==='definition').map(q=>q.id);
+        const assessed=cleanSelf(state.assessed,state.answers,state.assessedAnswers,frqIds,true);state.assessed=assessed.self;state.assessedAnswers=assessed.bindings;
+        const spelling=state.spelling===undefined?{answers:{},checked:{}}:state.spelling;if(!plain(spelling)||!plain(spelling.checked))fail();validAnswers(spelling.answers,spellingIds);validBindings(spelling.checked,spellingIds);state.spelling={...spelling,checked:Object.fromEntries(Object.entries(spelling.checked).filter(([qid,text])=>own(spelling.answers,qid)&&text===spelling.answers[qid]))};
+        const definitions=state.definitions===undefined?{answers:{},self:{},selfAnswers:{}}:state.definitions;if(!plain(definitions))fail();validAnswers(definitions.answers,termIds);const terms=cleanSelf(definitions.self,definitions.answers,definitions.selfAnswers,termIds,false);state.definitions={...definitions,self:terms.self,selfAnswers:terms.bindings};
+        for(const [key,a]of Object.entries(state.exams)){
           const paper=desc.mocks?.find(p=>p.id===key);
-          if(!paper||!plain(a)||typeof a.submitted!=='boolean'||!time(a.startedAt)||!time(a.elapsed)||!Array.isArray(a.selected)||a.selected.length>8||new Set(a.selected).size!==a.selected.length||a.selected.some(qid=>!paper.frq.includes(qid)))fail();
-          validAnswers(a.answers,[...paper.mcq,...paper.frq]);validSelf(a.self,paper.frq);
+          if(!paper||!plain(a)||typeof a.submitted!=='boolean'||!time(a.startedAt)||!time(a.elapsed)||!Array.isArray(a.selected)||new Set(a.selected).size!==a.selected.length||a.selected.some(qid=>!paper.frq.includes(qid)))fail();
+          if(paper.format==='midterm2026'?a.selected.length!==paper.frq.length||paper.frq.some(qid=>!a.selected.includes(qid)):a.selected.length>8)fail();
+          validAnswers(a.answers,[...paper.mcq,...paper.frq,...(paper.figures||[]),...(paper.terms||[])]);
+          const graded=cleanSelf(a.self,a.answers,a.selfAnswers,[...paper.frq,...(paper.terms||[])],paper.format!=='midterm2026');a.self=graded.self;a.selfAnswers=graded.bindings;
         }
       }
       const map = (name, check) => {

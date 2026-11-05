@@ -49,6 +49,48 @@
     for(const id of Object.keys(merged.assessed||{}))if(!sources.some(s=>Array.isArray(s.assessed?.[id])&&s.answers?.[id]===merged.answers[id]&&JSON.stringify(s.assessed[id])===JSON.stringify(merged.assessed[id])))delete merged.assessed[id];
     return merged;
   }
+  function rebaseNeuroState(before,current,latest,force=[]) {
+    // rebaseState may return latest by reference when no fields changed.
+    const clone=value=>JSON.parse(JSON.stringify(value));
+    const merged=clone(rebaseState(before,current,latest)),sources=[current,latest];
+    const own=(obj,key)=>Object.prototype.hasOwnProperty.call(obj||{},key);
+    const answer=(s,id)=>s?.answers?.[id]===undefined?'':s.answers[id];
+    const cleanRubrics=(target,variants,marksKey,bindingsKey,allowUnbound=true)=>{
+      target[marksKey]=target[marksKey]||{};target[bindingsKey]=target[bindingsKey]||{};
+      for(const id of Object.keys(target[marksKey])){
+        const match=variants.find(s=>Array.isArray(s?.[marksKey]?.[id])&&JSON.stringify(s[marksKey][id])===JSON.stringify(target[marksKey][id])&&answer(s,id)===answer(target,id)&&(own(s[bindingsKey],id)?s[bindingsKey][id]===answer(s,id):allowUnbound&&!own(s,bindingsKey)));
+        if(match)target[bindingsKey][id]=answer(target,id);else{delete target[marksKey][id];delete target[bindingsKey][id];}
+      }
+      for(const id of Object.keys(target[bindingsKey]))if(!own(target[marksKey],id))delete target[bindingsKey][id];
+    };
+    merged.answers=merged.answers||{};merged.checked=merged.checked||[];
+    for(const id of force)if(current.checked?.includes(id)&&Number.isInteger(current.answers?.[id])){merged.answers[id]=current.answers[id];merged.checked=[...new Set([...merged.checked,id])];}
+    merged.checked=merged.checked.filter(id=>sources.some(s=>s.checked?.includes(id)&&s.answers?.[id]===merged.answers[id]));
+    cleanRubrics(merged,sources,'assessed','assessedAnswers');
+    merged.spelling=merged.spelling||{answers:{},checked:{}};merged.spelling.checked=merged.spelling.checked||{};
+    for(const id of Object.keys(merged.spelling.checked))if(!sources.some(s=>own(s.spelling?.checked,id)&&s.spelling.checked[id]===merged.spelling.answers?.[id]&&s.spelling.answers?.[id]===merged.spelling.answers?.[id]))delete merged.spelling.checked[id];
+    merged.definitions=merged.definitions||{answers:{},self:{},selfAnswers:{}};
+    cleanRubrics(merged.definitions,sources.map(s=>s.definitions),'self','selfAnswers',false);
+    merged.exams=merged.exams||{};
+    for(const id of new Set([...Object.keys(current.exams||{}),...Object.keys(latest.exams||{})])){
+      const prior=before.exams?.[id],local=current.exams?.[id],remote=latest.exams?.[id];
+      // A new round is deliberate only in a tab which observed this submitted round.
+      if(prior?.submitted&&local&&!local.submitted){merged.exams[id]=clone(local);cleanRubrics(merged.exams[id],[local],'self','selfAnswers');continue;}
+      if(prior?.submitted&&remote&&!remote.submitted){merged.exams[id]=clone(remote);continue;}
+      const locked=remote?.submitted?remote:local?.submitted?local:null;
+      if(locked){
+        const target=merged.exams[id]||{};merged.exams[id]={...target,answers:clone(locked.answers),selected:clone(locked.selected),submitted:true,startedAt:locked.startedAt,elapsed:Math.max(locked.elapsed,target.elapsed||0)};
+      }
+      if(merged.exams[id])cleanRubrics(merged.exams[id],[local,remote],'self','selfAnswers');
+    }
+    return merged;
+  }
+  function neuroAssessmentIds(snap,rebased,ids){
+    const paper=snap.state.mock,exam=snap.state.section==='mocks'&&snap.state.exams?.[paper]?.submitted;
+    const final=exam?rebased.exams?.[paper]:rebased;
+    if(exam&&!final?.submitted)return [];
+    return ids.filter(id=>final?.answers?.[id]===snap.answers[id]);
+  }
   async function boot(win) {
     const doc=win.document,id=doc.documentElement.dataset.studyMaterial;if(!id)return;
     const en=doc.documentElement.lang==='en',text=(zh,english)=>en?english:zh;
@@ -138,8 +180,9 @@
         const assessed=assessmentIds(id,snap,lastAssessment,force).filter(qid=>{
           const q=bank.find(q=>q.id===qid),answer=snap.answers[qid];return q?.type==='mc'&&snap.checked.includes(qid)&&Number.isInteger(answer)&&answer>=0&&answer<q.options.length;
         });
-        const results=assessedResults(bank,snap.answers,assessed,previous.progress.results,Date.now(),assessed);
-        const rebased=id==='statistics-ch1-4-review'?rebaseStatsState(lastState,snap.state,previous.progress.state,assessed):rebaseState(lastState,snap.state,previous.progress.state);
+        const rebased=id==='neuroscience-ch4-6-review'?rebaseNeuroState(lastState,snap.state,previous.progress.state,assessed):id==='statistics-ch1-4-review'?rebaseStatsState(lastState,snap.state,previous.progress.state,assessed):rebaseState(lastState,snap.state,previous.progress.state);
+        const accepted=id==='neuroscience-ch4-6-review'?neuroAssessmentIds(snap,rebased,assessed):assessed;
+        const results=assessedResults(bank,snap.answers,accepted,previous.progress.results,Date.now(),accepted);
         if(id!=='neuroscience-ch4-6-review')for(const qid of assessed){if(rebased.choices)rebased.choices[qid]=snap.answers[qid];else if(rebased.answers)rebased.answers[qid]=snap.answers[qid];}
         if(id==='neuroscience-review'){
           const mc=bank.filter(q=>q.type==='mc');rebased.wrong=mc.flatMap((q,i)=>results[q.id]?.status==='incorrect'?[i]:[]);
@@ -170,5 +213,5 @@
     doc.addEventListener('click',process);doc.addEventListener('change',process);doc.addEventListener('input',process);win.addEventListener('hashchange',()=>persist());win.addEventListener('pagehide',()=>{clearTimeout(timer);persist();});
     store.subscribe(refreshTools);addWrittenButtons();persist();
   }
-  return {assessedResults,assessmentIds,rebaseState,rebaseStatsState,boot};
+  return {assessedResults,assessmentIds,rebaseState,rebaseStatsState,rebaseNeuroState,neuroAssessmentIds,boot};
 });
