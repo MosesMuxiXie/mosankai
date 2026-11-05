@@ -105,3 +105,14 @@ test('shared MCQ results cannot use answers rejected by the submitted-attempt lo
  rebased.exams[p.id].submitted=false;assert.deepEqual(adapters.neuroAssessmentIds(snap,rebased,['m0']),[]);
  const practice=c.freshState();practice.answers.m0=1;practice.checked=['m0'];assert.deepEqual(adapters.neuroAssessmentIds(c.snapshot(d,practice),practice,['m0']),['m0']);
 });
+test('missing whole selfAnswers object never upgrades current-paper rubrics during merge',()=>{
+ const before=c.freshState(),current=c.freshState();current.exams[p.id]=c.freshAttempt(p);const a=current.exams[p.id];a.submitted=true;grade(a,p.frq,d.frq);grade(a,p.terms,d.terms);delete a.selfAnswers;
+ const merged=adapters.rebaseNeuroState(before,current,before).exams[p.id];assert.deepEqual(merged.self,{});assert.deepEqual(merged.selfAnswers,{});assert.equal(c.scoreMock(d,p,merged).total,null);assert.equal(c.scoreMock(d,p,merged).bonus,null);
+ const legacy=c.freshState();legacy.exams.mock1=c.freshAttempt();legacy.exams.mock1.answers.f0='legacy response';legacy.exams.mock1.self.f0=[true,false,false,false,false];delete legacy.exams.mock1.selfAnswers;
+ const restored=adapters.rebaseNeuroState(before,legacy,before).exams.mock1;assert.deepEqual(restored.self.f0,[true,false,false,false,false]);assert.equal(restored.selfAnswers.f0,'legacy response');
+});
+test('missing whole selfAnswers object never upgrades current-paper rubrics during explicit reset',()=>{
+ const before=c.freshState();before.exams[p.id]=c.freshAttempt(p);before.exams[p.id].submitted=true;
+ const reset=copy(before);reset.exams[p.id].submitted=false;grade(reset.exams[p.id],p.frq,d.frq);grade(reset.exams[p.id],p.terms,d.terms);delete reset.exams[p.id].selfAnswers;
+ const attempt=adapters.rebaseNeuroState(before,reset,before).exams[p.id];assert.deepEqual(attempt.self,{});assert.deepEqual(attempt.selfAnswers,{});
+});

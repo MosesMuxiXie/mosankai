@@ -74,14 +74,16 @@
     merged.exams=merged.exams||{};
     for(const id of new Set([...Object.keys(current.exams||{}),...Object.keys(latest.exams||{})])){
       const prior=before.exams?.[id],local=current.exams?.[id],remote=latest.exams?.[id];
+      // Only the original v1 papers predate response-bound exam grading.
+      const legacy=['mock1','mock2','mock3'].includes(id);
       // A new round is deliberate only in a tab which observed this submitted round.
-      if(prior?.submitted&&local&&!local.submitted){merged.exams[id]=clone(local);cleanRubrics(merged.exams[id],[local],'self','selfAnswers');continue;}
+      if(prior?.submitted&&local&&!local.submitted){merged.exams[id]=clone(local);cleanRubrics(merged.exams[id],[local],'self','selfAnswers',legacy);continue;}
       if(prior?.submitted&&remote&&!remote.submitted){merged.exams[id]=clone(remote);continue;}
       const locked=remote?.submitted?remote:local?.submitted?local:null;
       if(locked){
         const target=merged.exams[id]||{};merged.exams[id]={...target,answers:clone(locked.answers),selected:clone(locked.selected),submitted:true,startedAt:locked.startedAt,elapsed:Math.max(locked.elapsed,target.elapsed||0)};
       }
-      if(merged.exams[id])cleanRubrics(merged.exams[id],[local,remote],'self','selfAnswers');
+      if(merged.exams[id])cleanRubrics(merged.exams[id],[local,remote],'self','selfAnswers',legacy);
     }
     return merged;
   }
