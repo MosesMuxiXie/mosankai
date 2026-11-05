@@ -16,6 +16,16 @@
   return `<strong>MCQ ${score.mcq}/60 · 识图 / Identification ${score.figures}/10 · FRQ ${score.frq===null?'待自评 / Pending':score.frq+'/30'}</strong><p class="base-score">正卷 / Base ${score.total===null?'待六道 FRQ 自评 / Awaiting six FRQ assessments':score.total+'/100'}</p><p>Bonus ${score.bonus===null?'待五道定义自评 / Awaiting five definition assessments':score.bonus+'/10'}</p>${score.total!==null&&score.bonus!==null?`<p>含加分 / Including bonus ${score.total+score.bonus}/110</p>`:''}<p class="small">FRQ 与定义为自评分；Bonus 不影响正卷成绩显示。空白题请明确记零。<span class="translation" lang="en">Written marks are self-assessed. Bonus assessment does not block the base result. Explicitly record blanks as zero.</span></p>`;
  }
  function withPrintOutput(body,output,runPrint){body.append(output);body.classList.add('print-midterm');try{return runPrint();}finally{body.classList.remove('print-midterm');output.remove();}}
+ function withPrintSection(section,runPrint){
+  const visibility=[...section.parentElement.children].map(node=>[node,node.hidden]);
+  try{for(const [node] of visibility)node.hidden=node!==section;return runPrint();}
+  finally{for(const [node,hidden] of visibility)node.hidden=hidden;}
+ }
+ function initGuideMenu(button,nav){
+  const setOpen=open=>{button.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);};
+  button.addEventListener('click',()=>setOpen(button.getAttribute('aria-expanded')!=='true'));
+  nav.addEventListener('click',event=>{if(event.target.closest('a'))setOpen(false);});
+ }
  function create({data:d,core:c,atlas:a,getState,questionHTML,sourceRefs=items=>refs({sources:items}),message=()=>{},onScore=()=>{}}){
   const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],shown=new Set();
   const state=()=>getState(),paper=()=>d.mocks.find(p=>p.id===state().mock),attempt=()=>state().exams[paper().id]||(state().exams[paper().id]=c.freshAttempt(paper()));
@@ -85,5 +95,5 @@
   }
   return {init,renderDrills,renderAtlas,renderMock,renderMockScore,printDrill};
  }
- return {renderSpelling,renderDefinition,renderCurrentScore,withPrintOutput,create};
+ return {renderSpelling,renderDefinition,renderCurrentScore,withPrintOutput,withPrintSection,initGuideMenu,create};
 });

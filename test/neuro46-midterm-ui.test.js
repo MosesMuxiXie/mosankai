@@ -25,3 +25,36 @@ test('temporary drill printing restores ordinary reading even when the native pr
  assert.throws(()=>a.withPrintOutput(body,output,()=>{assert.deepEqual(children,[output]);assert.ok(classes.has('print-midterm'));throw Error('Printer unavailable');}),/Printer unavailable/);
  assert.deepEqual(children,[]);assert.equal(classes.size,0);
 });
+
+for(const printerThrows of [false,true])test(`lesson printing excludes every other section and restores visibility after ${printerThrows?'a printer error':'printing'}`,()=>{
+ const a=api();assert.equal(typeof a.withPrintSection,'function');
+ const learn={id:'learn',hidden:false},atlas={id:'atlas',hidden:false,figures:Array(81).fill('<svg></svg>')};
+ const children=[{id:'home',hidden:false},{id:'exam-blueprint',hidden:false},learn,atlas,{id:'drills',hidden:false},{id:'sources',hidden:false},{id:'future-section',hidden:true}];
+ learn.parentElement={children};
+ const original=children.map(section=>section.hidden);
+ const print=()=>{
+  assert.deepEqual(children.filter(section=>!section.hidden).map(section=>section.id),['learn']);
+  assert.equal(children.filter(section=>!section.hidden).flatMap(section=>section.figures||[]).length,0,'all 81 atlas figures are excluded');
+  if(printerThrows)throw Error('Printer unavailable');
+  return 'printed';
+ };
+ if(printerThrows)assert.throws(()=>a.withPrintSection(learn,print),/Printer unavailable/);
+ else assert.equal(a.withPrintSection(learn,print),'printed');
+ assert.deepEqual(children.map(section=>section.hidden),original,'including an already hidden section');
+});
+
+test('guide menu opens all links and closes after any link selection without relying on a hash change',()=>{
+ const a=api();assert.equal(typeof a.initGuideMenu,'function');
+ const listeners={},classes=new Set(),attributes={'aria-expanded':'false'};
+ const button={getAttribute:key=>attributes[key],setAttribute:(key,value)=>attributes[key]=value,addEventListener:(event,run)=>listeners['button-'+event]=run};
+ const links=Array.from({length:8},(_,i)=>({hash:i===7?'#drills':'#section-'+i}));
+ const nav={children:links,classList:{toggle:(name,on)=>on?classes.add(name):classes.delete(name),remove:name=>classes.delete(name)},addEventListener:(event,run)=>listeners['nav-'+event]=run};
+ a.initGuideMenu(button,nav);
+ for(const link of links){
+  listeners['button-click']();assert.equal(attributes['aria-expanded'],'true');assert.ok(classes.has('open'));
+  let prevented=false;
+  listeners['nav-click']({target:{closest:selector=>selector==='a'?link:null},preventDefault:()=>prevented=true});
+  assert.equal(attributes['aria-expanded'],'false');assert.ok(!classes.has('open'));assert.equal(prevented,false,'anchor keyboard/default navigation remains available');
+ }
+ listeners['button-click']();listeners['button-click']();assert.equal(attributes['aria-expanded'],'false');assert.ok(!classes.has('open'));
+});
