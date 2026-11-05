@@ -63,3 +63,38 @@ test('scientifically distinct diagrams have distinct evidence and chemical atoms
  assert.match(render('serotonin'),/>N<\/text>.*>H<\/text>/);assert.match(render('5-hydroxytryptophan'),/>N<\/text>.*>H<\/text>/);
  assert.match(render('microiontophoresis'),/nA/);assert.match(render('length constant'),/37%/);
 });
+
+test('biological indole amino-acid substrates show S alpha stereochemistry in both display modes',()=>{
+ const a=api();
+ for(const id of ['G-tryptophan','G-5htp'])for(const answers of [false,true]){
+  const svg=a.renderFigure(id,{answers}),bonds=[...svg.matchAll(/<line x1="([\d.]+)" y1="([\d.]+)" x2="([\d.]+)" y2="([\d.]+)"[^>]*>/g)].map(m=>m.slice(1).map(Number));
+  // At this alpha-C, NH2 > COOH > CH2-indole is clockwise on the page.
+  // Short widening hatches toward NH2 put N away (H toward), giving S rather than R.
+  const hatches=bonds.filter(([x1,y1,x2,y2])=>y1===y2&&y1>53&&y1<107&&x1>=454&&x2<=472&&x2>x1);
+  assert.ok(hatches.length>=5,id+' needs a hashed rather than solid NH2 bond');
+  const ordered=hatches.sort((one,two)=>two[1]-one[1]);assert.ok(ordered[0][2]-ordered[0][0]<ordered.at(-1)[2]-ordered.at(-1)[0],id+' hatches widen away from alpha-C');
+  assert.ok(!svg.includes('M465 107 L456 53 L470 53 Z'),id+' must not show the old R solid wedge');
+ }
+});
+
+test('voltage-clamp outward current deactivates after the command returns to holding voltage',()=>{
+ const svg=api().renderFigure('G-voltage-clamp'),trace=[...svg.matchAll(/<path d="([^"]+)" stroke="([^"]+)"/g)].find(m=>m[2]==='#509d73');
+ assert.ok(trace);const points=[...trace[1].matchAll(/(?:M|L|Q|C|\s)(\d+(?:\.\d+)?) (\d+(?:\.\d+)?)/g)].map(m=>[Number(m[1]),Number(m[2])]);
+ const tail=points.filter(([x])=>x>575);assert.ok(tail.length>=2,'show a post-command deactivation tail rather than a sustained plateau');
+ const end=tail.at(-1);assert.ok(end[1]>=218&&end[1]<=222,'tail returns near zero-current baseline');assert.ok(tail.some(([,y])=>y>160&&y<218),'tail includes a decaying intermediate current');
+});
+
+test('current-ejected candidate is compared with the original stimulation response',()=>{
+ const a=api(),svg=a.renderFigure('G-iontophoresis');
+ assert.match(svg,/>original stimulation<\/text>/);assert.match(svg,/>candidate application<\/text>/);
+ const paths=[...svg.matchAll(/<path d="([^"]+)"[^>]*>/g)].map(m=>m[1]);
+ assert.ok(paths.filter(d=>/q20-35 45-17 q30 17 110 17/.test(d)).length===2,'show matching response shapes for both conditions');
+ assert.match(svg,/nA/);assert.ok(!svg.includes('microiontophoresis'));
+});
+
+test('agonist rubric scores receptor binding separately from activating efficacy',()=>{
+ const term=api().terms.find(t=>t.id==='D-agonist');
+ assert.match(term.points[0].en,/bind/i);assert.doesNotMatch(term.points[0].en,/activat|response|efficacy/i);
+ assert.match(term.points[1].en,/activat|efficacy/i);assert.doesNotMatch(term.points[1].en,/bind/i);
+ assert.ok(term.model.includes(term.points[0].en)&&term.model.includes(term.points[1].en));
+});
