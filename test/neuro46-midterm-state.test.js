@@ -116,3 +116,7 @@ test('missing whole selfAnswers object never upgrades current-paper rubrics duri
  const reset=copy(before);reset.exams[p.id].submitted=false;grade(reset.exams[p.id],p.frq,d.frq);grade(reset.exams[p.id],p.terms,d.terms);delete reset.exams[p.id].selfAnswers;
  const attempt=adapters.rebaseNeuroState(before,reset,before).exams[p.id];assert.deepEqual(attempt.self,{});assert.deepEqual(attempt.selfAnswers,{});
 });
+for(const [qid,type]of [['p0','spelling'],['t0','definition']])test('explicit '+type+' deep links clear drill filters that hide the requested question',()=>{
+ const s=c.freshState();s.drill={type:'spelling',chapter:'6',category:'molecule',wrongOnly:true,questionId:'p9'};
+ const next=c.resolveTarget(d,s,{questionId:qid});assert.equal(next.section,'drills');assert.equal(next.questionId,qid);assert.deepEqual(next.drill,{type,chapter:'all',category:'all',wrongOnly:false,questionId:qid});assert.equal(s.drill.chapter,'6');
+});
