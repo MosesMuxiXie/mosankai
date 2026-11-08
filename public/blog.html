@@ -38,7 +38,14 @@
           <p data-i18n="blog.byAuthor">By Moses Xie</p>
         </header>
         <section class="blog-archive" aria-labelledby="blog-archive-heading">
-          <h2 id="blog-archive-heading" class="blog-archive-heading" data-i18n="blog.articles">Articles</h2>
+          <div class="blog-archive-intro">
+            <h2 id="blog-archive-heading" class="blog-archive-heading" data-i18n="blog.articles">Articles</h2>
+            <p id="blog-archive-count" class="blog-archive-count"></p>
+            <nav id="blog-archive-years" class="blog-archive-years" aria-labelledby="blog-years-heading" hidden>
+              <h3 id="blog-years-heading" data-i18n="blog.browseYears">Browse by year</h3>
+              <ul id="blog-year-list"></ul>
+            </nav>
+          </div>
           <div id="blog-list"></div>
         </section>
       </section>
@@ -49,6 +56,13 @@
         <button id="blog-retry" type="button" class="comment-secondary-button" data-i18n="blog.retry" hidden>Try again</button>
       </div>
     </main>
+    <footer class="blog-footer">
+      <span class="blog-footer-mark">MOSANKAI</span>
+      <nav class="blog-nav" aria-label="More from Mosankai" data-i18n-aria-label="blog.footerNavigation">
+        <a href="/gallery" data-i18n="blog.galleryLink">Gallery</a>
+        <a href="/studyguides" data-i18n="blog.studyGuidesLink">Study Guides</a>
+      </nav>
+    </footer>
   </div>
   <script>
     const articlePath = /^\/blog\/([^/]+)\/?$/.exec(window.location.pathname)?.[1];
@@ -288,12 +302,14 @@
     }
 
     function renderBlogList() {
+      const countKey = blogs.length === 1 ? 'blog.oneArticle' : 'blog.articleCount';
+      document.getElementById('blog-archive-count').textContent = t(countKey, { count: blogs.length });
       const list = blogs.map((blog, index) => `
         <article class="blog-item">
           <a class="blog-entry" href="/blog/${encodeURIComponent(blog.slug || blog.id)}" aria-labelledby="post-title-${index}">
             ${blogDateMarkup(blog.date)}
             <div class="blog-entry-copy">
-              <h3 id="post-title-${index}" class="blog-title">${escapeHtml(blog.title)}</h3>
+              <h3 id="post-title-${index}" class="blog-title" tabindex="-1">${escapeHtml(blog.title)}</h3>
               ${blog.excerpt ? `<p class="blog-excerpt">${escapeHtml(blog.excerpt)}</p>` : ''}
               ${blog.author ? `<p class="blog-byline">${escapeHtml(blog.author)}</p>` : ''}
               ${blogTagsMarkup(blog.tags)}
@@ -302,6 +318,14 @@
           </a>
         </article>`).join('');
       document.getElementById('blog-list').innerHTML = list || `<p class="blog-empty">${escapeHtml(t('blog.noPosts'))}</p>`;
+      const firstPostByYear = new Map();
+      for (const [index, blog] of blogs.entries()) {
+        const year = /^(\d{4})-/.exec(blog.date)?.[1];
+        if (year && !firstPostByYear.has(year)) firstPostByYear.set(year, index);
+      }
+      document.getElementById('blog-year-list').innerHTML = [...firstPostByYear]
+        .map(([year, index]) => `<li><a href="#post-title-${index}">${year}</a></li>`).join('');
+      document.getElementById('blog-archive-years').hidden = !firstPostByYear.size;
     }
 
     function renderBlogDetail(blog) {

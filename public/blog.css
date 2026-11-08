@@ -1,10 +1,10 @@
 body {
+  --paper: #fbf3e5;
   margin: 0;
-  background: #ebe7df;
+  background: var(--paper);
 }
 
 .blog-page {
-  --paper: #fbf3e5;
   --surface: #fffbf4;
   --ink: #172638;
   --muted: #51535a;
@@ -13,15 +13,13 @@ body {
   --line: #d5c8b4;
   --wash: #f4e9d8;
   --heading-font: "Noto Serif SC", "Songti SC", "Source Han Serif SC", "Noto Serif CJK SC", SimSun, Georgia, serif;
-  --page-inset: clamp(.9rem, 4vw, 2.1rem);
-  --frame-margin: clamp(.65rem, 3vw, 1.75rem);
+  --page-inset: clamp(1rem, 4vw, 6rem);
 
-  box-sizing: border-box;
-  width: min(60rem, calc(100% - 2 * var(--frame-margin)));
-  margin: var(--frame-margin) auto;
-  border: 1px solid var(--ink);
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100vh;
+  min-block-size: 100svh;
   color: var(--ink);
-  background: var(--paper);
   color-scheme: light;
   font: 1rem/1.6 "Segoe UI", "PingFang SC", "Microsoft YaHei UI", "Noto Sans CJK SC", sans-serif;
 }
@@ -119,6 +117,7 @@ body {
 }
 
 .blog-main {
+  flex: 1;
   padding-bottom: clamp(1.65rem, 4vw, 2.65rem);
 }
 
@@ -147,7 +146,7 @@ body {
 .blog-heading::after {
   z-index: -1;
   inset: 0 0 0 auto;
-  width: min(36%, 18rem);
+  width: min(36%, 42rem);
   background: radial-gradient(circle, var(--ink) 1.2px, transparent 1.5px) 0 0 / 6px 6px;
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
   mask-image: linear-gradient(126deg, transparent 16%, #000 86%);
@@ -199,10 +198,59 @@ body {
   padding-top: 1.2rem;
 }
 
-.blog-archive-heading {
+.blog-archive-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .4rem 1rem;
   margin-bottom: .6rem;
+}
+
+.blog-archive-heading {
   font-size: clamp(1.25rem, 2.7vw, 1.6rem);
   line-height: 1.3;
+}
+
+.blog-archive-count {
+  margin: 0;
+  color: var(--muted);
+  font-size: .875rem;
+}
+
+.blog-archive-years {
+  display: none;
+  max-width: 12rem;
+  margin-top: 2.4rem;
+}
+
+.blog-archive-years h3 {
+  margin: 0 0 .55rem;
+  color: var(--muted);
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+}
+
+.blog-archive-years ul {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.blog-archive-years a {
+  display: block;
+  padding: .55rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+}
+
+.blog-archive-years a:hover {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 .blog-item + .blog-item {
@@ -548,6 +596,65 @@ body {
 .comment-secondary-button { color: var(--accent); background: var(--surface); }
 .comment-secondary-button:hover { background: var(--wash); }
 .comments-section button:disabled { opacity: .55; cursor: wait; }
+
+.blog-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .4rem 1.5rem;
+  padding: .7rem var(--page-inset);
+  border-top: 1px solid var(--ink);
+  background: var(--wash);
+}
+
+.blog-footer-mark {
+  font-size: .875rem;
+  font-weight: 800;
+  letter-spacing: .085em;
+}
+
+@media (min-width: 72rem) {
+  .blog-heading {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-block-size: clamp(12rem, 24vh, 18rem);
+  }
+
+  .blog-heading h1 { font-size: clamp(4rem, 4.6vw, 5.25rem); }
+
+  .blog-archive {
+    display: grid;
+    grid-template-columns: minmax(9rem, 17%) minmax(0, 1fr);
+    column-gap: clamp(2rem, 4vw, 6rem);
+    padding-top: clamp(1.5rem, 3.5vh, 3rem);
+  }
+
+  .blog-archive-intro {
+    display: block;
+    margin: .6rem 0 0;
+  }
+
+  .blog-archive-count { margin-top: .85rem; }
+
+  .blog-archive-heading { font-size: clamp(1.6rem, 1.85vw, 2.2rem); }
+  .blog-archive-years:not([hidden]) { display: block; }
+
+  #blog-list { border-block: 1px solid var(--ink); }
+
+  .blog-entry {
+    box-sizing: border-box;
+    align-content: center;
+    min-block-size: clamp(5.75rem, 14vh, 12rem);
+    grid-template-columns: clamp(8rem, 10vw, 12rem) minmax(0, 1fr) auto;
+    column-gap: clamp(2.25rem, 3.5vw, 5rem);
+  }
+
+  .blog-title { font-size: clamp(1.35rem, 1.75vw, 1.875rem); }
+  .blog-entry > .blog-date { font-size: 1rem; }
+}
 
 @media (max-width: 38rem) {
   .blog-heading::after { opacity: .72; }
