@@ -164,7 +164,8 @@ async function main() {
       await entry.waitFor();
       const date = await entry.locator('time').boundingBox();
       const title = await entry.getByRole('heading').boundingBox();
-      assert.ok(date.y < title.y && title.y < 235, 'On mobile the date is above the first title');
+      assert.ok(date.y + date.height <= title.y, 'On mobile the date is above the first title');
+      assert.ok(title.y < page.viewportSize().height / 3, 'The first title appears in the top third of the mobile viewport');
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
       await page.locator('[data-language="en"]').click();
 
