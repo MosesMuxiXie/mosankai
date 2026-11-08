@@ -7,6 +7,7 @@
   --accent-dark: #2b37aa;
   --line: #c5cede;
   --wash: #eef1fa;
+  --heading-font: "Noto Sans SC", "PingFang SC", "DengXian", "Microsoft YaHei", system-ui, sans-serif;
   --page-width: min(58rem, calc(100% - 2 * clamp(1rem, 4vw, 2.5rem)));
 
   margin: 0;
@@ -107,32 +108,36 @@
 }
 
 .blog-heading {
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.65rem;
 }
 
 .blog-heading::before {
   display: block;
   width: 1.75rem;
   height: 2px;
-  margin-bottom: .55rem;
+  margin-bottom: .8rem;
   background: var(--accent);
   content: "";
 }
 
 .blog-heading h1,
-.blog-detail-heading h1 {
+.blog-detail-heading h1,
+.blog-title {
   margin: 0;
-  font-weight: 600;
-  line-height: 1.25;
+  font-family: var(--heading-font);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: .045em;
   overflow-wrap: anywhere;
 }
 
 .blog-heading h1 {
   font-size: 1.875rem;
+  letter-spacing: .075em;
 }
 
 .blog-heading p {
-  margin: .15rem 0 0;
+  margin: .35rem 0 0;
   color: var(--muted);
   font-size: .875rem;
 }
@@ -183,15 +188,12 @@
 }
 
 .blog-title {
-  margin: 0;
   font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.4;
 }
 
 .blog-excerpt,
 .blog-byline {
-  margin: .2rem 0 0;
+  margin: .3rem 0 0;
 }
 
 .blog-excerpt {
@@ -250,7 +252,7 @@
 
 .blog-detail-heading {
   margin: .85rem 0 1.55rem;
-  padding-bottom: .9rem;
+  padding-bottom: 1.05rem;
   border-bottom: 1px solid var(--line);
 }
 
@@ -262,7 +264,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: .25rem 1rem;
-  margin-top: .45rem;
+  margin-top: .65rem;
   color: var(--muted);
   font-size: .875rem;
 }
@@ -483,7 +485,7 @@
 
 @media (max-width: 38rem) {
   .blog-main { padding-top: 1.2rem; }
-  .blog-heading { margin-bottom: .85rem; }
+  .blog-heading { margin-bottom: 1.2rem; }
   .blog-heading h1 { font-size: 1.625rem; }
   .blog-entry {
     grid-template-columns: minmax(0, 1fr) auto;
