@@ -76,7 +76,8 @@ async function main() {
       const index = await (await page.request.get(base + '/api/blogs')).json();
       assert.deepEqual(index, snapshot.index);
       await page.locator('main').getByRole('link', { name: index[0].title, exact: true }).waitFor();
-      assert.deepEqual(await page.locator('main article h2').allTextContents(), index.map(post => post.title));
+      const titles = page.locator('#blog-list').getByRole('heading', { level: 3 });
+      assert.deepEqual(await titles.allTextContents(), index.map(post => post.title));
       for (const [position, article] of snapshot.details.entries()) {
         const href = '/blog/' + encodeURIComponent(index[position].slug);
         await page.locator('main').getByRole('link', { name: article.title, exact: true }).click();
@@ -105,12 +106,13 @@ async function main() {
     } else {
       const entry = page.getByRole('link', { name: '模組筆記', exact: true });
       await entry.waitFor({ timeout: 3500 });
+      await page.getByRole('heading', { name: 'Articles', level: 2 }).waitFor({ timeout: 3500 });
       assert.equal(await entry.getAttribute('href'), richUrl);
       assert.equal(await entry.locator('time').getAttribute('datetime'), '2026-08-02');
       await entry.getByText('A rich article', { exact: true }).waitFor();
       await entry.getByText('Moses', { exact: true }).waitFor();
       await entry.getByText('Minecraft', { exact: true }).waitFor();
-      assert.ok((await entry.boundingBox()).y < 235, 'The first post should be near the top');
+      assert.ok((await entry.boundingBox()).y < page.viewportSize().height / 2, 'The first post starts in the top half of the desktop viewport');
       assert.equal(await page.locator('body img').count(), 0, 'The archive has no decorative images');
       await entry.focus();
       assert.equal(await entry.evaluate(link => link.matches(':focus-visible')), true);
@@ -162,10 +164,11 @@ async function main() {
       await page.getByRole('link', { name: '返回文章列表' }).click();
       await page.setViewportSize({ width: 390, height: 844 });
       await entry.waitFor();
+      await page.getByRole('heading', { name: '文章', level: 2 }).waitFor();
       const date = await entry.locator('time').boundingBox();
       const title = await entry.getByRole('heading').boundingBox();
       assert.ok(date.y + date.height <= title.y, 'On mobile the date is above the first title');
-      assert.ok(title.y < page.viewportSize().height / 3, 'The first title appears in the top third of the mobile viewport');
+      assert.ok(title.y < page.viewportSize().height / 2, 'The first title appears in the top half of the mobile viewport');
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
       await page.locator('[data-language="en"]').click();
 

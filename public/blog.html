@@ -18,33 +18,38 @@
   <link rel="stylesheet" href="/blog.css">
   <script src="/i18n.js"></script>
 </head>
-<body class="blog-page">
-  <header class="blog-header">
-    <div class="blog-header-inner">
-      <span class="blog-wordmark">MOSANKAI</span>
-      <nav class="blog-nav" aria-label="Blog navigation" data-i18n-aria-label="blog.navigation">
-        <a href="/" data-i18n="blog.home">Home</a>
-        <a href="/blog" id="blog-nav-articles" data-i18n="blog.articles">Articles</a>
-        <a href="/findatime" data-i18n="blog.findatime">Find a Time</a>
-      </nav>
-      <div id="language-switcher-slot" class="language-switcher-slot"></div>
-    </div>
-  </header>
-  <main class="blog-main">
-    <section id="blog-index" aria-labelledby="blog-heading" hidden>
-      <header class="blog-heading">
-        <h1 id="blog-heading" data-i18n="blog.heading">Blog</h1>
-        <p data-i18n="blog.byAuthor">By Moses Xie</p>
-      </header>
-      <div id="blog-list" class="blog-list"></div>
-    </section>
-    <article id="blog-detail" class="blog-detail" hidden></article>
-    <div id="blog-status" class="blog-status">
-      <p id="blog-status-message" role="status"></p>
-      <a id="blog-status-back" class="blog-back" href="/blog" data-i18n="blog.backToArticles" hidden>Back to Articles</a>
-      <button id="blog-retry" type="button" class="comment-secondary-button" data-i18n="blog.retry" hidden>Try again</button>
-    </div>
-  </main>
+<body>
+  <div class="blog-page">
+    <header class="blog-header">
+      <div class="blog-header-inner">
+        <span class="blog-wordmark">MOSANKAI</span>
+        <nav class="blog-nav" aria-label="Blog navigation" data-i18n-aria-label="blog.navigation">
+          <a href="/" data-i18n="blog.home">Home</a>
+          <a href="/blog" id="blog-nav-articles" data-i18n="blog.articles">Articles</a>
+          <a href="/findatime" data-i18n="blog.findatime">Find a Time</a>
+        </nav>
+        <div id="language-switcher-slot" class="language-switcher-slot"></div>
+      </div>
+    </header>
+    <main class="blog-main">
+      <section id="blog-index" aria-labelledby="blog-heading" hidden>
+        <header class="blog-heading">
+          <h1 id="blog-heading" data-i18n="blog.heading">Blog</h1>
+          <p data-i18n="blog.byAuthor">By Moses Xie</p>
+        </header>
+        <section class="blog-archive" aria-labelledby="blog-archive-heading">
+          <h2 id="blog-archive-heading" class="blog-archive-heading" data-i18n="blog.articles">Articles</h2>
+          <div id="blog-list"></div>
+        </section>
+      </section>
+      <article id="blog-detail" class="blog-detail" hidden></article>
+      <div id="blog-status" class="blog-status">
+        <p id="blog-status-message" role="status"></p>
+        <a id="blog-status-back" class="blog-back" href="/blog" data-i18n="blog.backToArticles" hidden>Back to Articles</a>
+        <button id="blog-retry" type="button" class="comment-secondary-button" data-i18n="blog.retry" hidden>Try again</button>
+      </div>
+    </main>
+  </div>
   <script>
     const articlePath = /^\/blog\/([^/]+)\/?$/.exec(window.location.pathname)?.[1];
     let blogs;
@@ -288,7 +293,7 @@
           <a class="blog-entry" href="/blog/${encodeURIComponent(blog.slug || blog.id)}" aria-labelledby="post-title-${index}">
             ${blogDateMarkup(blog.date)}
             <div class="blog-entry-copy">
-              <h2 id="post-title-${index}" class="blog-title">${escapeHtml(blog.title)}</h2>
+              <h3 id="post-title-${index}" class="blog-title">${escapeHtml(blog.title)}</h3>
               ${blog.excerpt ? `<p class="blog-excerpt">${escapeHtml(blog.excerpt)}</p>` : ''}
               ${blog.author ? `<p class="blog-byline">${escapeHtml(blog.author)}</p>` : ''}
               ${blogTagsMarkup(blog.tags)}
