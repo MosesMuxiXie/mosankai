@@ -14,58 +14,52 @@
   <title data-i18n="blog.title">Blog | Mosankai</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="stylesheet" href="/blog.css">
   <link rel="stylesheet" href="/i18n.css">
+  <link rel="stylesheet" href="/blog.css">
   <script src="/i18n.js"></script>
 </head>
-<body>
-  <div class="container">
-    <div class="sidebar">
-      <div class="hero" style="background-image:url('/img/m48a5_patton_cn.jpg')">
-        <h1>tanks</h1>
-        <p>
-          <span data-i18n="blog.explore">Explore.</span><br>
-          <span data-i18n="blog.shoot">Shoot.</span><br>
-          <span data-i18n="blog.write">Write.</span>
-        </p>
-        <div class="author">
-          <span data-i18n="blog.authorLine">A tank lover's personal blog</span><br>
-          <span data-i18n="blog.byAuthor">By Moses Xie</span>
-        </div>
-        <div style="margin-top:2em;font-size:1.3em;">
-          <a href="#" style="color:#fff;margin-right:0.5em;"><span title="Twitter" data-i18n-title="blog.twitter">🐦</span></a>
-          <a href="#" style="color:#fff;margin-right:0.5em;"><span title="Facebook" data-i18n-title="blog.facebook">📘</span></a>
-          <a href="#" style="color:#fff;"><span title="Subscribe" data-i18n-title="blog.subscribeIcon">🔔</span></a>
-        </div>
-      </div>
-    </div>
-    <div class="main">
-      <nav aria-label="Blog navigation" data-i18n-aria-label="blog.navigation">
-        <a href="/" data-i18n="blog.home">HOME</a>
-        <a href="#" class="active" onclick="showList();return false;" data-i18n="blog.articles">ARTICLES</a>
-        <a href="#" onclick="alert(MosankaiI18n.t('blog.suggestComingSoon'));return false;" data-i18n="blog.suggest">SUGGEST</a>
-        <a href="#" onclick="alert(MosankaiI18n.t('blog.subscribeComingSoon'));return false;" data-i18n="blog.subscribe">SUBSCRIBE</a>
-        <a href="#" onclick="alert(MosankaiI18n.t('blog.aboutComingSoon'));return false;" data-i18n="blog.about">ABOUT</a>
-        <a href="/findatime" data-i18n="blog.findatime">FIND A TIME</a>
+<body class="blog-page">
+  <header class="blog-header">
+    <div class="blog-header-inner">
+      <span class="blog-wordmark">MOSANKAI</span>
+      <nav class="blog-nav" aria-label="Blog navigation" data-i18n-aria-label="blog.navigation">
+        <a href="/" data-i18n="blog.home">Home</a>
+        <a href="/blog" id="blog-nav-articles" data-i18n="blog.articles">Articles</a>
+        <a href="/findatime" data-i18n="blog.findatime">Find a Time</a>
       </nav>
-      <div id="blog-list" class="blog-list"></div>
-      <div id="blog-detail" style="display:none;max-width:700px;margin:2.2em auto;"></div>
+      <div id="language-switcher-slot" class="language-switcher-slot"></div>
     </div>
-  </div>
+  </header>
+  <main class="blog-main">
+    <section id="blog-index" aria-labelledby="blog-heading" hidden>
+      <header class="blog-heading">
+        <h1 id="blog-heading" data-i18n="blog.heading">Blog</h1>
+        <p data-i18n="blog.byAuthor">By Moses Xie</p>
+      </header>
+      <div id="blog-list" class="blog-list"></div>
+    </section>
+    <article id="blog-detail" class="blog-detail" hidden></article>
+    <div id="blog-status" class="blog-status">
+      <p id="blog-status-message" role="status"></p>
+      <a id="blog-status-back" class="blog-back" href="/blog" data-i18n="blog.backToArticles" hidden>Back to Articles</a>
+      <button id="blog-retry" type="button" class="comment-secondary-button" data-i18n="blog.retry" hidden>Try again</button>
+    </div>
+  </main>
   <script>
-    let blogs = [];
+    const articlePath = /^\/blog\/([^/]+)\/?$/.exec(window.location.pathname)?.[1];
+    let blogs;
+    let viewStatus = 'blog.loading';
     let currentBlog = null;
     let activeReplyId = null;
     let activeEditId = null;
     let commentFeedback = null;
     const COMMENT_TOKEN_KEY = 'mosankai:blog-comment-tokens:v1';
     const COMMENT_NAME_KEY = 'mosankai:blog-comment-name:v1';
+    const HTML_ENTITIES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
     const t = (key, parameters) => MosankaiI18n.t(key, parameters);
 
     function escapeHtml(value) {
-      const node = document.createElement('span');
-      node.textContent = value == null ? '' : String(value);
-      return node.innerHTML;
+      return String(value ?? '').replace(/[&<>"']/g, character => HTML_ENTITIES[character]);
     }
 
     function safeImage(value) {
@@ -86,7 +80,7 @@
     function formatBlogDate(value) {
       const date = new Date(`${value}T00:00:00`);
       return Number.isNaN(date.getTime())
-        ? escapeHtml(value)
+        ? value
         : new Intl.DateTimeFormat(MosankaiI18n.locale(), {
             year: 'numeric',
             month: 'short',
@@ -97,7 +91,7 @@
     function formatCommentDate(comment) {
       const value = comment.createdAt || comment.date;
       const date = new Date(String(value || '').includes('T') ? value : `${value}T00:00:00`);
-      if (Number.isNaN(date.getTime())) return escapeHtml(value);
+      if (Number.isNaN(date.getTime())) return value;
       const options = comment.createdAt
         ? { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }
         : { year: 'numeric', month: 'short', day: 'numeric' };
@@ -181,8 +175,8 @@
       return `
         <form class="comment-inline-form reply-comment-form" data-parent-id="${escapeHtml(comment.id)}">
           <label>${escapeHtml(t('blog.replyTo', { name: comment.name }))}</label>
-          <input name="name" type="text" maxlength="40" value="${escapeHtml(storedCommentName())}" placeholder="${escapeHtml(t('blog.yourName'))}" required>
-          <textarea name="text" maxlength="2000" placeholder="${escapeHtml(t('blog.yourReply'))}" required></textarea>
+          <input name="name" type="text" maxlength="40" value="${escapeHtml(storedCommentName())}" aria-label="${escapeHtml(t('blog.yourName'))}" placeholder="${escapeHtml(t('blog.yourName'))}" required>
+          <textarea name="text" maxlength="2000" aria-label="${escapeHtml(t('blog.yourReply'))}" placeholder="${escapeHtml(t('blog.yourReply'))}" required></textarea>
           <div class="comment-form-actions">
             <button type="button" class="comment-secondary-button" data-comment-action="cancel">${escapeHtml(t('blog.cancel'))}</button>
             <button type="submit" class="comment-primary-button">${escapeHtml(t('blog.postReply'))}</button>
@@ -278,61 +272,52 @@
       }
     }
 
-    async function fetchBlogs() {
-      const response = await fetch('/api/blogs');
-      if (!response.ok) throw new Error('Unable to load articles.');
-      blogs = await response.json();
+    function blogDateMarkup(date) {
+      if (!date) return '';
+      return `<time class="blog-date" datetime="${escapeHtml(date)}">${escapeHtml(formatBlogDate(date))}</time>`;
+    }
+
+    function blogTagsMarkup(tags) {
+      if (!tags?.length) return '';
+      return `<div class="blog-tags">${tags.map(tag => `<span class="blog-tag">${escapeHtml(tag)}</span>`).join('')}</div>`;
     }
 
     function renderBlogList() {
-      const list = blogs.map(blog => {
-        const image = safeImage(blog.image);
-        return `
-        <article class="blog-item${image ? '' : ' no-image'}" data-blog-id="${encodeURIComponent(blog.slug || blog.id)}" tabindex="0">
-          ${image ? `<img src="${escapeHtml(image)}" class="blog-thumb" alt="${escapeHtml(t('blog.imageAlt'))}">` : ''}
-          <div class="blog-meta">
-            <div class="blog-title">${escapeHtml(blog.title)}</div>
-            <div class="blog-excerpt">${escapeHtml(blog.excerpt || '')}</div>
-            <div class="blog-info">
-              ${formatBlogDate(blog.date)} &nbsp;|&nbsp; ${escapeHtml(blog.author || t('blog.anonymous'))}
+      const list = blogs.map((blog, index) => `
+        <article class="blog-item">
+          <a class="blog-entry" href="/blog/${encodeURIComponent(blog.slug || blog.id)}" aria-labelledby="post-title-${index}">
+            ${blogDateMarkup(blog.date)}
+            <div class="blog-entry-copy">
+              <h2 id="post-title-${index}" class="blog-title">${escapeHtml(blog.title)}</h2>
+              ${blog.excerpt ? `<p class="blog-excerpt">${escapeHtml(blog.excerpt)}</p>` : ''}
+              ${blog.author ? `<p class="blog-byline">${escapeHtml(blog.author)}</p>` : ''}
+              ${blogTagsMarkup(blog.tags)}
             </div>
-            <div class="blog-tags">
-              ${(blog.tags || []).map(tag => `<span class="blog-tag">${escapeHtml(tag)}</span>`).join(' ')}
-            </div>
-          </div>
-          <span class="blog-arrow">&rsaquo;</span>
-        </article>`;
-      }).join('');
-      document.getElementById('blog-list').innerHTML = list || `<p>${escapeHtml(t('blog.noPosts'))}</p>`;
-      document.getElementById('blog-list').style.display = '';
-      document.getElementById('blog-detail').style.display = 'none';
+            <span class="blog-arrow" aria-hidden="true">→</span>
+          </a>
+        </article>`).join('');
+      document.getElementById('blog-list').innerHTML = list || `<p class="blog-empty">${escapeHtml(t('blog.noPosts'))}</p>`;
     }
 
-    function renderBlogDetail(blog, updateHistory = false) {
-      if (currentBlog && currentBlog.id !== blog.id) {
-        activeReplyId = null;
-        activeEditId = null;
-        commentFeedback = null;
-      }
-      currentBlog = blog;
-      const content = blog.contentFormat === 'html' && blog.contentHtml
-        ? blog.contentHtml
-        : escapeHtml(blog.content);
+    function renderBlogDetail(blog) {
+      const richContent = blog.contentFormat === 'html' && blog.contentHtml;
+      const content = richContent ? blog.contentHtml : escapeHtml(blog.content);
       const image = safeImage(blog.image);
       document.getElementById('blog-detail').innerHTML = `
-        <a href="#" id="back-to-articles" style="color:#1976d2;">&larr; ${escapeHtml(t('blog.backToArticles'))}</a>
-        <h2 style="margin-top:0.7em;color:#1976d2;">${escapeHtml(blog.title)}</h2>
-        <div style="margin-bottom:1em;font-size:1.05em;color:#888;">
-          ${formatBlogDate(blog.date)} &nbsp;|&nbsp; ${escapeHtml(blog.author || t('blog.anonymous'))}
-        </div>
+        <a href="/blog" class="blog-back"><span aria-hidden="true">←</span> ${escapeHtml(t('blog.backToArticles'))}</a>
+        <header class="blog-detail-heading">
+          <h1>${escapeHtml(blog.title)}</h1>
+          <div class="blog-detail-meta">
+            ${blogDateMarkup(blog.date)}
+            <span>${escapeHtml(blog.author || t('blog.anonymous'))}</span>
+          </div>
+        </header>
         ${image ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(t('blog.imageAlt'))}" class="blog-detail-image">` : ''}
-        <div class="blog-content">${content}</div>
-        <div style="margin-bottom:1.3em;">
-          ${(blog.tags || []).map(tag => `<span class="blog-tag">${escapeHtml(tag)}</span>`).join(' ')}
-        </div>
+        <div class="blog-content${richContent ? '' : ' blog-content-plain'}">${content}</div>
+        ${blogTagsMarkup(blog.tags)}
         <section class="comments-section" aria-labelledby="comments-title">
           <div class="comments-heading">
-            <h3 id="comments-title">${escapeHtml(t('blog.comments'))}</h3>
+            <h2 id="comments-title">${escapeHtml(t('blog.comments'))}</h2>
             <span class="comment-count">${escapeHtml((blog.comments || []).length === 1
               ? t('blog.oneComment')
               : t('blog.commentCount', { count: (blog.comments || []).length }))}</span>
@@ -342,7 +327,7 @@
           <div id="comments" class="comments-list">${commentsMarkup(blog.comments || [])}</div>
           <form id="comment-form" class="comment-composer">
             <label for="c-text">${escapeHtml(t('blog.addComment'))}</label>
-            <input type="text" id="c-name" maxlength="40" value="${escapeHtml(storedCommentName())}" placeholder="${escapeHtml(t('blog.yourName'))}" required>
+            <input type="text" id="c-name" maxlength="40" value="${escapeHtml(storedCommentName())}" aria-label="${escapeHtml(t('blog.yourName'))}" placeholder="${escapeHtml(t('blog.yourName'))}" required>
             <textarea id="c-text" maxlength="2000" placeholder="${escapeHtml(t('blog.yourComment'))}" required></textarea>
             <div class="comment-form-actions">
               <button type="submit" class="comment-primary-button">${escapeHtml(t('blog.postComment'))}</button>
@@ -350,19 +335,6 @@
           </form>
         </section>
       `;
-      document.getElementById('blog-list').style.display = 'none';
-      document.getElementById('blog-detail').style.display = '';
-      if (updateHistory) {
-        history.pushState(
-          { view: 'detail', slug: blog.slug || blog.id },
-          '',
-          `/blog/${encodeURIComponent(blog.slug || blog.id)}`
-        );
-      }
-      document.getElementById('back-to-articles').addEventListener('click', event => {
-        event.preventDefault();
-        showList();
-      });
       document.getElementById('comment-form').addEventListener('submit', async event => {
         event.preventDefault();
         const name = document.getElementById('c-name').value.trim();
@@ -475,56 +447,40 @@
       });
     }
 
-    async function showList(updateHistory = true) {
-      await fetchBlogs();
-      currentBlog = null;
-      activeReplyId = null;
-      activeEditId = null;
-      commentFeedback = null;
-      renderBlogList();
-      if (updateHistory && window.location.pathname !== '/blog') {
-        history.pushState({ view: 'list' }, '', '/blog');
-      }
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    function renderView() {
+      document.getElementById('blog-detail').hidden = !currentBlog;
+      document.getElementById('blog-status').hidden = !viewStatus;
+      document.getElementById('blog-status-message').textContent = viewStatus ? t(viewStatus) : '';
+      document.getElementById('blog-status-back').hidden = viewStatus !== 'blog.notFound';
+      document.getElementById('blog-retry').hidden = viewStatus !== 'blog.loadError';
+      if (currentBlog) renderBlogDetail(currentBlog);
+      else if (blogs) renderBlogList();
     }
 
-    async function showBlog(identifier, updateHistory = true) {
-      const response = await fetch(`/api/blogs/${encodeURIComponent(identifier)}`);
-      if (!response.ok) throw new Error('Unable to load this article.');
-      const blog = await response.json();
-      renderBlogDetail(blog, updateHistory);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    async function loadView() {
+      viewStatus = 'blog.loading';
+      renderView();
+      try {
+        const response = await fetch(articlePath ? `/api/blogs/${articlePath}` : '/api/blogs');
+        if (articlePath && response.status === 404) {
+          viewStatus = 'blog.notFound';
+        } else {
+          if (!response.ok) throw new Error('Unable to load blog');
+          if (articlePath) currentBlog = await response.json();
+          else blogs = await response.json();
+          viewStatus = null;
+        }
+      } catch {
+        viewStatus = 'blog.loadError';
+      }
+      renderView();
     }
 
-    document.getElementById('blog-list').addEventListener('click', event => {
-      const item = event.target.closest('[data-blog-id]');
-      if (item) showBlog(decodeURIComponent(item.dataset.blogId));
-    });
-    document.getElementById('blog-list').addEventListener('keydown', event => {
-      if (event.key !== 'Enter' && event.key !== ' ') return;
-      const item = event.target.closest('[data-blog-id]');
-      if (item) {
-        event.preventDefault();
-        showBlog(decodeURIComponent(item.dataset.blogId));
-      }
-    });
-    window.addEventListener('mosankai:languagechange', () => {
-      if (currentBlog) renderBlogDetail(currentBlog, false);
-      else renderBlogList();
-    });
-    window.addEventListener('popstate', () => {
-      const slug = decodeURIComponent(window.location.pathname.replace(/^\/blog\/?/, ''));
-      if (slug) showBlog(slug, false);
-      else showList(false);
-    });
-
-    window.showBlog = showBlog;
-    window.showList = showList;
-    const initialSlug = decodeURIComponent(window.location.pathname.replace(/^\/blog\/?/, ''));
-    const initialView = initialSlug ? showBlog(initialSlug, false) : showList(false);
-    initialView.catch(error => {
-      document.getElementById('blog-list').innerHTML = `<p>${escapeHtml(error.message)}</p>`;
-    });
+    document.getElementById('blog-index').hidden = Boolean(articlePath);
+    document.getElementById('blog-nav-articles').setAttribute('aria-current', articlePath ? 'location' : 'page');
+    document.getElementById('blog-retry').addEventListener('click', loadView);
+    window.addEventListener('mosankai:languagechange', renderView);
+    loadView();
   </script>
 </body>
 </html>
